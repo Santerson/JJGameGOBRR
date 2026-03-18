@@ -7,6 +7,7 @@ public class TowerAi : MonoBehaviour
     [SerializeField] float SizeY = 1;
     [SerializeField] Color refcolor = Color.white;
     [SerializeField] int HealthMax = 1;
+    private int Health = 1;
     [SerializeField] float RateOfFire = 5;
     [SerializeField] float FirePositionX = 0;
     [SerializeField] float FirePositiony = 0;
@@ -17,7 +18,7 @@ public class TowerAi : MonoBehaviour
     {
         RB = GetComponent<Rigidbody2D>();
         Vector3 Size = new Vector3(SizeX, SizeY);
-
+        Health = HealthMax;
         gameObject.transform.localScale = Size;
         gameObject.GetComponent<SpriteRenderer>().color = refcolor;
         cooldown = RateOfFire;
@@ -27,6 +28,10 @@ public class TowerAi : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (Health <= 0)
+        {
+            Destroy(gameObject);
+        }
         Vector2 FirePosition = new Vector2(gameObject.GetComponent<Transform>().position.x+FirePositionX, gameObject.GetComponent<Transform>().position.y + FirePositiony);
         
         cooldown -= Time.deltaTime;
@@ -37,4 +42,12 @@ public class TowerAi : MonoBehaviour
         }
         
     }
-}
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("EnemySmallDamageBox"))
+        {
+            Health -= 1;
+        }
+    }
+
+    }
