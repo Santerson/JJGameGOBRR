@@ -4,14 +4,14 @@
  * Description: Contains the logic behind having towers that can be dragged
  * and dropped on the grid
  * ******************************************/
-
-using System.Collections.Generic;
 using UnityEngine;
 
 public class UIDraggableTower : MonoBehaviour
 {
     [Tooltip("The tower that is instantiated when this tower is placed down")]
     [SerializeField] GameObject TowerPrefab;
+    [Tooltip("Sound that plays when selecting the tower")]
+    [SerializeField] AudioSource pickupSound;
 
     TowerGrid refTowerGrid;
     Vector2 initialPosition = Vector2.zero;
@@ -55,6 +55,7 @@ public class UIDraggableTower : MonoBehaviour
     private void OnMouseDown()
     {
         followingMouse = true;
+        pickupSound.Play();
     }
 
     /// <summary>
@@ -137,6 +138,7 @@ public class UIDraggableTower : MonoBehaviour
             // Reset Last point for the next iteration
             lastPoint = Mathf.Infinity;
         }
+        // Return the closest position
         return ClosestPos;
     }
 }

@@ -108,9 +108,6 @@ public class TowerGrid : MonoBehaviour
                 }
             }
         }
-
-        DropTower(RefTower1, new Vector2Int(2, 3));
-        RemoveTowerAtPosition(new Vector2Int(2, 3));
     }
 
     /// <summary>
