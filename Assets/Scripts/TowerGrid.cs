@@ -25,6 +25,8 @@ public class TowerGrid : MonoBehaviour
     [Tooltip("The position of every permanently unusable space in x,y. NOTE: This is 0 based indexing (bottom left is 0,0), and also, dont use a space that is out of the grid")]
     // NOTE: in code, due to 2d arrays being y,x make sure to use this vec2 in y,x.
     [SerializeField] List<Vector2Int> InaccessableSpaces;
+    [Tooltip("When placing towers, the distance from where the tower is dropped and the nearest grid must be less than this number in order for it to be successfully dropped.")]
+    [SerializeField] float longestDistanceToBePlaced = 2f;
     [Tooltip("The length of the lines in the editor")]
     [SerializeField] float EditorLineLength = 20;
 
@@ -39,7 +41,12 @@ public class TowerGrid : MonoBehaviour
     /// null objects are empty tower spots.
     /// </summary>
     [HideInInspector] public GameObject[,] TowersInSpots { get; private set; }
-    Vector2[,] SpacePositions;
+    /// <summary>
+    /// A 2d array containing positions for every space in the grid
+    /// That can have a tower. Use this to run the functions "drop tower"
+    /// "remove tower at location"
+    /// </summary>
+    public Vector2[,] SpacePositions { get; private set; }
 
     /// <summary>
     /// Contains different statuses for each space slot
@@ -214,5 +221,32 @@ public class TowerGrid : MonoBehaviour
                 Debug.DrawLine(new Vector2(Pos.x, Pos.y - 0.1f), new Vector2(Pos.x, Pos.y + 0.1f), crossColor);
             }
         }
+    }
+
+    /// <summary>
+    /// Returns the Grid's length
+    /// </summary>
+    /// <returns>uint of the grid length</returns>
+    public uint GetGridLength()
+    {
+        return GridLength;
+    }
+
+    /// <summary>
+    /// Returns the Grid's Height
+    /// </summary>
+    /// <returns>uint of the grid height</returns>
+    public uint GetGridHeight()
+    {
+        return GridHeight;
+    }
+
+    /// <summary>
+    /// Returns the longest distance a tower can be from a square for it to still be placed down
+    /// </summary>
+    /// <returns>float of the longest distance</returns>
+    public float GetLongestDistanceToBePlaced()
+    {
+        return longestDistanceToBePlaced;
     }
 }
