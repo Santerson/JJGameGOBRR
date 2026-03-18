@@ -16,12 +16,14 @@ public class EnemyAi : MonoBehaviour
     [SerializeField] float SizeX = 1;
     [SerializeField] float SizeY = 1;
     [SerializeField] Color refcolor = Color.white;
+    // changes stats
     [SerializeField] float Speed = -1;
     [SerializeField] int HealthMax = 1;
     [SerializeField] float AttackCooldown = 3;
     [SerializeField] float AttackHitBoxX = 0;
     [SerializeField] float AttackHitBoxY = 0;
     [SerializeField] float WalkBackAfterAttackTime = 2;
+    // variabls that are changed in the code
     private int Health;
     private float TimeUntilWalkBackAgain;
     private float coolDownAttack = 0;
@@ -30,23 +32,18 @@ public class EnemyAi : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        //sets riged body
         RB = GetComponent<Rigidbody2D>();
+        //sets size
         Vector3 Size = new Vector3(SizeX, SizeY);
         gameObject.transform.localScale = Size;
+        //sets color
         gameObject.GetComponent<SpriteRenderer>().color = refcolor;
+        //sets states
         Health = HealthMax;
         coolDownAttack = AttackCooldown;
-        
-        MaxSpeed = Speed;
-
+        MaxSpeed = Speed;   
     }
-    /*private void cooldown()
-    {
-        MaxSpeed = ;
-        TimeUntilWalkBackAgain = WalkBackAfterAttackTime;
-
-    }*/
 
     private void Update()
     {
@@ -67,24 +64,28 @@ public class EnemyAi : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        TimeUntilWalkBackAgain -= Time.deltaTime;
+        // - timers
+        
         coolDownAttack -= Time.deltaTime;
-
+        // checks if dead
         if (Health <= 0)
         {
             Destroy(gameObject);
         }
+        // moves enemy
         RB.linearVelocityX = MaxSpeed;
 
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("TriggereEntered");
+        //sets positon of were attack box will spawn
         Vector2 FirePosition = new Vector2(gameObject.GetComponent<Transform>().position.x + AttackHitBoxX, gameObject.GetComponent<Transform>().position.y + AttackHitBoxY);
+        // lowers health if hit by bullet
         if (collision.CompareTag("BulletFromSmallTower"))
         {
             Health -= 1;
         }
+        // souposed to spawn attack box when ready then move back a little so it can attack agin
         if (collision.CompareTag("Tower"))
         {
             if (coolDownAttack <= 0)
