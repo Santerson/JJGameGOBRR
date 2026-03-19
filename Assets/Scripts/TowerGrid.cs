@@ -35,8 +35,6 @@ public class TowerGrid : MonoBehaviour
         [SerializeField] float longestDistanceToBePlaced = 2f;
 
     [Header("Debug")]
-    [Tooltip("The length of the lines in the editor")]
-        [SerializeField] float EditorLineLength = 20;
         [SerializeField] bool EnableLogs = false;
         [SerializeField] bool DrawGrid = false;
         [SerializeField] GameObject RefTower1;

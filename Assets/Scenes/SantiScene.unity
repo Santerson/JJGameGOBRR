@@ -148,11 +148,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68ae9b8a1fcbb5648a4d700ee7b5bada, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GridHeight: 2
+  GridHeight: 4
   GridLength: 7
   SquareSize: 1.74
-  VerticalSpaceBuffer: 0.86
-  HorizontalSpaceBuffer: 0.42
+  VerticalSpaceBuffer: 1.82
+  HorizontalSpaceBuffer: 0.33
   GridOffset: {x: -6.19, y: -3.06}
   GridCenterOffset: {x: 0, y: 0}
   InaccessableSpaces:
