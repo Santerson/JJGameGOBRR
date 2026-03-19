@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 358759602}
   - component: {fileID: 358759601}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -149,15 +149,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GridHeight: 4
-  GridLength: 10
-  SquareSize: 1.7
-  GridOffset: {x: -8.27, y: -5.01}
+  GridLength: 7
+  SquareSize: 1.74
+  VerticalSpaceBuffer: 1.82
+  HorizontalSpaceBuffer: 0.33
+  GridOffset: {x: -6.19, y: -3.06}
   GridCenterOffset: {x: 0, y: 0}
   InaccessableSpaces:
   - {x: 2, y: 0}
   - {x: 3, y: 2}
   - {x: 3, y: 1}
   - {x: 6, y: 3}
+  - {x: 2, y: 3}
   longestDistanceToBePlaced: 2
   EditorLineLength: 20
   EnableLogs: 1
