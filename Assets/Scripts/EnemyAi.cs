@@ -16,6 +16,7 @@ public class EnemyAi : MonoBehaviour
     [SerializeField] float SizeX = 1;
     [SerializeField] float SizeY = 1;
     [SerializeField] Color refcolor = Color.white;
+
     // changes stats
     [SerializeField] float Speed = -1;
     [SerializeField] int HealthMax = 1;
@@ -23,7 +24,8 @@ public class EnemyAi : MonoBehaviour
     [SerializeField] float AttackHitBoxX = 0;
     [SerializeField] float AttackHitBoxY = 0;
     [SerializeField] float WalkBackAfterAttackTime = 2;
-    // variabls that are changed in the code
+
+    // variables that are changed in the code
     private int Health;
     private float TimeUntilWalkBackAgain;
     private float coolDownAttack = 0;
@@ -32,7 +34,7 @@ public class EnemyAi : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //sets riged body
+        //sets rigid body
         RB = GetComponent<Rigidbody2D>();
         //sets size
         Vector3 Size = new Vector3(SizeX, SizeY);
@@ -66,7 +68,7 @@ public class EnemyAi : MonoBehaviour
     {
         // - timers
         
-        coolDownAttack -= Time.deltaTime;
+        coolDownAttack -= Time.fixedDeltaTime;
         // checks if dead
         if (Health <= 0)
         {
@@ -76,6 +78,7 @@ public class EnemyAi : MonoBehaviour
         RB.linearVelocityX = MaxSpeed;
 
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //sets positon of were attack box will spawn
