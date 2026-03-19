@@ -9,6 +9,12 @@ public class SpawnerEnemy : MonoBehaviour
     [SerializeField] GameObject EnemyMedium;
     [SerializeField] GameObject EnemyLarge;
     [SerializeField] List<Vector2> SpawnPositions;
+    [SerializeField] int Min;
+    [SerializeField] int Max;
+    [SerializeField] int SamllLess;
+    [SerializeField] int MediumLess;
+    [SerializeField] int MediumGrater;
+    [SerializeField] int LargeLess;
     [SerializeField] float SpawnRate = 5;
     private float cooldown;
 
@@ -31,17 +37,17 @@ public class SpawnerEnemy : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        int chances = Random.Range(1, 7);
+        int chances = Random.Range(Min, Max);
         GameObject SpawnedEnemy = EnemySmall;
-        if (chances <= 3)
+        if (chances <= SamllLess)
         {
             SpawnedEnemy = EnemySmall;
         }
-        if (chances <= 5 && chances >= 4)
+        if (chances <= MediumLess && chances >= MediumGrater)
         {
             SpawnedEnemy = EnemySmall;
         }
-        if (chances == 6)
+        if (chances >= LargeLess)
         {
             SpawnedEnemy = EnemySmall;
         }

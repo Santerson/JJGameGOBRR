@@ -40,7 +40,7 @@ public class EnemyAi : MonoBehaviour
         Vector3 Size = new Vector3(SizeX, SizeY);
         gameObject.transform.localScale = Size;
         //sets color
-        gameObject.GetComponent<SpriteRenderer>().color = refcolor;
+        gameObject.GetComponentInChildren<SpriteRenderer>().color = refcolor;
         //sets states
         Health = HealthMax;
         coolDownAttack = AttackCooldown;

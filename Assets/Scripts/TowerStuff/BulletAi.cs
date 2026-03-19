@@ -13,7 +13,7 @@ public class BulletAi : MonoBehaviour
         RB = GetComponent<Rigidbody2D>();
         Vector3 Size = new Vector3(SizeX, SizeY);
         gameObject.transform.localScale = Size;
-        gameObject.GetComponent<SpriteRenderer>().color = refcolor;
+        gameObject.GetComponentInChildren<SpriteRenderer>().color = refcolor;
     }
 
     // Update is called once per frame

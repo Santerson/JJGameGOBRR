@@ -21,7 +21,7 @@ public class TowerAi : MonoBehaviour
         Vector3 Size = new Vector3(SizeX, SizeY);
         Health = HealthMax;
         gameObject.transform.localScale = Size;
-        gameObject.GetComponent<SpriteRenderer>().color = refcolor;
+        gameObject.GetComponentInChildren<SpriteRenderer>().color = refcolor;
         cooldown = RateOfFire;
 
     }
