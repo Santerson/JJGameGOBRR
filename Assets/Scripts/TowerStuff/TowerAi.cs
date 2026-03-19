@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class TowerAi : MonoBehaviour
 {
@@ -32,9 +33,9 @@ public class TowerAi : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        Vector2 FirePosition = new Vector2(gameObject.GetComponent<Transform>().position.x+FirePositionX, gameObject.GetComponent<Transform>().position.y + FirePositiony);
+        Vector2 FirePosition = new Vector2(transform.position.x+FirePositionX, transform.position.y + FirePositiony);
         
-        cooldown -= Time.deltaTime;
+        cooldown -= Time.fixedDeltaTime;
         if (cooldown <= 0)
         {
             Instantiate(bullet, FirePosition, Quaternion.Euler(0f, 0f, 0f));

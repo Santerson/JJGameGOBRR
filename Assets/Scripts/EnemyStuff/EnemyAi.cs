@@ -82,7 +82,7 @@ public class EnemyAi : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //sets positon of were attack box will spawn
-        Vector2 FirePosition = new Vector2(gameObject.GetComponent<Transform>().position.x + AttackHitBoxX, gameObject.GetComponent<Transform>().position.y + AttackHitBoxY);
+        Vector2 FirePosition = new Vector2(transform.position.x + AttackHitBoxX, transform.position.y + AttackHitBoxY);
         // lowers health if hit by bullet
         if (collision.CompareTag("BulletFromSmallTower"))
         {
