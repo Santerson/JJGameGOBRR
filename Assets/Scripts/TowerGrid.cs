@@ -36,7 +36,8 @@ public class TowerGrid : MonoBehaviour
 
     [Header("Debug")]
         [SerializeField] bool EnableLogs = false;
-        [SerializeField] bool DrawGrid = false;
+        [SerializeField] bool DrawGridInGame = false;
+        [SerializeField] bool AlwaysDrawGrid = false;
         [SerializeField] GameObject RefTower1;
 
     // An array of the SpaceStatus enum to contain the status of each space
@@ -78,6 +79,11 @@ public class TowerGrid : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         DrawDebugGrid();
+    }
+
+    private void OnDrawGizmos()
+    {
+        if (AlwaysDrawGrid) DrawDebugGrid();
     }
 
     /// <summary>
@@ -123,7 +129,7 @@ public class TowerGrid : MonoBehaviour
     /// </summary>
     private void Update()
     {
-        if (DrawGrid) DrawDebugGrid();
+        if (DrawGridInGame) DrawDebugGrid();
     }
 
 
