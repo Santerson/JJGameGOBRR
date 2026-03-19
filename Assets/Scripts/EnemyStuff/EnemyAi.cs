@@ -15,7 +15,6 @@ public class EnemyAi : MonoBehaviour
     // size and color for the enemy
     [SerializeField] float SizeX = 1;
     [SerializeField] float SizeY = 1;
-    [SerializeField] Color refcolor = Color.white;
 
     // changes stats
     [SerializeField] float Speed = -1;
@@ -26,6 +25,7 @@ public class EnemyAi : MonoBehaviour
     [SerializeField] float WalkBackAfterAttackTime = 2;
 
     // variables that are changed in the code
+    Color refcolor = Color.white;
     private int Health;
     private float TimeUntilWalkBackAgain;
     private float coolDownAttack = 0;
@@ -40,7 +40,7 @@ public class EnemyAi : MonoBehaviour
         Vector3 Size = new Vector3(SizeX, SizeY);
         gameObject.transform.localScale = Size;
         //sets color
-        gameObject.GetComponentInChildren<SpriteRenderer>().color = refcolor;
+        refcolor = gameObject.GetComponentInChildren<SpriteRenderer>().color;
         //sets states
         Health = HealthMax;
         coolDownAttack = AttackCooldown;
