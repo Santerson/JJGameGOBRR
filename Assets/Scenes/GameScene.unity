@@ -652,9 +652,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f5ac7a5151b4e1408a0121281daf46b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemySmall: {fileID: 1876545594802166408, guid: 93e3dc8f9a4962b4aa2507ed2b618b24, type: 3}
-  EnemyMedium: {fileID: 1876545594802166408, guid: 93e3dc8f9a4962b4aa2507ed2b618b24, type: 3}
-  EnemyLarge: {fileID: 1876545594802166408, guid: 93e3dc8f9a4962b4aa2507ed2b618b24, type: 3}
+  EnemySmall: {fileID: 6252635703142006987, guid: 6afbf9e759b377246a2e4a355e63b220, type: 3}
+  EnemyMedium: {fileID: 6252635703142006987, guid: 6afbf9e759b377246a2e4a355e63b220, type: 3}
+  EnemyLarge: {fileID: 6252635703142006987, guid: 6afbf9e759b377246a2e4a355e63b220, type: 3}
   SpawnPositions:
   - {x: 10.18, y: 1.24}
   - {x: 10.18, y: -1.51}
