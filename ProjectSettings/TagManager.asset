@@ -9,6 +9,8 @@ TagManager:
   - BulletFromSmallTower
   - enemy
   - EnemySmallDamageBox
+  - BunnyTower
+  - FairyTower
   layers:
   - Default
   - TransparentFX
