@@ -13,28 +13,35 @@ public class TowerGrid : MonoBehaviour
 {
     [Header("GridSize")]
     [Tooltip("The height of the grid")]
-    [SerializeField] uint GridHeight = 5;
+        [SerializeField] uint GridHeight = 5;
     [Tooltip("The length of the grid")]
-    [SerializeField] uint GridLength = 2;
+        [SerializeField] uint GridLength = 2;
     [Tooltip("The size of each square in the grid")]
-    [SerializeField] float SquareSize = 2f;
+        [SerializeField] float SquareSize = 2f;
+    [Tooltip("The space inbetween each space vertically")]
+        [SerializeField] float VerticalSpaceBuffer = 0;
+    [Tooltip("The space inbetween each space horizontally")]
+        [SerializeField] float HorizontalSpaceBuffer = 0;
+
     [Tooltip("The offset of the grid off of 0,0")]
-    [SerializeField] Vector2 GridOffset = Vector2.zero;
+        [SerializeField] Vector2 GridOffset = Vector2.zero;
     [Tooltip("The offset of the center point of every cell")]
-    [SerializeField] Vector2 GridCenterOffset = Vector2.zero;
+        [SerializeField] Vector2 GridCenterOffset = Vector2.zero;
+    
     [Tooltip("The position of every permanently unusable space in x,y. NOTE: This is 0 based indexing (bottom left is 0,0), and also, dont use a space that is out of the grid")]
     // NOTE: in code, due to 2d arrays being y,x make sure to use this vec2 in y,x.
-    [SerializeField] List<Vector2Int> InaccessableSpaces;
+        [SerializeField] List<Vector2Int> InaccessableSpaces;
     [Tooltip("When placing towers, the distance from where the tower is dropped and the nearest grid must be less than this number in order for it to be successfully dropped.")]
-    [SerializeField] float longestDistanceToBePlaced = 2f;
-    [Tooltip("The length of the lines in the editor")]
-    [SerializeField] float EditorLineLength = 20;
+        [SerializeField] float longestDistanceToBePlaced = 2f;
 
     [Header("Debug")]
-    [SerializeField] bool EnableLogs = false;
-    [SerializeField] bool DrawGrid = false;
-    [SerializeField] GameObject RefTower1;
+    [Tooltip("The length of the lines in the editor")]
+        [SerializeField] float EditorLineLength = 20;
+        [SerializeField] bool EnableLogs = false;
+        [SerializeField] bool DrawGrid = false;
+        [SerializeField] GameObject RefTower1;
 
+    // An array of the SpaceStatus enum to contain the status of each space
     SpaceStatus[,] SpaceStatuses;
     /// <summary>
     /// A 2d array containing all placed towers.
@@ -86,25 +93,28 @@ public class TowerGrid : MonoBehaviour
         SpacePositions = new Vector2[GridLength, GridHeight];
 
         // Fill the space positions in the grid
-        for (int i = 0; i < GridLength; i++)
+        for (int x = 0; x < GridLength; x++)
         {
-            for (int j = 0; j < GridHeight; j++)
+            for (int y = 0; y < GridHeight; y++)
             {
+                // Calculate additional offsets
+                float xAdditionalOffset = x * HorizontalSpaceBuffer;
+                float yAdditionalOffset = y * VerticalSpaceBuffer;
                 // Get the position of the grid
-                Vector2 Pos = new Vector2(i * SquareSize, j * SquareSize) + GridOffset + GridCenterOffset;
+                Vector2 Pos = new Vector2(x * SquareSize + xAdditionalOffset, y * SquareSize + yAdditionalOffset) + GridOffset + GridCenterOffset;
                 // Move to the center
                 Pos += new Vector2(SquareSize / 2, SquareSize / 2);
                 // Store the center
-                SpacePositions[i, j] = Pos;
+                SpacePositions[x, y] = Pos;
                 // See if that space is usable and update the other grid
                 // Note that InaccessableSpaces is in y, x instead of x, y
-                if (InaccessableSpaces.Contains(new Vector2Int(i,j)))
+                if (InaccessableSpaces.Contains(new Vector2Int(x,y)))
                 {
-                    SpaceStatuses[i, j] = SpaceStatus.nonexistant;
+                    SpaceStatuses[x, y] = SpaceStatus.nonexistant;
                 }
                 else
                 {
-                    SpaceStatuses[i, j] = SpaceStatus.unused;
+                    SpaceStatuses[x, y] = SpaceStatus.unused;
                 }
             }
         }
@@ -188,30 +198,21 @@ public class TowerGrid : MonoBehaviour
     /// </summary>
     private void DrawDebugGrid()
     {
-        // Draw Vertical Lines
-        for (int i = 0; i <= GridLength; i++)
-        {
-            Debug.DrawLine(new Vector2(i * SquareSize, 0) + GridOffset, new Vector2(i * SquareSize, EditorLineLength) + GridOffset);
-        }
-
-        // Draw Horizontal Lines
-        for (int i = 0; i <= GridHeight; i++)
-        {
-            Debug.DrawLine(new Vector2(0, i * SquareSize) + GridOffset, new Vector2(EditorLineLength, i * SquareSize) + GridOffset);
-        }
-
         // Draw Crosses
-        for (int i = 0; i < GridLength; i++)
+        for (int x = 0; x < GridLength; x++)
         {
-            for (int j = 0; j < GridHeight; j++)
+            for (int y = 0; y < GridHeight; y++)
             {
+                // Calculate additional offsets by the horizontal and vertical space buffers
+                float xAdditionalOffset = x * HorizontalSpaceBuffer;
+                float yAdditionalOffset = y * VerticalSpaceBuffer;
                 // Get the position of the grid
-                Vector2 Pos = new Vector2(i * SquareSize, j * SquareSize) + GridOffset + GridCenterOffset;
+                Vector2 Pos = new Vector2(x * SquareSize + xAdditionalOffset, y * SquareSize + yAdditionalOffset) + GridOffset + GridCenterOffset;
                 // Move to the center
                 Pos += new Vector2(SquareSize / 2, SquareSize / 2);
 
                 Color crossColor = Color.green;
-                if (InaccessableSpaces.Contains(new Vector2Int(i, j)))
+                if (InaccessableSpaces.Contains(new Vector2Int(x, y)))
                     crossColor = Color.red;
                 // Draw a cross
                 Debug.DrawLine(new Vector2(Pos.x - 0.1f, Pos.y), new Vector2(Pos.x + 0.1f, Pos.y), crossColor);
