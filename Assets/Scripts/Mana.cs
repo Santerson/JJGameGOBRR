@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Mana : MonoBehaviour
 {
@@ -84,5 +85,8 @@ public class Mana : MonoBehaviour
     {
         // TODO: do something cool here eventually
         Debug.Log("Player loses lmao");
+
+        // Set lose screen
+        SceneManager.LoadScene("SkillIssue");
     }
 }
