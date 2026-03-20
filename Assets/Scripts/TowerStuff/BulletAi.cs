@@ -13,6 +13,7 @@ public class BulletAi : MonoBehaviour
     [SerializeField] Color refcolor = Color.white;
     //stats
     [SerializeField] float Speed = 10;
+    [SerializeField] uint Damage = 2;
 
     private Rigidbody2D RB;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -38,5 +39,14 @@ public class BulletAi : MonoBehaviour
             Destroy(gameObject);
         }
             
+    }
+    
+    /// <summary>
+    /// Gets this bullet's damage
+    /// </summary>
+    /// <returns>uint of the bullet's damage</returns>
+    public uint GetDamage()
+    {
+        return Damage;
     }
 }

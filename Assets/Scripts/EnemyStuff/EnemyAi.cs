@@ -23,7 +23,6 @@ public class EnemyAi : MonoBehaviour
     [SerializeField] float AttackHitBoxX = 0;
     [SerializeField] float AttackHitBoxY = 0;
     [SerializeField] float WalkBackAfterAttackTime = 2;
-
     // variables that are changed in the code
     Color refcolor = Color.white;
     private int Health;
@@ -84,9 +83,19 @@ public class EnemyAi : MonoBehaviour
         //sets positon of were attack box will spawn
         Vector2 FirePosition = new Vector2(transform.position.x + AttackHitBoxX, transform.position.y + AttackHitBoxY);
         // lowers health if hit by bullet
-        if (collision.CompareTag("BulletFromSmallTower"))
+        if (collision.CompareTag("Bullet"))
         {
-            Health -= 1;
+            BulletAi refBullet = collision.GetComponent<BulletAi>();
+            if (refBullet != null)
+            {
+                int dmg = (int)refBullet.GetDamage();
+                Health -= dmg;
+
+            }
+            else
+            {
+                Debug.LogError("No bullet script attached! attach one.");
+            }
         }
         // souposed to spawn attack box when ready then move back a little so it can attack agin
         if (collision.CompareTag("Tower"))

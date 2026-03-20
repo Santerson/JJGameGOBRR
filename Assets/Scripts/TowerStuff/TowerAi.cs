@@ -88,9 +88,19 @@ public class TowerAi : MonoBehaviour
     /// <param name="collision"></param>
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("EnemySmallDamageBox"))
+        if (collision.CompareTag("EnemyDamgeBox"))
         {
-            Health -= 1;
+            EnemyBoxAi refDamageBox = collision.GetComponent<EnemyBoxAi>();
+            if (refDamageBox != null)
+            {
+                int dmg = (int)refDamageBox.GetDamage();
+                Health -= dmg;
+
+            }
+            else
+            {
+                Debug.LogError("No bullet script attached! attach one.");
+            }
         }
     }
 

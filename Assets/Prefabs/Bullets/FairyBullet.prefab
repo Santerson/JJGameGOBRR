@@ -14,7 +14,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 325832782174423122, guid: 71f4225f6a5e1d84fa90782979b0c8cb, type: 3}
       propertyPath: m_TagString
-      value: FairyBullet
+      value: Bullet
       objectReference: {fileID: 0}
     - target: {fileID: 7472844607871682638, guid: 71f4225f6a5e1d84fa90782979b0c8cb, type: 3}
       propertyPath: m_LocalPosition.x

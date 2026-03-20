@@ -11,7 +11,8 @@ public class EnemyBoxAi : MonoBehaviour
     // determines size
     [SerializeField] float SizeX = 1;
     [SerializeField] float SizeY = 1;
-    
+    [SerializeField] uint Damage = 1;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -29,5 +30,9 @@ public class EnemyBoxAi : MonoBehaviour
             Destroy(gameObject);
         }
 
+    }
+    public uint GetDamage()
+    {
+        return Damage;
     }
 }

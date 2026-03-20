@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6993916681057783024}
   m_Layer: 0
   m_Name: small enamy attack box
-  m_TagString: EnemySmallDamageBox
+  m_TagString: EnemyDamgeBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -150,6 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SizeX: 1
   SizeY: 1
+  Damage: 1
 --- !u!50 &6993916681057783024
 Rigidbody2D:
   serializedVersion: 5
