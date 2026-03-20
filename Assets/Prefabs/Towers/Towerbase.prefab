@@ -171,8 +171,7 @@ MonoBehaviour:
   bullet: {fileID: 5237352372188462167, guid: ddf8e3d1e612eb54fbf7d45c1c6142d2, type: 3}
   SizeX: 1
   SizeY: 1
-  refcolor: {r: 1, g: 1, b: 1, a: 1}
-  HealthMax: 1
+  HealthMax: 2
   RateOfFire: 5
   FirePositionX: 0
   FirePositiony: 0

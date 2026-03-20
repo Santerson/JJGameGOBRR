@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 3918630751366994614}
   m_Layer: 0
   m_Name: EnemyBase
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -214,7 +214,6 @@ MonoBehaviour:
   Hurtfield: {fileID: 7299621746851612134, guid: 56845e4789a06b94c981306cc565bc28, type: 3}
   SizeX: 1
   SizeY: 1
-  refcolor: {r: 1, g: 1, b: 1, a: 1}
   Speed: -5.48
   HealthMax: 3
   AttackCooldown: 2
