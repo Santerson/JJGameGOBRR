@@ -51,6 +51,7 @@ MonoBehaviour:
   SizeY: 1
   refcolor: {r: 1, g: 1, b: 1, a: 1}
   Speed: 10
+  Damage: 2
 --- !u!50 &521497994854751552
 Rigidbody2D:
   serializedVersion: 5
@@ -60,7 +61,7 @@ Rigidbody2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 325832782174423122}
   m_BodyType: 0
-  m_Simulated: 0
+  m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
@@ -77,7 +78,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Constraints: 6
 --- !u!61 &5836182153909750631
 BoxCollider2D:
   m_ObjectHideFlags: 0
