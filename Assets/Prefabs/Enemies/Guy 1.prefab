@@ -13,6 +13,10 @@ PrefabInstance:
       value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3548443905817846113, guid: 7dd82a7487d558b4ea1bd8c48c4c36b6, type: 3}
+      propertyPath: HealthMax
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3548443905817846113, guid: 7dd82a7487d558b4ea1bd8c48c4c36b6, type: 3}
       propertyPath: Hurtfield
       value: 
       objectReference: {fileID: 4341528035573730155, guid: 6b8f74e0bc0e79d4794ed0d0e017f690, type: 3}
@@ -30,7 +34,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3548443905817846113, guid: 7dd82a7487d558b4ea1bd8c48c4c36b6, type: 3}
       propertyPath: AttackCooldown
-      value: 2
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3548443905817846113, guid: 7dd82a7487d558b4ea1bd8c48c4c36b6, type: 3}
       propertyPath: WalkBackAfterAttackTime

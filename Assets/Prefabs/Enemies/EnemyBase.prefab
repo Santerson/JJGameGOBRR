@@ -214,12 +214,12 @@ MonoBehaviour:
   Hurtfield: {fileID: 7299621746851612134, guid: 56845e4789a06b94c981306cc565bc28, type: 3}
   SizeX: 1
   SizeY: 1
-  Speed: -5.48
+  Speed: -1
   HealthMax: 3
   AttackCooldown: 2
   AttackHitBoxX: -1.75
   AttackHitBoxY: 0
-  WalkBackAfterAttackTime: 2
+  WalkBackAfterAttackTime: 0.05
 --- !u!50 &109451618528338515
 Rigidbody2D:
   serializedVersion: 5
