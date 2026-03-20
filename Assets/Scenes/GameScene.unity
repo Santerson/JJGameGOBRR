@@ -605,6 +605,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ManaBar
       objectReference: {fileID: 0}
+    - target: {fileID: 5161085203479588299, guid: a1d4d8b83f75d0042b0b3e85fb1203de, type: 3}
+      propertyPath: manaGainText
+      value: 
+      objectReference: {fileID: 290243981}
     - target: {fileID: 8666548943402785908, guid: a1d4d8b83f75d0042b0b3e85fb1203de, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.78
@@ -790,8 +794,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemySmall: {fileID: 6252635703142006987, guid: 6afbf9e759b377246a2e4a355e63b220, type: 3}
-  EnemyMedium: {fileID: 6252635703142006987, guid: 6afbf9e759b377246a2e4a355e63b220, type: 3}
-  EnemyLarge: {fileID: 6252635703142006987, guid: 6afbf9e759b377246a2e4a355e63b220, type: 3}
+  EnemyMedium: {fileID: 7426724621865789392, guid: 59e9c41a0aab1ba4a8c025a3df66aa60, type: 3}
+  EnemyLarge: {fileID: 1502812715334231772, guid: 52e331000d60ac34aaefa3994a5a1055, type: 3}
   SpawnPositions:
   - {x: 10.18, y: 1.24}
   - {x: 10.18, y: -1.51}
