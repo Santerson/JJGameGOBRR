@@ -98,6 +98,11 @@ public class EnemyAi : MonoBehaviour
                 TimeUntilWalkBackAgain = WalkBackAfterAttackTime;
                 MaxSpeed *= -1;
             }
+            else
+            {
+                TimeUntilWalkBackAgain = WalkBackAfterAttackTime;
+                MaxSpeed *= -1;
+            }
         }
     }
 }
