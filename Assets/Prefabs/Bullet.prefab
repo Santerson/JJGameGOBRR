@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6575847073599296319}
   m_Layer: 0
   m_Name: Bullet
-  m_TagString: BulletFromSmallTower
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -152,6 +152,7 @@ MonoBehaviour:
   SizeY: 1
   refcolor: {r: 1, g: 1, b: 1, a: 1}
   Speed: 10
+  Damage: 2
 --- !u!50 &6575847073599296319
 Rigidbody2D:
   serializedVersion: 5
