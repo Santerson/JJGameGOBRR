@@ -99,7 +99,7 @@ public class TowerAi : MonoBehaviour
             }
             else
             {
-                Debug.LogError("No bullet script attached! attach one.");
+                Debug.LogError("No EnemyBoxAi script attached! attach one.");
             }
         }
     }
