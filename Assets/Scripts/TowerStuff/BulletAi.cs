@@ -34,7 +34,7 @@ public class BulletAi : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //checks for collision with enemy then dies
-        if (collision.CompareTag("enemy"))
+        if (collision.CompareTag("Enemy"))
         {
             Destroy(gameObject);
         }
