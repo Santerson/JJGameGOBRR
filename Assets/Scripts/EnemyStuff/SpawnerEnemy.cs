@@ -11,10 +11,12 @@ public class SpawnerEnemy : MonoBehaviour
     [SerializeField] List<Vector2> SpawnPositions;
     [SerializeField] int Min;
     [SerializeField] int Max;
+    [Tooltip("Roll below this is small")]
     [SerializeField] int SamllLess;
+    [Tooltip("Roll below this is medium")]
     [SerializeField] int MediumLess;
-    [SerializeField] int MediumGrater;
-    [SerializeField] int LargeLess;
+    [Tooltip("Roll above this is large")]
+    [SerializeField] int LargeGreater;
     [SerializeField] float SpawnRate = 5;
     private float cooldown;
 
@@ -43,13 +45,13 @@ public class SpawnerEnemy : MonoBehaviour
         {
             SpawnedEnemy = EnemySmall;
         }
-        if (chances <= MediumLess && chances >= MediumGrater)
+        else if (chances <= MediumLess)
         {
-            SpawnedEnemy = EnemySmall;
+            SpawnedEnemy = EnemyMedium;
         }
-        if (chances >= LargeLess)
+        else if (chances >= LargeGreater)
         {
-            SpawnedEnemy = EnemySmall;
+            SpawnedEnemy = EnemyLarge;
         }
 
         cooldown -= Time.fixedDeltaTime;
