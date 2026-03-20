@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 using UnityEngine.SceneManagement;
 
 public class Mana : MonoBehaviour
@@ -9,6 +10,8 @@ public class Mana : MonoBehaviour
     [SerializeField] float BaseManaRegen = 5f;
     [Tooltip("A linerenderer containing 2 positions, where position 1 is the end and position 0 is the start")]
     [SerializeField] LineRenderer ManaBar;
+    [Tooltip("Textbox for the mana regeneration")]
+    [SerializeField] TextMeshProUGUI manaGainText;
 
     float CurrentMana;
     Vector2 ManaBarInitialPosition;
@@ -47,6 +50,8 @@ public class Mana : MonoBehaviour
         // Update the manaLine
         float manaBarPosition = Mathf.Lerp(0, ManaBarInitialPosition.x, CurrentMana / MaxMana);
         ManaBar.SetPosition(1, new Vector3(manaBarPosition, 0, 0));
+        // Update the display
+        manaGainText.text = $"+{manaRegen : 0}";
         // Check if the player died
         if (CurrentMana <= 0)
         {
