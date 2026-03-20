@@ -7,6 +7,7 @@ public class TowerAi : MonoBehaviour
     [SerializeField] float SizeX = 1;
     [SerializeField] float SizeY = 1;
     [SerializeField] int HealthMax = 1;
+    [Tooltip("Shots per second. set to -1 to disable")]
     [SerializeField] float RateOfFire = 5;
     [SerializeField] float FirePositionX = 0;
     [SerializeField] float FirePositiony = 0;
@@ -50,6 +51,11 @@ public class TowerAi : MonoBehaviour
             return;
         }
         
+        if (RateOfFire == -1)
+        {
+            return;
+        }
+
         // Cooldown for a shot
         cooldown -= Time.fixedDeltaTime;
         // Fire a shot if it is cooled down

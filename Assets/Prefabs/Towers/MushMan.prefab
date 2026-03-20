@@ -26,7 +26,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6262921784777582634, guid: 01a5586a081987349ade83957f7874d8, type: 3}
       propertyPath: TowerManaCost
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7170060763959655223, guid: 01a5586a081987349ade83957f7874d8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -72,6 +72,10 @@ PrefabInstance:
       propertyPath: bullet
       value: 
       objectReference: {fileID: 3968881123420591287, guid: cc58e3cd036d3624b8807c43b263f467, type: 3}
+    - target: {fileID: 7530514561817378367, guid: 01a5586a081987349ade83957f7874d8, type: 3}
+      propertyPath: RateOfFire
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

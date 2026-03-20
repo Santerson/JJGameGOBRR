@@ -51,7 +51,7 @@ public class Mana : MonoBehaviour
         float manaBarPosition = Mathf.Lerp(0, ManaBarInitialPosition.x, CurrentMana / MaxMana);
         ManaBar.SetPosition(1, new Vector3(manaBarPosition, 0, 0));
         // Update the display
-        manaGainText.text = $"+{manaRegen : 0}";
+        manaGainText.text = $"{Mathf.Sign(manaRegen)}{manaRegen : 0}";
         // Check if the player died
         if (CurrentMana <= 0)
         {
