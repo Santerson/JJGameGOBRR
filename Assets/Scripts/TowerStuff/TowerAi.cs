@@ -94,4 +94,14 @@ public class TowerAi : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Destroys the tower if rightclicked on
+    /// </summary>
+    private void OnMouseOver()
+    {
+        if (Input.GetKeyDown(KeyCode.Backspace))
+        {
+            Die();
+        }
+    }
 }
