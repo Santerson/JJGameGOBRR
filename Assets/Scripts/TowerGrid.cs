@@ -151,6 +151,8 @@ public class TowerGrid : MonoBehaviour
             // Instantiate a game object there and save it's reference
             GameObject refTower = Instantiate(tower, SpacePositions[position.x, position.y], Quaternion.identity);
             TowersInSpots[position.x, position.y] = refTower;
+            // Save the position in the towerai script of the tower
+            refTower.GetComponent<TowerAi>().GridPosition = new Vector2Int(position.x, position.y);
             // return true
             if (EnableLogs) Debug.Log($"Placed a tower at {position.x}, {position.y}.");
             return true;
