@@ -1,21 +1,31 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.Rendering.Universal;
+using UnityEngine.Rendering;
 
 public class Mana : MonoBehaviour
 {
     [Tooltip("The player's maximum mana")]
-    [SerializeField] float MaxMana = 30f;
+        [SerializeField] float MaxMana = 30f;
     [Tooltip("The player's base mana regeneration")]
-    [SerializeField] float BaseManaRegen = 5f;
+        [SerializeField] float BaseManaRegen = 5f;
     [Tooltip("A linerenderer containing 2 positions, where position 1 is the end and position 0 is the start")]
-    [SerializeField] LineRenderer ManaBar;
+        [SerializeField] LineRenderer ManaBar;
     [Tooltip("Textbox for the mana regeneration")]
-    [SerializeField] TextMeshProUGUI manaGainText;
+        [SerializeField] TextMeshProUGUI manaGainText;
+
+    [Header("ScreenTint")]
+    [SerializeField] Volume volume;
+    [Tooltip("Enables the vignette")]
+        [SerializeField] bool enableVignette;
+    [Tooltip("The maximum vignette intensity (0 to 1)")]
+        [SerializeField] float maxVignetteEffect = 0.5f;
+
+    private Vignette screenTint;
 
     float CurrentMana;
     Vector2 ManaBarInitialPosition;
-
 
     /// <summary>
     /// Initialize variables
@@ -25,10 +35,19 @@ public class Mana : MonoBehaviour
         // Max mana
         CurrentMana = MaxMana;
         ManaBarInitialPosition = ManaBar.GetPosition(1);
+        // Vignette
+        if (volume.profile.TryGet<Vignette>(out screenTint))
+        {
+            screenTint.intensity.value = 0;
+        }
+        else
+        {
+            Debug.LogError("No vignette / volume found for the screen vignette!");
+        }
     }
 
     /// <summary>
-    /// Handles mana regeneration
+    /// Handles mana regeneration and mana vignette
     /// </summary>
     void Update()
     {
@@ -53,12 +72,16 @@ public class Mana : MonoBehaviour
         // Update the display
         if (manaRegen >= 0)
         {
-            manaGainText.text = $"+{manaRegen : 0}"; 
+            // This means gaining mana
+            manaGainText.text = $"+{manaRegen : 0}";
         }
         else
         {
+            // This means losing mana
             manaGainText.text = $"{manaRegen: 0}";
         }
+        // Update the vignette
+        if (enableVignette) screenTint.intensity.value = Mathf.Lerp(maxVignetteEffect, 0, CurrentMana / MaxMana);
         // Check if the player died
         if (CurrentMana <= 0)
         {
