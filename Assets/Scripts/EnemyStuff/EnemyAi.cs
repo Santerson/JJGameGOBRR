@@ -58,9 +58,9 @@ public class EnemyAi : MonoBehaviour
         RB.linearVelocityX = MaxSpeed;
         MaxSpeed = Speed;
     }
-    private void OnTriggerStay2D(Collider2D collision)
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
         // lowers health if hit by bullet
         if (collision.CompareTag("Bullet"))
         {
@@ -76,6 +76,10 @@ public class EnemyAi : MonoBehaviour
                 Debug.LogError("No bullet script attached! attach one.");
             }
         }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
         // souposed to spawn attack box when ready then move back a little so it can attack agin
         if (collision.CompareTag("Tower"))
         {

@@ -4,18 +4,24 @@
  * Description: Contains the logic behind having towers that can be dragged
  * and dropped on the grid
  * ******************************************/
+using TMPro;
 using UnityEngine;
+
 
 public class UIDraggableTower : MonoBehaviour
 {
     [Tooltip("The tower that is instantiated when this tower is placed down")]
-    [SerializeField] GameObject TowerPrefab;
+        [SerializeField] GameObject TowerPrefab;
     [Tooltip("Sound that plays when selecting the tower")]
-    [SerializeField] AudioSource pickupSound;
+        [SerializeField] AudioSource pickupSound;
+    [Tooltip("Cooldown inbetween tower placements")]
+        [SerializeField] float towerCooldown = 0;
+    [SerializeField] TextMeshProUGUI refCDText;
 
     TowerGrid refTowerGrid;
     Vector2 initialPosition = Vector2.zero;
     bool followingMouse = false;
+    float timeToNextTowerPlacement = 0;
 
     /// <summary>
     /// Sets initial variables
@@ -28,6 +34,10 @@ public class UIDraggableTower : MonoBehaviour
         {
             Debug.LogError("No Towergrid found! Make sure there is one on the scene");
         }
+        if (refCDText == null && towerCooldown > 0)
+        {
+            Debug.LogError("No cd text assigned!");
+        }
     }
 
     /// <summary>
@@ -35,6 +45,16 @@ public class UIDraggableTower : MonoBehaviour
     /// </summary>
     private void Update()
     {
+        // Reduce the time to the next tower placement if it is not 0
+        timeToNextTowerPlacement = timeToNextTowerPlacement > 0 ? timeToNextTowerPlacement - Time.deltaTime : 0;
+        if (timeToNextTowerPlacement > 0)
+        {
+            refCDText.text = $"{timeToNextTowerPlacement : 0.00}";
+        }
+        else if (refCDText != null)
+        {
+            refCDText.text = "";
+        }
         // Check if the gameobject should be following the mouse
         if (followingMouse)
         {
@@ -54,6 +74,10 @@ public class UIDraggableTower : MonoBehaviour
     /// </summary>
     private void OnMouseDown()
     {
+        if (timeToNextTowerPlacement > 0)
+        {
+            return;
+        }
         followingMouse = true;
         pickupSound.Play();
     }
@@ -81,7 +105,11 @@ public class UIDraggableTower : MonoBehaviour
         // Attempt to drop a tower there
         if (gridTile != new Vector2Int(-1, -1))
         {
-            refTowerGrid.DropTower(TowerPrefab, gridTile);
+            bool placed = refTowerGrid.DropTower(TowerPrefab, gridTile);
+            if (placed)
+            {
+                timeToNextTowerPlacement = towerCooldown;
+            }
         }
         // Stop following the mouse
         followingMouse = false;

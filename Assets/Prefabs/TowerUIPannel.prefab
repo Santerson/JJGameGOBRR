@@ -103,6 +103,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TowerPrefab: {fileID: 6224497392755857483, guid: 778a2407cf740254ca9a2b06264608be, type: 3}
   pickupSound: {fileID: 6419963212006066213}
+  towerCooldown: 0
+  refCDText: {fileID: 0}
 --- !u!61 &5962151161001864235
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -252,6 +254,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TowerPrefab: {fileID: 8829138057996306838, guid: 6edea39458718244583e46c6efb11e71, type: 3}
   pickupSound: {fileID: 6419963212006066213}
+  towerCooldown: 0
+  refCDText: {fileID: 0}
 --- !u!61 &7328040353933743678
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -401,6 +405,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TowerPrefab: {fileID: 1112848449195545200, guid: d5d4c879021a7c54e8af740048f089c1, type: 3}
   pickupSound: {fileID: 6419963212006066213}
+  towerCooldown: 0
+  refCDText: {fileID: 0}
 --- !u!61 &1167546182292993571
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -550,6 +556,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TowerPrefab: {fileID: 6122881920492048083, guid: cee1cbda9128e2c44adef4da8ff20b69, type: 3}
   pickupSound: {fileID: 6419963212006066213}
+  towerCooldown: 0
+  refCDText: {fileID: 0}
 --- !u!61 &8180057127755050563
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -622,7 +630,7 @@ Transform:
   m_GameObject: {fileID: 4439967214048086153}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.35, y: 3.8, z: 0}
+  m_LocalPosition: {x: 5.36, y: 3.84, z: 0}
   m_LocalScale: {x: 7.0917, y: 2.3417, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
