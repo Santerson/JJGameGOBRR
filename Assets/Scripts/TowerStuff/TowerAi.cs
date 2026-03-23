@@ -3,7 +3,7 @@ using UnityEngine.UIElements;
 
 public class TowerAi : MonoBehaviour
 {
-    [SerializeField] Animator animator;
+    [SerializeField] private Animator animator;
     [SerializeField] GameObject bullet;
     [SerializeField] float SizeX = 1;
     [SerializeField] float SizeY = 1;
@@ -64,13 +64,16 @@ public class TowerAi : MonoBehaviour
         {
             return;
         }
-        animator.SetInteger("State", (int)animatons.idole);
         // Cooldown for a shot
         cooldown -= Time.fixedDeltaTime;
         // Fire a shot if it is cooled down
         if (cooldown <= LengthOfAnimaton)
         {
             animator.SetInteger("State", (int)animatons.attack);
+        }
+        else
+        {
+            animator.SetInteger("State", (int)animatons.idole);
         }
         if (cooldown <= 0)
         {
