@@ -11,6 +11,7 @@ public class TowerAi : MonoBehaviour
     [SerializeField] float RateOfFire = 5;
     [SerializeField] float FirePositionX = 0;
     [SerializeField] float FirePositiony = 0;
+    [SerializeField] float LengthOfAnimaton = 0;
 
     [Header("Audio")]
     [SerializeField] AudioSource DeathSFX;
@@ -59,6 +60,7 @@ public class TowerAi : MonoBehaviour
         // Cooldown for a shot
         cooldown -= Time.fixedDeltaTime;
         // Fire a shot if it is cooled down
+        if (cooldown <= LengthOfAnimaton)
         if (cooldown <= 0)
         {
             // Calculate a fireposition

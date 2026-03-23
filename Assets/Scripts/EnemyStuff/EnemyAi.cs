@@ -22,11 +22,11 @@ public class EnemyAi : MonoBehaviour
     [SerializeField] float AttackCooldown = 3;
     [SerializeField] float AttackHitBoxX = 0;
     [SerializeField] float AttackHitBoxY = 0;
-    [SerializeField] float WalkBackAfterAttackTime = 2;
+
     // variables that are changed in the code
     Color refcolor = Color.white;
     private int Health;
-    private float TimeUntilWalkBackAgain;
+
     private float coolDownAttack = 0;
     private float MaxSpeed;
     private Rigidbody2D RB;
@@ -45,28 +45,9 @@ public class EnemyAi : MonoBehaviour
         coolDownAttack = AttackCooldown;
         MaxSpeed = Speed;   
     }
-
-    private void Update()
-    {
-        // Check if the enemy is currently walking backwards
-        if (TimeUntilWalkBackAgain > 0)
-        {
-            // Reduce the amoutn of tiem they are walking back for left by deltatime
-            TimeUntilWalkBackAgain -= Time.deltaTime;
-            // If they should start walking back forwards again
-            if (TimeUntilWalkBackAgain <= 0)
-            {
-                // Make them walk forward again
-                MaxSpeed *= -1;
-            }
-        }
-    }
-
-    // Update is called once per frame
     void FixedUpdate()
     {
         // - timers
-        
         coolDownAttack -= Time.fixedDeltaTime;
         // checks if dead
         if (Health <= 0)
@@ -75,13 +56,11 @@ public class EnemyAi : MonoBehaviour
         }
         // moves enemy
         RB.linearVelocityX = MaxSpeed;
-
+        MaxSpeed = Speed;
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        //sets positon of were attack box will spawn
-        Vector2 FirePosition = new Vector2(transform.position.x + AttackHitBoxX, transform.position.y + AttackHitBoxY);
+        
         // lowers health if hit by bullet
         if (collision.CompareTag("Bullet"))
         {
@@ -100,18 +79,20 @@ public class EnemyAi : MonoBehaviour
         // souposed to spawn attack box when ready then move back a little so it can attack agin
         if (collision.CompareTag("Tower"))
         {
+            //sets positon of were attack box will spawn
+            Vector2 FirePosition = new Vector2(transform.position.x + AttackHitBoxX, transform.position.y + AttackHitBoxY);
             if (coolDownAttack <= 0)
             {
                 coolDownAttack = AttackCooldown;
-                Instantiate(Hurtfield, FirePosition, Quaternion.Euler(0f, 0f, 0f));
-                TimeUntilWalkBackAgain = WalkBackAfterAttackTime;
-                MaxSpeed *= -1;
+                Instantiate(Hurtfield, FirePosition, Quaternion.identity);
+                MaxSpeed = 0;
             }
             else
             {
-                TimeUntilWalkBackAgain = WalkBackAfterAttackTime;
-                MaxSpeed *= -1;
+                MaxSpeed = 0;
             }
         }
+
+        
     }
 }

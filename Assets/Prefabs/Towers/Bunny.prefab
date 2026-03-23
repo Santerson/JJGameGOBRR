@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1020365560437474440, guid: 01a5586a081987349ade83957f7874d8, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: ece1db1bd8af9a2429f5c9a7dbcef70a, type: 2}
     - target: {fileID: 3240957570424726992, guid: 01a5586a081987349ade83957f7874d8, type: 3}
       propertyPath: m_Name
       value: Bunny

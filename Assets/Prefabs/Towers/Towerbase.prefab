@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 1411011776302122596}
   - component: {fileID: -4356603886146653841}
   - component: {fileID: 7530514561817378367}
+  - component: {fileID: -1020365560437474440}
   m_Layer: 0
   m_Name: Towerbase
   m_TagString: Tower
@@ -173,10 +174,32 @@ MonoBehaviour:
   SizeY: 1
   HealthMax: 2
   RateOfFire: 5
-  FirePositionX: 0
+  FirePositionX: 1
   FirePositiony: 0
   DeathSFX: {fileID: 3014569996701699862, guid: fb3b13b2322364443932008165f9b183, type: 3}
   GridPosition: {x: 0, y: 0}
+--- !u!95 &-1020365560437474440
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3240957570424726992}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4959736575911206215
 GameObject:
   m_ObjectHideFlags: 0
