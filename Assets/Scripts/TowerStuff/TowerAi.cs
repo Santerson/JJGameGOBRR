@@ -3,6 +3,7 @@ using UnityEngine.UIElements;
 
 public class TowerAi : MonoBehaviour
 {
+    [SerializeField] Animator animator;
     [SerializeField] GameObject bullet;
     [SerializeField] float SizeX = 1;
     [SerializeField] float SizeY = 1;
@@ -27,8 +28,14 @@ public class TowerAi : MonoBehaviour
     /// </summary>
     [HideInInspector] public Vector2Int GridPosition = Vector2Int.zero;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    enum animatons
+    {
+        idole,
+        attack,
+    }
     void Start()
     {
+        animator = GetComponent<Animator>();
         RB = GetComponent<Rigidbody2D>();
         Vector3 Size = new Vector3(SizeX, SizeY);
         Health = HealthMax;
@@ -36,6 +43,7 @@ public class TowerAi : MonoBehaviour
         refcolor = gameObject.GetComponentInChildren<SpriteRenderer>().color;
         cooldown = RateOfFire;
         refGrid = FindFirstObjectByType<TowerGrid>();
+        
         if (refGrid == null)
         {
             Debug.LogError("No tower grid found on the scene!");
@@ -56,11 +64,14 @@ public class TowerAi : MonoBehaviour
         {
             return;
         }
-
+        animator.SetInteger("State", (int)animatons.idole);
         // Cooldown for a shot
         cooldown -= Time.fixedDeltaTime;
         // Fire a shot if it is cooled down
         if (cooldown <= LengthOfAnimaton)
+        {
+            animator.SetInteger("State", (int)animatons.attack);
+        }
         if (cooldown <= 0)
         {
             // Calculate a fireposition
