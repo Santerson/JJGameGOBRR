@@ -17,17 +17,30 @@ public class EnemyAi : MonoBehaviour
     [SerializeField] float SizeY = 1;
 
     // changes stats
+    [Header("Stats")]
     [SerializeField] float Speed = -1;
     [SerializeField] int HealthMax = 1;
     [SerializeField] float AttackCooldown = 3;
     [SerializeField] float AttackHitBoxX = 0;
     [SerializeField] float AttackHitBoxY = 0;
 
+    [Header("SFX")]
+    [SerializeField] AudioSource SpawnSFX;
+    [SerializeField] AudioSource TakeDMGSFX;
+    [Tooltip("1 in this chance to play the sound each fixed update (50 times per second)")]
+    [SerializeField] float randomVoiceChance = 500f;
+    [SerializeField] AudioSource RandomVoiceSFX;
+    [Tooltip("The amount of time in seconds inbetween each walk sound")]
+    [SerializeField] float timeInbetweenWalkSounds = 1f;
+    [SerializeField] AudioSource WalkSFX;
+    [SerializeField] GameObject DeathSFX;
+
     // variables that are changed in the code
     Color refcolor = Color.white;
     private int Health;
 
     private float coolDownAttack = 0;
+    private float timeToNextEnemyWalkSound = 0;
     private float MaxSpeed;
     private Rigidbody2D RB;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -43,16 +56,20 @@ public class EnemyAi : MonoBehaviour
         //sets states
         Health = HealthMax;
         coolDownAttack = AttackCooldown;
-        MaxSpeed = Speed;   
+        MaxSpeed = Speed;
+        // Play Spawn Sound
+        SpawnSFX.Play();
     }
     void FixedUpdate()
     {
         // - timers
         coolDownAttack -= Time.fixedDeltaTime;
-        // checks if dead
-        if (Health <= 0)
+        if (Random.Range(0, randomVoiceChance) == 0) RandomVoiceSFX.Play();
+        timeToNextEnemyWalkSound -= Time.fixedDeltaTime;
+        if (timeToNextEnemyWalkSound <= 0)
         {
-            Destroy(gameObject);
+            WalkSFX.Play();
+            timeToNextEnemyWalkSound = timeInbetweenWalkSounds;
         }
         // moves enemy
         RB.linearVelocityX = MaxSpeed;
@@ -67,9 +84,14 @@ public class EnemyAi : MonoBehaviour
             BulletAi refBullet = collision.GetComponent<BulletAi>();
             if (refBullet != null)
             {
+                TakeDMGSFX.Play();
                 int dmg = (int)refBullet.GetDamage();
                 Health -= dmg;
-
+                // checks if dead
+                if (Health <= 0)
+                {
+                    Die();
+                }
             }
             else
             {
@@ -96,7 +118,14 @@ public class EnemyAi : MonoBehaviour
                 MaxSpeed = 0;
             }
         }
+    }
 
-        
+    /// <summary>
+    /// Kills the enemy and does cool effects
+    /// </summary>
+    void Die()
+    {
+        Instantiate(DeathSFX, transform.position, Quaternion.identity);
+        Destroy(gameObject);
     }
 }
