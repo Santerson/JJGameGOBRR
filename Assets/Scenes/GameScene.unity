@@ -757,6 +757,10 @@ PrefabInstance:
       propertyPath: manaGainText
       value: 
       objectReference: {fileID: 290243981}
+    - target: {fileID: 5161085203479588299, guid: a1d4d8b83f75d0042b0b3e85fb1203de, type: 3}
+      propertyPath: enableVignette
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8666548943402785908, guid: a1d4d8b83f75d0042b0b3e85fb1203de, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.78

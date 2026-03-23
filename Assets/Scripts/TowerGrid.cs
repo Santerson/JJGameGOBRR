@@ -12,27 +12,36 @@ using System.Collections.Generic;
 public class TowerGrid : MonoBehaviour
 {
     [Header("GridSize")]
+    // Gridsizes
     [Tooltip("The height of the grid")]
         [SerializeField] uint GridHeight = 5;
     [Tooltip("The length of the grid")]
         [SerializeField] uint GridLength = 2;
     [Tooltip("The size of each square in the grid")]
         [SerializeField] float SquareSize = 2f;
+
+    // Space Buffers
     [Tooltip("The space inbetween each space vertically")]
         [SerializeField] float VerticalSpaceBuffer = 0;
     [Tooltip("The space inbetween each space horizontally")]
         [SerializeField] float HorizontalSpaceBuffer = 0;
 
+    // Grid Offset
     [Tooltip("The offset of the grid off of 0,0")]
         [SerializeField] Vector2 GridOffset = Vector2.zero;
     [Tooltip("The offset of the center point of every cell")]
         [SerializeField] Vector2 GridCenterOffset = Vector2.zero;
     
+    // Special spaces
     [Tooltip("The position of every permanently unusable space in x,y. NOTE: This is 0 based indexing (bottom left is 0,0), and also, dont use a space that is out of the grid")]
-    // NOTE: in code, due to 2d arrays being y,x make sure to use this vec2 in y,x.
         [SerializeField] List<Vector2Int> InaccessableSpaces;
+
+    [Header("Max Distances")]
+    // Max Distances
     [Tooltip("When placing towers, the distance from where the tower is dropped and the nearest grid must be less than this number in order for it to be successfully dropped.")]
         [SerializeField] float longestDistanceToBePlaced = 2f;
+    [Tooltip("The minimum distance the tower must be away from an enemy to be placed")]
+    [SerializeField] float MinDistanceAwayFromEnemies = 1f;
 
     [Header("Debug")]
         [SerializeField] bool EnableLogs = false;
@@ -146,6 +155,16 @@ public class TowerGrid : MonoBehaviour
         SpaceStatus refSpace = SpaceStatuses[position.x, position.y];
         if (refSpace == SpaceStatus.unused)
         {
+            // Check if there is currently an enemy in the position
+            EnemyAi[] enemies = FindObjectsByType<EnemyAi>(FindObjectsSortMode.None);
+            foreach (EnemyAi enemy in enemies)
+            {
+                if (Vector2.Distance(enemy.transform.position, SpacePositions[position.x, position.y]) < MinDistanceAwayFromEnemies)
+                {
+                    return false;
+                }
+            }
+
             // If so, add it to the grid and update all arrays with it
             SpaceStatuses[position.x, position.y] = SpaceStatus.used;
             // Instantiate a game object there and save it's reference
