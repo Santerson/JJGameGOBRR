@@ -33,6 +33,7 @@ public class EnemyAi : MonoBehaviour
     [Tooltip("The amount of time in seconds inbetween each walk sound")]
     [SerializeField] float timeInbetweenWalkSounds = 1f;
     [SerializeField] AudioSource WalkSFX;
+    [SerializeField] AudioSource AttackSFX;
     [SerializeField] GameObject DeathSFX;
 
     // variables that are changed in the code
@@ -109,6 +110,7 @@ public class EnemyAi : MonoBehaviour
             Vector2 FirePosition = new Vector2(transform.position.x + AttackHitBoxX, transform.position.y + AttackHitBoxY);
             if (coolDownAttack <= 0)
             {
+                AttackSFX.Play();
                 coolDownAttack = AttackCooldown;
                 Instantiate(Hurtfield, FirePosition, Quaternion.identity);
                 MaxSpeed = 0;
