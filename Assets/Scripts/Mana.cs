@@ -134,13 +134,13 @@ public class Mana : MonoBehaviour
         float ProgressToNextThreshold = CurrentMana % ManaSFXInterval;
         float NewProgress = ProgressToNextThreshold + generation * Time.deltaTime;
         // Check if the mana has grown past a threshold
-        if (NewProgress >= ManaSFXInterval)
+        if (NewProgress > ManaSFXInterval)
         {
             // Play a sound at a certain pitch
             GainSFX.Play();
         }
         // Check if the mana has dropped below a threshold
-        if (NewProgress <= 0)
+        if (NewProgress < 0)
         {
             LossSFX.Play();
         }
