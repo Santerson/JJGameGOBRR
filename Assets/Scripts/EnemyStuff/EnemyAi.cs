@@ -23,7 +23,7 @@ public class EnemyAi : MonoBehaviour
     [SerializeField] float AttackCooldown = 3;
     [SerializeField] float AttackHitBoxX = 0;
     [SerializeField] float AttackHitBoxY = 0;
-
+    [SerializeField] float LengthOfAnimaton = 0;
     [Header("SFX")]
     [SerializeField] AudioSource SpawnSFX;
     [SerializeField] AudioSource TakeDMGSFX;
@@ -35,18 +35,30 @@ public class EnemyAi : MonoBehaviour
     [SerializeField] AudioSource WalkSFX;
     [SerializeField] AudioSource AttackSFX;
     [SerializeField] GameObject DeathSFX;
+    [SerializeField] float deathAnimationtime;
+    [SerializeField] float deathAnimation;
 
     // variables that are changed in the code
     Color refcolor = Color.white;
     private int Health;
-
+    private Animator animator;
     private float coolDownAttack = 0;
     private float timeToNextEnemyWalkSound = 0;
     private float MaxSpeed;
     private Rigidbody2D RB;
+    private float deathAnimationtimprivete;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    enum animatons
+    {
+        walk,
+        attack,
+        die,
+        idale
+    }
     void Start()
     {
+        //initializes the animations
+        animator = GetComponentInChildren<Animator>();
         //sets rigid body
         RB = GetComponent<Rigidbody2D>();
         //sets size
@@ -58,6 +70,7 @@ public class EnemyAi : MonoBehaviour
         Health = HealthMax;
         coolDownAttack = AttackCooldown;
         MaxSpeed = Speed;
+        deathAnimationtimprivete = deathAnimationtime;
         // Play Spawn Sound
         SpawnSFX.Play();
     }
@@ -75,6 +88,7 @@ public class EnemyAi : MonoBehaviour
         // moves enemy
         RB.linearVelocityX = MaxSpeed;
         MaxSpeed = Speed;
+        animator.SetInteger("State", (int)animatons.walk);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -108,6 +122,10 @@ public class EnemyAi : MonoBehaviour
         {
             //sets positon of were attack box will spawn
             Vector2 FirePosition = new Vector2(transform.position.x + AttackHitBoxX, transform.position.y + AttackHitBoxY);
+            if (coolDownAttack <= LengthOfAnimaton)
+            {
+                animator.SetInteger("State", (int)animatons.attack);
+            }
             if (coolDownAttack <= 0)
             {
                 AttackSFX.Play();
@@ -117,6 +135,7 @@ public class EnemyAi : MonoBehaviour
             }
             else
             {
+                animator.SetInteger("State", (int)animatons.idale);
                 MaxSpeed = 0;
             }
         }
@@ -127,6 +146,10 @@ public class EnemyAi : MonoBehaviour
     /// </summary>
     void Die()
     {
+        if (deathAnimationtimprivete >= deathAnimation)
+        {
+            animator.SetInteger("State", (int)animatons.die);
+        }
         Instantiate(DeathSFX, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
