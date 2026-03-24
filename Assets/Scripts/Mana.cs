@@ -22,6 +22,19 @@ public class Mana : MonoBehaviour
     [Tooltip("The maximum vignette intensity (0 to 1)")]
         [SerializeField] float maxVignetteEffect = 0.5f;
 
+    [Header("Audio")]
+    [SerializeField] AudioSource GainSFX;
+    [SerializeField] AudioSource LossSFX;
+    [Tooltip("The interval of mana inbetween each sound")]
+        [SerializeField] float ManaSFXInterval = 3f;
+    /*[SerializeField] float PosMinPitch = 1;
+    [SerializeField] float PosMaxPitch = 2;
+    [SerializeField] float RegenRateForMaxPitch = 5f;
+
+    [SerializeField] float NegMinPitch = 0.5f;
+    [SerializeField] float NegMaxPitch = 1f;
+    [SerializeField] float RegenLossForMinPitch = -5f;
+*/
     private Vignette screenTint;
 
     float CurrentMana;
@@ -62,6 +75,8 @@ public class Mana : MonoBehaviour
     {
         // Get the mana regen
         float manaRegen = CalculateCurrentManaRegen();
+        // Calculate if a sound should play
+        HandleManaSFX(manaRegen);
         // Add that to the current mana
         CurrentMana += manaRegen * Time.deltaTime;
         // Make sure that the mana does not exceed max mana
@@ -111,6 +126,24 @@ public class Mana : MonoBehaviour
 
         // Return the mana
         return regen;
+    }
+
+    void HandleManaSFX(float generation)
+    {
+        // Find if we are on a mana threshold
+        float ProgressToNextThreshold = CurrentMana % ManaSFXInterval;
+        float NewProgress = ProgressToNextThreshold + generation * Time.deltaTime;
+        // Check if the mana has grown past a threshold
+        if (NewProgress >= ManaSFXInterval)
+        {
+            // Play a sound at a certain pitch
+            GainSFX.Play();
+        }
+        // Check if the mana has dropped below a threshold
+        if (NewProgress <= 0)
+        {
+            LossSFX.Play();
+        }
     }
 
     /// <summary>
