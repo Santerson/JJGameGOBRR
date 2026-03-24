@@ -3,7 +3,7 @@ using UnityEngine.UIElements;
 
 public class TowerAi : MonoBehaviour
 {
-    [SerializeField] private Animator animator;
+    private Animator animator;
     [SerializeField] GameObject bullet;
     [SerializeField] float SizeX = 1;
     [SerializeField] float SizeY = 1;
@@ -35,7 +35,7 @@ public class TowerAi : MonoBehaviour
     }
     void Start()
     {
-        animator = GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
         RB = GetComponent<Rigidbody2D>();
         Vector3 Size = new Vector3(SizeX, SizeY);
         Health = HealthMax;
