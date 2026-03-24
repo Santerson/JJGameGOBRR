@@ -16,6 +16,8 @@ public class TowerAi : MonoBehaviour
 
     [Header("Audio")]
     [SerializeField] AudioSource DeathSFX;
+    [SerializeField] AudioSource SellSFX;
+    [SerializeField] AudioSource ShootSFX;
 
     private int Health = 1;
     private float cooldown;
@@ -56,6 +58,7 @@ public class TowerAi : MonoBehaviour
         // Destroy the object if it is out of hitpoints
         if (Health <= 0)
         {
+            Instantiate(DeathSFX, transform.position, Quaternion.identity);
             Die();
             return;
         }
@@ -81,6 +84,8 @@ public class TowerAi : MonoBehaviour
             Vector2 FirePosition = new Vector2(transform.position.x + FirePositionX, transform.position.y + FirePositiony);
             // Shoot
             Instantiate(bullet, FirePosition, Quaternion.identity);
+            // Sfx
+            ShootSFX.Play();
             // Reset cooldown
             cooldown = RateOfFire;
         }
@@ -98,7 +103,6 @@ public class TowerAi : MonoBehaviour
             Debug.LogError($"Unable to remove tower at the position {GridPosition.x}, {GridPosition.y}");
         }
         // Death effects (sfx, etc.)
-        Instantiate(DeathSFX, transform.position, Quaternion.identity);
 
         // Destroy the game object
         Destroy(gameObject);
@@ -133,6 +137,7 @@ public class TowerAi : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Backspace))
         {
+            Instantiate(SellSFX, transform.position, Quaternion.identity);
             Die();
         }
     }

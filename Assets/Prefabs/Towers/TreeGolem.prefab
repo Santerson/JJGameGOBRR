@@ -16,6 +16,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: TreeGolem
       objectReference: {fileID: 0}
+    - target: {fileID: 3555164166106743311, guid: 01a5586a081987349ade83957f7874d8, type: 3}
+      propertyPath: m_Pitch
+      value: 0.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 3555164166106743311, guid: 01a5586a081987349ade83957f7874d8, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: b095e5716a171c4469b4297d76d81b04, type: 3}
     - target: {fileID: 4466847123923408407, guid: 01a5586a081987349ade83957f7874d8, type: 3}
       propertyPath: m_Color.b
       value: 0
@@ -32,6 +40,14 @@ PrefabInstance:
       propertyPath: TowerManaCost
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 6996903444540495801, guid: 01a5586a081987349ade83957f7874d8, type: 3}
+      propertyPath: m_Pitch
+      value: 0.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 6996903444540495801, guid: 01a5586a081987349ade83957f7874d8, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: a61645c059f78a046b4e433c3bfdcf69, type: 3}
     - target: {fileID: 7170060763959655223, guid: 01a5586a081987349ade83957f7874d8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

@@ -20,6 +20,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Tower
       objectReference: {fileID: 0}
+    - target: {fileID: 3555164166106743311, guid: 01a5586a081987349ade83957f7874d8, type: 3}
+      propertyPath: m_Pitch
+      value: 1.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 3555164166106743311, guid: 01a5586a081987349ade83957f7874d8, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: 747c755917f4473449bf0d459f2a44b5, type: 3}
     - target: {fileID: 4466847123923408407, guid: 01a5586a081987349ade83957f7874d8, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -35,6 +43,10 @@ PrefabInstance:
     - target: {fileID: 6262921784777582634, guid: 01a5586a081987349ade83957f7874d8, type: 3}
       propertyPath: TowerManaCost
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6996903444540495801, guid: 01a5586a081987349ade83957f7874d8, type: 3}
+      propertyPath: m_Pitch
+      value: 1.45
       objectReference: {fileID: 0}
     - target: {fileID: 6996903444540495801, guid: 01a5586a081987349ade83957f7874d8, type: 3}
       propertyPath: m_Resource

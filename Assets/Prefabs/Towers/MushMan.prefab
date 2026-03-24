@@ -16,6 +16,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: MushMan
       objectReference: {fileID: 0}
+    - target: {fileID: 3555164166106743311, guid: 01a5586a081987349ade83957f7874d8, type: 3}
+      propertyPath: m_Pitch
+      value: 1.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 3555164166106743311, guid: 01a5586a081987349ade83957f7874d8, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: ba3c5085d27ba1d44898757646d410e4, type: 3}
     - target: {fileID: 4466847123923408407, guid: 01a5586a081987349ade83957f7874d8, type: 3}
       propertyPath: m_Color.b
       value: 0
@@ -31,6 +39,10 @@ PrefabInstance:
     - target: {fileID: 6262921784777582634, guid: 01a5586a081987349ade83957f7874d8, type: 3}
       propertyPath: TowerManaCost
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6996903444540495801, guid: 01a5586a081987349ade83957f7874d8, type: 3}
+      propertyPath: m_Pitch
+      value: 1.38
       objectReference: {fileID: 0}
     - target: {fileID: 7170060763959655223, guid: 01a5586a081987349ade83957f7874d8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -78,7 +90,7 @@ PrefabInstance:
       objectReference: {fileID: 3968881123420591287, guid: cc58e3cd036d3624b8807c43b263f467, type: 3}
     - target: {fileID: 7530514561817378367, guid: 01a5586a081987349ade83957f7874d8, type: 3}
       propertyPath: RateOfFire
-      value: 0.4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7530514561817378367, guid: 01a5586a081987349ade83957f7874d8, type: 3}
       propertyPath: LengthOfAnimaton

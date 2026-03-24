@@ -28,6 +28,14 @@ PrefabInstance:
       propertyPath: TowerManaCost
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 6996903444540495801, guid: 01a5586a081987349ade83957f7874d8, type: 3}
+      propertyPath: m_Pitch
+      value: 2.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 6996903444540495801, guid: 01a5586a081987349ade83957f7874d8, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: 9806fb63f22dd6f4598b6f6eaf7cd507, type: 3}
     - target: {fileID: 7170060763959655223, guid: 01a5586a081987349ade83957f7874d8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
