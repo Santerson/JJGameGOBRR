@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnerEnemy : MonoBehaviour
 {
-    
+
     [SerializeField] GameObject EnemySmall;
     [SerializeField] GameObject EnemyMedium;
     [SerializeField] GameObject EnemyLarge;
@@ -18,6 +18,10 @@ public class SpawnerEnemy : MonoBehaviour
     [Tooltip("Roll above this is large")]
     [SerializeField] int LargeGreater;
     [SerializeField] float SpawnRate = 5;
+    [SerializeField] float rateOfIncresseExponetel = 0;
+    [SerializeField] float rateOfIncresselinerer = 0;
+    [SerializeField] bool TrueExponetelFalseLiner;
+
     private float cooldown;
 
     private void OnDrawGizmosSelected()
@@ -39,6 +43,15 @@ public class SpawnerEnemy : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (TrueExponetelFalseLiner)
+        {
+            cooldown /= rateOfIncresseExponetel;
+        }
+        else
+        {
+            cooldown -= rateOfIncresselinerer;
+        }
+        
         int chances = Random.Range(Min, Max);
         GameObject SpawnedEnemy = EnemySmall;
         if (chances <= SamllLess)

@@ -98,7 +98,7 @@ PrefabInstance:
       objectReference: {fileID: 4112625674870454631, guid: 48d8e100310e14142b48ebfa11cc6810, type: 3}
     - target: {fileID: 7530514561817378367, guid: 01a5586a081987349ade83957f7874d8, type: 3}
       propertyPath: RateOfFire
-      value: 1.37
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

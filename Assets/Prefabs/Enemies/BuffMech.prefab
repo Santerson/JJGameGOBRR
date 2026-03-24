@@ -25,9 +25,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 8779f49fce0ac2d49ac4960d05b8a4aa, type: 3}
     - target: {fileID: 3548443905817846113, guid: 7dd82a7487d558b4ea1bd8c48c4c36b6, type: 3}
+      propertyPath: Speed
+      value: -0.125
+      objectReference: {fileID: 0}
+    - target: {fileID: 3548443905817846113, guid: 7dd82a7487d558b4ea1bd8c48c4c36b6, type: 3}
       propertyPath: Hurtfield
       value: 
       objectReference: {fileID: 8203647281451903675, guid: 22cfb6c2ec21568458204c625c5ad19e, type: 3}
+    - target: {fileID: 3548443905817846113, guid: 7dd82a7487d558b4ea1bd8c48c4c36b6, type: 3}
+      propertyPath: AttackCooldown
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3871431038229270174, guid: 7dd82a7487d558b4ea1bd8c48c4c36b6, type: 3}
       propertyPath: m_Sprite
       value: 
