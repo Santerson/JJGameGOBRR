@@ -48,7 +48,7 @@ public class TowerGrid : MonoBehaviour
         [SerializeField] bool DrawGridInGame = false;
         [SerializeField] bool AlwaysDrawGrid = false;
         [SerializeField] GameObject RefTower1;
-
+    
     // An array of the SpaceStatus enum to contain the status of each space
     SpaceStatus[,] SpaceStatuses;
     /// <summary>

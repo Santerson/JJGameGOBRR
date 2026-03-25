@@ -29,6 +29,10 @@ PrefabInstance:
       value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3548443905817846113, guid: 7dd82a7487d558b4ea1bd8c48c4c36b6, type: 3}
+      propertyPath: HealthMax
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3548443905817846113, guid: 7dd82a7487d558b4ea1bd8c48c4c36b6, type: 3}
       propertyPath: Hurtfield
       value: 
       objectReference: {fileID: 8203647281451903675, guid: aa7f068774588ab4fa4422db1e30c529, type: 3}
