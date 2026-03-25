@@ -108,10 +108,6 @@ public class EnemyAi : MonoBehaviour
                     Die();
                 }
             }
-            else
-            {
-                Debug.LogError("No bullet script attached! attach one.");
-            }
         }
     }
 
@@ -122,10 +118,12 @@ public class EnemyAi : MonoBehaviour
         {
             //sets positon of were attack box will spawn
             Vector2 FirePosition = new Vector2(transform.position.x + AttackHitBoxX, transform.position.y + AttackHitBoxY);
+            // starts to play animaton befor the tower shoots
             if (coolDownAttack <= LengthOfAnimaton)
             {
                 animator.SetInteger("State", (int)animatons.attack);
             }
+            // shoots a bullet when cooldown is ready
             if (coolDownAttack <= 0)
             {
                 AttackSFX.Play();
@@ -133,6 +131,7 @@ public class EnemyAi : MonoBehaviour
                 Instantiate(Hurtfield, FirePosition, Quaternion.identity);
                 MaxSpeed = 0;
             }
+            // plays idale 
             else
             {
                 animator.SetInteger("State", (int)animatons.idale);
@@ -146,6 +145,7 @@ public class EnemyAi : MonoBehaviour
     /// </summary>
     void Die()
     {
+        // plays death animatons
         if (deathAnimationtimprivete >= deathAnimation)
         {
             animator.SetInteger("State", (int)animatons.die);

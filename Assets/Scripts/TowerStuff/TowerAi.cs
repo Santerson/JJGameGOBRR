@@ -1,24 +1,35 @@
+/********************************************
+ * filename: BulletAi.cs
+ * Author: Micaiah Mariano
+ * Description: Contains the logic for the bullets form towers
+ * ******************************************/
 using UnityEngine;
 using UnityEngine.UIElements;
 
 public class TowerAi : MonoBehaviour
 {
-    private Animator animator;
+    //editable variables
+
+    // sets gameobject
     [SerializeField] GameObject bullet;
+    // sets size
     [SerializeField] float SizeX = 1;
     [SerializeField] float SizeY = 1;
+    // sets stats
     [SerializeField] int HealthMax = 1;
     [Tooltip("Shots per second. set to -1 to disable")]
     [SerializeField] float RateOfFire = 5;
     [SerializeField] float FirePositionX = 0;
     [SerializeField] float FirePositiony = 0;
+    // timer for animaton to start - fire cooldown
     [SerializeField] float LengthOfAnimaton = 0;
-
-    [Header("Audio")]
+    // sounds
     [SerializeField] AudioSource DeathSFX;
     [SerializeField] AudioSource SellSFX;
     [SerializeField] AudioSource ShootSFX;
-
+    [Header("Audio")]
+    // variables that are changed in the code
+    private Animator animator;
     private int Health = 1;
     private float cooldown;
     private Rigidbody2D RB;
@@ -29,14 +40,16 @@ public class TowerAi : MonoBehaviour
     /// The position of this tower in the grid (index based, where 0,0 is the bottom left)
     /// </summary>
     [HideInInspector] public Vector2Int GridPosition = Vector2Int.zero;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    //list of animatons
     enum animatons
     {
         idole,
         attack,
     }
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        // sets variables
         animator = GetComponentInChildren<Animator>();
         RB = GetComponent<Rigidbody2D>();
         Vector3 Size = new Vector3(SizeX, SizeY);
@@ -45,24 +58,19 @@ public class TowerAi : MonoBehaviour
         refcolor = gameObject.GetComponentInChildren<SpriteRenderer>().color;
         cooldown = RateOfFire;
         refGrid = FindFirstObjectByType<TowerGrid>();
-        
-        if (refGrid == null)
-        {
-            Debug.LogError("No tower grid found on the scene!");
-        }
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        // Destroy the object if it is out of hitpoints
+        // Destroy the object if it is out of hitpoints and plays sound
         if (Health <= 0)
         {
             Instantiate(DeathSFX, transform.position, Quaternion.identity);
             Die();
             return;
         }
-        
+        // make sure rate of fire causes
         if (RateOfFire == -1)
         {
             return;
@@ -122,10 +130,6 @@ public class TowerAi : MonoBehaviour
                 int dmg = (int)refDamageBox.GetDamage();
                 Health -= dmg;
 
-            }
-            else
-            {
-                Debug.LogError("No EnemyBoxAi script attached! attach one.");
             }
         }
     }
