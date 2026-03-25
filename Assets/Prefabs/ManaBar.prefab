@@ -81,7 +81,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxMana: 30
-  BaseManaRegen: 5
+  BaseManaRegen: 3
   ManaBar: {fileID: 2743147065890075436}
   manaGainText: {fileID: 0}
   volume: {fileID: 0}
@@ -90,12 +90,6 @@ MonoBehaviour:
   GainSFX: {fileID: 52696709823007944}
   LossSFX: {fileID: 888254917828749770}
   ManaSFXInterval: 3
-  PosMinPitch: 1
-  PosMaxPitch: 2
-  RegenRateForMaxPitch: 5
-  NegMinPitch: 0.5
-  NegMaxPitch: 1
-  RegenLossForMinPitch: -5
 --- !u!1 &5997688892660937254
 GameObject:
   m_ObjectHideFlags: 0

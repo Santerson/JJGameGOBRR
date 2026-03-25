@@ -90,7 +90,7 @@ PrefabInstance:
       objectReference: {fileID: 3968881123420591287, guid: cc58e3cd036d3624b8807c43b263f467, type: 3}
     - target: {fileID: 7530514561817378367, guid: 01a5586a081987349ade83957f7874d8, type: 3}
       propertyPath: RateOfFire
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 7530514561817378367, guid: 01a5586a081987349ade83957f7874d8, type: 3}
       propertyPath: LengthOfAnimaton
