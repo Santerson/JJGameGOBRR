@@ -96,6 +96,10 @@ PrefabInstance:
       propertyPath: RateOfFire
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 7530514561817378367, guid: 01a5586a081987349ade83957f7874d8, type: 3}
+      propertyPath: LengthOfAnimaton
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
