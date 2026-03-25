@@ -17,12 +17,18 @@ public class SpawnerEnemy : MonoBehaviour
     [SerializeField] int MediumLess;
     [Tooltip("Roll above this is large")]
     [SerializeField] int LargeGreater;
+
+    [Header("SpawnRate")]
     [SerializeField] float SpawnRate = 5;
-    [SerializeField] float rateOfIncresseExponetel = 0;
-    [SerializeField] float rateOfIncresselinerer = 0;
-    [SerializeField] bool TrueExponetelFalseLiner;
+    [SerializeField] float SpawnRateReductionPerEnemy = 0.1f;
+    [SerializeField] float MinimumSpawnRate = 2f;
+    [SerializeField] float SpawnBurstChance = .1f;
+    [Tooltip("The spawn range of a burst. With x being low (inclusive) and y being high (not inclusive)")]
+    [SerializeField] Vector2Int SpawnBurstRange = new Vector2Int(2, 5);
+    [SerializeField] float CooldownAfterBurst = 10f;
 
     private float cooldown;
+    float currentSpawnRate = 5;
 
     private void OnDrawGizmosSelected()
     {
@@ -38,20 +44,49 @@ public class SpawnerEnemy : MonoBehaviour
     void Start()
     {
         cooldown = SpawnRate;
+        currentSpawnRate = SpawnRate;
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        if (TrueExponetelFalseLiner)
+        // Reduce cooldown
+        cooldown -= Time.deltaTime;
+        if (cooldown <= 0)
         {
-            cooldown /= rateOfIncresseExponetel;
+            HandleEnemySpawnLogic();
         }
-        else
+    }
+
+    /// <summary>
+    /// Handles all logic for spawning enemies
+    /// </summary>
+    void HandleEnemySpawnLogic()
+    {
+        // Check for a burst
+        int quantity = 1;
+        if (Random.Range(0, 1) > SpawnBurstChance)
         {
-            cooldown -= rateOfIncresselinerer;
+            // Increase the spawn quantity if it is a burst
+            quantity = Random.Range(SpawnBurstRange.x, SpawnBurstRange.y);
         }
-        
+        // Spawn the amount of enemies
+        for (int i = 0; i < quantity; i++)
+        {
+            SpawnEnemy();
+        }
+        // Decrease the spawn rate
+        currentSpawnRate = currentSpawnRate - SpawnRateReductionPerEnemy < MinimumSpawnRate ? MinimumSpawnRate : currentSpawnRate - SpawnRateReductionPerEnemy;
+        // Increase the cooldown
+        cooldown = quantity > 1 ? CooldownAfterBurst : currentSpawnRate;
+    }
+
+    /// <summary>
+    /// Spawns an enemy at one of the positions given by the SpawnPositions array
+    /// </summary>
+    /// <param name="SpawnedEnemy">The enemy to be spawned</param>
+    void SpawnEnemy()
+    {
         int chances = Random.Range(Min, Max);
         GameObject SpawnedEnemy = EnemySmall;
         if (chances <= SamllLess)
@@ -67,21 +102,6 @@ public class SpawnerEnemy : MonoBehaviour
             SpawnedEnemy = EnemyLarge;
         }
 
-        cooldown -= Time.fixedDeltaTime;
-        if (cooldown <= 0)
-        {
-            SpawnEnemy(SpawnedEnemy);
-            cooldown = SpawnRate;
-        }
-        
-    }
-
-    /// <summary>
-    /// Spawns an enemy at one of the positions given by the SpawnPositions array
-    /// </summary>
-    /// <param name="SpawnedEnemy">The enemy to be spawned</param>
-    void SpawnEnemy(GameObject SpawnedEnemy)
-    {
         // Get a random spawn position
         int selectedSpawnLocation = Random.Range(0, SpawnPositions.Count);
         Vector2 spawnPos = SpawnPositions[selectedSpawnLocation];
