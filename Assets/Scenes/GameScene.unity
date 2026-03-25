@@ -1098,6 +1098,11 @@ MonoBehaviour:
   MediumLess: 9
   LargeGreater: 10
   SpawnRate: 5
+  SpawnRateReductionPerEnemy: 0.1
+  MinimumSpawnRate: 2
+  SpawnBurstChance: 0.1
+  SpawnBurstRange: {x: 2, y: 5}
+  CooldownAfterBurst: 10
 --- !u!4 &896655479
 Transform:
   m_ObjectHideFlags: 0

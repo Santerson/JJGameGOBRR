@@ -41,6 +41,7 @@ public class UIDraggableTower : MonoBehaviour
     }
 
     /// <summary>
+    /// Reduces the timer to place the next tower down and
     /// Force the gameobject to follow the mouse if mouse is held down starting over it
     /// </summary>
     private void Update()

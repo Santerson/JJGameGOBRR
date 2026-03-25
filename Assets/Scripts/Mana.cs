@@ -27,14 +27,15 @@ public class Mana : MonoBehaviour
     [SerializeField] AudioSource LossSFX;
     [Tooltip("The interval of mana inbetween each sound")]
         [SerializeField] float ManaSFXInterval = 3f;
-    /*[SerializeField] float PosMinPitch = 1;
+    /*
+    [SerializeField] float PosMinPitch = 1;
     [SerializeField] float PosMaxPitch = 2;
     [SerializeField] float RegenRateForMaxPitch = 5f;
 
     [SerializeField] float NegMinPitch = 0.5f;
     [SerializeField] float NegMaxPitch = 1f;
     [SerializeField] float RegenLossForMinPitch = -5f;
-*/
+    */
     private Vignette screenTint;
 
     float CurrentMana;
@@ -136,7 +137,6 @@ public class Mana : MonoBehaviour
         // Check if the mana has grown past a threshold
         if (NewProgress > ManaSFXInterval)
         {
-            // Play a sound at a certain pitch
             GainSFX.Play();
         }
         // Check if the mana has dropped below a threshold
