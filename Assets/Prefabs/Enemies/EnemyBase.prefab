@@ -479,6 +479,7 @@ MonoBehaviour:
   AttackCooldown: 2
   AttackHitBoxX: -1.75
   AttackHitBoxY: 0
+  LengthOfAnimaton: 0
   SpawnSFX: {fileID: 7678373172261649567}
   TakeDMGSFX: {fileID: 1526599685025577187}
   randomVoiceChance: 0.01
@@ -487,6 +488,8 @@ MonoBehaviour:
   WalkSFX: {fileID: 2974731639940640146}
   AttackSFX: {fileID: 1630253860278518672}
   DeathSFX: {fileID: 6739637119793450498, guid: a20168c9945c23e4a904e0986186883b, type: 3}
+  deathAnimationtime: 0
+  deathAnimation: 0
 --- !u!50 &109451618528338515
 Rigidbody2D:
   serializedVersion: 5
@@ -828,7 +831,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2233741807203710262}
   - component: {fileID: 3871431038229270174}
-  - component: {fileID: 6356159489674934050}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -906,25 +908,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &6356159489674934050
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9020245415442162817}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0

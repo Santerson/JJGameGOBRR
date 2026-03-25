@@ -1085,24 +1085,73 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f5ac7a5151b4e1408a0121281daf46b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemySmall: {fileID: 6252635703142006987, guid: 6afbf9e759b377246a2e4a355e63b220, type: 3}
-  EnemyMedium: {fileID: 7426724621865789392, guid: 59e9c41a0aab1ba4a8c025a3df66aa60, type: 3}
-  EnemyLarge: {fileID: 1502812715334231772, guid: 52e331000d60ac34aaefa3994a5a1055, type: 3}
+  GuyWeak: {fileID: 6252635703142006987, guid: 6afbf9e759b377246a2e4a355e63b220, type: 3}
+  GuyNormal: {fileID: 7426724621865789392, guid: 59e9c41a0aab1ba4a8c025a3df66aa60, type: 3}
+  GuyBuff: {fileID: 1502812715334231772, guid: 52e331000d60ac34aaefa3994a5a1055, type: 3}
+  MechWeak: {fileID: 4286734303812761443, guid: 2241b4f28d8a46f43b59f32b320e4624, type: 3}
+  MechNormal: {fileID: 4286734303812761443, guid: 21733315f45a76d44a66523535f111b1, type: 3}
+  MechBuff: {fileID: 4286734303812761443, guid: 5d58f2f904fa71641ab9d31faf6d0235, type: 3}
   SpawnPositions:
   - {x: 10.18, y: 1.24}
   - {x: 10.18, y: -1.51}
   - {x: 10.18, y: -4.36}
   Min: 1
   Max: 11
-  SamllLess: 7
-  MediumLess: 9
-  LargeGreater: 10
   SpawnRate: 5
   SpawnRateReductionPerEnemy: 0.1
   MinimumSpawnRate: 2
   SpawnBurstChance: 0.1
   SpawnBurstRange: {x: 2, y: 5}
   CooldownAfterBurst: 10
+  GuyWeakSpawnChances:
+  - 0.7
+  - 0.4
+  - 0.1
+  - 0
+  - 0
+  - 0
+  - 0
+  GuyNormalSpawnChances:
+  - 0.3
+  - 0.5
+  - 0.3
+  - 0.1
+  - 0
+  - 0
+  - 0
+  GuyBuffSpawnChances:
+  - 0
+  - 0.1
+  - 0.5
+  - 0.5
+  - 0.1
+  - 0
+  - 0
+  MechWeakSpawnChances:
+  - 0
+  - 0
+  - 0.1
+  - 0.4
+  - 0.6
+  - 0.4
+  - 0
+  MechNormalSpawnChances:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0.3
+  - 0.5
+  - 0.3
+  MechBuffSpawnChances:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0.1
+  - 0.7
+  StageEnemyCount: 050000000f0000001e0000003c0000006400000096000000c8000000
 --- !u!4 &896655479
 Transform:
   m_ObjectHideFlags: 0

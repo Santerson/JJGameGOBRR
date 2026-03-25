@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class SpawnerEnemy : MonoBehaviour
 {
+    [Header("Enemy Prefabs")]
+    [SerializeField] GameObject GuyWeak;
+    [SerializeField] GameObject GuyNormal;
+    [SerializeField] GameObject GuyBuff;
+    [SerializeField] GameObject MechWeak;
+    [SerializeField] GameObject MechNormal;
+    [SerializeField] GameObject MechBuff;
 
-    [SerializeField] GameObject EnemySmall;
-    [SerializeField] GameObject EnemyMedium;
-    [SerializeField] GameObject EnemyLarge;
+    [Header("Spawn Ranges")]
     [SerializeField] List<Vector2> SpawnPositions;
     [SerializeField] int Min;
     [SerializeField] int Max;
-    [Tooltip("Roll below this is small")]
-    [SerializeField] int SamllLess;
-    [Tooltip("Roll below this is medium")]
-    [SerializeField] int MediumLess;
-    [Tooltip("Roll above this is large")]
-    [SerializeField] int LargeGreater;
+
 
     [Header("SpawnRate")]
     [SerializeField] float SpawnRate = 5;
@@ -27,8 +27,24 @@ public class SpawnerEnemy : MonoBehaviour
     [SerializeField] Vector2Int SpawnBurstRange = new Vector2Int(2, 5);
     [SerializeField] float CooldownAfterBurst = 10f;
 
+    [Header("Spawn chances, check guy weak for tooltip")]
+    [Tooltip("Where the index in the list is the stage and a random number inbetween 0 and 1 must be rolled. " +
+        "A number below the given number will have that enemy spawned. It will check from weakguy to buff mech in the order." +
+        " If one criteria is met, none other will be checked.")]
+    [SerializeField] float[] GuyWeakSpawnChances;
+    [SerializeField] float[] GuyNormalSpawnChances;
+    [SerializeField] float[] GuyBuffSpawnChances;
+    [SerializeField] float[] MechWeakSpawnChances;
+    [SerializeField] float[] MechNormalSpawnChances;
+    [SerializeField] float[] MechBuffSpawnChances;
+
+    [Tooltip("Note: Every spawn range should have the same amount of quantity")]
+    [SerializeField] uint[] StageEnemyCount = new uint[] { 10, 100 };
+
     private float cooldown;
     float currentSpawnRate = 5;
+    uint currentSpawns = 0;
+    uint stage = 0;
 
     private void OnDrawGizmosSelected()
     {
@@ -65,7 +81,7 @@ public class SpawnerEnemy : MonoBehaviour
     {
         // Check for a burst
         int quantity = 1;
-        if (Random.Range(0, 1) > SpawnBurstChance)
+        if (Random.Range(0f, 1f) > SpawnBurstChance)
         {
             // Increase the spawn quantity if it is a burst
             quantity = Random.Range(SpawnBurstRange.x, SpawnBurstRange.y);
@@ -87,25 +103,50 @@ public class SpawnerEnemy : MonoBehaviour
     /// <param name="SpawnedEnemy">The enemy to be spawned</param>
     void SpawnEnemy()
     {
-        int chances = Random.Range(Min, Max);
-        GameObject SpawnedEnemy = EnemySmall;
-        if (chances <= SamllLess)
+        // Get the range for the current stage
+        GameObject SpawnedEnemy = GuyWeak;
+        float randomNumber = Random.Range(0f, 1f);
+        if (randomNumber < GuyWeakSpawnChances[stage])
+            SpawnedEnemy = GuyWeak;
+        else
         {
-            SpawnedEnemy = EnemySmall;
-        }
-        else if (chances <= MediumLess)
-        {
-            SpawnedEnemy = EnemyMedium;
-        }
-        else if (chances >= LargeGreater)
-        {
-            SpawnedEnemy = EnemyLarge;
-        }
+            randomNumber -= GuyWeakSpawnChances[stage];
+            if (randomNumber < GuyNormalSpawnChances[stage])
+                SpawnedEnemy = GuyNormal;
+            else
+            {
+                randomNumber -= GuyNormalSpawnChances[stage];
+                if (randomNumber < GuyBuffSpawnChances[stage])
+                    SpawnedEnemy = GuyBuff;
+                else
+                {
+                    randomNumber -= GuyBuffSpawnChances[stage];
+                    if (randomNumber < MechWeakSpawnChances[stage])
+                        SpawnedEnemy = MechWeak;
+                    else
+                    {
+                        randomNumber -= MechWeakSpawnChances[stage];
+                        if (randomNumber < MechNormalSpawnChances[stage])
+                            SpawnedEnemy = MechNormal;
+                        else
+                        {
+                            SpawnedEnemy = MechBuff;
+                        }
+                    }
+                }
+            }
+        } 
 
         // Get a random spawn position
         int selectedSpawnLocation = Random.Range(0, SpawnPositions.Count);
         Vector2 spawnPos = SpawnPositions[selectedSpawnLocation];
         // Instantiate an enemy at that position
         Instantiate(SpawnedEnemy, spawnPos, Quaternion.identity);
+        currentSpawns++;
+        Debug.Log(currentSpawns);
+        if (currentSpawns > StageEnemyCount[stage])
+        {
+            stage++;
+        }
     }
 }
