@@ -32,8 +32,6 @@ public class TowerAi : MonoBehaviour
     private Animator animator;
     private int Health = 1;
     private float cooldown;
-    private Rigidbody2D RB;
-    Color refcolor = Color.white;
     TowerGrid refGrid;
 
     /// <summary>
@@ -41,7 +39,7 @@ public class TowerAi : MonoBehaviour
     /// </summary>
     [HideInInspector] public Vector2Int GridPosition = Vector2Int.zero;
     //list of animatons
-    enum animatons
+    enum Animatons
     {
         idole,
         attack,
@@ -51,11 +49,9 @@ public class TowerAi : MonoBehaviour
     {
         // sets variables
         animator = GetComponentInChildren<Animator>();
-        RB = GetComponent<Rigidbody2D>();
         Vector3 Size = new Vector3(SizeX, SizeY);
         Health = HealthMax;
         gameObject.transform.localScale = Size;
-        refcolor = gameObject.GetComponentInChildren<SpriteRenderer>().color;
         cooldown = RateOfFire;
         refGrid = FindFirstObjectByType<TowerGrid>();
     }
@@ -77,15 +73,15 @@ public class TowerAi : MonoBehaviour
         }
         // Cooldown for a shot
         cooldown -= Time.fixedDeltaTime;
-        // Fire a shot if it is cooled down
         if (cooldown <= LengthOfAnimaton)
         {
-            animator.SetInteger("State", (int)animatons.attack);
+            animator.SetInteger("State", (int)Animatons.attack);
         }
         else
         {
-            animator.SetInteger("State", (int)animatons.idole);
+            animator.SetInteger("State", (int)Animatons.idole);
         }
+        // Fire a shot if it is cooled down
         if (cooldown <= 0)
         {
             // Calculate a fireposition

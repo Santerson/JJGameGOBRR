@@ -14,8 +14,14 @@ public class BulletAi : MonoBehaviour
     //stats
     [SerializeField] float Speed = 10;
     [SerializeField] uint Damage = 2;
-
+    
+    ///private Animator animator;
     private Rigidbody2D RB;
+
+    enum animatons
+    {
+        idale,
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -28,6 +34,7 @@ public class BulletAi : MonoBehaviour
 
     void FixedUpdate()
     {
+        //animator.SetInteger("State", (int)animatons.idale);
         // moves the bullet
         RB.linearVelocityX = Speed;
     }
