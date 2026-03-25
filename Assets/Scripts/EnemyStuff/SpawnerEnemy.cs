@@ -81,7 +81,7 @@ public class SpawnerEnemy : MonoBehaviour
     {
         // Check for a burst
         int quantity = 1;
-        if (Random.Range(0f, 1f) > SpawnBurstChance)
+        if (Random.Range(0f, 1f) < SpawnBurstChance)
         {
             // Increase the spawn quantity if it is a burst
             quantity = Random.Range(SpawnBurstRange.x, SpawnBurstRange.y);
