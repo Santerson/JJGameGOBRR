@@ -141,7 +141,9 @@ public class SpawnerEnemy : MonoBehaviour
         int selectedSpawnLocation = Random.Range(0, SpawnPositions.Count);
         Vector2 spawnPos = SpawnPositions[selectedSpawnLocation];
         // Instantiate an enemy at that position
-        Instantiate(SpawnedEnemy, spawnPos, Quaternion.identity);
+        GameObject spawndenemy = Instantiate(SpawnedEnemy, spawnPos, Quaternion.identity);
+        spawndenemy.GetComponent<EnemyAi>().lane = selectedSpawnLocation;
+        FindFirstObjectByType<LaneCheck>().Laneincress(selectedSpawnLocation);
         currentSpawns++;
         Debug.Log(currentSpawns);
         if (currentSpawns > StageEnemyCount[stage])

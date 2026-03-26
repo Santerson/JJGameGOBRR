@@ -33,6 +33,7 @@ public class TowerAi : MonoBehaviour
     private int Health = 1;
     private float cooldown;
     TowerGrid refGrid;
+    LaneCheck refLaneCheck;
 
     /// <summary>
     /// The position of this tower in the grid (index based, where 0,0 is the bottom left)
@@ -54,6 +55,11 @@ public class TowerAi : MonoBehaviour
         gameObject.transform.localScale = Size;
         cooldown = RateOfFire;
         refGrid = FindFirstObjectByType<TowerGrid>();
+        refLaneCheck = FindFirstObjectByType<LaneCheck>();
+        if (refLaneCheck == null)
+        {
+            Debug.LogError("No lane check in the scene");
+        }
     }
 
     // Update is called once per frame
@@ -73,25 +79,29 @@ public class TowerAi : MonoBehaviour
         }
         // Cooldown for a shot
         cooldown -= Time.fixedDeltaTime;
-        if (cooldown <= LengthOfAnimaton)
+        if ((GridPosition.y == 0 && refLaneCheck.Lane2 != 0) || (GridPosition.y == 1 && refLaneCheck.Lane1 != 0)
+            || (GridPosition.y == 2 && refLaneCheck.Lane0 != 0))
         {
-            animator.SetInteger("State", (int)Animatons.attack);
-        }
-        else
-        {
-            animator.SetInteger("State", (int)Animatons.idole);
-        }
-        // Fire a shot if it is cooled down
-        if (cooldown <= 0)
-        {
-            // Calculate a fireposition
-            Vector2 FirePosition = new Vector2(transform.position.x + FirePositionX, transform.position.y + FirePositiony);
-            // Shoot
-            Instantiate(bullet, FirePosition, Quaternion.identity);
-            // Sfx
-            ShootSFX.Play();
-            // Reset cooldown
-            cooldown = RateOfFire;
+            if (cooldown <= LengthOfAnimaton)
+            {
+                animator.SetInteger("State", (int)Animatons.attack);
+            }
+            else
+            {
+                animator.SetInteger("State", (int)Animatons.idole);
+            }
+            // Fire a shot if it is cooled down
+            if (cooldown <= 0)
+            {
+                // Calculate a fireposition
+                Vector2 FirePosition = new Vector2(transform.position.x + FirePositionX, transform.position.y + FirePositiony);
+                // Shoot
+                Instantiate(bullet, FirePosition, Quaternion.identity);
+                // Sfx
+                ShootSFX.Play();
+                // Reset cooldown
+                cooldown = RateOfFire;
+            }
         }
         
     }

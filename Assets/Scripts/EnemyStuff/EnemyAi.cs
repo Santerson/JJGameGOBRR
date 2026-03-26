@@ -39,6 +39,7 @@ public class EnemyAi : MonoBehaviour
     [SerializeField] float deathAnimation;
 
     // variables that are changed in the code
+    public int lane;
     Color refcolor = Color.white;
     private int Health;
     private Animator animator;
@@ -151,6 +152,7 @@ public class EnemyAi : MonoBehaviour
             // animator.SetInteger("State", (int)animatons.die);
         }
         Instantiate(DeathSFX, transform.position, Quaternion.identity);
+        FindFirstObjectByType<LaneCheck>().Lanedecreesss(lane);
         Destroy(gameObject);
     }
 }
