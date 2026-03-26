@@ -50,7 +50,7 @@ public class TowerGrid : MonoBehaviour
         [SerializeField] GameObject RefTower1;
     
     // An array of the SpaceStatus enum to contain the status of each space
-    SpaceStatus[,] SpaceStatuses;
+    public SpaceStatus[,] SpaceStatuses { get; private set; }
     /// <summary>
     /// A 2d array containing all placed towers.
     /// null objects are empty tower spots.

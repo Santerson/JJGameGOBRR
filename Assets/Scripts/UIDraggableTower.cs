@@ -17,11 +17,14 @@ public class UIDraggableTower : MonoBehaviour
     [Tooltip("Cooldown inbetween tower placements")]
         [SerializeField] float towerCooldown = 0;
     [SerializeField] TextMeshProUGUI refCDText;
+    [SerializeField] GameObject TowerShadowPrefab;
 
     TowerGrid refTowerGrid;
     Vector2 initialPosition = Vector2.zero;
     bool followingMouse = false;
     float timeToNextTowerPlacement = 0;
+    Vector2Int TowerShadowPosition = new Vector2Int(-1, -1);
+    GameObject TowerShadow;
 
     /// <summary>
     /// Sets initial variables
@@ -67,6 +70,22 @@ public class UIDraggableTower : MonoBehaviour
             mousePos.z = 0;
             // Set the gameObject to that point
             transform.position = mousePos;
+
+            // Shadow a drop position for the tower
+            // Get the closest drop position
+            Vector2Int closestPos = getClosestGridTile(mousePos);
+            // If the position is different than the one last frame
+            if (closestPos != TowerShadowPosition)
+            {
+                // Delete any other shadows
+                Destroy(TowerShadow);
+                // Save the position
+                TowerShadowPosition = closestPos;
+                // Check if there is a tower there 
+                if (refTowerGrid.SpaceStatuses[closestPos.x, closestPos.y] == TowerGrid.SpaceStatus.unused)
+                    // Instantiate a shadow there
+                    TowerShadow = Instantiate(TowerShadowPrefab, refTowerGrid.SpacePositions[closestPos.x, closestPos.y], Quaternion.identity);
+            }
         }
     }
 
@@ -107,11 +126,17 @@ public class UIDraggableTower : MonoBehaviour
         // Attempt to drop a tower there
         if (gridTile != new Vector2Int(-1, -1))
         {
+            // Try to drop a tower there
             bool placed = refTowerGrid.DropTower(TowerPrefab, gridTile);
+            // If successfully placed
             if (placed)
             {
+                // Reset the tower's cooldown
                 timeToNextTowerPlacement = towerCooldown;
             }
+            // Update stuff for the towergrid
+            Destroy(TowerShadow);
+            TowerShadowPosition = new Vector2Int(-1, -1);
         }
         // Stop following the mouse
         followingMouse = false;
