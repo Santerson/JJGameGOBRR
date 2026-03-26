@@ -477,7 +477,7 @@ MonoBehaviour:
   Speed: -1
   HealthMax: 3
   AttackCooldown: 2
-  AttackHitBoxX: -1.75
+  AttackHitBoxX: -1.25
   AttackHitBoxY: 0
   LengthOfAnimaton: 0
   SpawnSFX: {fileID: 7678373172261649567}
@@ -490,6 +490,7 @@ MonoBehaviour:
   DeathSFX: {fileID: 6739637119793450498, guid: a20168c9945c23e4a904e0986186883b, type: 3}
   deathAnimationtime: 0
   deathAnimation: 0
+  lane: 0
 --- !u!50 &109451618528338515
 Rigidbody2D:
   serializedVersion: 5
