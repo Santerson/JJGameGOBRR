@@ -82,7 +82,7 @@ public class TowerAi : MonoBehaviour
         if ((GridPosition.y == 0 && refLaneCheck.Lane2 != 0) || (GridPosition.y == 1 && refLaneCheck.Lane1 != 0)
             || (GridPosition.y == 2 && refLaneCheck.Lane0 != 0))
         {
-            if (cooldown <= LengthOfAnimaton)
+            if(cooldown <= LengthOfAnimaton)
             {
                 animator.SetInteger("State", (int)Animatons.attack);
             }
@@ -102,6 +102,11 @@ public class TowerAi : MonoBehaviour
                 // Reset cooldown
                 cooldown = RateOfFire;
             }
+        }
+        else
+        {
+            cooldown = LengthOfAnimaton;
+            animator.SetInteger("State", (int)Animatons.idole);
         }
         
     }
