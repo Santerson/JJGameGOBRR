@@ -148,7 +148,16 @@ public class SpawnerEnemy : MonoBehaviour
         Debug.Log(currentSpawns);
         if (currentSpawns > StageEnemyCount[stage])
         {
-            stage++;
+            IncreaseStage();
+        }
+    }
+
+    void IncreaseStage()
+    {
+        stage++;
+        if (stage >= StageEnemyCount.Length)
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("EpicDub");
         }
     }
 }

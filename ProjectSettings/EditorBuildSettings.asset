@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: b0660b8ca1f69fe4d87531e656f923cb
+  - enabled: 1
+    path: Assets/Scenes/EpicDub.unity
+    guid: 360dacfc7fd5a26439009619afb77ee8
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
