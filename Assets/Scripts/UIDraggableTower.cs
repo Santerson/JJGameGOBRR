@@ -75,7 +75,8 @@ public class UIDraggableTower : MonoBehaviour
     /// </summary>
     private void OnMouseDown()
     {
-        if (timeToNextTowerPlacement > 0)
+        // Do nothing if the tower can't be dragged
+        if (timeToNextTowerPlacement > 0 || Time.timeScale == 0)
         {
             return;
         }
