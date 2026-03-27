@@ -18,7 +18,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 8006e7933f218904e8a1b0b6cb07bbed, type: 3}
     - target: {fileID: 2233741807203710262, guid: 7dd82a7487d558b4ea1bd8c48c4c36b6, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 2974731639940640146, guid: 7dd82a7487d558b4ea1bd8c48c4c36b6, type: 3}
       propertyPath: m_Resource
@@ -44,6 +44,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
+    - target: {fileID: 3871431038229270174, guid: 7dd82a7487d558b4ea1bd8c48c4c36b6, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3871431038229270174, guid: 7dd82a7487d558b4ea1bd8c48c4c36b6, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3871431038229270174, guid: 7dd82a7487d558b4ea1bd8c48c4c36b6, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4386584308292238060, guid: 7dd82a7487d558b4ea1bd8c48c4c36b6, type: 3}
       propertyPath: m_Name
       value: BuffMech
