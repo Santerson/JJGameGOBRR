@@ -1,3 +1,8 @@
+/********************************************
+ * filename: TutorialPopup.cs
+ * Author: Santiago Caprarulo
+ * Description: pops a tutorial up
+ * ******************************************/
 using UnityEngine;
 
 public class TutorialPopup : MonoBehaviour

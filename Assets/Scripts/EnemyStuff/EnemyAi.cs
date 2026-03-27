@@ -1,6 +1,6 @@
 /********************************************
  * filename: EnemyAi.cs
- * Author: Micaiah Mariano
+ * Author: Micaiah Mariano, Santiago Caprarulo
  * Description: Contains all AI for the enemy basics allowing it to be edited outside of the scripts
  * ******************************************/
 using Unity.VisualScripting;

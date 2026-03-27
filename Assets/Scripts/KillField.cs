@@ -1,3 +1,8 @@
+/********************************
+ * Filename: KillField.cs
+ * Author: Santiago Caprarulo
+ * Description: destroys the object that hit it
+ * *****************************/
 using UnityEngine;
 
 public class KillField : MonoBehaviour
