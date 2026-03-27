@@ -542,17 +542,22 @@ MonoBehaviour:
 
 
     drag
-    and drop towers from the top left onto sections of the lane to place towers and
-    defend the tree.
+    and drop towers from the top right scroll onto sections of the lane to place
+    towers and defend the tree.
 
-    Each tower has a magic cost that must be paid every second,
-    seen on their profile card (top left)
+    Each tower has a mana cost that must be paid
+    every second, seen on their profile card (makred by a star)
 
-    Use unicorn bunnies to increase your
-    magic gain (but they can only be summoned once every 30 seconds
+    Use unicorn
+    bunnies to increase your magic gain (but they can only be summoned once every
+    30 seconds
 
-    Don''t let
-    the humans get through and don''t run out of magic!'
+    Mouse over a placed tower and press backspace to dismiss a tower,
+    you will stop using mana on it as a result.
+
+
+    Don''t let the humans get through
+    and don''t run out of magic!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -579,8 +584,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 18
+  m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

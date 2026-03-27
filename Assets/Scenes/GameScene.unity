@@ -266,38 +266,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1342530508445073221, guid: aa30cf7fa2f4d644b9b7b9c416d22508, type: 3}
-      propertyPath: m_text
-      value: 'Humans are coming to take the magic from the tree of magic!
-
-
-        drag
-        and drop towers from the top left onto sections of the lane to place towers
-        and defend the tree.
-
-        Each tower has a magic cost that must be paid
-        every second, seen on their profile card (top left)
-
-        Use unicorn
-        bunnies to increase your magic gain (but they can only be summoned once every
-        30 seconds
-
-
-        Mouse over a tower and press backspace to destroy a
-        tower, you will stop using mana on it as a result.
-
-
-        Don''t let the
-        humans get through and don''t run out of magic!'
-      objectReference: {fileID: 0}
-    - target: {fileID: 1342530508445073221, guid: aa30cf7fa2f4d644b9b7b9c416d22508, type: 3}
-      propertyPath: m_fontSize
-      value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 1342530508445073221, guid: aa30cf7fa2f4d644b9b7b9c416d22508, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 18
-      objectReference: {fileID: 0}
     - target: {fileID: 4145336565627189925, guid: aa30cf7fa2f4d644b9b7b9c416d22508, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
