@@ -242,7 +242,7 @@ MonoBehaviour:
   TowerPrefab: {fileID: 6224497392755857483, guid: 778a2407cf740254ca9a2b06264608be, type: 3}
   pickupSound: {fileID: 6419963212006066213}
   towerCooldown: 0
-  refCDText: {fileID: 0}
+  refCDText: {fileID: 4398162006797669372}
   TowerShadowPrefab: {fileID: 5494651061738657656, guid: ed43289bb934f184c82f70b20862acae, type: 3}
 --- !u!61 &5962151161001864235
 BoxCollider2D:
@@ -393,8 +393,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TowerPrefab: {fileID: 8829138057996306838, guid: 6edea39458718244583e46c6efb11e71, type: 3}
   pickupSound: {fileID: 6419963212006066213}
-  towerCooldown: 0
-  refCDText: {fileID: 0}
+  towerCooldown: 30
+  refCDText: {fileID: 4262197270266030206}
   TowerShadowPrefab: {fileID: 5494651061738657656, guid: ed43289bb934f184c82f70b20862acae, type: 3}
 --- !u!61 &7328040353933743678
 BoxCollider2D:
@@ -996,7 +996,7 @@ MonoBehaviour:
   TowerPrefab: {fileID: 1112848449195545200, guid: d5d4c879021a7c54e8af740048f089c1, type: 3}
   pickupSound: {fileID: 6419963212006066213}
   towerCooldown: 0
-  refCDText: {fileID: 0}
+  refCDText: {fileID: 5974563265039362337}
   TowerShadowPrefab: {fileID: 5494651061738657656, guid: ed43289bb934f184c82f70b20862acae, type: 3}
 --- !u!61 &1167546182292993571
 BoxCollider2D:
@@ -1325,7 +1325,7 @@ MonoBehaviour:
   TowerPrefab: {fileID: 6122881920492048083, guid: cee1cbda9128e2c44adef4da8ff20b69, type: 3}
   pickupSound: {fileID: 6419963212006066213}
   towerCooldown: 0
-  refCDText: {fileID: 0}
+  refCDText: {fileID: 5154926612328051360}
   TowerShadowPrefab: {fileID: 5494651061738657656, guid: ed43289bb934f184c82f70b20862acae, type: 3}
 --- !u!61 &8180057127755050563
 BoxCollider2D:
