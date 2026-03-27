@@ -1,3 +1,8 @@
+/********************************************
+ * filename: LaneCheck.cs
+ * Author: Micaiah Mariano
+ * Description: Contains the logic for enemys so they know what lane there on
+ * ******************************************/
 using UnityEngine;
 
 public class LaneCheck : MonoBehaviour
