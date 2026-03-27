@@ -1,38 +1,38 @@
 /********************************************
- * filename: BulletAi.cs
+ * filename: TowerAi.cs
  * Author: Micaiah Mariano
- * Description: Contains the logic for the bullets form towers
+ * Description: Contains the logic for the towers
  * ******************************************/
 using UnityEngine;
 using UnityEngine.UIElements;
 
 public class TowerAi : MonoBehaviour
 {
-    //editable variables
+    // Editable variables
 
-    // sets gameobject
-    [SerializeField] GameObject bullet;
-    // sets size
+    // Sets game objects
+    [SerializeField] GameObject Bullet;
+    // Sets size
     [SerializeField] float SizeX = 1;
     [SerializeField] float SizeY = 1;
-    // sets stats
+    // Sets stats
     [SerializeField] int HealthMax = 1;
     [Tooltip("Shots per second. set to -1 to disable")]
     [SerializeField] float RateOfFire = 5;
     [SerializeField] float InitialFireCooldown = 1f;
     [SerializeField] float FirePositionX = 0;
     [SerializeField] float FirePositiony = 0;
-    // timer for animaton to start - fire cooldown
+    // Timer for animaton to start - fire cooldown
     [SerializeField] float LengthOfAnimaton = 0;
-    // sounds
+    // Sounds
     [SerializeField] AudioSource DeathSFX;
     [SerializeField] AudioSource SellSFX;
     [SerializeField] AudioSource ShootSFX;
     [Header("Audio")]
-    // variables that are changed in the code
-    private Animator animator;
+    // Variables that are changed in the code
+    private Animator Animator;
     private int Health = 1;
-    private float cooldown;
+    private float CoolDown;
     TowerGrid refGrid;
     LaneCheck refLaneCheck;
 
@@ -40,7 +40,7 @@ public class TowerAi : MonoBehaviour
     /// The position of this tower in the grid (index based, where 0,0 is the bottom left)
     /// </summary>
     [HideInInspector] public Vector2Int GridPosition = Vector2Int.zero;
-    //list of animatons
+    // List of animatons
     enum Animatons
     {
         idole,
@@ -49,12 +49,12 @@ public class TowerAi : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        // sets variables
-        animator = GetComponentInChildren<Animator>();
+        // Sets variables
+        Animator = GetComponentInChildren<Animator>();
         Vector3 Size = new Vector3(SizeX, SizeY);
         Health = HealthMax;
         gameObject.transform.localScale = Size;
-        cooldown = InitialFireCooldown;
+        CoolDown = InitialFireCooldown;
         refGrid = FindFirstObjectByType<TowerGrid>();
         refLaneCheck = FindFirstObjectByType<LaneCheck>();
         if (refLaneCheck == null)
@@ -73,41 +73,43 @@ public class TowerAi : MonoBehaviour
             Die();
             return;
         }
-        // make sure rate of fire causes
+        // Make sure rate of fire causes
         if (RateOfFire == -1)
         {
             return;
         }
         // Cooldown for a shot
-        cooldown -= Time.fixedDeltaTime;
+        CoolDown -= Time.fixedDeltaTime;
         if ((GridPosition.y == 0 && refLaneCheck.Lane2 != 0) || (GridPosition.y == 1 && refLaneCheck.Lane1 != 0)
             || (GridPosition.y == 2 && refLaneCheck.Lane0 != 0))
         {
-            if(cooldown <= LengthOfAnimaton)
+            // Make sure animaton is played befor attack
+            if (CoolDown <= LengthOfAnimaton)
             {
-                animator.SetInteger("State", (int)Animatons.attack);
+                Animator.SetInteger("State", (int)Animatons.attack);
             }
             else
             {
-                animator.SetInteger("State", (int)Animatons.idole);
+                Animator.SetInteger("State", (int)Animatons.idole);
             }
             // Fire a shot if it is cooled down
-            if (cooldown <= 0)
+            if (CoolDown <= 0)
             {
                 // Calculate a fireposition
                 Vector2 FirePosition = new Vector2(transform.position.x + FirePositionX, transform.position.y + FirePositiony);
                 // Shoot
-                Instantiate(bullet, FirePosition, Quaternion.identity);
+                Instantiate(Bullet, FirePosition, Quaternion.identity);
                 // Sfx
                 ShootSFX.Play();
                 // Reset cooldown
-                cooldown = RateOfFire;
+                CoolDown = RateOfFire;
             }
         }
+        // Make sure attack cooldown cant hit zero tell animaton plays first
         else
         {
-            cooldown = LengthOfAnimaton;
-            animator.SetInteger("State", (int)Animatons.idole);
+            CoolDown = LengthOfAnimaton;
+            Animator.SetInteger("State", (int)Animatons.idole);
         }
         
     }

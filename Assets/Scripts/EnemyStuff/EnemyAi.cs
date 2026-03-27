@@ -28,15 +28,15 @@ public class EnemyAi : MonoBehaviour
     [SerializeField] AudioSource SpawnSFX;
     [SerializeField] AudioSource TakeDMGSFX;
     [Tooltip("1 in this chance to play the sound each fixed update (50 times per second)")]
-    [SerializeField] float randomVoiceChance = 500f;
+    [SerializeField] float RandomVoiceChance = 500f;
     [SerializeField] AudioSource RandomVoiceSFX;
     [Tooltip("The amount of time in seconds inbetween each walk sound")]
-    [SerializeField] float timeInbetweenWalkSounds = 1f;
+    [SerializeField] float TimeInbetweenWalkSounds = 1f;
     [SerializeField] AudioSource WalkSFX;
     [SerializeField] AudioSource AttackSFX;
     [SerializeField] GameObject DeathSFX;
-    [SerializeField] float deathAnimationtime;
-    [SerializeField] float deathAnimation;
+    [SerializeField] float DeathAnimationtime;
+    [SerializeField] float DeathAnimation;
 
     // variables that are changed in the code
     public int lane;
@@ -71,7 +71,7 @@ public class EnemyAi : MonoBehaviour
         Health = HealthMax;
         coolDownAttack = AttackCooldown;
         MaxSpeed = Speed;
-        deathAnimationtimprivete = deathAnimationtime;
+        deathAnimationtimprivete = DeathAnimationtime;
         // Play Spawn Sound
         SpawnSFX.Play();
     }
@@ -79,12 +79,12 @@ public class EnemyAi : MonoBehaviour
     {
         // - timers
         coolDownAttack -= Time.fixedDeltaTime;
-        if (Random.Range(0, randomVoiceChance) == 0) RandomVoiceSFX.Play();
+        if (Random.Range(0, RandomVoiceChance) == 0) RandomVoiceSFX.Play();
         timeToNextEnemyWalkSound -= Time.fixedDeltaTime;
         if (timeToNextEnemyWalkSound <= 0)
         {
             WalkSFX.Play();
-            timeToNextEnemyWalkSound = timeInbetweenWalkSounds;
+            timeToNextEnemyWalkSound = TimeInbetweenWalkSounds;
         }
         // moves enemy
         RB.linearVelocityX = MaxSpeed;
@@ -147,7 +147,7 @@ public class EnemyAi : MonoBehaviour
     void Die()
     {
         // plays death animatons
-        if (deathAnimationtimprivete >= deathAnimation)
+        if (deathAnimationtimprivete >= DeathAnimation)
         {
             // animator.SetInteger("State", (int)animatons.die);
         }
