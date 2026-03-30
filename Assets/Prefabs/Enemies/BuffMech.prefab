@@ -26,11 +26,11 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 8779f49fce0ac2d49ac4960d05b8a4aa, type: 3}
     - target: {fileID: 3548443905817846113, guid: 7dd82a7487d558b4ea1bd8c48c4c36b6, type: 3}
       propertyPath: Speed
-      value: -0.125
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3548443905817846113, guid: 7dd82a7487d558b4ea1bd8c48c4c36b6, type: 3}
       propertyPath: HealthMax
-      value: 16
+      value: 140
       objectReference: {fileID: 0}
     - target: {fileID: 3548443905817846113, guid: 7dd82a7487d558b4ea1bd8c48c4c36b6, type: 3}
       propertyPath: Hurtfield
