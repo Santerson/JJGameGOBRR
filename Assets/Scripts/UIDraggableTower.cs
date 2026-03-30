@@ -81,10 +81,12 @@ public class UIDraggableTower : MonoBehaviour
                 Destroy(TowerShadow);
                 // Save the position
                 TowerShadowPosition = closestPos;
-                // Check if there is a tower there 
-                if (refTowerGrid.SpaceStatuses[closestPos.x, closestPos.y] == TowerGrid.SpaceStatus.unused)
-                    // Instantiate a shadow there
-                    TowerShadow = Instantiate(TowerShadowPrefab, refTowerGrid.SpacePositions[closestPos.x, closestPos.y], Quaternion.identity);
+                // Check if the position is non-existent, if not:
+                if (closestPos != new Vector2Int(-1,-1))
+                    // Check if there is a tower there 
+                    if (refTowerGrid.SpaceStatuses[closestPos.x, closestPos.y] == TowerGrid.SpaceStatus.unused)
+                        // Instantiate a shadow there
+                        TowerShadow = Instantiate(TowerShadowPrefab, refTowerGrid.SpacePositions[closestPos.x, closestPos.y], Quaternion.identity);
             }
         }
     }

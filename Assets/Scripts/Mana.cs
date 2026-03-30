@@ -27,6 +27,15 @@ public class Mana : MonoBehaviour
     [SerializeField] AudioSource LossSFX;
     [Tooltip("The interval of mana inbetween each sound")]
         [SerializeField] float ManaSFXInterval = 3f;
+
+    [Header("ParticleSystems")]
+    [SerializeField] float MinSimulationSpeed = 1;
+    [SerializeField] float MaxSimulationSpeed = 2;
+    [SerializeField] float ManaGainForMaxSimSpeed = 6;
+    [SerializeField] ParticleSystem GainPX;
+    [SerializeField] ParticleSystem LossPX;
+    [SerializeField] Vector2 LossPXOffset = new Vector2(0, -0.3f);
+
     /*
     [SerializeField] float PosMinPitch = 1;
     [SerializeField] float PosMaxPitch = 2;
@@ -85,17 +94,25 @@ public class Mana : MonoBehaviour
         // Update the manaLine
         float manaBarPosition = Mathf.Lerp(0, ManaBarInitialPosition.x, CurrentMana / MaxMana);
         ManaBar.SetPosition(1, new Vector3(manaBarPosition, 0, 0));
+        LossPX.transform.position = new Vector2(ManaBar.transform.position.x + LossPXOffset.x, ManaBar.transform.position.y + LossPXOffset.y + manaBarPosition);
         // Update the display
-        if (manaRegen >= 0)
+        if (manaRegen > 0)
         {
             // This means gaining mana
             manaGainText.text = $"+{manaRegen : 0}";
+        }
+        else if (manaRegen == 0)
+        {
+            // This means mana is dead 0
+            manaGainText.text = $"+{manaRegen: 0}";
         }
         else
         {
             // This means losing mana
             manaGainText.text = $"{manaRegen: 0}";
         }
+        // Play and stop px
+        HandleManaPXPlayment(manaRegen);
         // Update the vignette
         if (enableVignette) screenTint.intensity.value = Mathf.Lerp(maxVignetteEffect, 0, CurrentMana / MaxMana);
         // Check if the player died
@@ -156,5 +173,41 @@ public class Mana : MonoBehaviour
 
         // Set lose screen
         SceneManager.LoadScene("SkillIssue");
+    }
+
+    void HandleManaPXPlayment(float ManaRegen)
+    {
+        // Calculate Simulation Speed
+        float simSpeed = Mathf.Lerp(MinSimulationSpeed, MaxSimulationSpeed, Mathf.Abs(ManaRegen) / ManaGainForMaxSimSpeed);
+
+        // Update Simulation Speeds
+        ParticleSystem.MainModule main = LossPX.main;
+        main.simulationSpeed = simSpeed;
+        main = GainPX.main;
+        main.simulationSpeed = simSpeed;
+
+        // Regenerating
+        if (ManaRegen > 0 && CurrentMana != MaxMana)
+        {
+            // Start and stop particle systems accordingly
+            if (LossPX.isPlaying) LossPX.Stop();
+            if (!GainPX.isPlaying) GainPX.Play();
+        }
+
+        // Losing
+        else if (ManaRegen < 0)
+        {
+            // Start and stop particle systems accordingly
+            if (GainPX.isPlaying) GainPX.Stop();
+            if (!LossPX.isPlaying) LossPX.Play();
+        }
+
+        // Stalled
+        else
+        {
+            // Start and stop particle systems accordingly
+            if (LossPX.isPlaying) LossPX.Stop();
+            if (GainPX.isPlaying) GainPX.Stop();
+        }
     }
 }
