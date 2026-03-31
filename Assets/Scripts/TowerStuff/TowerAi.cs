@@ -25,9 +25,9 @@ public class TowerAi : MonoBehaviour
     // Timer for animaton to start - fire cooldown
     [SerializeField] float LengthOfAnimaton = 0;
     // Sounds
-    [SerializeField] AudioSource DeathSFX;
+    [SerializeField] AK.Wwise.Event DeathSFX;
     [SerializeField] AudioSource SellSFX;
-    [SerializeField] string ShootSFXID;
+    [SerializeField] AK.Wwise.Event ShootSound;
     [Header("Audio")]
     // Variables that are changed in the code
     private Animator Animator;
@@ -69,7 +69,8 @@ public class TowerAi : MonoBehaviour
         // Destroy the object if it is out of hitpoints and plays sound
         if (Health <= 0)
         {
-            Instantiate(DeathSFX, transform.position, Quaternion.identity);
+            AkUnitySoundEngine.PostEvent(DeathSFX.Id, gameObject);
+            // Instantiate(DeathSFX, transform.position, Quaternion.identity);
             Die();
             return;
         }
@@ -102,7 +103,7 @@ public class TowerAi : MonoBehaviour
                 // Sfx
                 try
                 {
-                    AkUnitySoundEngine.PostEvent(ShootSFXID, this.gameObject);
+                    AkUnitySoundEngine.PostEvent(ShootSound.Id, gameObject);
                 }
                 catch
                 {

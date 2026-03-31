@@ -108,6 +108,14 @@ PrefabInstance:
       propertyPath: LengthOfAnimaton
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7530514561817378367, guid: 01a5586a081987349ade83957f7874d8, type: 3}
+      propertyPath: DeathSFX.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: a6f35f4eda3db7549a59297762bf73d5, type: 2}
+    - target: {fileID: 7530514561817378367, guid: 01a5586a081987349ade83957f7874d8, type: 3}
+      propertyPath: ShootSound.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: a6f35f4eda3db7549a59297762bf73d5, type: 2}
     m_RemovedComponents:
     - {fileID: -1020365560437474440, guid: 01a5586a081987349ade83957f7874d8, type: 3}
     m_RemovedGameObjects: []
