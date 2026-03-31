@@ -1,0 +1,21 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Web",
+  "BasePlatform": "Web",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3991942870",
+    "Type": "User",
+    "GUID": "{62E37DE2-229F-4C94-AF0B-DEED7E1CA4CC}",
+    "Language": "SFX",
+    "Hash": "{24E5C870-ECC9-0C67-2ADD-497979A2E044}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\Music",
+    "ShortName": "Music",
+    "Path": "Music.bnk"
+   }
+  ],
+  "FileHash": "{59C6FBED-7759-2FBD-A5C3-CBA7452748D0}"
+ }
+}
