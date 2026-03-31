@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36c43284733b389409d9cd94570bcfa8, type: 3}
   m_Name: WwiseLoggerSettings
   m_EditorClassIdentifier: 
-  m_logLevel: 1
+  m_logLevel: 3
