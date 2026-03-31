@@ -15,6 +15,7 @@ namespace AK
     {
         static const AkUniqueID PLAY_TITLE = 3849537216U;
         static const AkUniqueID PLAY_TMSHOOT = 4112018788U;
+        static const AkUniqueID PLAY_UCLICK = 484766513U;
     } // namespace EVENTS
 
     namespace STATES

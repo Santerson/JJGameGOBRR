@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ae1319a22ef17742810b708e2a7df02, type: 3}
+  m_Name: AA9452D3-5800-4804-A136-1DEB28C68AE8
+  m_EditorClassIdentifier: 
+  objectName: Play_UClick
+  id: 484766513
+  guid: AA9452D3-5800-4804-A136-1DEB28C68AE8
+  IsInUserDefinedSoundBank: 0

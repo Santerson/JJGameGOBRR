@@ -25,6 +25,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_UClick" ID="{AA9452D3-5800-4804-A136-1DEB28C68AE8}">
+					<ChildrenList>
+						<Action Name="" ID="{79410C2C-824C-4402-ADE5-43FA23BD3864}" ShortID="870074165">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Click" ID="{368040AF-46E3-4F8D-B319-D9FF11B75AFB}" WorkUnitID="{C9DDC0B8-4122-402E-850F-253503C47F0F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

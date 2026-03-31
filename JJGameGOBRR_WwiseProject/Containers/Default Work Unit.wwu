@@ -402,6 +402,18 @@
 									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84580E68-76CE-4E53-85DC-C1911E9315F6}"/>
 								</Reference>
 							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="UI_Click" ID="{709679FF-E6FA-4CEB-B0AB-4C357412691F}">
+									<Language>SFX</Language>
+									<AudioFile>UI_Click.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="826742836"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="UI_Click" ID="{709679FF-E6FA-4CEB-B0AB-4C357412691F}" Platform="Linked"/>
+							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Pause" ID="{8CDDE38B-F51C-4C40-ADAD-23517D709C52}" ShortID="388621297">
 							<ReferenceList>

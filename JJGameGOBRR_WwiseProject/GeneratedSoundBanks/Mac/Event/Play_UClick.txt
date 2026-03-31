@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	484766513	Play_UClick			\Default Work Unit\Play_UClick	
+
