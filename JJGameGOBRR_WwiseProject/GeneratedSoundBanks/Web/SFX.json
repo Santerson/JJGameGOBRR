@@ -1,0 +1,21 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Web",
+  "BasePlatform": "Web",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "393239870",
+    "Type": "User",
+    "GUID": "{1B1FEBF3-0FD8-419E-9E0B-3423DC0D482B}",
+    "Language": "SFX",
+    "Hash": "{5C283833-6D04-84F1-E57D-0AB1E1D83FEC}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\SFX",
+    "ShortName": "SFX",
+    "Path": "SFX.bnk"
+   }
+  ],
+  "FileHash": "{B660B868-ED41-CA53-2755-DBF1B51D7C5F}"
+ }
+}

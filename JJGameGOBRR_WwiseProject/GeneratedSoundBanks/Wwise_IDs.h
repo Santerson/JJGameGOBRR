@@ -14,6 +14,7 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID PLAY_TITLE = 3849537216U;
+        static const AkUniqueID PLAY_TMSHOOT = 4112018788U;
     } // namespace EVENTS
 
     namespace STATES
@@ -34,6 +35,7 @@ namespace AK
     {
         static const AkUniqueID INIT = 1355168291U;
         static const AkUniqueID MUSIC = 3991942870U;
+        static const AkUniqueID SFX = 393239870U;
     } // namespace BANKS
 
     namespace BUSSES

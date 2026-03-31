@@ -27,7 +27,7 @@ public class TowerAi : MonoBehaviour
     // Sounds
     [SerializeField] AudioSource DeathSFX;
     [SerializeField] AudioSource SellSFX;
-    [SerializeField] AudioSource ShootSFX;
+    [SerializeField] string ShootSFXID;
     [Header("Audio")]
     // Variables that are changed in the code
     private Animator Animator;
@@ -100,7 +100,14 @@ public class TowerAi : MonoBehaviour
                 // Shoot
                 Instantiate(Bullet, FirePosition, Quaternion.identity);
                 // Sfx
-                ShootSFX.Play();
+                try
+                {
+                    AkUnitySoundEngine.PostEvent(ShootSFXID, this.gameObject);
+                }
+                catch
+                {
+
+                }
                 // Reset cooldown
                 CoolDown = RateOfFire;
             }

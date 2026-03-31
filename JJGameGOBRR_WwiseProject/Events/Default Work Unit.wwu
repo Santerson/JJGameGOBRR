@@ -14,6 +14,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_TMShoot" ID="{B6D1461F-E233-432D-AF0B-E39D3F9D7FD9}">
+					<ChildrenList>
+						<Action Name="" ID="{4C1CCA39-4B5E-42D9-8EFD-F64DF9800EE6}" ShortID="431805177">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Shoot" ID="{4D98454F-6801-4939-A197-D7C6B46F2881}" WorkUnitID="{C9DDC0B8-4122-402E-850F-253503C47F0F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

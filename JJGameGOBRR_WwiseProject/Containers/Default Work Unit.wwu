@@ -96,6 +96,18 @@
 											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84580E68-76CE-4E53-85DC-C1911E9315F6}"/>
 										</Reference>
 									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Mush_Shoot" ID="{755B54B5-A4D8-4F69-836D-91830549C4D2}">
+											<Language>SFX</Language>
+											<AudioFile>Mush_Shoot.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="503869253"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Mush_Shoot" ID="{755B54B5-A4D8-4F69-836D-91830549C4D2}" Platform="Linked"/>
+									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Place" ID="{DBE3E0F7-374F-429A-B5B0-F0D39ACBD903}" ShortID="160397205">
 									<ReferenceList>
@@ -120,16 +132,6 @@
 							</ReferenceList>
 							<ChildrenList>
 								<Sound Name="Place" ID="{D8834EEA-D1F3-420D-9FD3-FCD3286C8C6E}" ShortID="456610803">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9178FA55-D303-4149-A5D8-ACE42835274F}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84580E68-76CE-4E53-85DC-C1911E9315F6}"/>
-										</Reference>
-									</ReferenceList>
-								</Sound>
-								<Sound Name="Shoot" ID="{00330042-5A19-464F-BB67-1DD9CD4A68A4}" ShortID="313767959">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9178FA55-D303-4149-A5D8-ACE42835274F}"/>
