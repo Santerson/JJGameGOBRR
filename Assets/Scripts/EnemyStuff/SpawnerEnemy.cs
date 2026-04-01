@@ -42,6 +42,7 @@ public class SpawnerEnemy : MonoBehaviour
     [SerializeField] uint[] StageEnemyCount = new uint[] { 10, 100 };
 
     private float cooldown;
+    AudioManager refAudioManager;
     float currentSpawnRate = 5;
     uint currentSpawns = 0;
     uint stage = 0;
@@ -61,6 +62,7 @@ public class SpawnerEnemy : MonoBehaviour
     {
         cooldown = SpawnRate;
         currentSpawnRate = SpawnRate;
+        refAudioManager = FindFirstObjectByType<AudioManager>();
     }
 
     // Update is called once per frame
@@ -157,6 +159,7 @@ public class SpawnerEnemy : MonoBehaviour
         stage++;
         if (stage >= StageEnemyCount.Length)
         {
+            refAudioManager.PlayWinLevelSFX();
             UnityEngine.SceneManagement.SceneManager.LoadScene("EpicDub");
         }
     }

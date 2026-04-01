@@ -10,10 +10,16 @@ using UnityEngine;
 
 public class EnemyKillPlayer : MonoBehaviour
 {
+    AudioManager refAudioManager;
+    private void Start()
+    {
+        refAudioManager = FindFirstObjectByType<AudioManager>();
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Enemy"))
         {
+            refAudioManager.PlayLoseLevelSFX();
             UnityEngine.SceneManagement.SceneManager.LoadScene("SkillIssue");
         }
     }

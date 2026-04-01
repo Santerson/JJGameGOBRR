@@ -9,16 +9,14 @@ using UnityEngine;
 
 public class PlayClickSound : MonoBehaviour
 {
+    AudioManager refAudioManager;
+    private void Start()
+    {
+        refAudioManager = FindFirstObjectByType<AudioManager>();
+    }
+
     public void PlaySound()
     {
-        GameObject refObj = GameObject.Find("UIButtonClickSFX");
-        if (refObj != null)
-        {
-            refObj.GetComponent<AudioSource>().Play();
-        }
-        else
-        {
-            Debug.LogWarning("Attempted to play a ui click sound but could not find a click sound. If this has not run from the starting scene, this is okay!");
-        }
+        refAudioManager.PlayClickSFX();
     }
 }

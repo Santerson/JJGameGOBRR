@@ -24,17 +24,12 @@ public class EnemyAi : MonoBehaviour
     [SerializeField] float AttackHitBoxX = 0;
     [SerializeField] float AttackHitBoxY = 0;
     [SerializeField] float LengthOfAnimaton = 0;
+    [SerializeField] AudioManager.Enemies EnemyID;
     [Header("SFX")]
-    [SerializeField] AudioSource SpawnSFX;
-    [SerializeField] AudioSource TakeDMGSFX;
     [Tooltip("1 in this chance to play the sound each fixed update (50 times per second)")]
     [SerializeField] float RandomVoiceChance = 500f;
-    [SerializeField] AudioSource RandomVoiceSFX;
     [Tooltip("The amount of time in seconds inbetween each walk sound")]
     [SerializeField] float TimeInbetweenWalkSounds = 1f;
-    [SerializeField] AudioSource WalkSFX;
-    [SerializeField] AudioSource AttackSFX;
-    [SerializeField] GameObject DeathSFX;
     [SerializeField] float DeathAnimationtime;
     [SerializeField] float DeathAnimation;
 
@@ -48,6 +43,8 @@ public class EnemyAi : MonoBehaviour
     private float MaxSpeed;
     private Rigidbody2D RB;
     private float deathAnimationtimprivete;
+
+    AudioManager refAudioManager;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     enum animatons
     {
@@ -73,17 +70,18 @@ public class EnemyAi : MonoBehaviour
         MaxSpeed = Speed;
         deathAnimationtimprivete = DeathAnimationtime;
         // Play Spawn Sound
-        SpawnSFX.Play();
+        refAudioManager = FindFirstObjectByType<AudioManager>();
+        refAudioManager.PlayEnemySpawnSFX(EnemyID);
     }
     void FixedUpdate()
     {
         // - timers
         coolDownAttack -= Time.fixedDeltaTime;
-        if (Random.Range(0, RandomVoiceChance) == 0) RandomVoiceSFX.Play();
+        if (Random.Range(0, RandomVoiceChance) == 0) refAudioManager.PlayEnemyVoiceSFX(EnemyID);
         timeToNextEnemyWalkSound -= Time.fixedDeltaTime;
         if (timeToNextEnemyWalkSound <= 0)
         {
-            WalkSFX.Play();
+            refAudioManager.PlayEnemyWalkSFX(EnemyID);
             timeToNextEnemyWalkSound = TimeInbetweenWalkSounds;
         }
         // moves enemy
@@ -100,7 +98,7 @@ public class EnemyAi : MonoBehaviour
             BulletAi refBullet = collision.GetComponent<BulletAi>();
             if (refBullet != null)
             {
-                TakeDMGSFX.Play();
+                refAudioManager.PlayEnemyHurtSFX(EnemyID);
                 int dmg = (int)refBullet.GetDamage();
                 Health -= dmg;
                 // checks if dead
@@ -127,7 +125,7 @@ public class EnemyAi : MonoBehaviour
             // shoots a bullet when cooldown is ready
             if (coolDownAttack <= 0)
             {
-                AttackSFX.Play();
+                refAudioManager.PlayEnemyAttackSFX(EnemyID);
                 coolDownAttack = AttackCooldown;
                 Instantiate(Hurtfield, FirePosition, Quaternion.identity);
                 MaxSpeed = 0;
@@ -151,7 +149,7 @@ public class EnemyAi : MonoBehaviour
         {
             // animator.SetInteger("State", (int)animatons.die);
         }
-        Instantiate(DeathSFX, transform.position, Quaternion.identity);
+        refAudioManager.PlayEnemyDieSFX(EnemyID);
         FindFirstObjectByType<LaneCheck>().Lanedecreesss(lane);
         Destroy(gameObject);
     }

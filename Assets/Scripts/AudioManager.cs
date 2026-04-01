@@ -64,7 +64,7 @@ public class AudioManager : MonoBehaviour
     /// </summary>
     public enum Enemies
     {
-        person = 0,
+        guy = 0,
         mech = 1
     }
 
