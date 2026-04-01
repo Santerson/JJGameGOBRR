@@ -73,6 +73,10 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8867111219507901984, guid: 71f4225f6a5e1d84fa90782979b0c8cb, type: 3}
+      propertyPath: particls
+      value: 
+      objectReference: {fileID: 2828063273654621887, guid: 5c7fe1e8f130b9e4599ccc84bb60a442, type: 3}
+    - target: {fileID: 8867111219507901984, guid: 71f4225f6a5e1d84fa90782979b0c8cb, type: 3}
       propertyPath: refcolor.b
       value: 0.8743562
       objectReference: {fileID: 0}
