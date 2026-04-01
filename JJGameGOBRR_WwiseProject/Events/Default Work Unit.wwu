@@ -80,6 +80,28 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_MBBattle1" ID="{1FE181B6-4376-4290-B4B8-D3EF64080B97}">
+					<ChildrenList>
+						<Action Name="" ID="{B9CC3903-BC8C-41FC-A1F8-9DE28FFFA8B3}" ShortID="119842447">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Battle1" ID="{977115B2-E67B-4317-ACE9-A1419C4E9A9D}" WorkUnitID="{C9DDC0B8-4122-402E-850F-253503C47F0F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_MBBattle2" ID="{AA65FE26-DB7F-4585-A5FF-FCD55F831C9A}">
+					<ChildrenList>
+						<Action Name="" ID="{36F0F21F-1E3E-4130-B697-FAA7702015C0}" ShortID="59617968">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Battle2" ID="{53E899AB-051A-411C-951D-50E58D9C5333}" WorkUnitID="{C9DDC0B8-4122-402E-850F-253503C47F0F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3768384938	Play_MBBattle1			\Default Work Unit\Play_MBBattle1	
+
