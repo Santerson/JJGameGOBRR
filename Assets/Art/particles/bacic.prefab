@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2392477421041186021}
   - component: {fileID: 3244115918783990471}
   - component: {fileID: 5372717829870065038}
+  - component: {fileID: 6686689718360215159}
   m_Layer: 0
   m_Name: bacic
   m_TagString: Untagged
@@ -4891,3 +4892,16 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &6686689718360215159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 400475872121413485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdc317d7b9896b34a987fb700fa8d214, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LeangthOfParticle: 1.5
