@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 400475872121413485, guid: 00c4fa796eb37854d898c375b76c6df6, type: 3}
       propertyPath: m_Name
-      value: bacic
+      value: towerDeath
       objectReference: {fileID: 0}
     - target: {fileID: 2392477421041186021, guid: 00c4fa796eb37854d898c375b76c6df6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -51,6 +51,10 @@ PrefabInstance:
     - target: {fileID: 2392477421041186021, guid: 00c4fa796eb37854d898c375b76c6df6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3244115918783990471, guid: 00c4fa796eb37854d898c375b76c6df6, type: 3}
+      propertyPath: VelocityModule.x.scalar
+      value: -4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

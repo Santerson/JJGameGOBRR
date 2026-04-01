@@ -54,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3244115918783990471, guid: 00c4fa796eb37854d898c375b76c6df6, type: 3}
       propertyPath: VelocityModule.x.scalar
-      value: -2
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 3244115918783990471, guid: 00c4fa796eb37854d898c375b76c6df6, type: 3}
       propertyPath: InitialModule.startSize.scalar

@@ -32,6 +32,7 @@ public class TowerAi : MonoBehaviour
     TowerGrid refGrid;
     LaneCheck refLaneCheck;
     AudioManager refAudioManager;
+    [SerializeField] private GameObject particls;
 
     /// <summary>
     /// The position of this tower in the grid (index based, where 0,0 is the bottom left)
@@ -70,6 +71,7 @@ public class TowerAi : MonoBehaviour
         if (Health <= 0)
         {
             refAudioManager.PlayTowerDieSFX(TowerID);
+            Instantiate(particls, gameObject.transform.position, Quaternion.identity);
             // Instantiate(DeathSFX, transform.position, Quaternion.identity);
             Die();
             return;
