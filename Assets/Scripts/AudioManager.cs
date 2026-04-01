@@ -14,6 +14,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] List<AK.Wwise.Event> TowerDropSFXs;
     [SerializeField] List<AK.Wwise.Event> TowerShootSFXs;
     [SerializeField] List<AK.Wwise.Event> TowerDieSFXs;
+    [SerializeField] List<AK.Wwise.Event> TowerSellSFXs;
 
     [Header("Enemies")]
     [SerializeField] List<AK.Wwise.Event> EnemyWalkSFXs;
@@ -97,6 +98,12 @@ public class AudioManager : MonoBehaviour
         AkUnitySoundEngine.PostEvent(refSound.Id, gameObject);
     }
 
+    public void PlayTowerSellSFX(Towers tower)
+    {
+        AK.Wwise.Event refSound = TowerSellSFXs[(int)tower];
+        AkUnitySoundEngine.PostEvent(refSound.Id, gameObject);
+    }
+
     /// <summary>
     /// Plays the attack sfx for a given enemy
     /// </summary>
@@ -174,7 +181,7 @@ public class AudioManager : MonoBehaviour
     }
 
     #pragma warning disable IDE0060 // Remove unused parameter warnings
-    public void PlayManaGainOrLossSFX(float manaGain, float manaLose)
+    public void PlayManaGainOrLossSFX(float manaGain, float maxMana)
     {
         // Placeholder, do whatever you need here henry (and remove the pragmas)
         if (manaGain > 0)

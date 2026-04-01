@@ -24,17 +24,14 @@ public class TowerAi : MonoBehaviour
     [SerializeField] float FirePositiony = 0;
     // Timer for animaton to start - fire cooldown
     [SerializeField] float LengthOfAnimaton = 0;
-    // Sounds
-    [SerializeField] AK.Wwise.Event DeathSFX;
-    [SerializeField] AudioSource SellSFX;
-    [SerializeField] AK.Wwise.Event ShootSound;
-    [Header("Audio")]
+    [SerializeField] AudioManager.Towers TowerID;
     // Variables that are changed in the code
     private Animator Animator;
     private int Health = 1;
     private float CoolDown;
     TowerGrid refGrid;
     LaneCheck refLaneCheck;
+    AudioManager refAudioManager;
 
     /// <summary>
     /// The position of this tower in the grid (index based, where 0,0 is the bottom left)
@@ -61,6 +58,9 @@ public class TowerAi : MonoBehaviour
         {
             Debug.LogError("No lane check in the scene");
         }
+        refAudioManager = FindFirstObjectByType<AudioManager>();
+        if (refAudioManager != null)
+            refAudioManager.PlayTowerDropSFXs(TowerID);
     }
 
     // Update is called once per frame
@@ -69,7 +69,7 @@ public class TowerAi : MonoBehaviour
         // Destroy the object if it is out of hitpoints and plays sound
         if (Health <= 0)
         {
-            AkUnitySoundEngine.PostEvent(DeathSFX.Id, gameObject);
+            refAudioManager.PlayTowerDieSFX(TowerID);
             // Instantiate(DeathSFX, transform.position, Quaternion.identity);
             Die();
             return;
@@ -101,14 +101,7 @@ public class TowerAi : MonoBehaviour
                 // Shoot
                 Instantiate(Bullet, FirePosition, Quaternion.identity);
                 // Sfx
-                try
-                {
-                    AkUnitySoundEngine.PostEvent(ShootSound.Id, gameObject);
-                }
-                catch
-                {
-
-                }
+                refAudioManager.PlayTowerShootSFX(TowerID);
                 // Reset cooldown
                 CoolDown = RateOfFire;
             }
@@ -163,7 +156,7 @@ public class TowerAi : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Backspace))
         {
-            Instantiate(SellSFX, transform.position, Quaternion.identity);
+            refAudioManager.PlayTowerSellSFX(TowerID);
             Die();
         }
     }

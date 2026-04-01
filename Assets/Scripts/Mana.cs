@@ -23,8 +23,6 @@ public class Mana : MonoBehaviour
         [SerializeField] float maxVignetteEffect = 0.5f;
 
     [Header("Audio")]
-    [SerializeField] AudioSource GainSFX;
-    [SerializeField] AudioSource LossSFX;
     [Tooltip("The interval of mana inbetween each sound")]
         [SerializeField] float ManaSFXInterval = 3f;
 
@@ -36,20 +34,11 @@ public class Mana : MonoBehaviour
     [SerializeField] ParticleSystem LossPX;
     [SerializeField] Vector2 LossPXOffset = new Vector2(0, -0.3f);
 
-    /*
-    [SerializeField] float PosMinPitch = 1;
-    [SerializeField] float PosMaxPitch = 2;
-    [SerializeField] float RegenRateForMaxPitch = 5f;
-
-    [SerializeField] float NegMinPitch = 0.5f;
-    [SerializeField] float NegMaxPitch = 1f;
-    [SerializeField] float RegenLossForMinPitch = -5f;
-    */
     private Vignette screenTint;
 
     float CurrentMana;
     Vector2 ManaBarInitialPosition;
-
+    AudioManager refAudioManager;
     /// <summary>
     /// Initialize variables
     /// </summary>
@@ -67,6 +56,8 @@ public class Mana : MonoBehaviour
         {
             Debug.LogError("No vignette / volume found for the screen vignette!");
         }
+        // AudioManager
+        refAudioManager = FindFirstObjectByType<AudioManager>();
     }
 
     /// <summary>
@@ -152,14 +143,9 @@ public class Mana : MonoBehaviour
         float ProgressToNextThreshold = CurrentMana % ManaSFXInterval;
         float NewProgress = ProgressToNextThreshold + generation * Time.deltaTime;
         // Check if the mana has grown past a threshold
-        if (NewProgress > ManaSFXInterval)
+        if (NewProgress > ManaSFXInterval || NewProgress < 0)
         {
-            GainSFX.Play();
-        }
-        // Check if the mana has dropped below a threshold
-        if (NewProgress < 0)
-        {
-            LossSFX.Play();
+            refAudioManager.PlayManaGainOrLossSFX(generation, MaxMana);
         }
     }
 
