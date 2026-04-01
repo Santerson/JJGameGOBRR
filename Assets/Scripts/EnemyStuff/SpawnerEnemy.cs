@@ -46,6 +46,7 @@ public class SpawnerEnemy : MonoBehaviour
     float currentSpawnRate = 5;
     uint currentSpawns = 0;
     uint stage = 0;
+    public bool EnemiesSpawning = true;
 
     private void OnDrawGizmosSelected()
     {
@@ -68,6 +69,7 @@ public class SpawnerEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!EnemiesSpawning) return;
         // Reduce cooldown
         cooldown -= Time.deltaTime;
         if (cooldown <= 0)
@@ -141,16 +143,29 @@ public class SpawnerEnemy : MonoBehaviour
 
         // Get a random spawn position
         int selectedSpawnLocation = Random.Range(0, SpawnPositions.Count);
-        Vector2 spawnPos = SpawnPositions[selectedSpawnLocation];
+        SpawnEnemy(SpawnedEnemy, selectedSpawnLocation);
+    }
+
+    /// <summary>
+    /// Spawns an enemy in a given lane
+    /// </summary>
+    /// <param name="spawnedEnemy">A gameobject for the enemy</param>
+    /// <param name="selectedSpawnLocation">The lane the enemy should spawn in</param>
+    /// <param name="countAsSpawn">Whether or not this should count to make the game more difficult</param>
+    public void SpawnEnemy(GameObject spawnedEnemy, int selectedSpawnLocation, bool countAsSpawn = true)
+    {
         // Instantiate an enemy at that position
-        GameObject spawndenemy = Instantiate(SpawnedEnemy, spawnPos, Quaternion.identity);
+        Vector2 spawnPos = SpawnPositions[selectedSpawnLocation];
+        GameObject spawndenemy = Instantiate(spawnedEnemy, spawnPos, Quaternion.identity);
         spawndenemy.GetComponent<EnemyAi>().lane = selectedSpawnLocation;
         FindFirstObjectByType<LaneCheck>().Laneincress(selectedSpawnLocation);
-        currentSpawns++;
-        Debug.Log(currentSpawns);
-        if (currentSpawns > StageEnemyCount[stage])
+        if (countAsSpawn)
         {
-            IncreaseStage();
+            currentSpawns++;
+            if (currentSpawns > StageEnemyCount[stage])
+            {
+                IncreaseStage();
+            }
         }
     }
 
