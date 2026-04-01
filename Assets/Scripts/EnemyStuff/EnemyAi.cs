@@ -5,6 +5,7 @@
  * ******************************************/
 using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEngine.ParticleSystem;
 
 public class EnemyAi : MonoBehaviour
 {
@@ -32,8 +33,7 @@ public class EnemyAi : MonoBehaviour
     [SerializeField] float TimeInbetweenWalkSounds = 1f;
     [SerializeField] float DeathAnimationtime;
     [SerializeField] float DeathAnimation;
-
-    // variables that are changed in the code
+    [SerializeField] private GameObject particls;    // variables that are changed in the code
     public int lane;
     Color refcolor = Color.white;
     private int Health;
@@ -104,6 +104,7 @@ public class EnemyAi : MonoBehaviour
                 // checks if dead
                 if (Health <= 0)
                 {
+                    Instantiate(particls, gameObject.transform.position, Quaternion.identity);
                     Die();
                 }
             }
