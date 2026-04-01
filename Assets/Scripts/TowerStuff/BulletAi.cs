@@ -15,8 +15,9 @@ public class BulletAi : MonoBehaviour
     [SerializeField] float Speed = 10;
     [SerializeField] uint Damage = 2;
     
-    //private Animator animator;
+    //private Animator animator and particls;
     private Rigidbody2D RB;
+    [SerializeField] private GameObject particls;
 
     enum animatons
     {
@@ -44,6 +45,7 @@ public class BulletAi : MonoBehaviour
         // Checks for collision with enemy then dies
         if (collision.CompareTag("Enemy"))
         {
+            Instantiate(particls, gameObject.transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
             
