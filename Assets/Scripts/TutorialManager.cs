@@ -8,6 +8,7 @@ public class TutorialManager : MonoBehaviour
 
     [Header("Tutorial Time Delays")]
     [SerializeField] float waitTime1 = 3f;
+    [SerializeField] float waitTime2 = 2f;
 
     [Header("Tutorial Gameobjects")]
     [SerializeField] GameObject tutorial1;
@@ -41,5 +42,8 @@ public class TutorialManager : MonoBehaviour
 
         // Spawn an enemy and enable second text
         refEnemySpawner.SpawnEnemy(tutorialEnemy, 1);
+        tutorial2.SetActive(true);
+        yield return new WaitForSeconds(waitTime2);
+        tutorial2.SetActive(false);
     }
 }
