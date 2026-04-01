@@ -36,6 +36,50 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_MLose" ID="{56AFA86D-BBD0-47FE-94D0-E169978CAC51}">
+					<ChildrenList>
+						<Action Name="" ID="{D5AF2577-3037-4FD2-9689-FBB3469E0F66}" ShortID="994397252">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Lose" ID="{39A1029D-1C9D-44E4-A802-E2F755DCF5C7}" WorkUnitID="{C9DDC0B8-4122-402E-850F-253503C47F0F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_MWin" ID="{F838AC53-0C14-486C-A240-EC32CB039980}">
+					<ChildrenList>
+						<Action Name="" ID="{FD4B341C-4455-434C-BC37-EFCC509D9DA8}" ShortID="694864914">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Win" ID="{62B7760F-01E8-49A3-BB10-AADE3F8468AF}" WorkUnitID="{C9DDC0B8-4122-402E-850F-253503C47F0F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_TGPlace" ID="{D7301991-B4FB-4E9D-AE77-4A5CC238FB77}">
+					<ChildrenList>
+						<Action Name="" ID="{D5D2E457-7C43-42BF-876D-912846054691}" ShortID="441396592">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Place" ID="{50CB9AC1-367D-47CC-AFC3-3BC527ECE1A6}" WorkUnitID="{C9DDC0B8-4122-402E-850F-253503C47F0F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_TGShoot" ID="{3E2A3678-6C4E-4A4C-BE3E-F2DC66DA12EE}">
+					<ChildrenList>
+						<Action Name="" ID="{D924FCD1-FF9F-40E4-82DD-C7CE6DC6D874}" ShortID="1034670632">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Shoot" ID="{706F5A27-84E5-4983-B793-FDB1E9E14426}" WorkUnitID="{C9DDC0B8-4122-402E-850F-253503C47F0F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

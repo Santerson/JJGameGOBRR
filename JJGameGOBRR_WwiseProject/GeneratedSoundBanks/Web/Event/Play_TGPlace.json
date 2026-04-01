@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Web",
+  "BasePlatform": "Web",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "4094970478",
+    "Type": "Event",
+    "GUID": "{D7301991-B4FB-4E9D-AE77-4A5CC238FB77}",
+    "Language": "SFX",
+    "Hash": "{0726429F-8EA8-D87F-DC35-70AE46F37055}",
+    "ObjectPath": "Play_TGPlace",
+    "ShortName": "Play_TGPlace",
+    "Path": "Event/Play_TGPlace.bnk",
+    "Media": [
+     {
+      "Id": "736745190",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "GolemPlace.wav",
+      "Path": "Media/736745190.wem",
+      "CachePath": "07/{0782F1F4-AE44-B08C-5DA2-69BAC837489A}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "4094970478",
+      "Name": "Play_TGPlace",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_TGPlace",
+      "GUID": "{D7301991-B4FB-4E9D-AE77-4A5CC238FB77}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.898322",
+      "DurationMax": "0.898322",
+      "MediaRefs": [
+       {
+        "Id": "736745190"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{FCD31F5C-F2BE-ABC6-064F-3D8F88B6E8A8}"
+ }
+}

@@ -56,6 +56,13 @@
 							</ReferenceList>
 							<ChildrenList>
 								<Sound Name="Shoot" ID="{706F5A27-84E5-4983-B793-FDB1E9E14426}" ShortID="735768111">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>4</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9178FA55-D303-4149-A5D8-ACE42835274F}"/>
@@ -64,8 +71,32 @@
 											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84580E68-76CE-4E53-85DC-C1911E9315F6}"/>
 										</Reference>
 									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="GolemShoot" ID="{FBCCFD88-AA06-4D2A-B452-5CBF8CA07C95}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.01415"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.33433"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>GolemShoot.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="865451487"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="GolemShoot" ID="{FBCCFD88-AA06-4D2A-B452-5CBF8CA07C95}" Platform="Linked"/>
+									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Place" ID="{50CB9AC1-367D-47CC-AFC3-3BC527ECE1A6}" ShortID="124825582">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-3</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9178FA55-D303-4149-A5D8-ACE42835274F}"/>
@@ -74,6 +105,22 @@
 											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84580E68-76CE-4E53-85DC-C1911E9315F6}"/>
 										</Reference>
 									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="GolemPlace" ID="{B7766AB9-57A2-4B4D-91DF-905029723B8C}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.18171"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>GolemPlace.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="736745190"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="GolemPlace" ID="{B7766AB9-57A2-4B4D-91DF-905029723B8C}" Platform="Linked"/>
+									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
 						</PropertyContainer>
@@ -456,6 +503,18 @@
 											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84580E68-76CE-4E53-85DC-C1911E9315F6}"/>
 										</Reference>
 									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Music1" ID="{6D095D4A-664E-4F48-B237-C7E381834CE8}">
+											<Language>SFX</Language>
+											<AudioFile>Music1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="921732490"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Music1" ID="{6D095D4A-664E-4F48-B237-C7E381834CE8}" Platform="Linked"/>
+									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Battle2" ID="{53E899AB-051A-411C-951D-50E58D9C5333}" ShortID="446429038">
 									<ReferenceList>
@@ -466,6 +525,18 @@
 											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84580E68-76CE-4E53-85DC-C1911E9315F6}"/>
 										</Reference>
 									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Music2" ID="{3EE80CE3-A882-49CE-A474-7E0AB0819722}">
+											<Language>SFX</Language>
+											<AudioFile>Music2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="385699294"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Music2" ID="{3EE80CE3-A882-49CE-A474-7E0AB0819722}" Platform="Linked"/>
+									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Battle3" ID="{D84053B3-9FDB-4AEF-8D33-A47B9FB2C6DB}" ShortID="803098569">
 									<ReferenceList>
@@ -502,6 +573,50 @@
 							</ChildrenList>
 							<ActiveSourceList>
 								<ActiveSource Name="JsongDraft" ID="{E6726A26-FCAE-4B39-9B76-3DA622D584E5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Win" ID="{62B7760F-01E8-49A3-BB10-AADE3F8468AF}" ShortID="695556351">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9178FA55-D303-4149-A5D8-ACE42835274F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84580E68-76CE-4E53-85DC-C1911E9315F6}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Win" ID="{45448D27-B455-4790-8056-614D0BD93F87}">
+									<Language>SFX</Language>
+									<AudioFile>Win.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="460062071"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Win" ID="{45448D27-B455-4790-8056-614D0BD93F87}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Lose" ID="{39A1029D-1C9D-44E4-A802-E2F755DCF5C7}" ShortID="144523255">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9178FA55-D303-4149-A5D8-ACE42835274F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84580E68-76CE-4E53-85DC-C1911E9315F6}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Lose" ID="{B6C2471E-DD54-44EB-87B3-6508CD66E2AA}">
+									<Language>SFX</Language>
+									<AudioFile>Lose.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="352609332"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Lose" ID="{B6C2471E-DD54-44EB-87B3-6508CD66E2AA}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>

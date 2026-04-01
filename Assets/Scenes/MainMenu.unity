@@ -1813,6 +1813,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5812513164392073569, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
+      propertyPath: WinLevelSFX.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: ba14fc2fc029ec849b8daaa8b5d9837f, type: 2}
+    - target: {fileID: 5812513164392073569, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
+      propertyPath: LoseLevelSFX.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: e8996b53713a86143947fd10593120ac, type: 2}
+    - target: {fileID: 5812513164392073569, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
+      propertyPath: TowerDropSFXs.Array.data[3].WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: aac9fb0b9630c0c42ac4f1ad220229be, type: 2}
+    - target: {fileID: 5812513164392073569, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
+      propertyPath: TowerShootSFXs.Array.data[3].WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 19c7b3d85ee0f0643a0c7263f024fdc9, type: 2}
     - target: {fileID: 7903793231949837847, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
       propertyPath: m_Name
       value: AudioManager
