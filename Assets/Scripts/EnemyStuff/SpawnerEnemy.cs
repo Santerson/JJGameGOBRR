@@ -1,5 +1,6 @@
-using Unity.VisualScripting;
 using System.Collections.Generic; /* List<T> */
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SpawnerEnemy : MonoBehaviour
@@ -47,6 +48,7 @@ public class SpawnerEnemy : MonoBehaviour
     uint currentSpawns = 0;
     uint spawnsInStage = 0;
     uint stage = 0;
+    [SerializeField] TextMeshProUGUI manaGainText;
     public bool EnemiesSpawning = true;
 
     private void OnDrawGizmosSelected()
@@ -77,6 +79,7 @@ public class SpawnerEnemy : MonoBehaviour
         {
             HandleEnemySpawnLogic();
         }
+        manaGainText.text = $"{stage: 0}";
     }
 
     /// <summary>
