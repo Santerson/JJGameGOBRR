@@ -11,7 +11,7 @@ using UnityEngine;
 public class UIDraggableTower : MonoBehaviour
 {
     [Tooltip("The tower that is instantiated when this tower is placed down")]
-        [SerializeField] GameObject TowerPrefab;
+        [SerializeField] public GameObject TowerPrefab;
     [Tooltip("Sound that plays when selecting the tower")]
         [SerializeField] AudioSource pickupSound;
     [Tooltip("Cooldown inbetween tower placements")]
@@ -19,23 +19,17 @@ public class UIDraggableTower : MonoBehaviour
     [SerializeField] TextMeshProUGUI refCDText;
     [SerializeField] GameObject TowerShadowPrefab;
 
-    public enum towerType
-    {
-        bunny,
-        mushman,
-        fairy,
-        golem
-    }
-    
+    public bool CanDrag = true;
+
     TowerGrid refTowerGrid;
     Vector2 initialPosition = Vector2.zero;
-    bool followingMouse = false;
+    public bool followingMouse { get; private set; } = false;
     float timeToNextTowerPlacement = 0;
     Vector2Int TowerShadowPosition = new Vector2Int(-1, -1);
     GameObject TowerShadow;
 
-    Vector2Int forcedNextTowerPosition = new Vector2Int(-1, -1);
-    towerType forcedNextTower = towerType.bunny;
+    public static Vector2Int forcedNextTowerPosition { get; private set; } = new Vector2Int(-1, -1);
+    static AudioManager.Towers forcedNextTower = AudioManager.Towers.bunny;
 
     /// <summary>
     /// Sets initial variables
@@ -108,7 +102,7 @@ public class UIDraggableTower : MonoBehaviour
     private void OnMouseDown()
     {
         // Do nothing if the tower can't be dragged
-        if (timeToNextTowerPlacement > 0 || Time.timeScale == 0)
+        if (timeToNextTowerPlacement > 0 || Time.timeScale == 0 || CanDrag == false)
         {
             return;
         }
@@ -139,13 +133,24 @@ public class UIDraggableTower : MonoBehaviour
         // Attempt to drop a tower there
         if (gridTile != new Vector2Int(-1, -1))
         {
-            // Try to drop a tower there
-            bool placed = refTowerGrid.DropTower(TowerPrefab, gridTile);
-            // If successfully placed
-            if (placed)
+            // Don't place the tower if it is not the forced tower (usually for tutuorial)
+            if (forcedNextTowerPosition != new Vector2Int(-1, -1))
             {
-                // Reset the tower's cooldown
-                timeToNextTowerPlacement = towerCooldown;
+                if (forcedNextTower == TowerPrefab.GetComponent<TowerAi>().TowerID) 
+                    if (forcedNextTowerPosition == gridTile)
+                        forcedNextTowerPosition = new Vector2Int(-1, -1);
+            }
+            // Place a tower if is allowed to be dropped there
+            if (forcedNextTowerPosition == new Vector2Int(-1, -1))
+            {
+                // Try to drop a tower there
+                bool placed = refTowerGrid.DropTower(TowerPrefab, gridTile);
+                // If successfully placed
+                if (placed)
+                {
+                    // Reset the tower's cooldown
+                    timeToNextTowerPlacement = towerCooldown;
+                }
             }
             // Update stuff for the towergrid
             Destroy(TowerShadow);
@@ -215,7 +220,7 @@ public class UIDraggableTower : MonoBehaviour
     /// </summary>
     /// <param name="towerType">The type of the tower to be placed</param>
     /// <param name="Position">The position of the tower</param>
-    public void ForceNextPositionTower(towerType towerType, Vector2Int Position)
+    public void ForceNextPositionTower(AudioManager.Towers towerType, Vector2Int Position)
     {
         forcedNextTower = towerType;
         forcedNextTowerPosition = Position;

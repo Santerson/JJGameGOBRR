@@ -1,3 +1,12 @@
+/************************************
+ * Filename: TutorialManager.cs
+ * Author: Santiago Caprarulo
+ * Description: Performs a tutorial at the start
+ * of the game
+ * 
+ * Note: This script sucked to make
+ * ********************************/
+
 using UnityEngine;
 using System.Collections; /* IEnumerator */
 
@@ -9,6 +18,9 @@ public class TutorialManager : MonoBehaviour
     [Header("Tutorial Time Delays")]
     [SerializeField] float waitTime1 = 3f;
     [SerializeField] float waitTime2 = 2f;
+    [SerializeField] float waitTime5 = 4f;
+    [SerializeField] float waitTime7 = 2f;
+    [SerializeField] float waitTime8 = 4f;
 
     [Header("Tutorial Gameobjects")]
     [SerializeField] GameObject tutorial1;
@@ -16,8 +28,14 @@ public class TutorialManager : MonoBehaviour
     [SerializeField] GameObject tutorialEnemy;
     [SerializeField] GameObject tutorial3;
     [SerializeField] GameObject tutorial4;
+    [SerializeField] GameObject tutorial5;
+    [SerializeField] GameObject tutorial6;
+    [SerializeField] GameObject tutorial7;
+    [SerializeField] GameObject tutorial8;
+    [SerializeField] GameObject tutorial9;
 
     SpawnerEnemy refEnemySpawner;
+    static bool tutorialOccured = false;
 
     public bool IsTutorialing { get; private set; } = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -28,14 +46,25 @@ public class TutorialManager : MonoBehaviour
         {
             Debug.LogError("NO enemy spawner found!");
         }
-        if (DoTutorial) StartCoroutine(PlayTutorial());
+        if (DoTutorial && !tutorialOccured) StartCoroutine(PlayTutorial());
     }
 
+    /// <summary>
+    /// Runs tutorial logic, alongside waiting for players to perform inputs
+    /// </summary>
+    /// <returns></returns>
     IEnumerator PlayTutorial()
     {
+        tutorialOccured = true;
         // Stop spawns
         refEnemySpawner.EnemiesSpawning = false;
-        
+        // Disable towerdragging
+        UIDraggableTower[] towerProfiles = FindObjectsByType<UIDraggableTower>(FindObjectsSortMode.None);
+        foreach (UIDraggableTower towerProfile in towerProfiles)
+        {
+            towerProfile.CanDrag = false;
+        }
+
         // Enable first text
         tutorial1.SetActive(true);
         yield return new WaitForSeconds(waitTime1);
@@ -50,9 +79,103 @@ public class TutorialManager : MonoBehaviour
         // Disable the second text
         tutorial2.SetActive(false);
         // Stop the enemy
-        Rigidbody2D enemyRB = refenemy.GetComponent<Rigidbody2D>();
-        float enemySpeed = enemyRB.linearVelocityX;
-        enemyRB.linearVelocityX = 0;
+        EnemyAi refEnemy = refenemy.GetComponent<EnemyAi>();
+        refEnemy.StoppedEnemy = true;
         // Show the third text box
+        tutorial3.SetActive(true);
+        UIDraggableTower mushManPortrait = null;
+
+        // Enable dragging for the mushman
+        foreach (UIDraggableTower towerProfile in towerProfiles)
+        {
+            // Check if it would instantiate a musman
+            if (towerProfile.TowerPrefab.GetComponent<TowerAi>().TowerID == AudioManager.Towers.mushman)
+            {
+                // Allow dragging for it
+                towerProfile.CanDrag = true;
+                mushManPortrait = towerProfile;
+                break;
+            }
+        }
+        // Force the next tower to be the mushman at 1, 1
+        mushManPortrait.ForceNextPositionTower(AudioManager.Towers.mushman, new Vector2Int(1, 1));
+        // Wait for the player to start dragging the tower
+        while (!mushManPortrait.followingMouse)
+        {
+            yield return new WaitForEndOfFrame();
+        }
+        // Go to the next tutorial object
+        tutorial3.SetActive(false);
+
+        tutorial4.SetActive(true);
+        // Wait for the player to put down the mushman there
+        while (UIDraggableTower.forcedNextTowerPosition != new Vector2Int(-1, -1))
+        {
+            yield return new WaitForEndOfFrame();
+        }
+        // Continue time
+        tutorial4.SetActive(false);
+        refEnemy.StoppedEnemy = false;
+        mushManPortrait.CanDrag = false;
+        tutorial5.SetActive(true);
+        // Wait for a bit
+        yield return new WaitForSeconds(waitTime5);
+
+        // Stop time a bit
+        tutorial5.SetActive(false);
+        refEnemy.StoppedEnemy = true;
+        TowerAi PlacedMushMan1 = FindFirstObjectByType<TowerAi>();
+        PlacedMushMan1.TowerAttacking = false;
+        mushManPortrait.CanDrag = true;
+        // Make the player place another mushman down
+        tutorial6.SetActive(true);
+        mushManPortrait.ForceNextPositionTower(AudioManager.Towers.mushman, new Vector2Int(0, 1));
+        while (UIDraggableTower.forcedNextTowerPosition != new Vector2Int(-1, -1))
+        {
+            yield return new WaitForEndOfFrame();
+        }
+        
+        tutorial6.SetActive(false);
+        refEnemy.StoppedEnemy = false;
+        PlacedMushMan1.TowerAttacking = true;
+        mushManPortrait.CanDrag = false;
+        // Wait for the enemies to destroy the enemy
+        tutorial7.SetActive(true);
+        yield return new WaitForSeconds(waitTime7);
+        
+        // Spawn the next enemy
+        tutorial7.SetActive(false);
+        tutorial8.SetActive(true);
+        refEnemySpawner.SpawnEnemy(tutorialEnemy, 0, false);
+        yield return new WaitForSeconds(waitTime8);
+        refEnemy = FindFirstObjectByType<EnemyAi>();
+        refEnemy.StoppedEnemy = true;
+        tutorial8.SetActive(false);
+        // Make the player drop the fairy
+        tutorial9.SetActive(true);
+        // Enable dragging for the fairy
+        UIDraggableTower fairyPortrait = null;
+        foreach (UIDraggableTower towerProfile in towerProfiles)
+        {
+            // Check if it would instantiate a musman
+            if (towerProfile.TowerPrefab.GetComponent<TowerAi>().TowerID == AudioManager.Towers.fairy)
+            {
+                // Allow dragging for it
+                towerProfile.CanDrag = true;
+                fairyPortrait = towerProfile;
+                break;
+            }
+        }
+        // Force the next position
+        fairyPortrait.ForceNextPositionTower(AudioManager.Towers.fairy, new Vector2Int(2, 2));
+        // wait
+        while (UIDraggableTower.forcedNextTowerPosition != new Vector2Int(-1, -1))
+        {
+            yield return new WaitForEndOfFrame();
+        }
+        // Continue Time
+        tutorial9.SetActive(false);
+        fairyPortrait.CanDrag = false;
+        refEnemy.StoppedEnemy = false;
     }
 }

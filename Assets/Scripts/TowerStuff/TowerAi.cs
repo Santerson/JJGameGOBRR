@@ -24,11 +24,12 @@ public class TowerAi : MonoBehaviour
     [SerializeField] float FirePositiony = 0;
     // Timer for animaton to start - fire cooldown
     [SerializeField] float LengthOfAnimaton = 0;
-    [SerializeField] AudioManager.Towers TowerID;
+    [SerializeField] public AudioManager.Towers TowerID;
     // Variables that are changed in the code
     private Animator Animator;
     private int Health = 1;
     private float CoolDown;
+    [HideInInspector] public bool TowerAttacking = true;
     TowerGrid refGrid;
     LaneCheck refLaneCheck;
     AudioManager refAudioManager; 
@@ -67,6 +68,10 @@ public class TowerAi : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (!TowerAttacking)
+        {
+            return;
+        }
         // Destroy the object if it is out of hitpoints and plays sound
         if (Health <= 0)
         {

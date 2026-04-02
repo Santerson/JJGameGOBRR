@@ -3,9 +3,7 @@
  * Author: Micaiah Mariano, Santiago Caprarulo
  * Description: Contains all AI for the enemy basics allowing it to be edited outside of the scripts
  * ******************************************/
-using Unity.VisualScripting;
 using UnityEngine;
-using static UnityEngine.ParticleSystem;
 
 public class EnemyAi : MonoBehaviour
 {
@@ -43,6 +41,8 @@ public class EnemyAi : MonoBehaviour
     private float MaxSpeed;
     private Rigidbody2D RB;
     private float deathAnimationtimprivete;
+
+    [HideInInspector] public bool StoppedEnemy = false;
 
     AudioManager refAudioManager;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -84,9 +84,17 @@ public class EnemyAi : MonoBehaviour
             refAudioManager.PlayEnemyWalkSFX(EnemyID);
             timeToNextEnemyWalkSound = TimeInbetweenWalkSounds;
         }
-        // moves enemy
-        RB.linearVelocityX = MaxSpeed;
-        MaxSpeed = Speed;
+        // Stop the enemy if they should be stopped, otherwise move it more
+        if (StoppedEnemy)
+        {
+            RB.linearVelocityX = 0;
+        }
+        else
+        {
+            // moves enemy
+            RB.linearVelocityX = MaxSpeed;
+            MaxSpeed = Speed;
+        }
         // animator.SetInteger("State", (int)animatons.walk);
     }
 
