@@ -19,12 +19,23 @@ public class UIDraggableTower : MonoBehaviour
     [SerializeField] TextMeshProUGUI refCDText;
     [SerializeField] GameObject TowerShadowPrefab;
 
+    public enum towerType
+    {
+        bunny,
+        mushman,
+        fairy,
+        golem
+    }
+    
     TowerGrid refTowerGrid;
     Vector2 initialPosition = Vector2.zero;
     bool followingMouse = false;
     float timeToNextTowerPlacement = 0;
     Vector2Int TowerShadowPosition = new Vector2Int(-1, -1);
     GameObject TowerShadow;
+
+    Vector2Int forcedNextTowerPosition = new Vector2Int(-1, -1);
+    towerType forcedNextTower = towerType.bunny;
 
     /// <summary>
     /// Sets initial variables
@@ -197,5 +208,16 @@ public class UIDraggableTower : MonoBehaviour
         }
         // Return the closest position
         return ClosestPos;
+    }
+
+    /// <summary>
+    /// Forces the next tower to be placed at a specific position
+    /// </summary>
+    /// <param name="towerType">The type of the tower to be placed</param>
+    /// <param name="Position">The position of the tower</param>
+    public void ForceNextPositionTower(towerType towerType, Vector2Int Position)
+    {
+        forcedNextTower = towerType;
+        forcedNextTowerPosition = Position;
     }
 }

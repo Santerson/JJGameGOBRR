@@ -45,6 +45,7 @@ public class SpawnerEnemy : MonoBehaviour
     AudioManager refAudioManager;
     float currentSpawnRate = 5;
     uint currentSpawns = 0;
+    uint spawnsInStage = 0;
     uint stage = 0;
     public bool EnemiesSpawning = true;
 
@@ -152,7 +153,7 @@ public class SpawnerEnemy : MonoBehaviour
     /// <param name="spawnedEnemy">A gameobject for the enemy</param>
     /// <param name="selectedSpawnLocation">The lane the enemy should spawn in</param>
     /// <param name="countAsSpawn">Whether or not this should count to make the game more difficult</param>
-    public void SpawnEnemy(GameObject spawnedEnemy, int selectedSpawnLocation, bool countAsSpawn = true)
+    public GameObject SpawnEnemy(GameObject spawnedEnemy, int selectedSpawnLocation, bool countAsSpawn = true)
     {
         // Instantiate an enemy at that position
         Vector2 spawnPos = SpawnPositions[selectedSpawnLocation];
@@ -162,11 +163,14 @@ public class SpawnerEnemy : MonoBehaviour
         if (countAsSpawn)
         {
             currentSpawns++;
-            if (currentSpawns > StageEnemyCount[stage])
+            spawnsInStage++;
+            if (spawnsInStage > StageEnemyCount[stage])
             {
                 IncreaseStage();
+                spawnsInStage = 0;
             }
         }
+        return spawndenemy;
     }
 
     void IncreaseStage()

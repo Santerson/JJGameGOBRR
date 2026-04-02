@@ -14,6 +14,8 @@ public class TutorialManager : MonoBehaviour
     [SerializeField] GameObject tutorial1;
     [SerializeField] GameObject tutorial2;
     [SerializeField] GameObject tutorialEnemy;
+    [SerializeField] GameObject tutorial3;
+    [SerializeField] GameObject tutorial4;
 
     SpawnerEnemy refEnemySpawner;
 
@@ -41,9 +43,16 @@ public class TutorialManager : MonoBehaviour
         tutorial1.SetActive(false);
 
         // Spawn an enemy and enable second text
-        refEnemySpawner.SpawnEnemy(tutorialEnemy, 1);
+        GameObject refenemy = refEnemySpawner.SpawnEnemy(tutorialEnemy, 1);
         tutorial2.SetActive(true);
         yield return new WaitForSeconds(waitTime2);
+
+        // Disable the second text
         tutorial2.SetActive(false);
+        // Stop the enemy
+        Rigidbody2D enemyRB = refenemy.GetComponent<Rigidbody2D>();
+        float enemySpeed = enemyRB.linearVelocityX;
+        enemyRB.linearVelocityX = 0;
+        // Show the third text box
     }
 }
