@@ -31,9 +31,9 @@ public class TowerAi : MonoBehaviour
     private float CoolDown;
     TowerGrid refGrid;
     LaneCheck refLaneCheck;
-    AudioManager refAudioManager;
+    AudioManager refAudioManager; 
     [SerializeField] private GameObject particls;
-
+    [SerializeField] private GameObject particlsRemove;
     /// <summary>
     /// The position of this tower in the grid (index based, where 0,0 is the bottom left)
     /// </summary>
@@ -158,6 +158,7 @@ public class TowerAi : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Backspace))
         {
+            Instantiate(particlsRemove, gameObject.transform.position, Quaternion.identity);
             refAudioManager.PlayTowerSellSFX(TowerID);
             Die();
         }

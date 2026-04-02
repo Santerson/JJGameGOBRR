@@ -298,7 +298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694bfbc40dad29488b63d50687d5c54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 5237352372188462167, guid: ddf8e3d1e612eb54fbf7d45c1c6142d2, type: 3}
+  Bullet: {fileID: 0}
   SizeX: 1
   SizeY: 1
   HealthMax: 2
@@ -307,9 +307,9 @@ MonoBehaviour:
   FirePositionX: 1
   FirePositiony: 0
   LengthOfAnimaton: 0
-  DeathSFX: {fileID: 3014569996701699862, guid: fb3b13b2322364443932008165f9b183, type: 3}
-  SellSFX: {fileID: 3014569996701699862, guid: 3c5785e4476fde346b7a3ea3c0690619, type: 3}
-  ShootSFX: {fileID: 3555164166106743311}
+  TowerID: 0
+  particls: {fileID: 0}
+  particlsRemove: {fileID: 1146853293022950771, guid: d68cc5ab47fa0b249b3d323e6aa666cc, type: 3}
   GridPosition: {x: 0, y: 0}
 --- !u!1 &4959736575911206215
 GameObject:
