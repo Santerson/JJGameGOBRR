@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68ae9b8a1fcbb5648a4d700ee7b5bada, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  particls: {fileID: 49964572713317819, guid: 9b643252bc0b17e458f9eefbf2ae3252, type: 3}
   GridHeight: 3
   GridLength: 8
   SquareSize: 2
@@ -53,6 +54,8 @@ MonoBehaviour:
   GridCenterOffset: {x: 0, y: 0}
   InaccessableSpaces: []
   longestDistanceToBePlaced: 1.3
+  MinDistanceAwayFromEnemies: 1
   EnableLogs: 1
-  DrawGrid: 1
+  DrawGridInGame: 0
+  AlwaysDrawGrid: 0
   RefTower1: {fileID: 9116573849009834622, guid: 2a84faba236884240a891788196bd643, type: 3}

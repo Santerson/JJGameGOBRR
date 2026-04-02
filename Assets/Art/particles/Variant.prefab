@@ -14,11 +14,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2392477421041186021, guid: 00c4fa796eb37854d898c375b76c6df6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.536655
+      value: 7.8540773
       objectReference: {fileID: 0}
     - target: {fileID: 2392477421041186021, guid: 00c4fa796eb37854d898c375b76c6df6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.7822857
+      value: 0.55793995
       objectReference: {fileID: 0}
     - target: {fileID: 2392477421041186021, guid: 00c4fa796eb37854d898c375b76c6df6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -70,7 +70,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3244115918783990471, guid: 00c4fa796eb37854d898c375b76c6df6, type: 3}
       propertyPath: ShapeModule.radius.value
-      value: 2.41
+      value: 1.65
       objectReference: {fileID: 0}
     - target: {fileID: 3244115918783990471, guid: 00c4fa796eb37854d898c375b76c6df6, type: 3}
       propertyPath: ShapeModule.radiusThickness
@@ -82,11 +82,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3244115918783990471, guid: 00c4fa796eb37854d898c375b76c6df6, type: 3}
       propertyPath: InitialModule.startSpeed.scalar
-      value: -7
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 3244115918783990471, guid: 00c4fa796eb37854d898c375b76c6df6, type: 3}
       propertyPath: InitialModule.startSpeed.minScalar
-      value: -4
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 3244115918783990471, guid: 00c4fa796eb37854d898c375b76c6df6, type: 3}
       propertyPath: InitialModule.startColor.maxColor.g

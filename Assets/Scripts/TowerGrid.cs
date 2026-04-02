@@ -11,6 +11,7 @@ using System.Collections.Generic;
 
 public class TowerGrid : MonoBehaviour
 {
+    [SerializeField] private GameObject particls;
     [Header("GridSize")]
     // Gridsizes
     [Tooltip("The height of the grid")]
@@ -169,6 +170,7 @@ public class TowerGrid : MonoBehaviour
             SpaceStatuses[position.x, position.y] = SpaceStatus.used;
             // Instantiate a game object there and save it's reference
             GameObject refTower = Instantiate(tower, SpacePositions[position.x, position.y], Quaternion.identity);
+            Instantiate(particls, SpacePositions[position.x, position.y], Quaternion.identity);
             TowersInSpots[position.x, position.y] = refTower;
             // Save the position in the towerai script of the tower
             refTower.GetComponent<TowerAi>().GridPosition = new Vector2Int(position.x, position.y);
