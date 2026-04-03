@@ -35,6 +35,7 @@ public class Mana : MonoBehaviour
     [SerializeField] Vector2 LossPXOffset = new Vector2(0, -0.3f);
 
     private Vignette screenTint;
+    public bool ManaDraining = true;
 
     float CurrentMana;
     Vector2 ManaBarInitialPosition;
@@ -79,7 +80,8 @@ public class Mana : MonoBehaviour
         // Calculate if a sound should play
         HandleManaSFX(manaRegen);
         // Add that to the current mana
-        CurrentMana += manaRegen * Time.deltaTime;
+        if (manaRegen > 0 || (manaRegen <= 0 && ManaDraining))
+            CurrentMana += manaRegen * Time.deltaTime;
         // Make sure that the mana does not exceed max mana
         CurrentMana = CurrentMana > MaxMana ? MaxMana : CurrentMana;
         // Update the manaLine

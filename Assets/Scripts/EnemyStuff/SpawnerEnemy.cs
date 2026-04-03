@@ -12,6 +12,7 @@ public class SpawnerEnemy : MonoBehaviour
     [SerializeField] GameObject MechWeak;
     [SerializeField] GameObject MechNormal;
     [SerializeField] GameObject MechBuff;
+    [SerializeField] TextMeshProUGUI stageText;
 
     [Header("Spawn Ranges")]
     [SerializeField] List<Vector2> SpawnPositions;
@@ -48,7 +49,6 @@ public class SpawnerEnemy : MonoBehaviour
     uint currentSpawns = 0;
     uint spawnsInStage = 0;
     uint stage = 0;
-    [SerializeField] TextMeshProUGUI manaGainText;
     public bool EnemiesSpawning = true;
 
     private void OnDrawGizmosSelected()
@@ -79,7 +79,7 @@ public class SpawnerEnemy : MonoBehaviour
         {
             HandleEnemySpawnLogic();
         }
-        manaGainText.text = $"{stage: 0}";
+        stageText.text = $"{stage : 0}";
     }
 
     /// <summary>
