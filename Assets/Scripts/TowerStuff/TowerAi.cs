@@ -18,12 +18,14 @@ public class TowerAi : MonoBehaviour
     // Sets stats
     [SerializeField] int HealthMax = 1;
     [Tooltip("Shots per second. set to -1 to disable")]
-    [SerializeField] float RateOfFire = 5;
+    
     [SerializeField] float InitialFireCooldown = 1f;
+    [SerializeField] float CoolDownMax = 0;
     [SerializeField] float FirePositionX = 0;
     [SerializeField] float FirePositiony = 0;
     // Timer for animaton to start - fire cooldown
     [SerializeField] float LengthOfAnimaton = 0;
+    [SerializeField] float CoolDownMin = 0;
     [SerializeField] public AudioManager.Towers TowerID;
     // Variables that are changed in the code
     private Animator Animator;
@@ -71,6 +73,7 @@ public class TowerAi : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        float CoolDown = Random.Range(CoolDownMin, CoolDownMax);
         if (!TowerAttacking)
         {
             return;
@@ -84,11 +87,7 @@ public class TowerAi : MonoBehaviour
             Die();
             return;
         }
-        // Make sure rate of fire causes
-        if (RateOfFire == -1)
-        {
-            return;
-        }
+
         // Cooldown for a shot
         CoolDown -= Time.fixedDeltaTime;
         if ((GridPosition.y == 0 && refLaneCheck.Lane2 != 0) || (GridPosition.y == 1 && refLaneCheck.Lane1 != 0)
@@ -113,7 +112,7 @@ public class TowerAi : MonoBehaviour
                 // Sfx
                 refAudioManager.PlayTowerShootSFX(TowerID);
                 // Reset cooldown
-                CoolDown = RateOfFire;
+                CoolDown = Random.Range(CoolDownMin, CoolDownMax);
             }
         }
         // Make sure attack cooldown cant hit zero tell animaton plays first
