@@ -39,6 +39,9 @@ public class TowerAi : MonoBehaviour
     /// The position of this tower in the grid (index based, where 0,0 is the bottom left)
     /// </summary>
     [HideInInspector] public Vector2Int GridPosition = Vector2Int.zero;
+
+    public bool canBeSold = true;
+
     // List of animatons
     enum Animatons
     {
@@ -161,7 +164,7 @@ public class TowerAi : MonoBehaviour
     /// </summary>
     private void OnMouseOver()
     {
-        if (Input.GetKeyDown(KeyCode.Backspace))
+        if (Input.GetKeyDown(KeyCode.Backspace) && canBeSold)
         {
             Instantiate(particlsRemove, gameObject.transform.position, Quaternion.identity);
             refAudioManager.PlayTowerSellSFX(TowerID);

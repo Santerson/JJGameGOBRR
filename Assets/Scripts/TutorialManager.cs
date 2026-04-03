@@ -21,6 +21,9 @@ public class TutorialManager : MonoBehaviour
     [SerializeField] float waitTime5 = 4f;
     [SerializeField] float waitTime7 = 2f;
     [SerializeField] float waitTime8 = 4f;
+    [SerializeField] float waitTimeAfter9 = 2f;
+    [SerializeField] float waitTime10 = 3f;
+    [SerializeField] float waitTime11 = 4f;
 
     [Header("Tutorial Gameobjects")]
     [SerializeField] GameObject tutorial1;
@@ -33,6 +36,9 @@ public class TutorialManager : MonoBehaviour
     [SerializeField] GameObject tutorial7;
     [SerializeField] GameObject tutorial8;
     [SerializeField] GameObject tutorial9;
+    [SerializeField] GameObject tutorial10;
+    [SerializeField] GameObject tutorial11;
+    [SerializeField] GameObject tutorial12;
 
     SpawnerEnemy refEnemySpawner;
     static bool tutorialOccured = false;
@@ -106,7 +112,7 @@ public class TutorialManager : MonoBehaviour
         }
         // Go to the next tutorial object
         tutorial3.SetActive(false);
-
+        
         tutorial4.SetActive(true);
         // Wait for the player to put down the mushman there
         while (UIDraggableTower.forcedNextTowerPosition != new Vector2Int(-1, -1))
@@ -118,6 +124,11 @@ public class TutorialManager : MonoBehaviour
         refEnemy.StoppedEnemy = false;
         mushManPortrait.CanDrag = false;
         tutorial5.SetActive(true);
+        TowerAi[] towers = FindObjectsByType<TowerAi>(FindObjectsSortMode.None);
+        foreach (TowerAi tower in towers)
+        {
+            tower.canBeSold = false;
+        }
         // Wait for a bit
         yield return new WaitForSeconds(waitTime5);
 
@@ -139,6 +150,11 @@ public class TutorialManager : MonoBehaviour
         refEnemy.StoppedEnemy = false;
         PlacedMushMan1.TowerAttacking = true;
         mushManPortrait.CanDrag = false;
+        towers = FindObjectsByType<TowerAi>(FindObjectsSortMode.None);
+        foreach (TowerAi tower in towers)
+        {
+            tower.canBeSold = false;
+        }
         // Wait for the enemies to destroy the enemy
         tutorial7.SetActive(true);
         yield return new WaitForSeconds(waitTime7);
@@ -177,5 +193,40 @@ public class TutorialManager : MonoBehaviour
         tutorial9.SetActive(false);
         fairyPortrait.CanDrag = false;
         refEnemy.StoppedEnemy = false;
+        towers = FindObjectsByType<TowerAi>(FindObjectsSortMode.None);
+        foreach (TowerAi tower in towers)
+        {
+            tower.canBeSold = false;
+        }
+        // Stop for a bit
+        yield return new WaitForSeconds(waitTimeAfter9);
+        // Show the next text box
+        tutorial10.SetActive(true);
+        yield return new WaitForSeconds(waitTime10);
+
+        // Freeze the whole game
+        Time.timeScale = 0;
+        tutorial10.SetActive(false);
+        tutorial11.SetActive(true);
+        yield return new WaitForSecondsRealtime(waitTime11);
+        tutorial11.SetActive(false);
+        // Do stuff to make it so you can only sell the mushman towers
+        towers = FindObjectsByType<TowerAi>(FindObjectsSortMode.None);
+        foreach (TowerAi tower in towers)
+        {
+            if (tower.TowerID == AudioManager.Towers.mushman)
+            {
+                tower.canBeSold = true;
+            }
+        }
+        tutorial12.SetActive(true);
+        // freeze time until the player does the thing again
+        while (towers.Length != 1)
+        {
+            towers = FindObjectsByType<TowerAi>(FindObjectsSortMode.None);
+            yield return new WaitForEndOfFrame();
+        }
+        tutorial12.SetActive(false);
+        Time.timeScale = 1f;
     }
 }
