@@ -18,19 +18,14 @@ public class TutorialManager : MonoBehaviour
 
     [Header("I'm sorry in advance")]
 
+    [SerializeField] KeyCode ContinueButton = KeyCode.Space;
+
     [Header("Tutorial Time Delays")]
-    [SerializeField] float waitTime1 = 3f;
     [SerializeField] float waitTime2 = 2f;
-    [SerializeField] float waitTime5 = 4f;
+    [SerializeField] float waitTime5 = 4f; 
     [SerializeField] float waitTime7 = 2f;
     [SerializeField] float waitTime8 = 4f;
     [SerializeField] float waitTimeAfter9 = 2f;
-    [SerializeField] float waitTime10 = 3f;
-    [SerializeField] float waitTime11 = 4f;
-    [SerializeField] float waitTime13 = 4f;
-    [SerializeField] float waitTime15 = 4f;
-    [SerializeField] float waitTime16 = 7f;
-    [SerializeField] float waitTime17 = 4f;
 
     [Header("Tutorial Textbox Gameobjects")]
     [SerializeField] GameObject tutorial1;
@@ -84,7 +79,11 @@ public class TutorialManager : MonoBehaviour
 
         // Enable first text
         tutorial1.SetActive(true);
-        yield return new WaitForSeconds(waitTime1);
+        // Wait
+        while (!Input.GetKey(ContinueButton))
+            yield return new WaitForEndOfFrame();
+        while (Input.GetKey(ContinueButton))
+            yield return new WaitForEndOfFrame();
         // Disable first text
         tutorial1.SetActive(false);
 
@@ -142,7 +141,6 @@ public class TutorialManager : MonoBehaviour
         }
         // Wait for a bit
         yield return new WaitForSeconds(waitTime5);
-
         // Stop time a bit
         tutorial5.SetActive(false);
         refEnemy.StoppedEnemy = true;
@@ -169,7 +167,6 @@ public class TutorialManager : MonoBehaviour
         // Wait for the enemies to destroy the enemy
         tutorial7.SetActive(true);
         yield return new WaitForSeconds(waitTime7);
-        
         // Spawn the next enemy
         tutorial7.SetActive(false);
         tutorial8.SetActive(true);
@@ -213,14 +210,27 @@ public class TutorialManager : MonoBehaviour
         yield return new WaitForSeconds(waitTimeAfter9);
         // Show the next text box
         tutorial10.SetActive(true);
-        yield return new WaitForSeconds(waitTime10);
-
-        // Freeze the whole game
         Mana manaBar = FindFirstObjectByType<Mana>();
+        while (!Input.GetKey(ContinueButton))
+        {
+            if (manaBar.CurrentMana <= 3)
+                manaBar.ManaDraining = false;
+            yield return new WaitForEndOfFrame();
+        }
+        while (Input.GetKey(ContinueButton))
+        {
+            if (manaBar.CurrentMana <= 3)
+                manaBar.ManaDraining = false;
+            yield return new WaitForEndOfFrame();
+        }
+        // Freeze the whole game
         manaBar.ManaDraining = false;
         tutorial10.SetActive(false);
         tutorial11.SetActive(true);
-        yield return new WaitForSeconds(waitTime11);
+        while (!Input.GetKey(ContinueButton))
+            yield return new WaitForEndOfFrame();
+        while (Input.GetKey(ContinueButton))
+            yield return new WaitForEndOfFrame();
         tutorial11.SetActive(false);
         // Do stuff to make it so you can only sell the mushman towers
         towers = FindObjectsByType<TowerAi>(FindObjectsSortMode.None);
@@ -241,7 +251,10 @@ public class TutorialManager : MonoBehaviour
         tutorial12.SetActive(false);
         manaBar.ManaDraining = true;
         tutorial13.SetActive(true);
-        yield return new WaitForSeconds(waitTime13);
+        while (!Input.GetKey(ContinueButton))
+            yield return new WaitForEndOfFrame();
+        while (Input.GetKey(ContinueButton))
+            yield return new WaitForEndOfFrame();
         tutorial13.SetActive(false);
 
         // Force the next tower to be the bunny
@@ -266,13 +279,22 @@ public class TutorialManager : MonoBehaviour
         }
         tutorial14.SetActive(false);
         tutorial15.SetActive(true);
-        yield return new WaitForSeconds(waitTime15);
+        while (!Input.GetKey(ContinueButton))
+            yield return new WaitForEndOfFrame();
+        while (Input.GetKey(ContinueButton))
+            yield return new WaitForEndOfFrame();
         tutorial15.SetActive(false);
         tutorial16.SetActive(true);
-        yield return new WaitForSeconds(waitTime16);
+        while (!Input.GetKey(ContinueButton))
+            yield return new WaitForEndOfFrame();
+        while (Input.GetKey(ContinueButton))
+            yield return new WaitForEndOfFrame();
         tutorial16.SetActive(false);
         tutorial17.SetActive(true);
-        yield return new WaitForSeconds(waitTime17);
+        while (!Input.GetKey(ContinueButton))
+            yield return new WaitForEndOfFrame();
+        while (Input.GetKey(ContinueButton))
+            yield return new WaitForEndOfFrame();
         tutorial17.SetActive(false);
 
         // Restart the game and keep it going

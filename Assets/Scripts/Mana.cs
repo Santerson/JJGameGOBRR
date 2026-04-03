@@ -37,7 +37,7 @@ public class Mana : MonoBehaviour
     private Vignette screenTint;
     public bool ManaDraining = true;
 
-    float CurrentMana;
+    public float CurrentMana { get; private set; }
     Vector2 ManaBarInitialPosition;
     AudioManager refAudioManager;
     /// <summary>
