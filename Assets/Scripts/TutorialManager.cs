@@ -4,7 +4,8 @@
  * Description: Performs a tutorial at the start
  * of the game
  * 
- * Note: This script sucked to make
+ * Note: This script sucked to make and sucks
+ *       to look at :/
  * ********************************/
 
 using UnityEngine;
@@ -15,6 +16,8 @@ public class TutorialManager : MonoBehaviour
 {
     [SerializeField] bool DoTutorial = true;
 
+    [Header("I'm sorry in advance")]
+
     [Header("Tutorial Time Delays")]
     [SerializeField] float waitTime1 = 3f;
     [SerializeField] float waitTime2 = 2f;
@@ -24,8 +27,12 @@ public class TutorialManager : MonoBehaviour
     [SerializeField] float waitTimeAfter9 = 2f;
     [SerializeField] float waitTime10 = 3f;
     [SerializeField] float waitTime11 = 4f;
+    [SerializeField] float waitTime13 = 4f;
+    [SerializeField] float waitTime15 = 4f;
+    [SerializeField] float waitTime16 = 7f;
+    [SerializeField] float waitTime17 = 4f;
 
-    [Header("Tutorial Gameobjects")]
+    [Header("Tutorial Textbox Gameobjects")]
     [SerializeField] GameObject tutorial1;
     [SerializeField] GameObject tutorial2;
     [SerializeField] GameObject tutorialEnemy;
@@ -39,6 +46,11 @@ public class TutorialManager : MonoBehaviour
     [SerializeField] GameObject tutorial10;
     [SerializeField] GameObject tutorial11;
     [SerializeField] GameObject tutorial12;
+    [SerializeField] GameObject tutorial13;
+    [SerializeField] GameObject tutorial14;
+    [SerializeField] GameObject tutorial15;
+    [SerializeField] GameObject tutorial16;
+    [SerializeField] GameObject tutorial17;
 
     SpawnerEnemy refEnemySpawner;
     static bool tutorialOccured = false;
@@ -58,7 +70,6 @@ public class TutorialManager : MonoBehaviour
     /// <summary>
     /// Runs tutorial logic, alongside waiting for players to perform inputs
     /// </summary>
-    /// <returns></returns>
     IEnumerator PlayTutorial()
     {
         tutorialOccured = true;
@@ -205,10 +216,11 @@ public class TutorialManager : MonoBehaviour
         yield return new WaitForSeconds(waitTime10);
 
         // Freeze the whole game
-        Time.timeScale = 0;
+        Mana manaBar = FindFirstObjectByType<Mana>();
+        manaBar.ManaDraining = false;
         tutorial10.SetActive(false);
         tutorial11.SetActive(true);
-        yield return new WaitForSecondsRealtime(waitTime11);
+        yield return new WaitForSeconds(waitTime11);
         tutorial11.SetActive(false);
         // Do stuff to make it so you can only sell the mushman towers
         towers = FindObjectsByType<TowerAi>(FindObjectsSortMode.None);
@@ -227,6 +239,47 @@ public class TutorialManager : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
         tutorial12.SetActive(false);
-        Time.timeScale = 1f;
+        manaBar.ManaDraining = true;
+        tutorial13.SetActive(true);
+        yield return new WaitForSeconds(waitTime13);
+        tutorial13.SetActive(false);
+
+        // Force the next tower to be the bunny
+        UIDraggableTower bunnyPortrait = null;
+        foreach (UIDraggableTower towerProfile in towerProfiles)
+        {
+            // Check if it would instantiate a musman
+            if (towerProfile.TowerPrefab.GetComponent<TowerAi>().TowerID == AudioManager.Towers.bunny)
+            {
+                // Allow dragging for it
+                towerProfile.CanDrag = true;
+                bunnyPortrait = towerProfile;
+                break;
+            }
+        }
+        bunnyPortrait.ForceNextPositionTower(AudioManager.Towers.bunny, new Vector2Int(0, 2));
+        tutorial14.SetActive(true);
+        // Wait until the next tower is the bunny
+        while (UIDraggableTower.forcedNextTowerPosition != new Vector2Int(-1, -1))
+        {
+            yield return new WaitForEndOfFrame();
+        }
+        tutorial14.SetActive(false);
+        tutorial15.SetActive(true);
+        yield return new WaitForSeconds(waitTime15);
+        tutorial15.SetActive(false);
+        tutorial16.SetActive(true);
+        yield return new WaitForSeconds(waitTime16);
+        tutorial16.SetActive(false);
+        tutorial17.SetActive(true);
+        yield return new WaitForSeconds(waitTime17);
+        tutorial17.SetActive(false);
+
+        // Restart the game and keep it going
+        foreach (UIDraggableTower towerProfile in towerProfiles)
+        {
+            towerProfile.CanDrag = true;
+        }
+        refEnemySpawner.EnemiesSpawning = true;
     }
 }
