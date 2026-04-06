@@ -31,14 +31,14 @@ public class BulletAi : MonoBehaviour
         Vector3 Size = new Vector3(SizeX, SizeY);
         gameObject.transform.localScale = Size;
         gameObject.GetComponentInChildren<SpriteRenderer>().color = refcolor;
+        // Moves the bullet
+        RB.linearVelocityX = Speed;
     }
 
     void FixedUpdate()
     {
         // Animates the bullet
         //animator.SetInteger("State", (int)animatons.idale);
-        // Moves the bullet
-        RB.linearVelocityX = Speed;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

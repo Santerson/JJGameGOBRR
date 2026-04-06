@@ -22,6 +22,12 @@ public class Mana : MonoBehaviour
     [Tooltip("The maximum vignette intensity (0 to 1)")]
         [SerializeField] float maxVignetteEffect = 0.5f;
 
+    [Header("TimeWarp")]
+    [Tooltip("The amount of mana required for the game to slow down")]
+        [SerializeField] float ManaForTimeWarp = 10f;
+    [Tooltip("The amount the game slows down, where 1 is the base speed")]
+        [SerializeField] float TimeWarpAmount = 0.5f;
+
     [Header("Audio")]
     [Tooltip("The interval of mana inbetween each sound")]
         [SerializeField] float ManaSFXInterval = 3f;
@@ -67,6 +73,25 @@ public class Mana : MonoBehaviour
     void Update()
     {
         HandleManaRegeneration();
+        HandleTimeWarpManagement();
+    }
+
+    /// <summary>
+    /// Slows the game down if the player is low on mana
+    /// (mantains physics calculation speed)
+    /// </summary>
+    void HandleTimeWarpManagement()
+    {
+        // Do nothing if the game is paused
+        if (PauseMenu.paused) return;
+
+        // Calculate new game speed
+        float gameSpeed = CurrentMana < ManaForTimeWarp ? TimeWarpAmount : 1;
+
+        // apply that gamespeed
+        Time.timeScale = gameSpeed;
+        // (fixedDeltaTime is for physics update. It's base is 0.02f)
+        Time.fixedDeltaTime = 0.02f * Time.timeScale;
     }
 
     /// <summary>

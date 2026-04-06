@@ -10,7 +10,7 @@ public class PauseMenu : MonoBehaviour
 {
     [SerializeField] GameObject pauseMenu;
     [SerializeField] AudioSource pauseSound;
-    bool paused = false;
+    public static bool paused { get; private set; } = false;
     // Update is called once per frame
     void Update()
     {

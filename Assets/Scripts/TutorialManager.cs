@@ -277,6 +277,18 @@ public class TutorialManager : MonoBehaviour
         {
             yield return new WaitForEndOfFrame();
         }
+        // Disable placement for the bunny
+        foreach (UIDraggableTower towerProfile in towerProfiles)
+        {
+            // Check if it would instantiate a bunny
+            if (towerProfile.TowerPrefab.GetComponent<TowerAi>().TowerID == AudioManager.Towers.bunny)
+            {
+                // Allow dragging for it
+                towerProfile.CanDrag = false;
+                bunnyPortrait = towerProfile;
+                break;
+            }
+        }
         tutorial14.SetActive(false);
         tutorial15.SetActive(true);
         while (!Input.GetKey(ContinueButton))
@@ -303,5 +315,10 @@ public class TutorialManager : MonoBehaviour
             towerProfile.CanDrag = true;
         }
         refEnemySpawner.EnemiesSpawning = true;
+        // make every tower avaliable to be sold
+        foreach (TowerAi tower in towers)
+        {
+            tower.canBeSold = true;
+        }
     }
 }
