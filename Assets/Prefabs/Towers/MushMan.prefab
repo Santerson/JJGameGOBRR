@@ -102,7 +102,7 @@ PrefabInstance:
       objectReference: {fileID: 2182802411495967165, guid: 9e421d7cefddb004e8279c3f8ba05b23, type: 3}
     - target: {fileID: 7530514561817378367, guid: 01a5586a081987349ade83957f7874d8, type: 3}
       propertyPath: HealthMax
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7530514561817378367, guid: 01a5586a081987349ade83957f7874d8, type: 3}
       propertyPath: RateOfFire

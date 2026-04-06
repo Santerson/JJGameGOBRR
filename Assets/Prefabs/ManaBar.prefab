@@ -89,8 +89,8 @@ MonoBehaviour:
   volume: {fileID: 0}
   enableVignette: 1
   maxVignetteEffect: 0.5
-  GainSFX: {fileID: 52696709823007944}
-  LossSFX: {fileID: 888254917828749770}
+  ManaForTimeWarp: 7
+  TimeWarpAmount: 0.5
   ManaSFXInterval: 3
   MinSimulationSpeed: 1
   MaxSimulationSpeed: 2
@@ -98,6 +98,7 @@ MonoBehaviour:
   GainPX: {fileID: 1387528567304665541}
   LossPX: {fileID: 6630017897886869818}
   LossPXOffset: {x: 0, y: -0.3}
+  ManaDraining: 1
 --- !u!1 &5056500602453078983
 GameObject:
   m_ObjectHideFlags: 0
