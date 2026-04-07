@@ -11,6 +11,8 @@ using System.Collections.Generic;
 
 public class TowerGrid : MonoBehaviour
 {
+    [SerializeField] private GameObject particls_fail;
+
     [SerializeField] private GameObject particls;
     [Header("GridSize")]
     // Gridsizes
@@ -162,6 +164,7 @@ public class TowerGrid : MonoBehaviour
             {
                 if (Vector2.Distance(enemy.transform.position, SpacePositions[position.x, position.y]) < MinDistanceAwayFromEnemies)
                 {
+                    Instantiate(particls_fail, SpacePositions[position.x, position.y], Quaternion.identity);
                     return false;
                 }
             }
