@@ -395,40 +395,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2139589152159381438, guid: eca15c26b23ebe946b6f1e522b3ef64e, type: 3}
-      propertyPath: VelocityModule.inWorldSpace
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2139589152159381438, guid: eca15c26b23ebe946b6f1e522b3ef64e, type: 3}
-      propertyPath: VelocityModule.radial.scalar
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2139589152159381438, guid: eca15c26b23ebe946b6f1e522b3ef64e, type: 3}
-      propertyPath: VelocityModule.orbitalZ.scalar
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2139589152159381438, guid: eca15c26b23ebe946b6f1e522b3ef64e, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2139589152159381438, guid: eca15c26b23ebe946b6f1e522b3ef64e, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2139589152159381438, guid: eca15c26b23ebe946b6f1e522b3ef64e, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.r
-      value: 0.89433956
-      objectReference: {fileID: 0}
-    - target: {fileID: 2139589152159381438, guid: eca15c26b23ebe946b6f1e522b3ef64e, type: 3}
-      propertyPath: InitialModule.startColor.minColor.b
-      value: 0.2245282
-      objectReference: {fileID: 0}
-    - target: {fileID: 2139589152159381438, guid: eca15c26b23ebe946b6f1e522b3ef64e, type: 3}
-      propertyPath: InitialModule.startColor.minColor.g
-      value: 0.2245282
-      objectReference: {fileID: 0}
-    - target: {fileID: 2139589152159381438, guid: eca15c26b23ebe946b6f1e522b3ef64e, type: 3}
-      propertyPath: InitialModule.startColor.minMaxState
-      value: 2
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
+      value: 12.5
       objectReference: {fileID: 0}
     - target: {fileID: 3835646781985333780, guid: eca15c26b23ebe946b6f1e522b3ef64e, type: 3}
       propertyPath: m_Name

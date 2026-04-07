@@ -1228,6 +1228,10 @@ PrefabInstance:
       value: -5.04
       objectReference: {fileID: 0}
     - target: {fileID: 6349601164191860111, guid: 11a8d664d00071144829a74972322ba3, type: 3}
+      propertyPath: particls_fail
+      value: 
+      objectReference: {fileID: 3835646781985333780, guid: eca15c26b23ebe946b6f1e522b3ef64e, type: 3}
+    - target: {fileID: 6349601164191860111, guid: 11a8d664d00071144829a74972322ba3, type: 3}
       propertyPath: AlwaysDrawGrid
       value: 1
       objectReference: {fileID: 0}
