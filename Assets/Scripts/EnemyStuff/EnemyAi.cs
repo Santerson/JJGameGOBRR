@@ -79,12 +79,16 @@ public class EnemyAi : MonoBehaviour
     {
         // - timers
         coolDownAttack -= Time.fixedDeltaTime;
-        if (Random.Range(0, RandomVoiceChance) == 0) refAudioManager.PlayEnemyVoiceSFX(EnemyID);
-        timeToNextEnemyWalkSound -= Time.fixedDeltaTime;
-        if (timeToNextEnemyWalkSound <= 0)
+        // Play the audio for the enemy
+        if (!StoppedEnemy)
         {
-            refAudioManager.PlayEnemyWalkSFX(EnemyID);
-            timeToNextEnemyWalkSound = TimeInbetweenWalkSounds;
+            if (Random.Range(0, RandomVoiceChance) == 0) refAudioManager.PlayEnemyVoiceSFX(EnemyID);
+            timeToNextEnemyWalkSound -= Time.fixedDeltaTime;
+            if (timeToNextEnemyWalkSound <= 0)
+            {
+                refAudioManager.PlayEnemyWalkSFX(EnemyID);
+                timeToNextEnemyWalkSound = TimeInbetweenWalkSounds;
+            }
         }
         // Stop the enemy if they should be stopped, otherwise move it more
         if (StoppedEnemy)
