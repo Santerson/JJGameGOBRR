@@ -19,6 +19,7 @@ public class TutorialManager : MonoBehaviour
     [Header("I'm sorry in advance")]
 
     [SerializeField] KeyCode ContinueButton = KeyCode.Mouse0;
+    [SerializeField] KeyCode SkipButton = KeyCode.Mouse1;
 
     [Header("Tutorial Time Delays")]
     [SerializeField] float waitTime2 = 2f;
@@ -81,9 +82,39 @@ public class TutorialManager : MonoBehaviour
         tutorial1.SetActive(true);
         // Wait
         while (!Input.GetKey(ContinueButton))
+        {
+            if (Input.GetKey(SkipButton))
+            {
+                // Restart the game and keep it going
+                foreach (UIDraggableTower towerProfile in towerProfiles)
+                {
+                    towerProfile.CanDrag = true;
+                }
+                refEnemySpawner.EnemiesSpawning = true;
+                tutorial1.SetActive(false);
+                tutorialOccured = true;
+                IsTutorialing = false;
+                yield break;
+            }
             yield return new WaitForEndOfFrame();
+        }
         while (Input.GetKey(ContinueButton))
+        {
+            if (Input.GetKey(SkipButton))
+            {
+                // Restart the game and keep it going
+                foreach (UIDraggableTower towerProfile in towerProfiles)
+                {
+                    towerProfile.CanDrag = true;
+                }
+                refEnemySpawner.EnemiesSpawning = true;
+                tutorial1.SetActive(false);
+                tutorialOccured = true;
+                IsTutorialing = false;
+                yield break;
+            }
             yield return new WaitForEndOfFrame();
+        }
         // Disable first text
         tutorial1.SetActive(false);
 
