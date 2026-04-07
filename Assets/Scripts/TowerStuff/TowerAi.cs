@@ -164,7 +164,7 @@ public class TowerAi : MonoBehaviour
     /// </summary>
     private void OnMouseOver()
     {
-        if (Input.GetKeyDown(KeyCode.Backspace) && canBeSold)
+        if (Input.GetMouseButtonDown(1) && canBeSold)
         {
             Instantiate(particlsRemove, gameObject.transform.position, Quaternion.identity);
             refAudioManager.PlayTowerSellSFX(TowerID);
