@@ -166,6 +166,7 @@ public class Mana : MonoBehaviour
 
     void HandleManaSFX(float generation)
     {
+        if (!ManaDraining) return;
         // Find if we are on a mana threshold
         float ProgressToNextThreshold = CurrentMana % ManaSFXInterval;
         float NewProgress = ProgressToNextThreshold + generation * Time.deltaTime;
