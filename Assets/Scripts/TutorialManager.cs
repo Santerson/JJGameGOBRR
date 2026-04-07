@@ -18,7 +18,7 @@ public class TutorialManager : MonoBehaviour
 
     [Header("I'm sorry in advance")]
 
-    [SerializeField] KeyCode ContinueButton = KeyCode.Space;
+    [SerializeField] KeyCode ContinueButton = KeyCode.Mouse0;
 
     [Header("Tutorial Time Delays")]
     [SerializeField] float waitTime2 = 2f;
