@@ -244,6 +244,11 @@ MonoBehaviour:
   towerCooldown: 0
   refCDText: {fileID: 4398162006797669372}
   TowerShadowPrefab: {fileID: 5494651061738657656, guid: ed43289bb934f184c82f70b20862acae, type: 3}
+  DraggingTowerVersion: {fileID: 166203792177270601, guid: 076e42f706c2bd349ab165b4db8137ae, type: 3}
+  TopLeftOfScroll: {x: 0, y: 0}
+  BottomRightOfScroll: {x: 0, y: 0}
+  SelectedTowerTint: 0.2
+  CanDrag: 1
 --- !u!61 &5962151161001864235
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -393,9 +398,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TowerPrefab: {fileID: 8829138057996306838, guid: 6edea39458718244583e46c6efb11e71, type: 3}
   pickupSound: {fileID: 6419963212006066213}
-  towerCooldown: 30
+  towerCooldown: 0
   refCDText: {fileID: 4262197270266030206}
   TowerShadowPrefab: {fileID: 5494651061738657656, guid: ed43289bb934f184c82f70b20862acae, type: 3}
+  DraggingTowerVersion: {fileID: 8610750346112869936, guid: 686dca9fdeac58244a417b06612b07c5, type: 3}
+  TopLeftOfScroll: {x: 0, y: 0}
+  BottomRightOfScroll: {x: 0, y: 0}
+  SelectedTowerTint: 0.2
+  CanDrag: 1
 --- !u!61 &7328040353933743678
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -655,7 +665,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 444115634598780923, guid: c2613a3744ce6744e857e8b3a8075783, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -742,7 +752,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 444115634598780923, guid: c2613a3744ce6744e857e8b3a8075783, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -998,6 +1008,11 @@ MonoBehaviour:
   towerCooldown: 0
   refCDText: {fileID: 5974563265039362337}
   TowerShadowPrefab: {fileID: 5494651061738657656, guid: ed43289bb934f184c82f70b20862acae, type: 3}
+  DraggingTowerVersion: {fileID: 7528795631024294427, guid: e0c7e7ea35c6c9847a07fff445b29bc1, type: 3}
+  TopLeftOfScroll: {x: 0, y: 0}
+  BottomRightOfScroll: {x: 0, y: 0}
+  SelectedTowerTint: 0.2
+  CanDrag: 1
 --- !u!61 &1167546182292993571
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1327,6 +1342,11 @@ MonoBehaviour:
   towerCooldown: 0
   refCDText: {fileID: 5154926612328051360}
   TowerShadowPrefab: {fileID: 5494651061738657656, guid: ed43289bb934f184c82f70b20862acae, type: 3}
+  DraggingTowerVersion: {fileID: 3968689692443041225, guid: 2ba37cde89fbb884c8c223ae932aecee, type: 3}
+  TopLeftOfScroll: {x: 0, y: 0}
+  BottomRightOfScroll: {x: 0, y: 0}
+  SelectedTowerTint: 0.2
+  CanDrag: 1
 --- !u!61 &8180057127755050563
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1452,7 +1472,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 1
   m_Sprite: {fileID: -3931549939905956971, guid: b4b7b2c9d42895a49acb10a52b45ed83, type: 3}
   m_Color: {r: 0.5849056, g: 0.3530991, b: 0, a: 1}
   m_FlipX: 0
@@ -1539,7 +1559,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 444115634598780923, guid: c2613a3744ce6744e857e8b3a8075783, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1722,7 +1742,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -394, y: 74}
+  m_AnchoredPosition: {x: -399, y: 105}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4925367528108723639
@@ -2015,7 +2035,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 4
   m_TargetDisplay: 0
 --- !u!114 &6092010846874580082
 MonoBehaviour:
@@ -2132,7 +2152,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 444115634598780923, guid: c2613a3744ce6744e857e8b3a8075783, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

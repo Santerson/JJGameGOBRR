@@ -18,18 +18,38 @@ public class UIDraggableTower : MonoBehaviour
         [SerializeField] float towerCooldown = 0;
     [SerializeField] TextMeshProUGUI refCDText;
     [SerializeField] GameObject TowerShadowPrefab;
+    [SerializeField] GameObject DraggingTowerVersion;
 
+    [Header("Sroll Stuff")]
+    [SerializeField] Vector2 TopLeftOfScroll = Vector2.zero;
+    [SerializeField] Vector2 BottomRightOfScroll = Vector2.zero;
+    [Tooltip("The transparency of the object when the tower is selected. Where 1 is fully opaque and 0 is fully invisible")]
+        [SerializeField] float SelectedTowerTint = 0.2f;
     public bool CanDrag = true;
 
     TowerGrid refTowerGrid;
+    SpriteRenderer refRenderer;
+
     Vector2 initialPosition = Vector2.zero;
     public bool followingMouse { get; private set; } = false;
     float timeToNextTowerPlacement = 0;
     Vector2Int TowerShadowPosition = new Vector2Int(-1, -1);
     GameObject TowerShadow;
+    GameObject InactiveTowerThatFollowsMouse = null;
 
     public static Vector2Int forcedNextTowerPosition { get; private set; } = new Vector2Int(-1, -1);
     static AudioManager.Towers forcedNextTower = AudioManager.Towers.bunny;
+
+    private void OnDrawGizmosSelected()
+    {
+        Vector2 topRight = new Vector2(BottomRightOfScroll.x, TopLeftOfScroll.y);
+        Vector2 bottomLeft = new Vector2(TopLeftOfScroll.x, BottomRightOfScroll.y);
+        Debug.DrawLine(topRight, TopLeftOfScroll, Color.red);
+        Debug.DrawLine(TopLeftOfScroll, bottomLeft, Color.red);
+        Debug.DrawLine(bottomLeft, BottomRightOfScroll, Color.red);
+        Debug.DrawLine(BottomRightOfScroll, topRight, Color.red);
+    }
+
 
     /// <summary>
     /// Sets initial variables
@@ -46,6 +66,7 @@ public class UIDraggableTower : MonoBehaviour
         {
             Debug.LogError("No cd text assigned!");
         }
+        refRenderer = GetComponent<SpriteRenderer>();
     }
 
     /// <summary>
@@ -73,8 +94,25 @@ public class UIDraggableTower : MonoBehaviour
             mousePos = Camera.main.ScreenToWorldPoint(mousePos);
             // Reset the z so it's visible in 2d space
             mousePos.z = 0;
-            // Set the gameObject to that point
-            transform.position = mousePos;
+            if (InactiveTowerThatFollowsMouse == null)
+                // Set the gameObject to that point
+                transform.position = mousePos;
+            else
+                // Move the instantiated tower version to the mouse
+                InactiveTowerThatFollowsMouse.transform.position = mousePos;
+
+            // Check if the tower should be changed to the actual tower instead of the portrait
+            // Check if the tower is outside of the range of the scroll
+            if (InactiveTowerThatFollowsMouse == null && !isInRange(TopLeftOfScroll, BottomRightOfScroll, mousePos))
+            {
+                // If so, return and hide the portrait
+                transform.position = initialPosition;
+                refRenderer.color = new Color(refRenderer.color.r, refRenderer.color.g, refRenderer.color.b, SelectedTowerTint);
+                // Instantiate a new gameobject
+                InactiveTowerThatFollowsMouse = Instantiate(DraggingTowerVersion, transform.position, Quaternion.identity);
+                // Make that object follow the mouse instead
+                InactiveTowerThatFollowsMouse.transform.position = mousePos;
+            }
 
             // Shadow a drop position for the tower
             // Get the closest drop position
@@ -129,7 +167,7 @@ public class UIDraggableTower : MonoBehaviour
         // Nullcheck refTowergrid
         if (refTowerGrid == null) return;
         // Find the point on the TowerGrid closest to the mousePos
-        Vector2Int gridTile = getClosestGridTile(transform.position);
+        Vector2Int gridTile = getClosestGridTile(InactiveTowerThatFollowsMouse.transform.position);
         // Attempt to drop a tower there
         if (gridTile != new Vector2Int(-1, -1))
         {
@@ -158,8 +196,11 @@ public class UIDraggableTower : MonoBehaviour
         }
         // Stop following the mouse
         followingMouse = false;
-        // Move the object back to it's original position
-        transform.position = initialPosition;
+        // Destroy the instantiated tower
+        Destroy(InactiveTowerThatFollowsMouse);
+        InactiveTowerThatFollowsMouse = null;
+        // Re-enable the sprite
+        refRenderer.color = new Color(refRenderer.color.r, refRenderer.color.g, refRenderer.color.b, 1);
     }
 
     /// <summary>
@@ -189,7 +230,7 @@ public class UIDraggableTower : MonoBehaviour
             for (int j = 0; j < gridHeight; j++)
             {
                 // Run distance formula between the current point and the targetted dropping position
-                float distance = Vector2.Distance(transform.position, SpacePositions[i, j]);
+                float distance = Vector2.Distance(position, SpacePositions[i, j]);
 
                 // If the space distance is shorter than the smallest
                 if (distance < smallestDistance && distance <= maxLen)
@@ -224,5 +265,18 @@ public class UIDraggableTower : MonoBehaviour
     {
         forcedNextTower = towerType;
         forcedNextTowerPosition = Position;
+    }
+
+    /// <summary>
+    /// Determines if a vector2 is in a square of other vector2s
+    /// </summary>
+    /// <returns>true if it is, false otherwise</returns>
+    bool isInRange(Vector2 topLeft, Vector2 bottomRight, Vector2 Position)
+    {
+        
+        if (Position.x < topLeft.x && Position.x > bottomRight.x)
+            if (Position.y > bottomRight.y && Position.y < topLeft.y)
+                return true;
+        return false;
     }
 }
