@@ -56,6 +56,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DraggingFairy
       objectReference: {fileID: 0}
+    - target: {fileID: 7752386744874560871, guid: cee1cbda9128e2c44adef4da8ff20b69, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3380152979816006441, guid: cee1cbda9128e2c44adef4da8ff20b69, type: 3}
     - {fileID: 1189840973771281724, guid: cee1cbda9128e2c44adef4da8ff20b69, type: 3}

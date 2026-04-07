@@ -56,6 +56,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DraggingGolem
       objectReference: {fileID: 0}
+    - target: {fileID: 7570271042030550015, guid: 778a2407cf740254ca9a2b06264608be, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3202539774404498865, guid: 778a2407cf740254ca9a2b06264608be, type: 3}
     - {fileID: 1304400960458474404, guid: 778a2407cf740254ca9a2b06264608be, type: 3}

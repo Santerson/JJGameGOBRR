@@ -1,3 +1,9 @@
+/**********************************************
+ * Filename: SpawnerEnemy
+ * Author: Micaiah Mariano, Santiago Caprarulo
+ * 
+ * *******************************************/
+
 using System.Collections.Generic; /* List<T> */
 using TMPro;
 using Unity.VisualScripting;
