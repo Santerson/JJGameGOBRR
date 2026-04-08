@@ -13,6 +13,10 @@ PrefabInstance:
       value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3548443905817846113, guid: 7dd82a7487d558b4ea1bd8c48c4c36b6, type: 3}
+      propertyPath: Particls
+      value: 
+      objectReference: {fileID: 8807719857622679111, guid: c7175111333068a4c8ae3c1bd2c26fa4, type: 3}
+    - target: {fileID: 3548443905817846113, guid: 7dd82a7487d558b4ea1bd8c48c4c36b6, type: 3}
       propertyPath: particls
       value: 
       objectReference: {fileID: 8807719857622679111, guid: c7175111333068a4c8ae3c1bd2c26fa4, type: 3}
