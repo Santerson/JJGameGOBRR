@@ -9,7 +9,7 @@ public class EnemyAi : MonoBehaviour
 {
     // editable variables
 
-    // the attack hit box for the enemy
+    // the attack hitbox for the enemy
     [SerializeField] GameObject Hurtfield;
     // size and color for the enemy
     [SerializeField] float SizeX = 1;
@@ -31,9 +31,9 @@ public class EnemyAi : MonoBehaviour
     [SerializeField] float TimeInbetweenWalkSounds = 1f;
     [SerializeField] float DeathAnimationtime;
     [SerializeField] float DeathAnimation;
-    [SerializeField] private GameObject particls;    
+    [SerializeField] private GameObject Particls;
     
-    // variables that are changed in the code
+    // variables that are changed in the code along with particles and animations and sounds
     public int lane;
     Color refcolor = Color.white;
     private int Health;
@@ -43,12 +43,11 @@ public class EnemyAi : MonoBehaviour
     private float MaxSpeed;
     private Rigidbody2D RB;
     private float deathAnimationtimprivete;
-
     [HideInInspector] public bool StoppedEnemy = false;
-
     AudioManager refAudioManager;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    enum animatons
+
+    // the animations
+    enum animations
     {
         walk,
         attack,
@@ -57,29 +56,29 @@ public class EnemyAi : MonoBehaviour
     }
     void Start()
     {
-        //initializes the animations
+        // initializes the animations
         animator = GetComponentInChildren<Animator>();
-        //sets rigid body
+        // sets rigid body
         RB = GetComponent<Rigidbody2D>();
-        //sets size
+        // sets size
         Vector3 Size = new Vector3(SizeX, SizeY);
         gameObject.transform.localScale = Size;
-        //sets color
+        // sets color
         refcolor = gameObject.GetComponentInChildren<SpriteRenderer>().color;
-        //sets states
+        // sets states
         Health = HealthMax;
         coolDownAttack = AttackCooldown;
         MaxSpeed = Speed;
         deathAnimationtimprivete = DeathAnimationtime;
-        // Play Spawn Sound
+        // play Spawn Sound
         refAudioManager = FindFirstObjectByType<AudioManager>();
         refAudioManager.PlayEnemySpawnSFX(EnemyID);
     }
     void FixedUpdate()
     {
-        // - timers
+        // minus timers
         coolDownAttack -= Time.fixedDeltaTime;
-        // Play the audio for the enemy
+        // play the audio for the enemy
         if (!StoppedEnemy)
         {
             if (Random.Range(0, RandomVoiceChance) == 0) refAudioManager.PlayEnemyVoiceSFX(EnemyID);
@@ -90,7 +89,7 @@ public class EnemyAi : MonoBehaviour
                 timeToNextEnemyWalkSound = TimeInbetweenWalkSounds;
             }
         }
-        // Stop the enemy if they should be stopped, otherwise move it more
+        // stop the enemy if they should be stopped, otherwise move it more
         if (StoppedEnemy)
         {
             RB.linearVelocityX = 0;
@@ -118,7 +117,7 @@ public class EnemyAi : MonoBehaviour
                 // checks if dead
                 if (Health <= 0)
                 {
-                    Instantiate(particls, gameObject.transform.position, Quaternion.identity);
+                    Instantiate(Particls, gameObject.transform.position, Quaternion.identity);
                     Die();
                 }
             }
