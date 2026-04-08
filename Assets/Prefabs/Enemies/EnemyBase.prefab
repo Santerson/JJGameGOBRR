@@ -480,17 +480,14 @@ MonoBehaviour:
   AttackHitBoxX: -1.25
   AttackHitBoxY: 0
   LengthOfAnimaton: 0
-  SpawnSFX: {fileID: 7678373172261649567}
-  TakeDMGSFX: {fileID: 1526599685025577187}
-  randomVoiceChance: 0.01
-  RandomVoiceSFX: {fileID: 4983362631465533413}
-  timeInbetweenWalkSounds: 1
-  WalkSFX: {fileID: 2974731639940640146}
-  AttackSFX: {fileID: 1630253860278518672}
-  DeathSFX: {fileID: 6739637119793450498, guid: a20168c9945c23e4a904e0986186883b, type: 3}
-  deathAnimationtime: 0
-  deathAnimation: 0
+  EnemyID: 0
+  RandomVoiceChance: 500
+  TimeInbetweenWalkSounds: 1
+  DeathAnimationtime: 0
+  DeathAnimation: 0
+  Particls: {fileID: 3276437734808352427, guid: bfe9eb7932f3da04a88aa0c555d60227, type: 3}
   lane: 0
+  StoppedEnemy: 0
 --- !u!50 &109451618528338515
 Rigidbody2D:
   serializedVersion: 5

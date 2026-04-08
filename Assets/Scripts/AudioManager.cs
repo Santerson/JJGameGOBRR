@@ -32,23 +32,6 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AK.Wwise.Event UIClickSFX;
 
     /// <summary>
-    /// Handles don't destroy on load functionality
-    /// </summary>
-    private void Start()
-    {
-        // Check if other objects exist
-        DontDestroyOnLoad[] objs = FindObjectsByType<DontDestroyOnLoad>(FindObjectsSortMode.None);
-        if (objs.Length > 1)
-        {
-            // Destroy itself if so
-            Destroy(gameObject);
-            return;
-        }
-        // Otherwise, never destroy it
-        DontDestroyOnLoad(gameObject);
-    }
-
-    /// <summary>
     /// A reference to the id of every tower
     /// </summary>
     public enum Towers

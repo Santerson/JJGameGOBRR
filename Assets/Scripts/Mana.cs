@@ -157,9 +157,6 @@ public class Mana : MonoBehaviour
         {
             regen -= currTower.GetTowerManaCost();
         }
-
-        // TODO: Get every mana booster on the field and increase regen by that amount
-
         // Return the mana
         return regen;
     }
@@ -184,6 +181,8 @@ public class Mana : MonoBehaviour
     {
         // TODO: do something cool here eventually
         Debug.Log("Player loses lmao");
+
+        FindFirstObjectByType<AudioManager>().PlayLoseLevelSFX();
 
         // Set lose screen
         SceneManager.LoadScene("SkillIssue");

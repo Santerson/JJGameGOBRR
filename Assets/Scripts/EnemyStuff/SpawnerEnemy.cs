@@ -1,61 +1,55 @@
 /**********************************************
  * Filename: SpawnerEnemy
  * Author: Micaiah Mariano, Santiago Caprarulo
- * 
+ * Description: Handles all enemy spawn logic
  * *******************************************/
 
 using System.Collections.Generic; /* List<T> */
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class SpawnerEnemy : MonoBehaviour
 {
     [Header("Enemy Prefabs")]
-    [SerializeField] GameObject GuyWeak;
-    [SerializeField] GameObject GuyNormal;
-    [SerializeField] GameObject GuyBuff;
-    [SerializeField] GameObject MechWeak;
-    [SerializeField] GameObject MechNormal;
-    [SerializeField] GameObject MechBuff;
     [SerializeField] TextMeshProUGUI stageText;
 
     [Header("Spawn Ranges")]
     [SerializeField] List<Vector2> SpawnPositions;
-    [SerializeField] int Min;
-    [SerializeField] int Max;
 
+    [Header("Enemy Spawns")]
+    [Tooltip("Nodes consisting of enemy wave data. Refer to the EnemyNode struct for more info")]
+    [SerializeField] List<EnemyNode> EnemyNodes;
 
-    [Header("SpawnRate")]
-    [SerializeField] float SpawnRate = 5;
-    [SerializeField] float SpawnRateReductionPerEnemy = 0.1f;
-    [SerializeField] float MinimumSpawnRate = 2f;
-    [SerializeField] float SpawnBurstChance = .1f;
-    [Tooltip("The spawn range of a burst. With x being low (inclusive) and y being high (not inclusive)")]
-    [SerializeField] Vector2Int SpawnBurstRange = new Vector2Int(2, 5);
-    [SerializeField] float CooldownAfterBurst = 10f;
-
-    [Header("Spawn chances, check guy weak for tooltip")]
-    [Tooltip("Where the index in the list is the stage and a random number inbetween 0 and 1 must be rolled. " +
-        "A number below the given number will have that enemy spawned. It will check from weakguy to buff mech in the order." +
-        " If one criteria is met, none other will be checked.")]
-    [SerializeField] float[] GuyWeakSpawnChances;
-    [SerializeField] float[] GuyNormalSpawnChances;
-    [SerializeField] float[] GuyBuffSpawnChances;
-    [SerializeField] float[] MechWeakSpawnChances;
-    [SerializeField] float[] MechNormalSpawnChances;
-    [SerializeField] float[] MechBuffSpawnChances;
-
-    [Tooltip("Note: Every spawn range should have the same amount of quantity")]
-    [SerializeField] uint[] StageEnemyCount = new uint[] { 10, 100 };
-
-    private float cooldown;
-    AudioManager refAudioManager;
-    float currentSpawnRate = 5;
-    uint currentSpawns = 0;
-    uint spawnsInStage = 0;
+    // Whether or not enemies are currently spawning in
+    [HideInInspector] public bool EnemiesSpawning = true;
+    /// <summary>
+    /// The amount of time until the next enemy spawns in
+    /// </summary>
+    private float cooldownToNextEnemy;
+    LaneCheck refLaneCheck = null;
+    // The current stage of the player
     uint stage = 0;
-    public bool EnemiesSpawning = true;
+
+    // If all the monsters in the current wave have been spawned
+    bool allMobsInWaveSpawned = false;
+    bool EndOfGameCheckedThisWave = false;
+
+    /// <summary>
+    /// A struct containing data for spawning enemies
+    /// </summary>
+    [System.Serializable]
+    struct EnemyNode
+    {
+        [Tooltip("The enemies spawning in the current wave")]
+        [SerializeField] public List<GameObject> Enemies;
+        [Tooltip("The time in-between each enemy in the wave")]
+        [SerializeField] public float TimeInbetweenSpawns;
+        [Tooltip("The time after all enemies have been DEFEATED before the next wave starts")]
+        [SerializeField] public float WaitTimeAfterLastSpawn;
+        [Tooltip("Whether or not this wave is considered a hard wave (WIP)")]
+        [SerializeField] public bool IsHardWave;
+    }
+
 
     private void OnDrawGizmosSelected()
     {
@@ -70,90 +64,73 @@ public class SpawnerEnemy : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        cooldown = SpawnRate;
-        currentSpawnRate = SpawnRate;
-        refAudioManager = FindFirstObjectByType<AudioManager>();
+        refLaneCheck = FindAnyObjectByType<LaneCheck>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        // Do nothing if enemies are not spawning (IE tutorial)
         if (!EnemiesSpawning) return;
-        // Reduce cooldown
-        cooldown -= Time.deltaTime;
-        if (cooldown <= 0)
+        // Check if all enemies have not been spawned
+        if (!allMobsInWaveSpawned)
         {
-            HandleEnemySpawnLogic();
+            // Otherwise, check reduce cooldown to next enemy and spawn one if it should be spawned
+            cooldownToNextEnemy -= Time.deltaTime;
+            if (cooldownToNextEnemy <= 0)
+            {
+                // Check if the player has reached the end of the game
+                if (!EndOfGameCheckedThisWave)
+                    if (!CheckIfGameWin()) // CheckIfGameWin will change scenes if the game is won
+                        EndOfGameCheckedThisWave = true;
+                    else
+                        return;
+                SpawnEnemy();
+            }
         }
+        // Otherwise, check if all lanes are empty
+        else
+        {
+            if (refLaneCheck.Lane0 == 0 && refLaneCheck.Lane1 == 0 && refLaneCheck.Lane2 == 0)
+            {
+                // Restart the cooldown
+                allMobsInWaveSpawned = false;
+                EndOfGameCheckedThisWave = false;
+            }
+        }
+        // Update stage text
         stageText.text = $"{stage : 0}";
-    }
-
-    /// <summary>
-    /// Handles all logic for spawning enemies
-    /// </summary>
-    void HandleEnemySpawnLogic()
-    {
-        // Check for a burst
-        int quantity = 1;
-        if (Random.Range(0f, 1f) < SpawnBurstChance)
-        {
-            // Increase the spawn quantity if it is a burst
-            quantity = Random.Range(SpawnBurstRange.x, SpawnBurstRange.y);
-        }
-        // Spawn the amount of enemies
-        for (int i = 0; i < quantity; i++)
-        {
-            SpawnEnemy();
-        }
-        // Decrease the spawn rate
-        currentSpawnRate = currentSpawnRate - SpawnRateReductionPerEnemy < MinimumSpawnRate ? MinimumSpawnRate : currentSpawnRate - SpawnRateReductionPerEnemy;
-        // Increase the cooldown
-        cooldown = quantity > 1 ? CooldownAfterBurst : currentSpawnRate;
     }
 
     /// <summary>
     /// Spawns an enemy at one of the positions given by the SpawnPositions array
     /// </summary>
-    /// <param name="SpawnedEnemy">The enemy to be spawned</param>
     void SpawnEnemy()
     {
-        // Get the range for the current stage
-        GameObject SpawnedEnemy = GuyWeak;
-        float randomNumber = Random.Range(0f, 1f);
-        if (randomNumber < GuyWeakSpawnChances[stage])
-            SpawnedEnemy = GuyWeak;
-        else
-        {
-            randomNumber -= GuyWeakSpawnChances[stage];
-            if (randomNumber < GuyNormalSpawnChances[stage])
-                SpawnedEnemy = GuyNormal;
-            else
-            {
-                randomNumber -= GuyNormalSpawnChances[stage];
-                if (randomNumber < GuyBuffSpawnChances[stage])
-                    SpawnedEnemy = GuyBuff;
-                else
-                {
-                    randomNumber -= GuyBuffSpawnChances[stage];
-                    if (randomNumber < MechWeakSpawnChances[stage])
-                        SpawnedEnemy = MechWeak;
-                    else
-                    {
-                        randomNumber -= MechWeakSpawnChances[stage];
-                        if (randomNumber < MechNormalSpawnChances[stage])
-                            SpawnedEnemy = MechNormal;
-                        else
-                        {
-                            SpawnedEnemy = MechBuff;
-                        }
-                    }
-                }
-            }
-        } 
-
         // Get a random spawn position
         int selectedSpawnLocation = Random.Range(0, SpawnPositions.Count);
+
+        // TODO: create a safety so not >2 enemies spawn on the same lane
+
+        // Get the next enemy in the spawnqueue
+        EnemyNode currNode = EnemyNodes[0];
+        GameObject SpawnedEnemy = currNode.Enemies[0];
+        // Spawn that enemy
         SpawnEnemy(SpawnedEnemy, selectedSpawnLocation);
+        // Remove that enemy from the spawn queue
+        currNode.Enemies.RemoveAt(0);
+        // Remove the node if the node is clear
+        if (currNode.Enemies.Count == 0)
+        {
+            EnemyNodes.RemoveAt(0);
+            allMobsInWaveSpawned = true;
+            cooldownToNextEnemy = currNode.WaitTimeAfterLastSpawn;
+        }
+        // Otherwise, wait a bit and spawn another
+        else
+        {
+            cooldownToNextEnemy = currNode.TimeInbetweenSpawns;
+        }
     }
 
     /// <summary>
@@ -168,27 +145,22 @@ public class SpawnerEnemy : MonoBehaviour
         Vector2 spawnPos = SpawnPositions[selectedSpawnLocation];
         GameObject spawndenemy = Instantiate(spawnedEnemy, spawnPos, Quaternion.identity);
         spawndenemy.GetComponent<EnemyAi>().lane = selectedSpawnLocation;
-        FindFirstObjectByType<LaneCheck>().Laneincress(selectedSpawnLocation);
-        if (countAsSpawn)
-        {
-            currentSpawns++;
-            spawnsInStage++;
-            if (spawnsInStage > StageEnemyCount[stage])
-            {
-                IncreaseStage();
-                spawnsInStage = 0;
-            }
-        }
+        refLaneCheck.Laneincress(selectedSpawnLocation);
         return spawndenemy;
     }
 
-    void IncreaseStage()
+    /// <summary>
+    /// Runs logic to check if the game has been won
+    /// <returns>True if the game is won, false otherwise</returns>
+    /// </summary>
+    bool CheckIfGameWin()
     {
-        stage++;
-        if (stage >= StageEnemyCount.Length)
+        if (EnemyNodes.Count == 0)
         {
-            refAudioManager.PlayWinLevelSFX();
+            // Win game epic dub yippe
             UnityEngine.SceneManagement.SceneManager.LoadScene("EpicDub");
+            return true;
         }
+        return false;
     }
 }

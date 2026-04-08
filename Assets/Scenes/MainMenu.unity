@@ -1040,7 +1040,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1108361111}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4017bb734f0af0941a9552676e3d9ec0, type: 3}
   m_Name: 
@@ -1053,7 +1053,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: e8996b53713a86143947fd10593120ac, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: dba3e4341c711274d9261dd8cd473a11, type: 2}
   useCallbacks: 0
   stopSoundOnDestroy: 1
   Callbacks: []
