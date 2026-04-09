@@ -19,7 +19,6 @@ public class TowerAi : MonoBehaviour
     [SerializeField] int HealthMax = 1;
     [Tooltip("Shots per second. set to -1 to disable")]
     [SerializeField] float RateOfFire = 5;
-    [SerializeField] float InitialFireCooldown = 1f;
     [SerializeField] float FirePositionX = 0;
     [SerializeField] float FirePositiony = 0;
     // Timer for animaton to start - fire cooldown
@@ -56,7 +55,7 @@ public class TowerAi : MonoBehaviour
         Vector3 Size = new Vector3(SizeX, SizeY);
         Health = HealthMax;
         gameObject.transform.localScale = Size;
-        CoolDown = InitialFireCooldown;
+        CoolDown = LengthOfAnimaton;
         refGrid = FindFirstObjectByType<TowerGrid>();
         refLaneCheck = FindFirstObjectByType<LaneCheck>();
         if (refLaneCheck == null)
