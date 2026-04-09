@@ -44,6 +44,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5221ce1846b14524ba3775f558a15fbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MenuMusic:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: dba3e4341c711274d9261dd8cd473a11, type: 2}
+  GameMusic1:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: b86ca04acb5dbf84da37e3e55aa912b6, type: 2}
+  GameMusic2:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 2685e0f3d0a7d3240b7834edf0b042d3, type: 2}
   TowerDropSFXs:
   - idInternal: 0
     valueGuidInternal: 

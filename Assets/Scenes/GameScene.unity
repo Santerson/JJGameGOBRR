@@ -2040,6 +2040,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5812513164392073569, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
+      propertyPath: DONOTPLAYMAINMENUMUSIC
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7903793231949837847, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
       propertyPath: m_Name
       value: AudioManager
@@ -3651,7 +3655,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 581455787720894976, guid: 22927ea945a9bce46a8cbb09c532b58d, type: 3}
       propertyPath: DoTutorial
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 880122336935575878, guid: 22927ea945a9bce46a8cbb09c532b58d, type: 3}
       propertyPath: m_Name

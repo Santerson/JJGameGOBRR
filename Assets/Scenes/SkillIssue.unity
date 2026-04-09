@@ -622,6 +622,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
+--- !u!114 &1061448188 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5812513164392073569, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
+  m_PrefabInstance: {fileID: 1061448187}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5221ce1846b14524ba3775f558a15fbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1139981146
 GameObject:
   m_ObjectHideFlags: 0
@@ -717,9 +728,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1228374034}
-        m_TargetAssemblyTypeName: PlayClickSound, Assembly-CSharp
-        m_MethodName: PlaySound
+      - m_Target: {fileID: 1061448188}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayGameMusic1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1061448188}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayClickSFX
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
