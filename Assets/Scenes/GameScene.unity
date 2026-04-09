@@ -1753,22 +1753,125 @@ MonoBehaviour:
     - {fileID: 6252635703142006987, guid: 6afbf9e759b377246a2e4a355e63b220, type: 3}
     - {fileID: 6252635703142006987, guid: 6afbf9e759b377246a2e4a355e63b220, type: 3}
     - {fileID: 6252635703142006987, guid: 6afbf9e759b377246a2e4a355e63b220, type: 3}
-    TimeInbetweenSpawns: 0.3
+    - {fileID: 6252635703142006987, guid: 6afbf9e759b377246a2e4a355e63b220, type: 3}
+    TimeInbetweenSpawns: 8.7
+    WaitTimeAfterLastSpawn: 6
+    IsHardWave: 0
+  - Enemies:
+    - {fileID: 6252635703142006987, guid: 6afbf9e759b377246a2e4a355e63b220, type: 3}
+    - {fileID: 6252635703142006987, guid: 6afbf9e759b377246a2e4a355e63b220, type: 3}
+    - {fileID: 6252635703142006987, guid: 6afbf9e759b377246a2e4a355e63b220, type: 3}
+    - {fileID: 6252635703142006987, guid: 6afbf9e759b377246a2e4a355e63b220, type: 3}
+    TimeInbetweenSpawns: 3.48
     WaitTimeAfterLastSpawn: 2
     IsHardWave: 0
   - Enemies:
     - {fileID: 7426724621865789392, guid: 59e9c41a0aab1ba4a8c025a3df66aa60, type: 3}
+    - {fileID: 7426724621865789392, guid: 59e9c41a0aab1ba4a8c025a3df66aa60, type: 3}
+    - {fileID: 7426724621865789392, guid: 59e9c41a0aab1ba4a8c025a3df66aa60, type: 3}
+    - {fileID: 7426724621865789392, guid: 59e9c41a0aab1ba4a8c025a3df66aa60, type: 3}
+    - {fileID: 7426724621865789392, guid: 59e9c41a0aab1ba4a8c025a3df66aa60, type: 3}
+    TimeInbetweenSpawns: 8.7
+    WaitTimeAfterLastSpawn: 2
+    IsHardWave: 0
+  - Enemies:
+    - {fileID: 7426724621865789392, guid: 59e9c41a0aab1ba4a8c025a3df66aa60, type: 3}
+    - {fileID: 7426724621865789392, guid: 59e9c41a0aab1ba4a8c025a3df66aa60, type: 3}
+    - {fileID: 7426724621865789392, guid: 59e9c41a0aab1ba4a8c025a3df66aa60, type: 3}
+    - {fileID: 7426724621865789392, guid: 59e9c41a0aab1ba4a8c025a3df66aa60, type: 3}
+    - {fileID: 7426724621865789392, guid: 59e9c41a0aab1ba4a8c025a3df66aa60, type: 3}
+    - {fileID: 7426724621865789392, guid: 59e9c41a0aab1ba4a8c025a3df66aa60, type: 3}
+    TimeInbetweenSpawns: 8.7
+    WaitTimeAfterLastSpawn: 2
+    IsHardWave: 0
+  - Enemies:
+    - {fileID: 7426724621865789392, guid: 59e9c41a0aab1ba4a8c025a3df66aa60, type: 3}
+    - {fileID: 7426724621865789392, guid: 59e9c41a0aab1ba4a8c025a3df66aa60, type: 3}
+    - {fileID: 1502812715334231772, guid: 52e331000d60ac34aaefa3994a5a1055, type: 3}
+    - {fileID: 7426724621865789392, guid: 59e9c41a0aab1ba4a8c025a3df66aa60, type: 3}
+    - {fileID: 1502812715334231772, guid: 52e331000d60ac34aaefa3994a5a1055, type: 3}
+    - {fileID: 1502812715334231772, guid: 52e331000d60ac34aaefa3994a5a1055, type: 3}
+    - {fileID: 7426724621865789392, guid: 59e9c41a0aab1ba4a8c025a3df66aa60, type: 3}
+    TimeInbetweenSpawns: 8.7
+    WaitTimeAfterLastSpawn: 2
+    IsHardWave: 0
+  - Enemies:
+    - {fileID: 7426724621865789392, guid: 59e9c41a0aab1ba4a8c025a3df66aa60, type: 3}
+    - {fileID: 7426724621865789392, guid: 59e9c41a0aab1ba4a8c025a3df66aa60, type: 3}
+    - {fileID: 1502812715334231772, guid: 52e331000d60ac34aaefa3994a5a1055, type: 3}
+    - {fileID: 7426724621865789392, guid: 59e9c41a0aab1ba4a8c025a3df66aa60, type: 3}
+    - {fileID: 1502812715334231772, guid: 52e331000d60ac34aaefa3994a5a1055, type: 3}
+    - {fileID: 1502812715334231772, guid: 52e331000d60ac34aaefa3994a5a1055, type: 3}
+    - {fileID: 7426724621865789392, guid: 59e9c41a0aab1ba4a8c025a3df66aa60, type: 3}
+    TimeInbetweenSpawns: 8.7
+    WaitTimeAfterLastSpawn: 2
+    IsHardWave: 0
+  - Enemies:
     - {fileID: 6252635703142006987, guid: 6afbf9e759b377246a2e4a355e63b220, type: 3}
+    - {fileID: 4286734303812761443, guid: 2241b4f28d8a46f43b59f32b320e4624, type: 3}
+    - {fileID: 7426724621865789392, guid: 59e9c41a0aab1ba4a8c025a3df66aa60, type: 3}
+    - {fileID: 6252635703142006987, guid: 6afbf9e759b377246a2e4a355e63b220, type: 3}
+    - {fileID: 4286734303812761443, guid: 2241b4f28d8a46f43b59f32b320e4624, type: 3}
+    - {fileID: 4286734303812761443, guid: 2241b4f28d8a46f43b59f32b320e4624, type: 3}
+    - {fileID: 7426724621865789392, guid: 59e9c41a0aab1ba4a8c025a3df66aa60, type: 3}
+    TimeInbetweenSpawns: 8.7
+    WaitTimeAfterLastSpawn: 2
+    IsHardWave: 0
+  - Enemies:
+    - {fileID: 4286734303812761443, guid: 2241b4f28d8a46f43b59f32b320e4624, type: 3}
+    - {fileID: 7426724621865789392, guid: 59e9c41a0aab1ba4a8c025a3df66aa60, type: 3}
+    - {fileID: 4286734303812761443, guid: 2241b4f28d8a46f43b59f32b320e4624, type: 3}
+    - {fileID: 4286734303812761443, guid: 21733315f45a76d44a66523535f111b1, type: 3}
+    - {fileID: 6252635703142006987, guid: 6afbf9e759b377246a2e4a355e63b220, type: 3}
+    - {fileID: 4286734303812761443, guid: 2241b4f28d8a46f43b59f32b320e4624, type: 3}
+    - {fileID: 6252635703142006987, guid: 6afbf9e759b377246a2e4a355e63b220, type: 3}
+    TimeInbetweenSpawns: 8.7
+    WaitTimeAfterLastSpawn: 2
+    IsHardWave: 0
+  - Enemies:
     - {fileID: 7426724621865789392, guid: 59e9c41a0aab1ba4a8c025a3df66aa60, type: 3}
     - {fileID: 7426724621865789392, guid: 59e9c41a0aab1ba4a8c025a3df66aa60, type: 3}
+    - {fileID: 4286734303812761443, guid: 21733315f45a76d44a66523535f111b1, type: 3}
     - {fileID: 7426724621865789392, guid: 59e9c41a0aab1ba4a8c025a3df66aa60, type: 3}
+    - {fileID: 4286734303812761443, guid: 21733315f45a76d44a66523535f111b1, type: 3}
+    - {fileID: 4286734303812761443, guid: 21733315f45a76d44a66523535f111b1, type: 3}
     - {fileID: 7426724621865789392, guid: 59e9c41a0aab1ba4a8c025a3df66aa60, type: 3}
+    TimeInbetweenSpawns: 8.7
+    WaitTimeAfterLastSpawn: 2
+    IsHardWave: 0
+  - Enemies:
+    - {fileID: 4286734303812761443, guid: 21733315f45a76d44a66523535f111b1, type: 3}
     - {fileID: 7426724621865789392, guid: 59e9c41a0aab1ba4a8c025a3df66aa60, type: 3}
+    - {fileID: 4286734303812761443, guid: 21733315f45a76d44a66523535f111b1, type: 3}
+    - {fileID: 4286734303812761443, guid: 21733315f45a76d44a66523535f111b1, type: 3}
     - {fileID: 7426724621865789392, guid: 59e9c41a0aab1ba4a8c025a3df66aa60, type: 3}
+    - {fileID: 4286734303812761443, guid: 21733315f45a76d44a66523535f111b1, type: 3}
     - {fileID: 7426724621865789392, guid: 59e9c41a0aab1ba4a8c025a3df66aa60, type: 3}
+    TimeInbetweenSpawns: 8.7
+    WaitTimeAfterLastSpawn: 2
+    IsHardWave: 0
+  - Enemies:
+    - {fileID: 4286734303812761443, guid: 21733315f45a76d44a66523535f111b1, type: 3}
+    - {fileID: 1502812715334231772, guid: 52e331000d60ac34aaefa3994a5a1055, type: 3}
+    - {fileID: 4286734303812761443, guid: 5d58f2f904fa71641ab9d31faf6d0235, type: 3}
+    - {fileID: 4286734303812761443, guid: 5d58f2f904fa71641ab9d31faf6d0235, type: 3}
+    - {fileID: 1502812715334231772, guid: 52e331000d60ac34aaefa3994a5a1055, type: 3}
+    - {fileID: 4286734303812761443, guid: 5d58f2f904fa71641ab9d31faf6d0235, type: 3}
     - {fileID: 7426724621865789392, guid: 59e9c41a0aab1ba4a8c025a3df66aa60, type: 3}
+    - {fileID: 1502812715334231772, guid: 52e331000d60ac34aaefa3994a5a1055, type: 3}
+    TimeInbetweenSpawns: 8.7
+    WaitTimeAfterLastSpawn: 2
+    IsHardWave: 0
+  - Enemies:
+    - {fileID: 4286734303812761443, guid: 21733315f45a76d44a66523535f111b1, type: 3}
+    - {fileID: 1502812715334231772, guid: 52e331000d60ac34aaefa3994a5a1055, type: 3}
+    - {fileID: 4286734303812761443, guid: 5d58f2f904fa71641ab9d31faf6d0235, type: 3}
+    - {fileID: 4286734303812761443, guid: 5d58f2f904fa71641ab9d31faf6d0235, type: 3}
+    - {fileID: 1502812715334231772, guid: 52e331000d60ac34aaefa3994a5a1055, type: 3}
+    - {fileID: 4286734303812761443, guid: 5d58f2f904fa71641ab9d31faf6d0235, type: 3}
     - {fileID: 7426724621865789392, guid: 59e9c41a0aab1ba4a8c025a3df66aa60, type: 3}
-    TimeInbetweenSpawns: 0.7
+    - {fileID: 1502812715334231772, guid: 52e331000d60ac34aaefa3994a5a1055, type: 3}
+    TimeInbetweenSpawns: 8.7
     WaitTimeAfterLastSpawn: 2
     IsHardWave: 0
   EnemiesSpawning: 1
@@ -3546,6 +3649,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 581455787720894976, guid: 22927ea945a9bce46a8cbb09c532b58d, type: 3}
+      propertyPath: DoTutorial
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 880122336935575878, guid: 22927ea945a9bce46a8cbb09c532b58d, type: 3}
       propertyPath: m_Name
       value: TutorialManager
