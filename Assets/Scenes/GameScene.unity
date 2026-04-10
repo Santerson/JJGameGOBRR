@@ -2597,14 +2597,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TowerUIPannel
       objectReference: {fileID: 0}
-    - target: {fileID: 9106581312842278696, guid: d931347fa36788c4ca12e679043bb40a, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -399
-      objectReference: {fileID: 0}
-    - target: {fileID: 9106581312842278696, guid: d931347fa36788c4ca12e679043bb40a, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 105
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -14,11 +14,15 @@ public class UIDraggableTower : MonoBehaviour
         [SerializeField] public GameObject TowerPrefab;
     [Tooltip("Sound that plays when selecting the tower")]
         [SerializeField] AudioSource pickupSound;
-    [Tooltip("Cooldown inbetween tower placements")]
-        [SerializeField] float towerCooldown = 0;
     [SerializeField] TextMeshProUGUI refCDText;
     [SerializeField] GameObject TowerShadowPrefab;
     [SerializeField] GameObject DraggingTowerVersion;
+
+    [Header("Timer Stuffs")]
+    [Tooltip("Cooldown inbetween tower placements")]
+        [SerializeField] float towerCooldown = 0;
+    [SerializeField] float OpacityAtMaxTimer = 0.1f;
+    [SerializeField] float OpacityAt0Timer = 1;
 
     [Header("Sroll Stuff")]
     [SerializeField] Vector2 TopLeftOfScroll = Vector2.zero;
@@ -29,6 +33,7 @@ public class UIDraggableTower : MonoBehaviour
 
     TowerGrid refTowerGrid;
     SpriteRenderer refRenderer;
+    Color baseColor => refRenderer.color;
 
     Vector2 initialPosition = Vector2.zero;
     public bool followingMouse { get; private set; } = false;
@@ -79,7 +84,12 @@ public class UIDraggableTower : MonoBehaviour
         timeToNextTowerPlacement = timeToNextTowerPlacement > 0 ? timeToNextTowerPlacement - Time.deltaTime : 0;
         if (timeToNextTowerPlacement > 0)
         {
-            refCDText.text = $"{timeToNextTowerPlacement : 0.00}";
+            // Change the cooldown to the next tower
+            refCDText.text = $"{timeToNextTowerPlacement : 0}";
+            // Slowly make the sprite fade back in
+            float alpha = Mathf.Lerp(OpacityAt0Timer, OpacityAtMaxTimer, timeToNextTowerPlacement / towerCooldown);
+            refRenderer.color = new Color(baseColor.r, baseColor.g, baseColor.b, alpha);
+            // Play an effect once it's ready
         }
         else if (refCDText != null)
         {

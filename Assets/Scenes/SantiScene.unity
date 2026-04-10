@@ -2053,30 +2053,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1104244116}
     m_Modifications:
-    - target: {fileID: 62947936252694914, guid: d931347fa36788c4ca12e679043bb40a, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 301010277258853023, guid: d931347fa36788c4ca12e679043bb40a, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2331479958151200414, guid: d931347fa36788c4ca12e679043bb40a, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2845227815208261546, guid: d931347fa36788c4ca12e679043bb40a, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5471541280457297626, guid: d931347fa36788c4ca12e679043bb40a, type: 3}
-      propertyPath: m_SortingOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6907502187335727181, guid: d931347fa36788c4ca12e679043bb40a, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 7980452966119718721, guid: d931347fa36788c4ca12e679043bb40a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.05
@@ -2120,14 +2096,6 @@ PrefabInstance:
     - target: {fileID: 9065587149058656228, guid: d931347fa36788c4ca12e679043bb40a, type: 3}
       propertyPath: m_Name
       value: TowerUIPannel
-      objectReference: {fileID: 0}
-    - target: {fileID: 9106581312842278696, guid: d931347fa36788c4ca12e679043bb40a, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -399
-      objectReference: {fileID: 0}
-    - target: {fileID: 9106581312842278696, guid: d931347fa36788c4ca12e679043bb40a, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 105
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

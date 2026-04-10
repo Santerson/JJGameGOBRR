@@ -240,10 +240,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TowerPrefab: {fileID: 6224497392755857483, guid: 778a2407cf740254ca9a2b06264608be, type: 3}
   pickupSound: {fileID: 6419963212006066213}
-  towerCooldown: 0
   refCDText: {fileID: 4398162006797669372}
   TowerShadowPrefab: {fileID: 5494651061738657656, guid: ed43289bb934f184c82f70b20862acae, type: 3}
   DraggingTowerVersion: {fileID: 166203792177270601, guid: 076e42f706c2bd349ab165b4db8137ae, type: 3}
+  towerCooldown: 0
+  OpacityAtMaxTimer: 0.1
+  OpacityAt0Timer: 1
   TopLeftOfScroll: {x: 0, y: 0}
   BottomRightOfScroll: {x: 0, y: 0}
   SelectedTowerTint: 0.2
@@ -397,10 +399,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TowerPrefab: {fileID: 8829138057996306838, guid: 6edea39458718244583e46c6efb11e71, type: 3}
   pickupSound: {fileID: 6419963212006066213}
-  towerCooldown: 30
   refCDText: {fileID: 4262197270266030206}
   TowerShadowPrefab: {fileID: 5494651061738657656, guid: ed43289bb934f184c82f70b20862acae, type: 3}
   DraggingTowerVersion: {fileID: 8610750346112869936, guid: 686dca9fdeac58244a417b06612b07c5, type: 3}
+  towerCooldown: 30
+  OpacityAtMaxTimer: 0.2
+  OpacityAt0Timer: 1
   TopLeftOfScroll: {x: 0, y: 0}
   BottomRightOfScroll: {x: 0, y: 0}
   SelectedTowerTint: 0.2
@@ -828,10 +832,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TowerPrefab: {fileID: 1112848449195545200, guid: d5d4c879021a7c54e8af740048f089c1, type: 3}
   pickupSound: {fileID: 6419963212006066213}
-  towerCooldown: 0
   refCDText: {fileID: 5974563265039362337}
   TowerShadowPrefab: {fileID: 5494651061738657656, guid: ed43289bb934f184c82f70b20862acae, type: 3}
   DraggingTowerVersion: {fileID: 7528795631024294427, guid: e0c7e7ea35c6c9847a07fff445b29bc1, type: 3}
+  towerCooldown: 0
+  OpacityAtMaxTimer: 0.1
+  OpacityAt0Timer: 1
   TopLeftOfScroll: {x: 0, y: 0}
   BottomRightOfScroll: {x: 0, y: 0}
   SelectedTowerTint: 0.2
@@ -1161,10 +1167,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TowerPrefab: {fileID: 6122881920492048083, guid: cee1cbda9128e2c44adef4da8ff20b69, type: 3}
   pickupSound: {fileID: 6419963212006066213}
-  towerCooldown: 0
   refCDText: {fileID: 5154926612328051360}
   TowerShadowPrefab: {fileID: 5494651061738657656, guid: ed43289bb934f184c82f70b20862acae, type: 3}
   DraggingTowerVersion: {fileID: 3968689692443041225, guid: 2ba37cde89fbb884c8c223ae932aecee, type: 3}
+  towerCooldown: 0
+  OpacityAtMaxTimer: 0.1
+  OpacityAt0Timer: 1
   TopLeftOfScroll: {x: 0, y: 0}
   BottomRightOfScroll: {x: 0, y: 0}
   SelectedTowerTint: 0.2
@@ -1470,14 +1478,14 @@ RectTransform:
   m_GameObject: {fileID: 4967991175874447248}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0516524, y: 1.0516524, z: 1.0516524}
+  m_LocalScale: {x: 1.7389921, y: 1.7389921, z: 1.7389921}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1067303033778663658}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -399, y: 105}
+  m_AnchoredPosition: {x: -347.8, y: -10.4}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4925367528108723639
@@ -1508,17 +1516,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 30.00
+  m_text: 30
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4414ee163d49d554b99433bd8131211e, type: 2}
+  m_sharedMaterial: {fileID: -6795033844800694740, guid: 4414ee163d49d554b99433bd8131211e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4279047445
+  m_fontColor: {r: 0.08235294, g: 0.08235294, b: 0.050980397, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1574,7 +1582,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 53.029415, y: 0, z: 54.016937, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
