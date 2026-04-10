@@ -44,12 +44,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68ae9b8a1fcbb5648a4d700ee7b5bada, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  particls_fail: {fileID: 0}
   particls: {fileID: 49964572713317819, guid: 9b643252bc0b17e458f9eefbf2ae3252, type: 3}
   GridHeight: 3
   GridLength: 8
   SquareSize: 2
   VerticalSpaceBuffer: 0
   HorizontalSpaceBuffer: 0
+  OddLaneExtraBuffer: 0.24
+  EvenLaneExtraBuffer: -0.24
   GridOffset: {x: -6.19, y: -3.06}
   GridCenterOffset: {x: 0, y: 0}
   InaccessableSpaces: []

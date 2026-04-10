@@ -28,6 +28,10 @@ public class TowerGrid : MonoBehaviour
         [SerializeField] float VerticalSpaceBuffer = 0;
     [Tooltip("The space inbetween each space horizontally")]
         [SerializeField] float HorizontalSpaceBuffer = 0;
+    [Tooltip("The difference in space inbetween every odd lane")]
+        [SerializeField] float OddLaneExtraBuffer = 0;
+    [Tooltip("The difference in space for every even lane")]
+        [SerializeField] float EvenLaneExtraBuffer = 0;
 
     // Grid Offset
     [Tooltip("The offset of the grid off of 0,0")]
@@ -120,6 +124,11 @@ public class TowerGrid : MonoBehaviour
                 Vector2 Pos = new Vector2(x * SquareSize + xAdditionalOffset, y * SquareSize + yAdditionalOffset) + GridOffset + GridCenterOffset;
                 // Move to the center
                 Pos += new Vector2(SquareSize / 2, SquareSize / 2);
+                // Offset it if it is an odd lane
+                if (y % 2 == 1)
+                    Pos.x += OddLaneExtraBuffer;
+                else
+                    Pos.x += EvenLaneExtraBuffer;
                 // Store the center
                 SpacePositions[x, y] = Pos;
                 // See if that space is usable and update the other grid
@@ -243,6 +252,11 @@ public class TowerGrid : MonoBehaviour
                 Vector2 Pos = new Vector2(x * SquareSize + xAdditionalOffset, y * SquareSize + yAdditionalOffset) + GridOffset + GridCenterOffset;
                 // Move to the center
                 Pos += new Vector2(SquareSize / 2, SquareSize / 2);
+                // Add it's offset if the y is odd
+                if (y % 2 == 1)
+                    Pos.x += OddLaneExtraBuffer;
+                else
+                    Pos.x += EvenLaneExtraBuffer;
 
                 Color crossColor = Color.green;
                 if (InaccessableSpaces.Contains(new Vector2Int(x, y)))
