@@ -1250,7 +1250,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6349601164191860111, guid: 11a8d664d00071144829a74972322ba3, type: 3}
       propertyPath: VerticalSpaceBuffer
-      value: -0.29
+      value: -0.35
       objectReference: {fileID: 0}
     - target: {fileID: 6349601164191860111, guid: 11a8d664d00071144829a74972322ba3, type: 3}
       propertyPath: HorizontalSpaceBuffer

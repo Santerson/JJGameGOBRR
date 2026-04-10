@@ -105,6 +105,13 @@ public class SpawnerEnemy : MonoBehaviour
         }
         // Update stage text
         stageText.text = $"{stage : 0}";
+
+        /************
+        if (IsHardWave)
+        {
+
+        }
+        ********/
     }
 
     /// <summary>
