@@ -49,7 +49,7 @@ MonoBehaviour:
   GridHeight: 3
   GridLength: 8
   SquareSize: 2
-  VerticalSpaceBuffer: 0
+  VerticalSpaceBuffer: -0.35
   HorizontalSpaceBuffer: 0
   OddLaneExtraBuffer: 0.24
   EvenLaneExtraBuffer: -0.24

@@ -132,7 +132,12 @@ public class Mana : MonoBehaviour
         // Play and stop px
         HandleManaPXPlayment(manaRegen);
         // Update the vignette
-        if (enableVignette) screenTint.intensity.value = Mathf.Lerp(maxVignetteEffect, 0, CurrentMana / MaxMana);
+        if (CurrentMana != MaxMana)
+            if (enableVignette)
+            {
+                // TODO: Make this logarithmic -Mathf.Sqrt(CurrentMana/MaxMana) + 1
+                screenTint.intensity.value = Mathf.Lerp(maxVignetteEffect, 0, CurrentMana / MaxMana);
+            }
         // Check if the player died
         if (CurrentMana <= 0)
         {
