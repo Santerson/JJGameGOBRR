@@ -81,10 +81,15 @@ public class SpawnerEnemy : MonoBehaviour
             {
                 // Check if the player has reached the end of the game
                 if (!EndOfGameCheckedThisWave)
+                {
+                    // Increase the wave count
+                    stage++;
+                    stageText.text = $"{stage}";
                     if (!CheckIfGameWin()) // CheckIfGameWin will change scenes if the game is won
                         EndOfGameCheckedThisWave = true;
                     else
                         return;
+                }
                 SpawnEnemy();
             }
         }
