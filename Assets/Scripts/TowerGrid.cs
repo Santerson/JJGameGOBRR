@@ -175,6 +175,9 @@ public class TowerGrid : MonoBehaviour
             GameObject refTower = Instantiate(tower, SpacePositions[position.x, position.y], Quaternion.identity);
             Instantiate(particls, SpacePositions[position.x, position.y], Quaternion.identity);
             TowersInSpots[position.x, position.y] = refTower;
+            // Change the layer of the sprite of the tower
+            refTower.GetComponentInChildren<SpriteRenderer>().sortingOrder = 2 - position.y;
+
             // Save the position in the towerai script of the tower
             refTower.GetComponent<TowerAi>().GridPosition = new Vector2Int(position.x, position.y);
             // return true
