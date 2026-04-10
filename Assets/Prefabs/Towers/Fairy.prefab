@@ -49,8 +49,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4720349265970859464, guid: 01a5586a081987349ade83957f7874d8, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4720349265970859464, guid: 01a5586a081987349ade83957f7874d8, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4720349265970859464, guid: 01a5586a081987349ade83957f7874d8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6262921784777582634, guid: 01a5586a081987349ade83957f7874d8, type: 3}
       propertyPath: TowerManaCost
@@ -64,6 +72,14 @@ PrefabInstance:
       propertyPath: m_Resource
       value: 
       objectReference: {fileID: 8300000, guid: e3d9cda458c0ca74788665662085918f, type: 3}
+    - target: {fileID: 7170060763959655223, guid: 01a5586a081987349ade83957f7874d8, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170060763959655223, guid: 01a5586a081987349ade83957f7874d8, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7170060763959655223, guid: 01a5586a081987349ade83957f7874d8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
