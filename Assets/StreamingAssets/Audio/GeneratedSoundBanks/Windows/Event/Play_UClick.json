@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "484766513",
+    "Type": "Event",
+    "GUID": "{AA9452D3-5800-4804-A136-1DEB28C68AE8}",
+    "Language": "SFX",
+    "Hash": "{56C0CC06-83B9-8898-6CF1-F1E5F22BCB78}",
+    "ObjectPath": "Play_UClick",
+    "ShortName": "Play_UClick",
+    "Path": "Event/Play_UClick.bnk",
+    "Media": [
+     {
+      "Id": "826742836",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "UI_Click.wav",
+      "Path": "Media/826742836.wem",
+      "CachePath": "AD/{AD4F1600-348E-E33B-D187-417A4571F39B}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "484766513",
+      "Name": "Play_UClick",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_UClick",
+      "GUID": "{AA9452D3-5800-4804-A136-1DEB28C68AE8}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.4025397",
+      "DurationMax": "1.4025397",
+      "MediaRefs": [
+       {
+        "Id": "826742836"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{DEBEBD34-78B1-F857-0973-1F33A00D8368}"
+ }
+}

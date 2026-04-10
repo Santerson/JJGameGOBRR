@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3768384938",
+    "Type": "Event",
+    "GUID": "{1FE181B6-4376-4290-B4B8-D3EF64080B97}",
+    "Language": "SFX",
+    "Hash": "{F55EA607-5D25-5DF0-7069-D88F0D98D2D0}",
+    "ObjectPath": "Play_MBBattle1",
+    "ShortName": "Play_MBBattle1",
+    "Path": "Event/Play_MBBattle1.bnk",
+    "Media": [
+     {
+      "Id": "921732490",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Music1.wav",
+      "Path": "Media/921732490.wem",
+      "CachePath": "97/{97428204-5B61-3D20-A3CD-2D3AD5E04446}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3768384938",
+      "Name": "Play_MBBattle1",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_MBBattle1",
+      "GUID": "{1FE181B6-4376-4290-B4B8-D3EF64080B97}",
+      "DurationType": "OneShot",
+      "DurationMin": "31.497778",
+      "DurationMax": "31.497778",
+      "MediaRefs": [
+       {
+        "Id": "921732490"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{741C71CD-F74C-A5F2-A509-B9B76129918A}"
+ }
+}

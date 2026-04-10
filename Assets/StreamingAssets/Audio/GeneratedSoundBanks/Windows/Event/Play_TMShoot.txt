@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	4112018788	Play_TMShoot			\Default Work Unit\Play_TMShoot	
+
