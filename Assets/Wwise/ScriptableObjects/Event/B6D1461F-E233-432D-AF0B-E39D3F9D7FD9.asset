@@ -15,4 +15,4 @@ MonoBehaviour:
   objectName: Play_TMShoot
   id: 4112018788
   guid: B6D1461F-E233-432D-AF0B-E39D3F9D7FD9
-  IsInUserDefinedSoundBank: 0
+  IsInUserDefinedSoundBank: 1

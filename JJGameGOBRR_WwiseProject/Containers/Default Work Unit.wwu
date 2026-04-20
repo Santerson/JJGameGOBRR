@@ -223,6 +223,13 @@
 							</ChildrenList>
 						</PropertyContainer>
 						<Sound Name="Place" ID="{245944BF-2763-4B1F-BB17-4E554905A39A}" ShortID="905568902">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9178FA55-D303-4149-A5D8-ACE42835274F}"/>
@@ -231,8 +238,27 @@
 									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84580E68-76CE-4E53-85DC-C1911E9315F6}"/>
 								</Reference>
 							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="TowerPlace" ID="{F65583C4-BACD-4E4F-BAD0-3D0F6C7673C0}">
+									<Language>SFX</Language>
+									<AudioFile>TowerPlace.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="681854957"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="TowerPlace" ID="{F65583C4-BACD-4E4F-BAD0-3D0F6C7673C0}" Platform="Linked"/>
+							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Death" ID="{5B344D34-5AA9-4C33-B2C5-B8FDBB22B107}" ShortID="658016216">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>7</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9178FA55-D303-4149-A5D8-ACE42835274F}"/>
@@ -241,6 +267,18 @@
 									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84580E68-76CE-4E53-85DC-C1911E9315F6}"/>
 								</Reference>
 							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="TowerDeath" ID="{8068F7AE-5274-494E-86B4-D790083E7AAE}">
+									<Language>SFX</Language>
+									<AudioFile>TowerDeath.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="36569900"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="TowerDeath" ID="{8068F7AE-5274-494E-86B4-D790083E7AAE}" Platform="Linked"/>
+							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Hurt" ID="{A4C6AE36-0B3B-42A3-A596-1EF62A410C14}" ShortID="813048589">
 							<ReferenceList>
@@ -251,8 +289,27 @@
 									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84580E68-76CE-4E53-85DC-C1911E9315F6}"/>
 								</Reference>
 							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="TowerHurt" ID="{B86F975E-CD98-4626-AA4B-CDA2F6D92ACE}">
+									<Language>SFX</Language>
+									<AudioFile>TowerHurt.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="19713553"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="TowerHurt" ID="{B86F975E-CD98-4626-AA4B-CDA2F6D92ACE}" Platform="Linked"/>
+							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Remove" ID="{AC6F6DAF-B231-4592-AF75-741E1B2C3939}" ShortID="792398748">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>4</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9178FA55-D303-4149-A5D8-ACE42835274F}"/>
@@ -261,8 +318,27 @@
 									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84580E68-76CE-4E53-85DC-C1911E9315F6}"/>
 								</Reference>
 							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="TowerRemove" ID="{1885FC3D-19E1-40AB-A195-A5255A039BB5}">
+									<Language>SFX</Language>
+									<AudioFile>TowerRemove.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="964520397"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="TowerRemove" ID="{1885FC3D-19E1-40AB-A195-A5255A039BB5}" Platform="Linked"/>
+							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Click" ID="{AED6F6EA-0C07-429D-9B8B-F5A3003E38F5}" ShortID="1045229705">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9178FA55-D303-4149-A5D8-ACE42835274F}"/>
@@ -271,6 +347,18 @@
 									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84580E68-76CE-4E53-85DC-C1911E9315F6}"/>
 								</Reference>
 							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="TowerClick" ID="{271D07A9-1253-4F05-AD0F-BCDFB814AFAC}">
+									<Language>SFX</Language>
+									<AudioFile>TowerClick.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="887464942"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="TowerClick" ID="{271D07A9-1253-4F05-AD0F-BCDFB814AFAC}" Platform="Linked"/>
+							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
 				</PropertyContainer>

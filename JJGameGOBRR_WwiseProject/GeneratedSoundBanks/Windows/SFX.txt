@@ -1,0 +1,22 @@
+Event	ID	Name			Wwise Object Path	Notes
+	484766513	Play_UClick			\Default Work Unit\Play_UClick	
+	1130750870	Play_TRemove			\Default Work Unit\Play_TRemove	
+	1341661114	Play_TGShoot			\Default Work Unit\Play_TGShoot	
+	2269172114	Play_TClick			\Default Work Unit\Play_TClick	
+	2363708467	Play_TPlace			\Default Work Unit\Play_TPlace	
+	2465328249	Play_THurt			\Default Work Unit\Play_THurt	
+	2689049308	Play_TDeath			\Default Work Unit\Play_TDeath	
+	4094970478	Play_TGPlace			\Default Work Unit\Play_TGPlace	
+	4112018788	Play_TMShoot			\Default Work Unit\Play_TMShoot	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	19713553	Hurt	.cache\9D\{9D8FC875-2AC7-E7F5-7B3B-7EDBEAEAA0F6}.wem		\Containers\Default Work Unit\TowerMixer\Hurt		109320
+	36569900	Death	.cache\9B\{9B0209DF-993A-224D-A2C1-255BB1D4F6C1}.wem		\Containers\Default Work Unit\TowerMixer\Death		296020
+	503869253	Shoot	.cache\3A\{3A34253B-6903-2C4B-2766-37FB6AC6B82A}.wem		\Containers\Default Work Unit\TowerMixer\MushMixer\Shoot		107712
+	681854957	Place	.cache\A8\{A8D75D23-5F1B-5FF7-AA52-3FEF5FB43E47}.wem		\Containers\Default Work Unit\TowerMixer\Place		147548
+	736745190	Place	.cache\07\{0782F1F4-AE44-B08C-5DA2-69BAC837489A}.wem		\Containers\Default Work Unit\TowerMixer\GolemMixer\Place		158560
+	826742836	Click	.cache\AD\{AD4F1600-348E-E33B-D187-417A4571F39B}.wem		\Containers\Default Work Unit\UI\Click		247504
+	865451487	Shoot	.cache\3F\{3F39DC8D-0C0B-DC1C-3631-56E7980AEB3C}.wem		\Containers\Default Work Unit\TowerMixer\GolemMixer\Shoot		59072
+	887464942	Click	.cache\FE\{FE8B806C-DB0C-89C0-39B8-93E4D538A8C5}.wem		\Containers\Default Work Unit\TowerMixer\Click		79964
+	964520397	Remove	.cache\11\{11AA256F-DEC8-0DD2-3B9A-64F248982645}.wem		\Containers\Default Work Unit\TowerMixer\Remove		102152
+

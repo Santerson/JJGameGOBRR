@@ -4,12 +4,28 @@
 		<WorkUnit Name="Default Work Unit" ID="{3B27B5EE-6CDA-4E3B-A87C-4BF6B92C0E58}" PersistMode="Standalone">
 			<ChildrenList>
 				<SoundBank Name="Music" ID="{62E37DE2-229F-4C94-AF0B-DEED7E1CA4CC}">
-					<ObjectInclusionList/>
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_MTitle" ID="{DF7AAD0A-76B3-4270-A529-410314F7BE85}" WorkUnitID="{387072C7-A7CF-4480-B8F0-2D62B0219160}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_MBBattle1" ID="{1FE181B6-4376-4290-B4B8-D3EF64080B97}" WorkUnitID="{387072C7-A7CF-4480-B8F0-2D62B0219160}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_MBBattle2" ID="{AA65FE26-DB7F-4585-A5FF-FCD55F831C9A}" WorkUnitID="{387072C7-A7CF-4480-B8F0-2D62B0219160}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_MLose" ID="{56AFA86D-BBD0-47FE-94D0-E169978CAC51}" WorkUnitID="{387072C7-A7CF-4480-B8F0-2D62B0219160}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_MWin" ID="{F838AC53-0C14-486C-A240-EC32CB039980}" WorkUnitID="{387072C7-A7CF-4480-B8F0-2D62B0219160}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
 				<SoundBank Name="SFX" ID="{1B1FEBF3-0FD8-419E-9E0B-3423DC0D482B}">
-					<ObjectInclusionList/>
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_TMShoot" ID="{B6D1461F-E233-432D-AF0B-E39D3F9D7FD9}" WorkUnitID="{387072C7-A7CF-4480-B8F0-2D62B0219160}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_TClick" ID="{33A62A1B-52EE-440C-8692-B8E22C9461E4}" WorkUnitID="{387072C7-A7CF-4480-B8F0-2D62B0219160}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_UClick" ID="{AA9452D3-5800-4804-A136-1DEB28C68AE8}" WorkUnitID="{387072C7-A7CF-4480-B8F0-2D62B0219160}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_THurt" ID="{0F5C36BE-DBBC-4815-9234-1F8673BDC1D9}" WorkUnitID="{387072C7-A7CF-4480-B8F0-2D62B0219160}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_TRemove" ID="{274B90E1-46B4-4A1F-9125-ED63C01B6DD9}" WorkUnitID="{387072C7-A7CF-4480-B8F0-2D62B0219160}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_TGShoot" ID="{3E2A3678-6C4E-4A4C-BE3E-F2DC66DA12EE}" WorkUnitID="{387072C7-A7CF-4480-B8F0-2D62B0219160}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_TPlace" ID="{50DB0A5A-E1E8-4C16-9396-EDCA8D188111}" WorkUnitID="{387072C7-A7CF-4480-B8F0-2D62B0219160}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_TDeath" ID="{26656795-D73F-4DCB-915C-1EE27CC8D0F2}" WorkUnitID="{387072C7-A7CF-4480-B8F0-2D62B0219160}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_TGPlace" ID="{D7301991-B4FB-4E9D-AE77-4A5CC238FB77}" WorkUnitID="{387072C7-A7CF-4480-B8F0-2D62B0219160}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
