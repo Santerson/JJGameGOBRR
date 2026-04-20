@@ -148,7 +148,7 @@ MonoBehaviour:
   - idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: a6f35f4eda3db7549a59297762bf73d5, type: 2}
-  TowerSellSFXs:
+  TowerRemoveSFXs:
   - idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: a6f35f4eda3db7549a59297762bf73d5, type: 2}
@@ -161,6 +161,26 @@ MonoBehaviour:
   - idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: a6f35f4eda3db7549a59297762bf73d5, type: 2}
+  TowerGenericDrop:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 9e512db37a24b1b479ebe0b857040d53, type: 2}
+  TowerGenericDeath:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 4baca3d19b6267448904299325ac32b8, type: 2}
+  TowerGenericClick:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 2900e724ff65c90478360eeb35049eed, type: 2}
+  TowerGenericHurt:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: bf8dbdc1797c26940b0536eb4c2280f5, type: 2}
+  TowerGenericRemove:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: ddf9560d5bec1064b90495bf79b8e155, type: 2}
   EnemyWalkSFXs:
   - idInternal: 0
     valueGuidInternal: 
