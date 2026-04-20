@@ -169,5 +169,20 @@ public class TowerAi : MonoBehaviour
             refAudioManager.PlayTowerSellSFX(TowerID);
             Die();
         }
+        else if (Input.GetMouseButtonDown(0) && canBeSold)
+        {
+            Instantiate(particlsRemove, gameObject.transform.position, Quaternion.identity);
+            refAudioManager.PlayTowerSellSFX(TowerID);
+            Die();
+            UIDraggableTower[] allTowerDrags = FindObjectsByType<UIDraggableTower>(FindObjectsSortMode.None);
+            // Make the player now hold a copy of this tower
+            foreach (UIDraggableTower towerDrag in allTowerDrags)
+            {
+                if (towerDrag.TowerPrefab.GetComponent<TowerAi>().TowerID == TowerID)
+                {
+                    towerDrag.followingMouse = true;
+                }
+            }
+        }
     }
 }

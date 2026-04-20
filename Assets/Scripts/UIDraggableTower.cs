@@ -37,7 +37,7 @@ public class UIDraggableTower : MonoBehaviour
     Color baseColor => refRenderer.color;
 
     Vector2 initialPosition = Vector2.zero;
-    public bool followingMouse { get; private set; } = false;
+    public bool followingMouse { get; set; } = false;
     float timeToNextTowerPlacement = 0;
     Vector2Int TowerShadowPosition = new Vector2Int(-1, -1);
     GameObject TowerShadow;
@@ -143,6 +143,9 @@ public class UIDraggableTower : MonoBehaviour
                         // Instantiate a shadow there
                         TowerShadow = Instantiate(TowerShadowPrefab, refTowerGrid.SpacePositions[closestPos.x, closestPos.y], Quaternion.identity);
             }
+            // Extra check for some reason
+            if (!Input.GetMouseButton(0))
+                PlaceTowerAtPosition();
         }
     }
 
