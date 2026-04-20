@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{B6D1461F-E233-432D-AF0B-E39D3F9D7FD9}",
     "Language": "SFX",
-    "Hash": "{18B9F18E-97A2-A4C7-BE02-32F64B043664}",
+    "Hash": "{FD946401-0BD4-74C7-976E-7D329E27DF12}",
     "ObjectPath": "Play_TMShoot",
     "ShortName": "Play_TMShoot",
     "Path": "Event/Play_TMShoot.bnk",
@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "Mush_Shoot.wav",
       "Path": "Media/503869253.wem",
-      "CachePath": "C5/{C5F7C612-0BCA-2038-9EA8-B05D9BF31327}.wem"
+      "CachePath": "3A/{3A34253B-6903-2C4B-2766-37FB6AC6B82A}.wem"
      }
     ],
     "Events": [
@@ -32,8 +32,8 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Play_TMShoot",
       "GUID": "{B6D1461F-E233-432D-AF0B-E39D3F9D7FD9}",
       "DurationType": "OneShot",
-      "DurationMin": "0.7239002",
-      "DurationMax": "0.7239002",
+      "DurationMin": "0.610068",
+      "DurationMax": "0.610068",
       "MediaRefs": [
        {
         "Id": "503869253"
@@ -43,6 +43,6 @@
     ]
    }
   ],
-  "FileHash": "{56DEB652-4E30-142E-C33C-F7364AE8737A}"
+  "FileHash": "{CFB96C74-7398-1B79-7B2E-5DB1459DD2BD}"
  }
 }
