@@ -33,6 +33,7 @@ public class UIDraggableTower : MonoBehaviour
 
     TowerGrid refTowerGrid;
     SpriteRenderer refRenderer;
+    AudioManager RefAudioManager;
     Color baseColor => refRenderer.color;
 
     Vector2 initialPosition = Vector2.zero;
@@ -63,6 +64,7 @@ public class UIDraggableTower : MonoBehaviour
     {
         initialPosition = transform.position;
         refTowerGrid = FindFirstObjectByType<TowerGrid>();
+        RefAudioManager = FindFirstObjectByType<AudioManager>();
         if (refTowerGrid == null)
         {
             Debug.LogError("No Towergrid found! Make sure there is one on the scene");
@@ -155,7 +157,7 @@ public class UIDraggableTower : MonoBehaviour
             return;
         }
         followingMouse = true;
-        pickupSound.Play();
+        RefAudioManager.PlayTowercClickSFX();
     }
 
     /// <summary>

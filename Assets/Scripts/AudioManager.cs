@@ -41,6 +41,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AK.Wwise.Event ManaGainSFX;
     [SerializeField] AK.Wwise.Event ManaLoseSFX;
     [SerializeField] AK.Wwise.Event UIClickSFX;
+    [SerializeField] AK.Wwise.Event PauseSFX;
 
     // Sound IDS
     private static uint MainMenuID = 0;
@@ -129,7 +130,7 @@ public class AudioManager : MonoBehaviour
     /// <summary>
     /// Plays a click sfx for a tower
     /// </summary>
-    public void PlayTowercCickSFX()
+    public void PlayTowercClickSFX()
     {
         AkUnitySoundEngine.PostEvent(TowerGenericClick.Id, gameObject);
     }
@@ -294,5 +295,10 @@ public class AudioManager : MonoBehaviour
         }
         AkUnitySoundEngine.StopAll();
         GameMusic2ID = AkUnitySoundEngine.PostEvent(GameMusic2.Id, gameObject);
+    }
+
+    public void PlayPauseSFX()
+    {
+        AkUnitySoundEngine.PostEvent(PauseSFX.Id, gameObject);
     }
 }

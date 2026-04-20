@@ -10,6 +10,8 @@ public class PauseMenu : MonoBehaviour
 {
     [SerializeField] GameObject pauseMenu;
     [SerializeField] AudioSource pauseSound;
+
+    AudioManager RefAudioManager;
     public static bool paused { get; private set; } = false;
     // Update is called once per frame
     void Update()
@@ -28,6 +30,6 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = (paused ? 0.0f : 1.0f);
         // Enable or disable the pause menu
         pauseMenu.SetActive(paused);
-        pauseSound.Play();
+        RefAudioManager.PlayPauseSFX();
     }
 }

@@ -108,7 +108,7 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 2685e0f3d0a7d3240b7834edf0b042d3, type: 2}
-  PlayMainMenuMusicOnStart: 0
+  PlayMainMenuMusicOnStart: 1
   TowerDropSFXs:
   - idInternal: 0
     valueGuidInternal: 
