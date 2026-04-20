@@ -15,6 +15,9 @@ public class Mana : MonoBehaviour
     [Tooltip("Textbox for the mana regeneration")]
         [SerializeField] TextMeshProUGUI manaGainText;
 
+    [SerializeField] Gradient StartBarGradient;
+    [SerializeField] Gradient EndBarGradient;
+
     [Header("ScreenTint")]
     [SerializeField] Volume volume;
     [Tooltip("Enables the vignette")]
@@ -112,6 +115,8 @@ public class Mana : MonoBehaviour
         // Update the manaLine
         float manaBarPosition = Mathf.Lerp(0, ManaBarInitialPosition.x, CurrentMana / MaxMana);
         ManaBar.SetPosition(1, new Vector3(manaBarPosition, 0, 0));
+        ManaBar.GetComponent<LineRenderer>().startColor = new Color(Mathf.Lerp(StartBarGradient.colorKeys[0].color.r, EndBarGradient.colorKeys[0].color.r, CurrentMana / MaxMana), Mathf.Lerp(StartBarGradient.colorKeys[0].color.g, EndBarGradient.colorKeys[0].color.g, CurrentMana / MaxMana), Mathf.Lerp(StartBarGradient.colorKeys[0].color.b, EndBarGradient.colorKeys[0].color.b, CurrentMana / MaxMana), 10);
+        ManaBar.GetComponent<LineRenderer>().endColor = new Color(Mathf.Lerp(StartBarGradient.colorKeys[0].color.r, EndBarGradient.colorKeys[0].color.r, CurrentMana / MaxMana), Mathf.Lerp(StartBarGradient.colorKeys[0].color.g, EndBarGradient.colorKeys[0].color.g, CurrentMana / MaxMana), Mathf.Lerp(StartBarGradient.colorKeys[0].color.b, EndBarGradient.colorKeys[0].color.b, CurrentMana / MaxMana), 10);
         LossPX.transform.position = new Vector2(ManaBar.transform.position.x + LossPXOffset.x, ManaBar.transform.position.y + LossPXOffset.y + manaBarPosition);
         // Update the display
         if (manaRegen > 0)

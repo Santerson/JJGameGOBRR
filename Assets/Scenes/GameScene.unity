@@ -1516,12 +1516,76 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 976098927}
     - target: {fileID: 5161085203479588299, guid: a1d4d8b83f75d0042b0b3e85fb1203de, type: 3}
+      propertyPath: EndRedFloat
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161085203479588299, guid: a1d4d8b83f75d0042b0b3e85fb1203de, type: 3}
       propertyPath: manaGainText
       value: 
       objectReference: {fileID: 290243981}
     - target: {fileID: 5161085203479588299, guid: a1d4d8b83f75d0042b0b3e85fb1203de, type: 3}
+      propertyPath: EndtBlueFloat
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161085203479588299, guid: a1d4d8b83f75d0042b0b3e85fb1203de, type: 3}
+      propertyPath: StartRedFloat
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161085203479588299, guid: a1d4d8b83f75d0042b0b3e85fb1203de, type: 3}
+      propertyPath: StartBlueFloat
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161085203479588299, guid: a1d4d8b83f75d0042b0b3e85fb1203de, type: 3}
       propertyPath: enableVignette
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161085203479588299, guid: a1d4d8b83f75d0042b0b3e85fb1203de, type: 3}
+      propertyPath: EndBarGradient.key0.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161085203479588299, guid: a1d4d8b83f75d0042b0b3e85fb1203de, type: 3}
+      propertyPath: EndBarGradient.key0.g
+      value: 0.4192574
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161085203479588299, guid: a1d4d8b83f75d0042b0b3e85fb1203de, type: 3}
+      propertyPath: EndBarGradient.key0.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161085203479588299, guid: a1d4d8b83f75d0042b0b3e85fb1203de, type: 3}
+      propertyPath: EndBarGradient.key1.b
+      value: 0.3056603
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161085203479588299, guid: a1d4d8b83f75d0042b0b3e85fb1203de, type: 3}
+      propertyPath: EndBarGradient.key1.g
+      value: 0.22305974
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161085203479588299, guid: a1d4d8b83f75d0042b0b3e85fb1203de, type: 3}
+      propertyPath: EndBarGradient.key1.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161085203479588299, guid: a1d4d8b83f75d0042b0b3e85fb1203de, type: 3}
+      propertyPath: StartBarGradient.key0.b
+      value: 0.05932188
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161085203479588299, guid: a1d4d8b83f75d0042b0b3e85fb1203de, type: 3}
+      propertyPath: StartBarGradient.key0.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161085203479588299, guid: a1d4d8b83f75d0042b0b3e85fb1203de, type: 3}
+      propertyPath: StartBarGradient.key0.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161085203479588299, guid: a1d4d8b83f75d0042b0b3e85fb1203de, type: 3}
+      propertyPath: StartBarGradient.key1.b
+      value: 0.018974207
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161085203479588299, guid: a1d4d8b83f75d0042b0b3e85fb1203de, type: 3}
+      propertyPath: StartBarGradient.key1.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161085203479588299, guid: a1d4d8b83f75d0042b0b3e85fb1203de, type: 3}
+      propertyPath: StartBarGradient.key1.r
+      value: 0.4490565
       objectReference: {fileID: 0}
     - target: {fileID: 8666548943402785908, guid: a1d4d8b83f75d0042b0b3e85fb1203de, type: 3}
       propertyPath: m_LocalPosition.x

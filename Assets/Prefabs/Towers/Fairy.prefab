@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1411011776302122596, guid: 01a5586a081987349ade83957f7874d8, type: 3}
       propertyPath: m_Size.y
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1411011776302122596, guid: 01a5586a081987349ade83957f7874d8, type: 3}
       propertyPath: m_Offset.y
@@ -36,6 +36,10 @@ PrefabInstance:
       propertyPath: m_Resource
       value: 
       objectReference: {fileID: 8300000, guid: 747c755917f4473449bf0d459f2a44b5, type: 3}
+    - target: {fileID: 4466847123923408407, guid: 01a5586a081987349ade83957f7874d8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7703928251218509914, guid: 0aa4906f2ed51234fb1cceefd84392c7, type: 3}
     - target: {fileID: 4466847123923408407, guid: 01a5586a081987349ade83957f7874d8, type: 3}
       propertyPath: m_Color.b
       value: 1
