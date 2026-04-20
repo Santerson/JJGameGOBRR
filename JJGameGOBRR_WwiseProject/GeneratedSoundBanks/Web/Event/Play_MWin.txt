@@ -1,3 +1,0 @@
-Event	ID	Name			Wwise Object Path	Notes
-	1264558303	Play_MWin			\Default Work Unit\Play_MWin	
-

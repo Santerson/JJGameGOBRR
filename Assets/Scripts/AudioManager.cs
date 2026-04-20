@@ -20,7 +20,12 @@ public class AudioManager : MonoBehaviour
     [SerializeField] List<AK.Wwise.Event> TowerDropSFXs;
     [SerializeField] List<AK.Wwise.Event> TowerShootSFXs;
     [SerializeField] List<AK.Wwise.Event> TowerDieSFXs;
-    [SerializeField] List<AK.Wwise.Event> TowerSellSFXs;
+    [SerializeField] List<AK.Wwise.Event> TowerRemoveSFXs;
+    [SerializeField] AK.Wwise.Event TowerGenericDrop;
+    [SerializeField] AK.Wwise.Event TowerGenericDeath;
+    [SerializeField] AK.Wwise.Event TowerGenericClick;
+    [SerializeField] AK.Wwise.Event TowerGenericHurt;
+    [SerializeField] AK.Wwise.Event TowerGenericRemove;
 
     [Header("Enemies")]
     [SerializeField] List<AK.Wwise.Event> EnemyWalkSFXs;
@@ -36,6 +41,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AK.Wwise.Event ManaGainSFX;
     [SerializeField] AK.Wwise.Event ManaLoseSFX;
     [SerializeField] AK.Wwise.Event UIClickSFX;
+    [SerializeField] AK.Wwise.Event PauseSFX;
 
     // Sound IDS
     private static uint MainMenuID = 0;
@@ -82,6 +88,7 @@ public class AudioManager : MonoBehaviour
     {
         AK.Wwise.Event refSound = TowerDropSFXs[(int)tower];
         AkUnitySoundEngine.PostEvent(refSound.Id, gameObject);
+        AkUnitySoundEngine.PostEvent(TowerGenericDrop.Id, gameObject);
     }
 
     /// <summary>
@@ -102,12 +109,30 @@ public class AudioManager : MonoBehaviour
     {
         AK.Wwise.Event refSound = TowerDieSFXs[(int)tower];
         AkUnitySoundEngine.PostEvent(refSound.Id, gameObject);
+        AkUnitySoundEngine.PostEvent(TowerGenericDeath.Id, gameObject);
     }
 
     public void PlayTowerSellSFX(Towers tower)
     {
-        AK.Wwise.Event refSound = TowerSellSFXs[(int)tower];
+        AK.Wwise.Event refSound = TowerRemoveSFXs[(int)tower];
         AkUnitySoundEngine.PostEvent(refSound.Id, gameObject);
+        AkUnitySoundEngine.PostEvent(TowerGenericRemove.Id, gameObject);
+    }
+
+    /// <summary>
+    /// Plays a hurt sfx for a tower
+    /// </summary>
+    public void PlayTowerHurtSFX()
+    {
+        AkUnitySoundEngine.PostEvent(TowerGenericHurt.Id, gameObject);
+    }
+
+    /// <summary>
+    /// Plays a click sfx for a tower
+    /// </summary>
+    public void PlayTowercClickSFX()
+    {
+        AkUnitySoundEngine.PostEvent(TowerGenericClick.Id, gameObject);
     }
 
     /// <summary>
@@ -270,5 +295,10 @@ public class AudioManager : MonoBehaviour
         }
         AkUnitySoundEngine.StopAll();
         GameMusic2ID = AkUnitySoundEngine.PostEvent(GameMusic2.Id, gameObject);
+    }
+
+    public void PlayPauseSFX()
+    {
+        AkUnitySoundEngine.PostEvent(PauseSFX.Id, gameObject);
     }
 }

@@ -15,4 +15,4 @@ MonoBehaviour:
   objectName: Play_TGShoot
   id: 1341661114
   guid: 3E2A3678-6C4E-4A4C-BE3E-F2DC66DA12EE
-  IsInUserDefinedSoundBank: 0
+  IsInUserDefinedSoundBank: 1

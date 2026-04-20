@@ -16,11 +16,16 @@ namespace AK
         static const AkUniqueID PLAY_MBBATTLE1 = 3768384938U;
         static const AkUniqueID PLAY_MBBATTLE2 = 3768384937U;
         static const AkUniqueID PLAY_MLOSE = 2794885476U;
+        static const AkUniqueID PLAY_MTITLE = 631836703U;
         static const AkUniqueID PLAY_MWIN = 1264558303U;
+        static const AkUniqueID PLAY_TCLICK = 2269172114U;
+        static const AkUniqueID PLAY_TDEATH = 2689049308U;
         static const AkUniqueID PLAY_TGPLACE = 4094970478U;
         static const AkUniqueID PLAY_TGSHOOT = 1341661114U;
-        static const AkUniqueID PLAY_TITLE = 3849537216U;
+        static const AkUniqueID PLAY_THURT = 2465328249U;
         static const AkUniqueID PLAY_TMSHOOT = 4112018788U;
+        static const AkUniqueID PLAY_TPLACE = 2363708467U;
+        static const AkUniqueID PLAY_TREMOVE = 1130750870U;
         static const AkUniqueID PLAY_UCLICK = 484766513U;
     } // namespace EVENTS
 

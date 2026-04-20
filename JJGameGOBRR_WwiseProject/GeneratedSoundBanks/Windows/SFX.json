@@ -10,12 +10,214 @@
     "Type": "User",
     "GUID": "{1B1FEBF3-0FD8-419E-9E0B-3423DC0D482B}",
     "Language": "SFX",
-    "Hash": "{5C283833-6D04-84F1-E57D-0AB1E1D83FEC}",
+    "Hash": "{34EE9E11-1073-3CC3-8836-ED1F55E9C4C9}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\SFX",
     "ShortName": "SFX",
-    "Path": "SFX.bnk"
+    "Path": "SFX.bnk",
+    "Media": [
+     {
+      "Id": "19713553",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "TowerHurt.wav",
+      "CachePath": "9D/{9D8FC875-2AC7-E7F5-7B3B-7EDBEAEAA0F6}.wem"
+     },
+     {
+      "Id": "36569900",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "TowerDeath.wav",
+      "CachePath": "9B/{9B0209DF-993A-224D-A2C1-255BB1D4F6C1}.wem"
+     },
+     {
+      "Id": "503869253",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Mush_Shoot.wav",
+      "CachePath": "3A/{3A34253B-6903-2C4B-2766-37FB6AC6B82A}.wem"
+     },
+     {
+      "Id": "681854957",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "TowerPlace.wav",
+      "CachePath": "A8/{A8D75D23-5F1B-5FF7-AA52-3FEF5FB43E47}.wem"
+     },
+     {
+      "Id": "736745190",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GolemPlace.wav",
+      "CachePath": "07/{0782F1F4-AE44-B08C-5DA2-69BAC837489A}.wem"
+     },
+     {
+      "Id": "826742836",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "UI_Click.wav",
+      "CachePath": "AD/{AD4F1600-348E-E33B-D187-417A4571F39B}.wem"
+     },
+     {
+      "Id": "865451487",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GolemShoot.wav",
+      "CachePath": "3F/{3F39DC8D-0C0B-DC1C-3631-56E7980AEB3C}.wem"
+     },
+     {
+      "Id": "887464942",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "TowerClick.wav",
+      "CachePath": "FE/{FE8B806C-DB0C-89C0-39B8-93E4D538A8C5}.wem"
+     },
+     {
+      "Id": "964520397",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "TowerRemove.wav",
+      "CachePath": "11/{11AA256F-DEC8-0DD2-3B9A-64F248982645}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2269172114",
+      "Name": "Play_TClick",
+      "ObjectPath": "\\Events\\Default Work Unit\\SoundEffects\\Play_TClick",
+      "GUID": "{33A62A1B-52EE-440C-8692-B8E22C9461E4}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.45276645",
+      "DurationMax": "0.45276645",
+      "MediaRefs": [
+       {
+        "Id": "887464942"
+       }
+      ]
+     },
+     {
+      "Id": "2689049308",
+      "Name": "Play_TDeath",
+      "ObjectPath": "\\Events\\Default Work Unit\\SoundEffects\\Play_TDeath",
+      "GUID": "{26656795-D73F-4DCB-915C-1EE27CC8D0F2}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.6775737",
+      "DurationMax": "1.6775737",
+      "MediaRefs": [
+       {
+        "Id": "36569900"
+       }
+      ]
+     },
+     {
+      "Id": "4094970478",
+      "Name": "Play_TGPlace",
+      "ObjectPath": "\\Events\\Default Work Unit\\SoundEffects\\Play_TGPlace",
+      "GUID": "{D7301991-B4FB-4E9D-AE77-4A5CC238FB77}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.898322",
+      "DurationMax": "0.898322",
+      "MediaRefs": [
+       {
+        "Id": "736745190"
+       }
+      ]
+     },
+     {
+      "Id": "1341661114",
+      "Name": "Play_TGShoot",
+      "ObjectPath": "\\Events\\Default Work Unit\\SoundEffects\\Play_TGShoot",
+      "GUID": "{3E2A3678-6C4E-4A4C-BE3E-F2DC66DA12EE}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.33433",
+      "DurationMax": "0.33433",
+      "MediaRefs": [
+       {
+        "Id": "865451487"
+       }
+      ]
+     },
+     {
+      "Id": "2465328249",
+      "Name": "Play_THurt",
+      "ObjectPath": "\\Events\\Default Work Unit\\SoundEffects\\Play_THurt",
+      "GUID": "{0F5C36BE-DBBC-4815-9234-1F8673BDC1D9}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.61918366",
+      "DurationMax": "0.61918366",
+      "MediaRefs": [
+       {
+        "Id": "19713553"
+       }
+      ]
+     },
+     {
+      "Id": "4112018788",
+      "Name": "Play_TMShoot",
+      "ObjectPath": "\\Events\\Default Work Unit\\SoundEffects\\Play_TMShoot",
+      "GUID": "{B6D1461F-E233-432D-AF0B-E39D3F9D7FD9}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.610068",
+      "DurationMax": "0.610068",
+      "MediaRefs": [
+       {
+        "Id": "503869253"
+       }
+      ]
+     },
+     {
+      "Id": "2363708467",
+      "Name": "Play_TPlace",
+      "ObjectPath": "\\Events\\Default Work Unit\\SoundEffects\\Play_TPlace",
+      "GUID": "{50DB0A5A-E1E8-4C16-9396-EDCA8D188111}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.8358957",
+      "DurationMax": "0.8358957",
+      "MediaRefs": [
+       {
+        "Id": "681854957"
+       }
+      ]
+     },
+     {
+      "Id": "1130750870",
+      "Name": "Play_TRemove",
+      "ObjectPath": "\\Events\\Default Work Unit\\SoundEffects\\Play_TRemove",
+      "GUID": "{274B90E1-46B4-4A1F-9125-ED63C01B6DD9}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.5785487",
+      "DurationMax": "0.5785487",
+      "MediaRefs": [
+       {
+        "Id": "964520397"
+       }
+      ]
+     },
+     {
+      "Id": "484766513",
+      "Name": "Play_UClick",
+      "ObjectPath": "\\Events\\Default Work Unit\\SoundEffects\\Play_UClick",
+      "GUID": "{AA9452D3-5800-4804-A136-1DEB28C68AE8}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.4025397",
+      "DurationMax": "1.4025397",
+      "MediaRefs": [
+       {
+        "Id": "826742836"
+       }
+      ]
+     }
+    ]
    }
   ],
-  "FileHash": "{E76E7D1B-F479-999C-E61E-F68FFC138BB7}"
+  "FileHash": "{34D4C806-F8EC-2FEC-5AA7-8B3996974143}"
  }
 }
