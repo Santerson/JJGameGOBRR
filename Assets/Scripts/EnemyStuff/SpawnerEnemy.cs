@@ -170,8 +170,9 @@ public class SpawnerEnemy : MonoBehaviour
         if (EnemyNodes.Count == 0)
         {
             // Win game epic dub yippe
-            UnityEngine.SceneManagement.SceneManager.LoadScene("EpicDub");
             FindFirstObjectByType<AudioManager>().PlayMenuMusic();
+            FindFirstObjectByType<AudioManager>().PlayWinLevelSFX();
+            UnityEngine.SceneManagement.SceneManager.LoadScene("EpicDub");
             return true;
         }
         return false;

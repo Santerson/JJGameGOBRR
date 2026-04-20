@@ -205,10 +205,10 @@ MonoBehaviour:
   EnemyHurtSFXs:
   - idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: a6f35f4eda3db7549a59297762bf73d5, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: c18d9fba5d7a4ab4ea5918194d606e5a, type: 2}
   - idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: a6f35f4eda3db7549a59297762bf73d5, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: c18d9fba5d7a4ab4ea5918194d606e5a, type: 2}
   EnemyDieSFXs:
   - idInternal: 0
     valueGuidInternal: 
@@ -243,3 +243,7 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: c18d9fba5d7a4ab4ea5918194d606e5a, type: 2}
+  PauseSFX:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}

@@ -260,6 +260,7 @@ public class AudioManager : MonoBehaviour
 
     /// <summary>
     /// Stops all music and plays game music track 1
+    /// (called in the unity inspector i believe)
     /// </summary>
     public void PlayGameMusic1()
     {

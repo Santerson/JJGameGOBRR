@@ -153,7 +153,7 @@ public class TowerAi : MonoBehaviour
             {
                 int dmg = (int)refDamageBox.GetDamage();
                 Health -= dmg;
-
+                refAudioManager.PlayTowerHurtSFX();
             }
         }
     }
