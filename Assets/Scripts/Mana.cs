@@ -193,7 +193,7 @@ public class Mana : MonoBehaviour
         Debug.Log("Player loses lmao");
 
         FindFirstObjectByType<AudioManager>().PlayMenuMusic();
-        FindFirstObjectByType<AudioManager>().PlayLoseLevelSFX();
+        FindFirstObjectByType<AudioManager>().PlayLoseLevelMusic();
 
         // Set lose screen
         SceneManager.LoadScene("SkillIssue");

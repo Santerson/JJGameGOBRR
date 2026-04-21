@@ -1502,12 +1502,12 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 554722774}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: PlayGameMusic1
-        m_Mode: 1
+        m_MethodName: PlayGameMusic
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1617,6 +1617,10 @@ PrefabInstance:
     - target: {fileID: 2737843157973409760, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5812513164392073569, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
+      propertyPath: PlayMainMenu
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5812513164392073569, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
       propertyPath: PlayMainMenuMusicOnStart
