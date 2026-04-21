@@ -64,6 +64,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: red Death
       objectReference: {fileID: 0}
+    - target: {fileID: 3384518867202187266, guid: bfe9eb7932f3da04a88aa0c555d60227, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3384518867202187266, guid: bfe9eb7932f3da04a88aa0c555d60227, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.062190022
+      objectReference: {fileID: 0}
+    - target: {fileID: 3384518867202187266, guid: bfe9eb7932f3da04a88aa0c555d60227, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962398751239056537, guid: bfe9eb7932f3da04a88aa0c555d60227, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962398751239056537, guid: bfe9eb7932f3da04a88aa0c555d60227, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962398751239056537, guid: bfe9eb7932f3da04a88aa0c555d60227, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5340931758141326099, guid: bfe9eb7932f3da04a88aa0c555d60227, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5340931758141326099, guid: bfe9eb7932f3da04a88aa0c555d60227, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5340931758141326099, guid: bfe9eb7932f3da04a88aa0c555d60227, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
