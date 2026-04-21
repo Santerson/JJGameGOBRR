@@ -17,7 +17,9 @@ namespace AK
         static const AkUniqueID PLAY_MBBATTLE2 = 3768384937U;
         static const AkUniqueID PLAY_MLOSE = 2794885476U;
         static const AkUniqueID PLAY_MTITLE = 631836703U;
+        static const AkUniqueID PLAY_MUSICPLAYLIST = 2585924577U;
         static const AkUniqueID PLAY_MWIN = 1264558303U;
+        static const AkUniqueID PLAY_TBPLACE = 3957186333U;
         static const AkUniqueID PLAY_TCLICK = 2269172114U;
         static const AkUniqueID PLAY_TDEATH = 2689049308U;
         static const AkUniqueID PLAY_TGPLACE = 4094970478U;
@@ -31,15 +33,20 @@ namespace AK
 
     namespace STATES
     {
-        namespace CURRENTLEVEL
+        namespace MUSIC_STATE_GROUP
         {
-            static const AkUniqueID GROUP = 491548818U;
+            static const AkUniqueID GROUP = 2434766612U;
 
             namespace STATE
             {
+                static const AkUniqueID BATTLELEVEL = 1121213527U;
+                static const AkUniqueID BATTLELEVEL2 = 2337103047U;
+                static const AkUniqueID LOSELEVEL = 4041551472U;
+                static const AkUniqueID MENULEVEL = 2980504018U;
                 static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID WINLEVEL = 180761629U;
             } // namespace STATE
-        } // namespace CURRENTLEVEL
+        } // namespace MUSIC_STATE_GROUP
 
     } // namespace STATES
 

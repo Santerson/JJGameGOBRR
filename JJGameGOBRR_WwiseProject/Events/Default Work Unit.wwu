@@ -104,6 +104,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_TBPlace" ID="{58D66B10-76D8-4F4B-95E6-35D170AE66F8}">
+							<ChildrenList>
+								<Action Name="" ID="{733B0E14-BC0E-4918-945D-44BDD2FB06AC}" ShortID="408910534">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Place" ID="{D8834EEA-D1F3-420D-9FD3-FCD3286C8C6E}" WorkUnitID="{C9DDC0B8-4122-402E-850F-253503C47F0F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="MusicThings" ID="{09F339EE-521F-45D9-BA4D-86CA6D483AA9}" ShortID="825185757">

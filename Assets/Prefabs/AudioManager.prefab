@@ -41,7 +41,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7903793231949837847}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a13263957d72fd440b8863927f0d4605, type: 3}
   m_Name: 
@@ -112,7 +112,7 @@ MonoBehaviour:
   TowerDropSFXs:
   - idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: a6f35f4eda3db7549a59297762bf73d5, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 29da9eba11ff69d4dbabd74d0ebaf399, type: 2}
   - idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: a6f35f4eda3db7549a59297762bf73d5, type: 2}
@@ -205,10 +205,10 @@ MonoBehaviour:
   EnemyHurtSFXs:
   - idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: c18d9fba5d7a4ab4ea5918194d606e5a, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: a6f35f4eda3db7549a59297762bf73d5, type: 2}
   - idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: c18d9fba5d7a4ab4ea5918194d606e5a, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: a6f35f4eda3db7549a59297762bf73d5, type: 2}
   EnemyDieSFXs:
   - idInternal: 0
     valueGuidInternal: 
@@ -246,4 +246,4 @@ MonoBehaviour:
   PauseSFX:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 2900e724ff65c90478360eeb35049eed, type: 2}

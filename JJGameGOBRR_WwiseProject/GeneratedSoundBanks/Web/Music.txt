@@ -1,14 +1,25 @@
 Event	ID	Name			Wwise Object Path	Notes
-	631836703	Play_MTitle			\MusicWorkUnit\Play_MTitle	
-	1264558303	Play_MWin			\MusicWorkUnit\Play_MWin	
-	2794885476	Play_MLose			\MusicWorkUnit\Play_MLose	
-	3768384937	Play_MBBattle2			\MusicWorkUnit\Play_MBBattle2	
-	3768384938	Play_MBBattle1			\MusicWorkUnit\Play_MBBattle1	
+	631836703	Play_MTitle			\Default Work Unit\MusicThings\Play_MTitle	
+	1264558303	Play_MWin			\Default Work Unit\MusicThings\Play_MWin	
+	2794885476	Play_MLose			\Default Work Unit\MusicThings\Play_MLose	
+	3768384937	Play_MBBattle2			\Default Work Unit\MusicThings\Play_MBBattle2	
+	3768384938	Play_MBBattle1			\Default Work Unit\MusicThings\Play_MBBattle1	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	2434766612	Music_State_Group			\Default Work Unit\Music_State_Group	
+
+State	ID	Name	State Group			Notes
+	180761629	WinLevel	Music_State_Group			
+	748895195	None	Music_State_Group			
+	1121213527	BattleLevel	Music_State_Group			
+	2337103047	BattleLevel2	Music_State_Group			
+	2980504018	MenuLevel	Music_State_Group			
+	4041551472	LoseLevel	Music_State_Group			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	352609332	Lose	.cache\1F\{1FC2AF73-0133-D198-0C88-409FC4C4D1F1}.wem		\Containers\Default Work Unit\MusicMixer\Lose		285940
-	385699294	Battle2	.cache\DD\{DD0F6763-CE41-2673-5D3E-CC5937A6BB38}.wem		\Containers\Default Work Unit\MusicMixer\BattleBlends\Battle2		5556304
-	408197109	Title	.cache\AF\{AF5189A0-9E0E-2023-3764-EEED6B1F89A7}.wem		\Containers\Default Work Unit\MusicMixer\Title		16934496
-	460062071	Win	.cache\27\{27977291-F8D9-43B8-3D7B-3955233D190E}.wem		\Containers\Default Work Unit\MusicMixer\Win		203188
-	921732490	Battle1	.cache\97\{97428204-5B61-3D20-A3CD-2D3AD5E04446}.wem		\Containers\Default Work Unit\MusicMixer\BattleBlends\Battle1		5556304
+	352609332	Lose	.cache\1F\{1FC2AF73-0133-D198-0C88-409FC4C4D1F1}.wem		\Containers\Default Work Unit\MusicMixer\MusicPlaylist\Lose		285940
+	385699294	Battle2	.cache\DD\{DD0F6763-CE41-2673-5D3E-CC5937A6BB38}.wem		\Containers\Default Work Unit\MusicMixer\MusicPlaylist\BattleBlends\Battle2		5556304
+	408197109	Title	.cache\AF\{AF5189A0-9E0E-2023-3764-EEED6B1F89A7}.wem		\Containers\Default Work Unit\MusicMixer\MusicPlaylist\Title		16934496
+	460062071	Win	.cache\27\{27977291-F8D9-43B8-3D7B-3955233D190E}.wem		\Containers\Default Work Unit\MusicMixer\MusicPlaylist\Win		203188
+	921732490	Battle1	.cache\97\{97428204-5B61-3D20-A3CD-2D3AD5E04446}.wem		\Containers\Default Work Unit\MusicMixer\MusicPlaylist\BattleBlends\Battle1		5556304
 

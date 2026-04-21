@@ -187,6 +187,18 @@
 											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84580E68-76CE-4E53-85DC-C1911E9315F6}"/>
 										</Reference>
 									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="BunnySpawn2" ID="{D1C8ED0E-3EDB-44A1-96D3-5AFB37E0D884}">
+											<Language>SFX</Language>
+											<AudioFile>BunnySpawn2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1020242796"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="BunnySpawn2" ID="{D1C8ED0E-3EDB-44A1-96D3-5AFB37E0D884}" Platform="Linked"/>
+									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
 						</PropertyContainer>
@@ -473,6 +485,18 @@
 											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84580E68-76CE-4E53-85DC-C1911E9315F6}"/>
 										</Reference>
 									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="GuySpawnm" ID="{D9C06F71-DC62-455B-9EA0-538C676E761B}">
+											<Language>SFX</Language>
+											<AudioFile>GuySpawnm.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="225219682"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="GuySpawnm" ID="{D9C06F71-DC62-455B-9EA0-538C676E761B}" Platform="Linked"/>
+									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Attack" ID="{052DA59F-3403-47D3-8CC0-4FADA6E2462D}" ShortID="636289337">
 									<ReferenceList>
@@ -483,6 +507,18 @@
 											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84580E68-76CE-4E53-85DC-C1911E9315F6}"/>
 										</Reference>
 									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Guy_Attack" ID="{2DFEEC39-67F5-4F0D-BA78-A2055AE6FDD5}">
+											<Language>SFX</Language>
+											<AudioFile>Guy_Attack.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="547085646"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Guy_Attack" ID="{2DFEEC39-67F5-4F0D-BA78-A2055AE6FDD5}" Platform="Linked"/>
+									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Voice" ID="{2B423AB0-E1A0-4FD8-AA36-915BC331B8B8}" ShortID="341134536">
 									<ReferenceList>
@@ -493,6 +529,18 @@
 											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84580E68-76CE-4E53-85DC-C1911E9315F6}"/>
 										</Reference>
 									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="GuyVoice" ID="{95C5CE6E-1F81-48A3-8811-4BA63B2BE6A7}">
+											<Language>SFX</Language>
+											<AudioFile>GuyVoice.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="347852687"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="GuyVoice" ID="{95C5CE6E-1F81-48A3-8811-4BA63B2BE6A7}" Platform="Linked"/>
+									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Die" ID="{0248ADB3-8005-464B-A7D4-47E9C0F9C44F}" ShortID="384262421">
 									<ReferenceList>
@@ -503,6 +551,18 @@
 											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84580E68-76CE-4E53-85DC-C1911E9315F6}"/>
 										</Reference>
 									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="GuyDeath" ID="{DD643329-3AF3-47F8-9387-2FB7206A2ABE}">
+											<Language>SFX</Language>
+											<AudioFile>GuyDeath.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="243047079"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="GuyDeath" ID="{DD643329-3AF3-47F8-9387-2FB7206A2ABE}" Platform="Linked"/>
+									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Hurt" ID="{EC511FA5-4F6F-463A-8268-F6F19587D3D1}" ShortID="309035901">
 									<ReferenceList>
@@ -513,6 +573,18 @@
 											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84580E68-76CE-4E53-85DC-C1911E9315F6}"/>
 										</Reference>
 									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="GuyHurt" ID="{96AA43F4-52B7-46CC-A9EC-7165587D75AA}">
+											<Language>SFX</Language>
+											<AudioFile>GuyHurt.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="738599819"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="GuyHurt" ID="{96AA43F4-52B7-46CC-A9EC-7165587D75AA}" Platform="Linked"/>
+									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
 						</PropertyContainer>

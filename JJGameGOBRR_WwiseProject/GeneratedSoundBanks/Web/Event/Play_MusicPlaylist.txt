@@ -1,0 +1,14 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2585924577	Play_MusicPlaylist			\Default Work Unit\MusicThings\Play_MusicPlaylist	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	2434766612	Music_State_Group			\Default Work Unit\Music_State_Group	
+
+State	ID	Name	State Group			Notes
+	180761629	WinLevel	Music_State_Group			
+	748895195	None	Music_State_Group			
+	1121213527	BattleLevel	Music_State_Group			
+	2337103047	BattleLevel2	Music_State_Group			
+	2980504018	MenuLevel	Music_State_Group			
+	4041551472	LoseLevel	Music_State_Group			
+

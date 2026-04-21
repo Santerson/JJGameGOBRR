@@ -107,7 +107,7 @@ public class AudioManager : MonoBehaviour
     /// <param name="tower">The ID of the tower</param>
     public void PlayTowerDieSFX(Towers tower)
     {
-        AK.Wwise.Event refSound = TowerDieSFXs[(int)tower];
+        AK.Wwise.Event refSound = TowerDieSFXs[(int)tower]; 
         AkUnitySoundEngine.PostEvent(refSound.Id, gameObject);
         AkUnitySoundEngine.PostEvent(TowerGenericDeath.Id, gameObject);
     }

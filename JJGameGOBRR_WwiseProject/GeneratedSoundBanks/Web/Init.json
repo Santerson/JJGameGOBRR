@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{10E99458-CF79-EEDC-20C7-C3284FF0412D}",
+    "Hash": "{A0424E16-E944-10CA-9D29-0789874DC95C}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -44,22 +44,52 @@
     ],
     "StateGroups": [
      {
-      "Id": "491548818",
-      "Name": "CurrentLevel",
-      "ObjectPath": "\\States\\Default Work Unit\\CurrentLevel",
-      "GUID": "{5A19B937-16A9-41F6-B756-DB671270D2A2}",
+      "Id": "2434766612",
+      "Name": "Music_State_Group",
+      "ObjectPath": "\\States\\Default Work Unit\\Music_State_Group",
+      "GUID": "{1712CBF6-D8AA-4000-B3B6-D6EBD3FD80C6}",
       "States": [
+       {
+        "Id": "180761629",
+        "Name": "WinLevel",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_State_Group\\WinLevel",
+        "GUID": "{0A3782FD-23B7-4190-9FC6-6AF7EB5B0A83}"
+       },
        {
         "Id": "748895195",
         "Name": "None",
-        "ObjectPath": "\\States\\Default Work Unit\\CurrentLevel\\None",
-        "GUID": "{214D4B71-40F1-4155-8CDB-397949C0AD01}"
+        "ObjectPath": "\\States\\Default Work Unit\\Music_State_Group\\None",
+        "GUID": "{708CF3F4-2C9C-4AE1-8981-F5EAC4196E46}"
+       },
+       {
+        "Id": "1121213527",
+        "Name": "BattleLevel",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_State_Group\\BattleLevel",
+        "GUID": "{944C87C5-AF4D-4D36-A14F-93AF72CA2B14}"
+       },
+       {
+        "Id": "2337103047",
+        "Name": "BattleLevel2",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_State_Group\\BattleLevel2",
+        "GUID": "{173F842F-E5E1-43CC-9D55-0AE8431AD003}"
+       },
+       {
+        "Id": "2980504018",
+        "Name": "MenuLevel",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_State_Group\\MenuLevel",
+        "GUID": "{84A5005D-D1C6-47D6-BD76-0249C93F6A61}"
+       },
+       {
+        "Id": "4041551472",
+        "Name": "LoseLevel",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_State_Group\\LoseLevel",
+        "GUID": "{66C18FB2-CB72-4FDF-83A1-36B1B92886D5}"
        }
       ]
      }
     ]
    }
   ],
-  "FileHash": "{D587BDC0-177F-E7B1-D3CF-2B6310460626}"
+  "FileHash": "{BE375951-7A7C-9CD8-AF3F-E66659D8D45F}"
  }
 }

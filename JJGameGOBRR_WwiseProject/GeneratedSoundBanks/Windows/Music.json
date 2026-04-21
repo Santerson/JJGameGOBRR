@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{62E37DE2-229F-4C94-AF0B-DEED7E1CA4CC}",
     "Language": "SFX",
-    "Hash": "{8DE524E9-2BEB-01D9-B5FB-E70EE7ABF6EE}",
+    "Hash": "{423C6052-BD55-CAA7-ABBE-4126CC9B22C8}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Music",
     "ShortName": "Music",
     "Path": "Music.bnk",
@@ -125,9 +125,55 @@
        }
       ]
      }
+    ],
+    "StateGroups": [
+     {
+      "Id": "2434766612",
+      "Name": "Music_State_Group",
+      "ObjectPath": "\\States\\Default Work Unit\\Music_State_Group",
+      "GUID": "{1712CBF6-D8AA-4000-B3B6-D6EBD3FD80C6}",
+      "States": [
+       {
+        "Id": "180761629",
+        "Name": "WinLevel",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_State_Group\\WinLevel",
+        "GUID": "{0A3782FD-23B7-4190-9FC6-6AF7EB5B0A83}"
+       },
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_State_Group\\None",
+        "GUID": "{708CF3F4-2C9C-4AE1-8981-F5EAC4196E46}"
+       },
+       {
+        "Id": "1121213527",
+        "Name": "BattleLevel",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_State_Group\\BattleLevel",
+        "GUID": "{944C87C5-AF4D-4D36-A14F-93AF72CA2B14}"
+       },
+       {
+        "Id": "2337103047",
+        "Name": "BattleLevel2",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_State_Group\\BattleLevel2",
+        "GUID": "{173F842F-E5E1-43CC-9D55-0AE8431AD003}"
+       },
+       {
+        "Id": "2980504018",
+        "Name": "MenuLevel",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_State_Group\\MenuLevel",
+        "GUID": "{84A5005D-D1C6-47D6-BD76-0249C93F6A61}"
+       },
+       {
+        "Id": "4041551472",
+        "Name": "LoseLevel",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_State_Group\\LoseLevel",
+        "GUID": "{66C18FB2-CB72-4FDF-83A1-36B1B92886D5}"
+       }
+      ]
+     }
     ]
    }
   ],
-  "FileHash": "{47743EAE-09E5-819A-691E-AE3179778136}"
+  "FileHash": "{C224B0F0-ACA8-6B97-D25B-6E33EC8F7232}"
  }
 }
