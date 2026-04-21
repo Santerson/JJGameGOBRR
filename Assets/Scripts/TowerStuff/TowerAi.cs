@@ -169,7 +169,7 @@ public class TowerAi : MonoBehaviour
             refAudioManager.PlayTowerSellSFX(TowerID);
             Die();
         }
-        else if (Input.GetMouseButtonDown(0) && canBeSold)
+        else if (Input.GetMouseButtonDown(0) && canBeSold && TowerID != AudioManager.Towers.bunny)
         {
             Instantiate(particlsRemove, gameObject.transform.position, Quaternion.identity);
             refAudioManager.PlayTowerSellSFX(TowerID);
