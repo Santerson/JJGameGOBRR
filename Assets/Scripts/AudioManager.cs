@@ -203,7 +203,7 @@ public class AudioManager : MonoBehaviour
     public void PlayLoseLevelSFX()
     {
         //AkUnitySoundEngine.PostEvent(LoseLevelSFX.Id, gameObject);
-        AkSoundEngine.SetState("MusicStateGroup", "Win");
+        AkSoundEngine.SetState("MusicStateGroup", "Lose");
     }
 
     /// <summary>
