@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2591182578",
+    "Type": "Event",
+    "GUID": "{822FDE62-0D80-458A-92E5-C3B4EC6E7FFA}",
+    "Language": "SFX",
+    "Hash": "{3D02FB48-AB01-BA1D-9238-FC5CBB438FAC}",
+    "ObjectPath": "Play_MDecreasing",
+    "ShortName": "Play_MDecreasing",
+    "Path": "Event/Play_MDecreasing.bnk",
+    "Media": [
+     {
+      "Id": "152500346",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Mana_Decreasing.wav",
+      "Path": "Media/152500346.wem",
+      "CachePath": "79/{7936D13D-0614-9436-ED20-54D6E81CB127}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2591182578",
+      "Name": "Play_MDecreasing",
+      "ObjectPath": "\\Events\\Default Work Unit\\SoundEffects\\Play_MDecreasing",
+      "GUID": "{822FDE62-0D80-458A-92E5-C3B4EC6E7FFA}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.79086167",
+      "DurationMax": "0.79086167",
+      "MediaRefs": [
+       {
+        "Id": "152500346"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{98595503-E9F1-B2C0-906D-5BE1DC0BD9CE}"
+ }
+}

@@ -96,6 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5221ce1846b14524ba3775f558a15fbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayMainMenu: 0
   MenuMusic:
     idInternal: 0
     valueGuidInternal: 
@@ -108,7 +109,6 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 2685e0f3d0a7d3240b7834edf0b042d3, type: 2}
-  PlayMainMenuMusicOnStart: 1
   TowerDropSFXs:
   - idInternal: 0
     valueGuidInternal: 
@@ -234,11 +234,11 @@ MonoBehaviour:
   ManaGainSFX:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: a6f35f4eda3db7549a59297762bf73d5, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 6aaaa3f8c7aa6254195cf71a36090898, type: 2}
   ManaLoseSFX:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: a6f35f4eda3db7549a59297762bf73d5, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 8281abdae6d3eea428840993b9ea59cf, type: 2}
   UIClickSFX:
     idInternal: 0
     valueGuidInternal: 

@@ -170,6 +170,28 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_MDecreasing" ID="{822FDE62-0D80-458A-92E5-C3B4EC6E7FFA}">
+							<ChildrenList>
+								<Action Name="" ID="{3CCE02CD-1E44-4732-AC46-C1FF6C396B07}" ShortID="737962459">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Decreasing" ID="{69D642D4-F211-43BA-A4A5-EE9B05FBD66B}" WorkUnitID="{C9DDC0B8-4122-402E-850F-253503C47F0F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_MIncreasing" ID="{C929B1E9-DC16-4373-91E6-3D84251BF915}">
+							<ChildrenList>
+								<Action Name="" ID="{F3AED9AD-CAE9-4486-9E1C-193FAC5B8D54}" ShortID="825300263">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Increasing" ID="{82BC5769-DBC4-4547-A09F-19B2FE073A87}" WorkUnitID="{C9DDC0B8-4122-402E-850F-253503C47F0F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="MusicThings" ID="{09F339EE-521F-45D9-BA4D-86CA6D483AA9}" ShortID="825185757">

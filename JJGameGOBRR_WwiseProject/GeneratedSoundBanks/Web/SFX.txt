@@ -25,7 +25,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	681854957	Place	.cache\A8\{A8D75D23-5F1B-5FF7-AA52-3FEF5FB43E47}.wem		\Containers\Default Work Unit\TowerMixer\Place		147548
 	736745190	Place	.cache\07\{0782F1F4-AE44-B08C-5DA2-69BAC837489A}.wem		\Containers\Default Work Unit\TowerMixer\GolemMixer\Place		158560
 	738599819	Hurt	.cache\80\{80114EC7-6832-5CA4-B7E8-E66739F1F1D0}.wem		\Containers\Default Work Unit\EnemyMixer\GuyMixer\Hurt		49100
-	826742836	Click	.cache\AD\{AD4F1600-348E-E33B-D187-417A4571F39B}.wem		\Containers\Default Work Unit\UI\Click		247504
+	826742836	Click	.cache\A1\{A11A05AB-BCFD-C303-65E4-60D53CCF5822}.wem		\Containers\Default Work Unit\UI\Click		44348
 	865451487	Shoot	.cache\3F\{3F39DC8D-0C0B-DC1C-3631-56E7980AEB3C}.wem		\Containers\Default Work Unit\TowerMixer\GolemMixer\Shoot		59072
 	887464942	Click	.cache\FE\{FE8B806C-DB0C-89C0-39B8-93E4D538A8C5}.wem		\Containers\Default Work Unit\TowerMixer\Click		79964
 	964520397	Remove	.cache\11\{11AA256F-DEC8-0DD2-3B9A-64F248982645}.wem		\Containers\Default Work Unit\TowerMixer\Remove		102152

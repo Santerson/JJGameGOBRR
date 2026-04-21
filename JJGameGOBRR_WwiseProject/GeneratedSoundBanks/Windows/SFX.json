@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{1B1FEBF3-0FD8-419E-9E0B-3423DC0D482B}",
     "Language": "SFX",
-    "Hash": "{ECF654A9-5A7E-1CE2-E23D-B601B88DC486}",
+    "Hash": "{326900C9-84F5-E0CE-00B6-591E697FAEFF}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\SFX",
     "ShortName": "SFX",
     "Path": "SFX.bnk",
@@ -101,7 +101,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "UI_Click.wav",
-      "CachePath": "AD/{AD4F1600-348E-E33B-D187-417A4571F39B}.wem"
+      "CachePath": "A1/{A11A05AB-BCFD-C303-65E4-60D53CCF5822}.wem"
      },
      {
       "Id": "865451487",
@@ -317,8 +317,8 @@
       "ObjectPath": "\\Events\\Default Work Unit\\SoundEffects\\Play_UClick",
       "GUID": "{AA9452D3-5800-4804-A136-1DEB28C68AE8}",
       "DurationType": "OneShot",
-      "DurationMin": "1.4025397",
-      "DurationMax": "1.4025397",
+      "DurationMin": "0.25086167",
+      "DurationMax": "0.25086167",
       "MediaRefs": [
        {
         "Id": "826742836"
@@ -328,6 +328,6 @@
     ]
    }
   ],
-  "FileHash": "{60360BBC-4843-A676-FE1B-EE3E9609AA52}"
+  "FileHash": "{5BF08E97-261D-6812-738D-9CA89C31AC16}"
  }
 }

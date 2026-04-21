@@ -22,6 +22,18 @@
 									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84580E68-76CE-4E53-85DC-C1911E9315F6}"/>
 								</Reference>
 							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Mana_Increasing" ID="{6B51DFC0-7019-49DC-8CF2-9AA6E83BCF02}">
+									<Language>SFX</Language>
+									<AudioFile>Mana_Increasing.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="914461470"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Mana_Increasing" ID="{6B51DFC0-7019-49DC-8CF2-9AA6E83BCF02}" Platform="Linked"/>
+							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Decreasing" ID="{69D642D4-F211-43BA-A4A5-EE9B05FBD66B}" ShortID="751315519">
 							<ReferenceList>
@@ -32,6 +44,18 @@
 									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84580E68-76CE-4E53-85DC-C1911E9315F6}"/>
 								</Reference>
 							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Mana_Decreasing" ID="{DE9C5EF1-7513-413F-8BB4-FD720C9D569E}">
+									<Language>SFX</Language>
+									<AudioFile>Mana_Decreasing.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="152500346"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Mana_Decreasing" ID="{DE9C5EF1-7513-413F-8BB4-FD720C9D569E}" Platform="Linked"/>
+							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
 				</PropertyContainer>
