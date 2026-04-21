@@ -15,7 +15,6 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AK.Wwise.Event MenuMusic;
     [SerializeField] AK.Wwise.Event GameMusic1;
     [SerializeField] AK.Wwise.Event GameMusic2;
-    [SerializeField] bool PlayMainMenuMusicOnStart = false;
 
     [Header("Towers")]
     [SerializeField] List<AK.Wwise.Event> TowerDropSFXs;
@@ -45,6 +44,8 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AK.Wwise.Event PauseSFX;
 
     static bool HasStartedMenuMusic = false;
+
+    static AudioManager Instance;
     /// <summary>
     /// A reference to the id of every tower
     /// </summary>
@@ -67,19 +68,21 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
+        if (Instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = GetComponent<AudioManager>();
+        DontDestroyOnLoad(gameObject);
         // Tell WWise MusicStateGroup should exist because it is needed for music to play
         AkUnitySoundEngine.PostEvent("Play_MusicPlaylist", gameObject);
         // Plays the main menu music if it is not playing
-        if (PlayMainMenuMusicOnStart  && !HasStartedMenuMusic)
+        if (PlayMainMenu && !HasStartedMenuMusic)
         {
             PlayMenuMusic();
             HasStartedMenuMusic = true;
         }
-    }
-
-    private void Update()
-    {
-        
     }
 
     /// <summary>

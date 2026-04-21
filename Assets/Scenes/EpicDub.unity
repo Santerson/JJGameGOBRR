@@ -119,74 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &32310142
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2737843157973409760, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.8957117
-      objectReference: {fileID: 0}
-    - target: {fileID: 2737843157973409760, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.73123336
-      objectReference: {fileID: 0}
-    - target: {fileID: 2737843157973409760, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -6.9557586
-      objectReference: {fileID: 0}
-    - target: {fileID: 2737843157973409760, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2737843157973409760, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2737843157973409760, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2737843157973409760, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2737843157973409760, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2737843157973409760, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2737843157973409760, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7903793231949837847, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
-      propertyPath: m_Name
-      value: AudioManager
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
---- !u!114 &32310143 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5812513164392073569, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
-  m_PrefabInstance: {fileID: 32310142}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5221ce1846b14524ba3775f558a15fbe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &413648585
 GameObject:
   m_ObjectHideFlags: 0
@@ -922,10 +854,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 32310143}
-        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: PlayGameMusic
-        m_Mode: 3
+      - m_Target: {fileID: 1228374034}
+        m_TargetAssemblyTypeName: PlayClickSound, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -934,14 +866,14 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 32310143}
-        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: PlayClickSFX
-        m_Mode: 1
+      - m_Target: {fileID: 1228374035}
+        m_TargetAssemblyTypeName: TryCallAudioEfxs, Assembly-CSharp
+        m_MethodName: TryCallBattle
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -998,6 +930,7 @@ GameObject:
   - component: {fileID: 1228374030}
   - component: {fileID: 1228374029}
   - component: {fileID: 1228374034}
+  - component: {fileID: 1228374035}
   m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
@@ -1115,6 +1048,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 579c4acbef7671140974113fbd5de869, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1228374035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1228374028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88f915ba2e589854d831c5b57ca3293a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1785635683
 GameObject:
   m_ObjectHideFlags: 0
@@ -1213,6 +1158,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1228374034}
         m_TargetAssemblyTypeName: PlayClickSound, Assembly-CSharp
         m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1228374035}
+        m_TargetAssemblyTypeName: TryCallAudioEfxs, Assembly-CSharp
+        m_MethodName: TryCallMainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1484,4 +1441,3 @@ SceneRoots:
   - {fileID: 1835340340}
   - {fileID: 1228374033}
   - {fileID: 836603870}
-  - {fileID: 32310142}

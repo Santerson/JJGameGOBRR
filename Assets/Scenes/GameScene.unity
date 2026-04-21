@@ -488,9 +488,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 476262333}
-        m_TargetAssemblyTypeName: PlayClickSound, Assembly-CSharp
-        m_MethodName: PlaySound
+      - m_Target: {fileID: 476262335}
+        m_TargetAssemblyTypeName: TryCallAudioEfxs, Assembly-CSharp
+        m_MethodName: TryCallButtonClickSFX
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1073,6 +1073,7 @@ GameObject:
   - component: {fileID: 476262333}
   - component: {fileID: 476262332}
   - component: {fileID: 476262334}
+  - component: {fileID: 476262335}
   m_Layer: 0
   m_Name: PauseMenu
   m_TagString: Untagged
@@ -1134,6 +1135,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 1387609457}
   pauseSound: {fileID: 0}
+--- !u!114 &476262335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 476262330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88f915ba2e589854d831c5b57ca3293a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &553086037
 GameObject:
   m_ObjectHideFlags: 0
@@ -1966,67 +1979,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!1001 &944734474
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2737843157973409760, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.8957117
-      objectReference: {fileID: 0}
-    - target: {fileID: 2737843157973409760, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.73123336
-      objectReference: {fileID: 0}
-    - target: {fileID: 2737843157973409760, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -6.9557586
-      objectReference: {fileID: 0}
-    - target: {fileID: 2737843157973409760, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2737843157973409760, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2737843157973409760, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2737843157973409760, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2737843157973409760, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2737843157973409760, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2737843157973409760, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5812513164392073569, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
-      propertyPath: DONOTPLAYMAINMENUMUSIC
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7903793231949837847, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
-      propertyPath: m_Name
-      value: AudioManager
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
 --- !u!1 &976098926
 GameObject:
   m_ObjectHideFlags: 0
@@ -2159,9 +2111,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 476262333}
-        m_TargetAssemblyTypeName: PlayClickSound, Assembly-CSharp
-        m_MethodName: PlaySound
+      - m_Target: {fileID: 476262335}
+        m_TargetAssemblyTypeName: TryCallAudioEfxs, Assembly-CSharp
+        m_MethodName: TryCallButtonClickSFX
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3671,7 +3623,6 @@ SceneRoots:
   - {fileID: 275494554}
   - {fileID: 476262331}
   - {fileID: 306742390}
-  - {fileID: 944734474}
   - {fileID: 2729516079127167584}
   - {fileID: 1374051650}
   - {fileID: 806683164}
