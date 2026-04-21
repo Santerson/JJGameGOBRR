@@ -13,12 +13,12 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID PLAY_MBBATTLE1 = 3768384938U;
-        static const AkUniqueID PLAY_MBBATTLE2 = 3768384937U;
-        static const AkUniqueID PLAY_MLOSE = 2794885476U;
-        static const AkUniqueID PLAY_MTITLE = 631836703U;
+        static const AkUniqueID PLAY_EGATTACK = 2449192322U;
+        static const AkUniqueID PLAY_EGDIE = 401033372U;
+        static const AkUniqueID PLAY_EGHURT = 282744853U;
+        static const AkUniqueID PLAY_EGSPAWN = 3350535243U;
+        static const AkUniqueID PLAY_EGVOICE = 1314935524U;
         static const AkUniqueID PLAY_MUSICPLAYLIST = 2585924577U;
-        static const AkUniqueID PLAY_MWIN = 1264558303U;
         static const AkUniqueID PLAY_TBPLACE = 3957186333U;
         static const AkUniqueID PLAY_TCLICK = 2269172114U;
         static const AkUniqueID PLAY_TDEATH = 2689049308U;

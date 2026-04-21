@@ -10,19 +10,11 @@
     "Type": "User",
     "GUID": "{62E37DE2-229F-4C94-AF0B-DEED7E1CA4CC}",
     "Language": "SFX",
-    "Hash": "{F7CE83E9-BFB8-E279-A92D-881B8AE444C9}",
+    "Hash": "{E60C78D3-1878-65E8-03DA-CC4B1DB85217}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Music",
     "ShortName": "Music",
     "Path": "Music.bnk",
     "Media": [
-     {
-      "Id": "352609332",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "Lose.wav",
-      "CachePath": "1F/{1FC2AF73-0133-D198-0C88-409FC4C4D1F1}.wem"
-     },
      {
       "Id": "371096670",
       "Language": "SFX",
@@ -32,36 +24,12 @@
       "CachePath": "10/{10C7C072-102E-72D2-1CA7-B02E4FF7FF0D}.wem"
      },
      {
-      "Id": "385699294",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "Music2.wav",
-      "CachePath": "DD/{DD0F6763-CE41-2673-5D3E-CC5937A6BB38}.wem"
-     },
-     {
       "Id": "408197109",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "JsongDraft.wav",
       "CachePath": "AF/{AF5189A0-9E0E-2023-3764-EEED6B1F89A7}.wem"
-     },
-     {
-      "Id": "460062071",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "Win.wav",
-      "CachePath": "27/{27977291-F8D9-43B8-3D7B-3955233D190E}.wem"
-     },
-     {
-      "Id": "921732490",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "Music1.wav",
-      "CachePath": "97/{97428204-5B61-3D20-A3CD-2D3AD5E04446}.wem"
      },
      {
       "Id": "938029413",
@@ -97,60 +65,6 @@
      }
     ],
     "Events": [
-     {
-      "Id": "3768384938",
-      "Name": "Play_MBBattle1",
-      "ObjectPath": "\\Events\\Default Work Unit\\MusicThings\\Play_MBBattle1",
-      "GUID": "{1FE181B6-4376-4290-B4B8-D3EF64080B97}",
-      "DurationType": "OneShot",
-      "DurationMin": "31.497778",
-      "DurationMax": "31.497778",
-      "MediaRefs": [
-       {
-        "Id": "921732490"
-       }
-      ]
-     },
-     {
-      "Id": "3768384937",
-      "Name": "Play_MBBattle2",
-      "ObjectPath": "\\Events\\Default Work Unit\\MusicThings\\Play_MBBattle2",
-      "GUID": "{AA65FE26-DB7F-4585-A5FF-FCD55F831C9A}",
-      "DurationType": "OneShot",
-      "DurationMin": "31.497778",
-      "DurationMax": "31.497778",
-      "MediaRefs": [
-       {
-        "Id": "385699294"
-       }
-      ]
-     },
-     {
-      "Id": "2794885476",
-      "Name": "Play_MLose",
-      "ObjectPath": "\\Events\\Default Work Unit\\MusicThings\\Play_MLose",
-      "GUID": "{56AFA86D-BBD0-47FE-94D0-E169978CAC51}",
-      "DurationType": "OneShot",
-      "DurationMin": "1.6204308",
-      "DurationMax": "1.6204308",
-      "MediaRefs": [
-       {
-        "Id": "352609332"
-       }
-      ]
-     },
-     {
-      "Id": "631836703",
-      "Name": "Play_MTitle",
-      "ObjectPath": "\\Events\\Default Work Unit\\MusicThings\\Play_MTitle",
-      "GUID": "{DF7AAD0A-76B3-4270-A529-410314F7BE85}",
-      "DurationType": "Infinite",
-      "MediaRefs": [
-       {
-        "Id": "408197109"
-       }
-      ]
-     },
      {
       "Id": "2585924577",
       "Name": "Play_MusicPlaylist",
@@ -237,20 +151,6 @@
         ]
        }
       ]
-     },
-     {
-      "Id": "1264558303",
-      "Name": "Play_MWin",
-      "ObjectPath": "\\Events\\Default Work Unit\\MusicThings\\Play_MWin",
-      "GUID": "{F838AC53-0C14-486C-A240-EC32CB039980}",
-      "DurationType": "OneShot",
-      "DurationMin": "1.1513152",
-      "DurationMax": "1.1513152",
-      "MediaRefs": [
-       {
-        "Id": "460062071"
-       }
-      ]
      }
     ],
     "StateGroups": [
@@ -307,6 +207,6 @@
     ]
    }
   ],
-  "FileHash": "{0A3EC56C-8E26-384C-9B18-C6E8EB235BAD}"
+  "FileHash": "{6F6D275F-AA92-4844-E5A9-DA9691432E55}"
  }
 }

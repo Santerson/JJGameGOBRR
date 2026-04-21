@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{1B1FEBF3-0FD8-419E-9E0B-3423DC0D482B}",
     "Language": "SFX",
-    "Hash": "{34EE9E11-1073-3CC3-8836-ED1F55E9C4C9}",
+    "Hash": "{ECF654A9-5A7E-1CE2-E23D-B601B88DC486}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\SFX",
     "ShortName": "SFX",
     "Path": "SFX.bnk",
@@ -32,12 +32,44 @@
       "CachePath": "9B/{9B0209DF-993A-224D-A2C1-255BB1D4F6C1}.wem"
      },
      {
+      "Id": "225219682",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GuySpawnm.wav",
+      "CachePath": "60/{604B6AF6-1CDA-33D4-EFE1-54BD22C71232}.wem"
+     },
+     {
+      "Id": "243047079",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GuyDeath.wav",
+      "CachePath": "BD/{BD66DFE2-24E0-13EE-3EDF-0C4C017BD402}.wem"
+     },
+     {
+      "Id": "347852687",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GuyVoice.wav",
+      "CachePath": "A0/{A07D45CB-6159-190D-E846-C3EC20833FEE}.wem"
+     },
+     {
       "Id": "503869253",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Mush_Shoot.wav",
       "CachePath": "3A/{3A34253B-6903-2C4B-2766-37FB6AC6B82A}.wem"
+     },
+     {
+      "Id": "547085646",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Guy_Attack.wav",
+      "CachePath": "D9/{D9A54542-ED4F-61A7-CF0D-CC8396AA611D}.wem"
      },
      {
       "Id": "681854957",
@@ -54,6 +86,14 @@
       "Location": "Memory",
       "ShortName": "GolemPlace.wav",
       "CachePath": "07/{0782F1F4-AE44-B08C-5DA2-69BAC837489A}.wem"
+     },
+     {
+      "Id": "738599819",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GuyHurt.wav",
+      "CachePath": "80/{80114EC7-6832-5CA4-B7E8-E66739F1F1D0}.wem"
      },
      {
       "Id": "826742836",
@@ -89,6 +129,76 @@
      }
     ],
     "Events": [
+     {
+      "Id": "2449192322",
+      "Name": "Play_EGAttack",
+      "ObjectPath": "\\Events\\Default Work Unit\\SoundEffects\\Play_EGAttack",
+      "GUID": "{874FBE2A-FE91-412C-BECF-29F88569953E}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.5038549",
+      "DurationMax": "0.5038549",
+      "MediaRefs": [
+       {
+        "Id": "547085646"
+       }
+      ]
+     },
+     {
+      "Id": "401033372",
+      "Name": "Play_EGDie",
+      "ObjectPath": "\\Events\\Default Work Unit\\SoundEffects\\Play_EGDie",
+      "GUID": "{8A12C26B-8B8F-4BD6-8D7F-7A57DF9E3E39}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.4693424",
+      "DurationMax": "1.4693424",
+      "MediaRefs": [
+       {
+        "Id": "243047079"
+       }
+      ]
+     },
+     {
+      "Id": "282744853",
+      "Name": "Play_EGHurt",
+      "ObjectPath": "\\Events\\Default Work Unit\\SoundEffects\\Play_EGHurt",
+      "GUID": "{00619A6E-27F5-4244-8F7B-8A5CBDDFFC5F}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.27780044",
+      "DurationMax": "0.27780044",
+      "MediaRefs": [
+       {
+        "Id": "738599819"
+       }
+      ]
+     },
+     {
+      "Id": "3350535243",
+      "Name": "Play_EGSpawn",
+      "ObjectPath": "\\Events\\Default Work Unit\\SoundEffects\\Play_EGSpawn",
+      "GUID": "{F651BDAD-7A9D-44AA-AD4E-63FE036E2177}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.62095237",
+      "DurationMax": "0.62095237",
+      "MediaRefs": [
+       {
+        "Id": "225219682"
+       }
+      ]
+     },
+     {
+      "Id": "1314935524",
+      "Name": "Play_EGVoice",
+      "ObjectPath": "\\Events\\Default Work Unit\\SoundEffects\\Play_EGVoice",
+      "GUID": "{998513C1-BC0E-4E06-8357-997F0EF4A7CB}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.6422902",
+      "DurationMax": "1.6422902",
+      "MediaRefs": [
+       {
+        "Id": "347852687"
+       }
+      ]
+     },
      {
       "Id": "2269172114",
       "Name": "Play_TClick",
@@ -218,6 +328,6 @@
     ]
    }
   ],
-  "FileHash": "{41B6F6F2-89A1-6FCA-6A91-CBDFFABBC9CE}"
+  "FileHash": "{355BAB41-D9B2-430C-272B-AC87E8D22678}"
  }
 }
