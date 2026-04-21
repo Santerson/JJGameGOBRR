@@ -3,14 +3,15 @@
 	<States>
 		<WorkUnit Name="Default Work Unit" ID="{997F274A-A4F9-487B-AE57-DB9ADFD7D4FE}" PersistMode="Standalone">
 			<ChildrenList>
-				<StateGroup Name="Music_State_Group" ID="{1712CBF6-D8AA-4000-B3B6-D6EBD3FD80C6}">
+				<StateGroup Name="MusicStateGroup" ID="{1712CBF6-D8AA-4000-B3B6-D6EBD3FD80C6}">
 					<ChildrenList>
 						<State Name="None" ID="{708CF3F4-2C9C-4AE1-8981-F5EAC4196E46}"/>
-						<State Name="BattleLevel" ID="{944C87C5-AF4D-4D36-A14F-93AF72CA2B14}"/>
-						<State Name="LoseLevel" ID="{66C18FB2-CB72-4FDF-83A1-36B1B92886D5}"/>
-						<State Name="WinLevel" ID="{0A3782FD-23B7-4190-9FC6-6AF7EB5B0A83}"/>
-						<State Name="MenuLevel" ID="{84A5005D-D1C6-47D6-BD76-0249C93F6A61}"/>
-						<State Name="BattleLevel2" ID="{173F842F-E5E1-43CC-9D55-0AE8431AD003}"/>
+						<State Name="Battle1" ID="{944C87C5-AF4D-4D36-A14F-93AF72CA2B14}"/>
+						<State Name="Lose" ID="{66C18FB2-CB72-4FDF-83A1-36B1B92886D5}"/>
+						<State Name="Win" ID="{0A3782FD-23B7-4190-9FC6-6AF7EB5B0A83}"/>
+						<State Name="Title" ID="{84A5005D-D1C6-47D6-BD76-0249C93F6A61}"/>
+						<State Name="Battle2" ID="{173F842F-E5E1-43CC-9D55-0AE8431AD003}"/>
+						<State Name="Battle3" ID="{C03F85D9-E4DA-4B7F-8938-2663CD0884AE}"/>
 					</ChildrenList>
 				</StateGroup>
 			</ChildrenList>

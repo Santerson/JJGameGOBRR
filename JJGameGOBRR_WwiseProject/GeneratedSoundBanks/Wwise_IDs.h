@@ -33,20 +33,21 @@ namespace AK
 
     namespace STATES
     {
-        namespace MUSIC_STATE_GROUP
+        namespace MUSICSTATEGROUP
         {
-            static const AkUniqueID GROUP = 2434766612U;
+            static const AkUniqueID GROUP = 2163007642U;
 
             namespace STATE
             {
-                static const AkUniqueID BATTLELEVEL = 1121213527U;
-                static const AkUniqueID BATTLELEVEL2 = 2337103047U;
-                static const AkUniqueID LOSELEVEL = 4041551472U;
-                static const AkUniqueID MENULEVEL = 2980504018U;
+                static const AkUniqueID BATTLE1 = 2813898844U;
+                static const AkUniqueID BATTLE2 = 2813898847U;
+                static const AkUniqueID BATTLE3 = 2813898846U;
+                static const AkUniqueID LOSE = 221232726U;
                 static const AkUniqueID NONE = 748895195U;
-                static const AkUniqueID WINLEVEL = 180761629U;
+                static const AkUniqueID TITLE = 3705726509U;
+                static const AkUniqueID WIN = 979765101U;
             } // namespace STATE
-        } // namespace MUSIC_STATE_GROUP
+        } // namespace MUSICSTATEGROUP
 
     } // namespace STATES
 

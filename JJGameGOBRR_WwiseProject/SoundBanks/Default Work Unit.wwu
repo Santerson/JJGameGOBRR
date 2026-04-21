@@ -10,6 +10,7 @@
 						<ObjectRef Name="Play_MBBattle2" ID="{AA65FE26-DB7F-4585-A5FF-FCD55F831C9A}" WorkUnitID="{387072C7-A7CF-4480-B8F0-2D62B0219160}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_MLose" ID="{56AFA86D-BBD0-47FE-94D0-E169978CAC51}" WorkUnitID="{387072C7-A7CF-4480-B8F0-2D62B0219160}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_MWin" ID="{F838AC53-0C14-486C-A240-EC32CB039980}" WorkUnitID="{387072C7-A7CF-4480-B8F0-2D62B0219160}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_MusicPlaylist" ID="{D5CA57AC-3DC9-4CA8-BB98-3A5E555913B0}" WorkUnitID="{387072C7-A7CF-4480-B8F0-2D62B0219160}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

@@ -70,6 +70,8 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
+        // Tell WWise MusicStateGroup should exist because it is needed for music to play
+        AkUnitySoundEngine.PostEvent("Play_MusicPlaylist", gameObject);
         // Plays the main menu music if it is not playing
         if (MainMenuID == 0 && PlayMainMenuMusicOnStart )
             MainMenuID = AkUnitySoundEngine.PostEvent(MenuMusic.Id, gameObject);
@@ -200,7 +202,8 @@ public class AudioManager : MonoBehaviour
     /// </summary>
     public void PlayLoseLevelSFX()
     {
-        AkUnitySoundEngine.PostEvent(LoseLevelSFX.Id, gameObject);
+        //AkUnitySoundEngine.PostEvent(LoseLevelSFX.Id, gameObject);
+        AkSoundEngine.SetState("MusicStateGroup", "Win");
     }
 
     /// <summary>
@@ -209,6 +212,7 @@ public class AudioManager : MonoBehaviour
     public void PlayWinLevelSFX()
     {
         AkUnitySoundEngine.PostEvent(LoseLevelSFX.Id, gameObject);
+
     }
 
     #pragma warning disable IDE0060 // Remove unused parameter warnings

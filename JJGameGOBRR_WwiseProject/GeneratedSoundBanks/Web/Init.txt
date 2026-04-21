@@ -1,13 +1,14 @@
 State Group	ID	Name			Wwise Object Path	Notes
-	2434766612	Music_State_Group			\Default Work Unit\Music_State_Group	
+	2163007642	MusicStateGroup			\Default Work Unit\MusicStateGroup	
 
 State	ID	Name	State Group			Notes
-	180761629	WinLevel	Music_State_Group			
-	748895195	None	Music_State_Group			
-	1121213527	BattleLevel	Music_State_Group			
-	2337103047	BattleLevel2	Music_State_Group			
-	2980504018	MenuLevel	Music_State_Group			
-	4041551472	LoseLevel	Music_State_Group			
+	221232726	Lose	MusicStateGroup			
+	748895195	None	MusicStateGroup			
+	979765101	Win	MusicStateGroup			
+	2813898844	Battle1	MusicStateGroup			
+	2813898846	Battle3	MusicStateGroup			
+	2813898847	Battle2	MusicStateGroup			
+	3705726509	Title	MusicStateGroup			
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	2246998526	Main Audio Bus			\Default Work Unit\Main Audio Bus	
