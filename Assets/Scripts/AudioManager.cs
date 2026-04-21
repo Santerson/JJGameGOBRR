@@ -72,7 +72,7 @@ public class AudioManager : MonoBehaviour
         // Plays the main menu music if it is not playing
         if (PlayMainMenuMusicOnStart  && !HasStartedMenuMusic)
         {
-            AkUnitySoundEngine.PostEvent(MenuMusic.Id, gameObject);
+            PlayMenuMusic();
             HasStartedMenuMusic = true;
         }
     }
