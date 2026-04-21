@@ -47,6 +47,7 @@ public class TutorialManager : MonoBehaviour
     [SerializeField] GameObject tutorial15;
     [SerializeField] GameObject tutorial16;
     [SerializeField] GameObject tutorial17;
+    [SerializeField] GameObject tutorial13_2;
 
     SpawnerEnemy refEnemySpawner;
     static bool tutorialOccured = false;
@@ -287,7 +288,13 @@ public class TutorialManager : MonoBehaviour
         while (Input.GetKey(ContinueButton))
             yield return new WaitForEndOfFrame();
         tutorial13.SetActive(false);
-
+        // New Tutorial about moving towers
+        tutorial13_2.SetActive(true);
+        while (!Input.GetKey(ContinueButton))
+            yield return new WaitForEndOfFrame();
+        while (Input.GetKey(ContinueButton))
+            yield return new WaitForEndOfFrame();
+        tutorial13_2.SetActive(false);
         // Force the next tower to be the bunny
         UIDraggableTower bunnyPortrait = null;
         foreach (UIDraggableTower towerProfile in towerProfiles)
