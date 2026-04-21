@@ -72,7 +72,8 @@ public class EnemyAi : MonoBehaviour
         deathAnimationtimprivete = DeathAnimationtime;
         // play Spawn Sound
         refAudioManager = FindFirstObjectByType<AudioManager>();
-        refAudioManager.PlayEnemySpawnSFX(EnemyID);
+        if (refAudioManager != null)
+            refAudioManager.PlayEnemySpawnSFX(EnemyID);
     }
     void FixedUpdate()
     {
@@ -81,11 +82,12 @@ public class EnemyAi : MonoBehaviour
         // play the audio for the enemy
         if (!StoppedEnemy)
         {
-            if (Random.Range(0, RandomVoiceChance) == 0) refAudioManager.PlayEnemyVoiceSFX(EnemyID);
+            if (Random.Range(0, RandomVoiceChance) == 0 && refAudioManager != null) refAudioManager.PlayEnemyVoiceSFX(EnemyID);
             timeToNextEnemyWalkSound -= Time.fixedDeltaTime;
             if (timeToNextEnemyWalkSound <= 0)
             {
-                refAudioManager.PlayEnemyWalkSFX(EnemyID);
+                if (refAudioManager != null)
+                    refAudioManager.PlayEnemyWalkSFX(EnemyID);
                 timeToNextEnemyWalkSound = TimeInbetweenWalkSounds;
             }
         }
@@ -111,7 +113,8 @@ public class EnemyAi : MonoBehaviour
             BulletAi refBullet = collision.GetComponent<BulletAi>();
             if (refBullet != null)
             {
-                refAudioManager.PlayEnemyHurtSFX(EnemyID);
+                
+                refAudioManager?.PlayEnemyHurtSFX(EnemyID);
                 int dmg = (int)refBullet.GetDamage();
                 Health -= dmg;
                 // checks if dead
@@ -139,7 +142,7 @@ public class EnemyAi : MonoBehaviour
             // shoots a bullet when cooldown is ready
             if (coolDownAttack <= 0)
             {
-                refAudioManager.PlayEnemyAttackSFX(EnemyID);
+                refAudioManager?.PlayEnemyAttackSFX(EnemyID);
                 coolDownAttack = AttackCooldown;
                 Instantiate(Hurtfield, FirePosition, Quaternion.identity);
                 MaxSpeed = 0;
@@ -163,7 +166,7 @@ public class EnemyAi : MonoBehaviour
         {
             // animator.SetInteger("State", (int)animatons.die);
         }
-        refAudioManager.PlayEnemyDieSFX(EnemyID);
+        refAudioManager?.PlayEnemyDieSFX(EnemyID);
         FindFirstObjectByType<LaneCheck>().Lanedecreesss(lane);
         Destroy(gameObject);
     }

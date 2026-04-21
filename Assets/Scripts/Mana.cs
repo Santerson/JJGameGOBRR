@@ -178,9 +178,9 @@ public class Mana : MonoBehaviour
         float ProgressToNextThreshold = CurrentMana % ManaSFXInterval;
         float NewProgress = ProgressToNextThreshold + generation * Time.deltaTime;
         // Check if the mana has grown past a threshold
-        if (NewProgress > ManaSFXInterval || NewProgress < 0)
+        if ((NewProgress > ManaSFXInterval || NewProgress < 0))
         {
-            refAudioManager.PlayManaGainOrLossSFX(generation, MaxMana);
+            refAudioManager?.PlayManaGainOrLossSFX(generation, MaxMana);
         }
     }
 
@@ -192,8 +192,8 @@ public class Mana : MonoBehaviour
         // TODO: do something cool here eventually
         Debug.Log("Player loses lmao");
 
-        FindFirstObjectByType<AudioManager>().PlayMenuMusic();
-        FindFirstObjectByType<AudioManager>().PlayLoseLevelMusic();
+        FindFirstObjectByType<AudioManager>()?.PlayMenuMusic();
+        FindFirstObjectByType<AudioManager>()?.PlayLoseLevelMusic();
 
         // Set lose screen
         SceneManager.LoadScene("SkillIssue");

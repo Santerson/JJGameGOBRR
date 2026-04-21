@@ -13,6 +13,15 @@ public class PauseMenu : MonoBehaviour
 
     AudioManager RefAudioManager;
     public static bool paused { get; private set; } = false;
+
+    private void Start()
+    {
+        RefAudioManager = FindFirstObjectByType<AudioManager>();
+        paused = false;
+        if (RefAudioManager == null)
+            Debug.LogWarning("No audio manager found! If this is started from not the main menu, this is okay! Some audio bugs might occur");
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -30,6 +39,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = (paused ? 0.0f : 1.0f);
         // Enable or disable the pause menu
         pauseMenu.SetActive(paused);
-        RefAudioManager.PlayPauseSFX();
+        if (RefAudioManager != null)
+            RefAudioManager.PlayPauseSFX();
     }
 }

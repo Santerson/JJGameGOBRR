@@ -17,6 +17,6 @@ public class PlayClickSound : MonoBehaviour
 
     public void PlaySound()
     {
-        refAudioManager.PlayClickSFX();
+        refAudioManager?.PlayClickSFX();
     }
 }
