@@ -1034,7 +1034,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6349601164191860111, guid: 11a8d664d00071144829a74972322ba3, type: 3}
       propertyPath: GridOffset.x
-      value: -4.75
+      value: -4.39
       objectReference: {fileID: 0}
     - target: {fileID: 6349601164191860111, guid: 11a8d664d00071144829a74972322ba3, type: 3}
       propertyPath: GridOffset.y
@@ -1054,7 +1054,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6349601164191860111, guid: 11a8d664d00071144829a74972322ba3, type: 3}
       propertyPath: HorizontalSpaceBuffer
-      value: -0.32
+      value: -0.41
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1266,6 +1266,30 @@ PrefabInstance:
       propertyPath: m_Positions.Array.data[1].x
       value: 5.99
       objectReference: {fileID: 0}
+    - target: {fileID: 2743147065890075436, guid: a1d4d8b83f75d0042b0b3e85fb1203de, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743147065890075436, guid: a1d4d8b83f75d0042b0b3e85fb1203de, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743147065890075436, guid: a1d4d8b83f75d0042b0b3e85fb1203de, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743147065890075436, guid: a1d4d8b83f75d0042b0b3e85fb1203de, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743147065890075436, guid: a1d4d8b83f75d0042b0b3e85fb1203de, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743147065890075436, guid: a1d4d8b83f75d0042b0b3e85fb1203de, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3383565832189436823, guid: a1d4d8b83f75d0042b0b3e85fb1203de, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.46
@@ -1340,27 +1364,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5161085203479588299, guid: a1d4d8b83f75d0042b0b3e85fb1203de, type: 3}
       propertyPath: EndBarGradient.key0.b
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5161085203479588299, guid: a1d4d8b83f75d0042b0b3e85fb1203de, type: 3}
       propertyPath: EndBarGradient.key0.g
-      value: 0.4192574
+      value: 0.99722207
       objectReference: {fileID: 0}
     - target: {fileID: 5161085203479588299, guid: a1d4d8b83f75d0042b0b3e85fb1203de, type: 3}
       propertyPath: EndBarGradient.key0.r
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5161085203479588299, guid: a1d4d8b83f75d0042b0b3e85fb1203de, type: 3}
       propertyPath: EndBarGradient.key1.b
-      value: 0.5471698
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5161085203479588299, guid: a1d4d8b83f75d0042b0b3e85fb1203de, type: 3}
       propertyPath: EndBarGradient.key1.g
-      value: 0.31380302
+      value: 0.54901963
       objectReference: {fileID: 0}
     - target: {fileID: 5161085203479588299, guid: a1d4d8b83f75d0042b0b3e85fb1203de, type: 3}
       propertyPath: EndBarGradient.key1.r
-      value: 0
+      value: 0.54476726
       objectReference: {fileID: 0}
     - target: {fileID: 5161085203479588299, guid: a1d4d8b83f75d0042b0b3e85fb1203de, type: 3}
       propertyPath: StartBarGradient.key0.b
