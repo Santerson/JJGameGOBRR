@@ -42,11 +42,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4720349265970859464, guid: 01a5586a081987349ade83957f7874d8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.37
+      value: 0.378
       objectReference: {fileID: 0}
     - target: {fileID: 4720349265970859464, guid: 01a5586a081987349ade83957f7874d8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 1.151
       objectReference: {fileID: 0}
     - target: {fileID: 6262921784777582634, guid: 01a5586a081987349ade83957f7874d8, type: 3}
       propertyPath: TowerManaCost
