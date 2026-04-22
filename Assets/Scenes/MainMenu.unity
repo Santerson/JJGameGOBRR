@@ -1663,7 +1663,7 @@ PrefabInstance:
     - target: {fileID: 5812513164392073569, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
       propertyPath: EnemyHurtSFXs.Array.data[0].WwiseObjectReference
       value: 
-      objectReference: {fileID: 11400000, guid: a6f35f4eda3db7549a59297762bf73d5, type: 2}
+      objectReference: {fileID: 11400000, guid: c18b9a992aa87ac4a9688ce58494aaf3, type: 2}
     - target: {fileID: 5812513164392073569, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
       propertyPath: EnemyHurtSFXs.Array.data[1].WwiseObjectReference
       value: 
