@@ -19,8 +19,8 @@ public class EnemyKillPlayer : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
         {
-            refAudioManager.PlayMenuMusic();
-            refAudioManager.PlayLoseLevelMusic();
+            refAudioManager?.PlayMenuMusic();
+            refAudioManager?.PlayLoseLevelMusic();
             UnityEngine.SceneManagement.SceneManager.LoadScene("SkillIssue");
         }
     }
