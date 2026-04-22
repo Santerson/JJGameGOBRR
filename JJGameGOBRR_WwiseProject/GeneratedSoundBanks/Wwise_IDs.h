@@ -21,6 +21,8 @@ namespace AK
         static const AkUniqueID PLAY_EGWALK = 2567734897U;
         static const AkUniqueID PLAY_MDECREASING = 2591182578U;
         static const AkUniqueID PLAY_MINCREASING = 353692838U;
+        static const AkUniqueID PLAY_MMUSICPLAYLISTPAUSED = 1326554868U;
+        static const AkUniqueID PLAY_MMUSICPLAYLISTPLAYING = 468706480U;
         static const AkUniqueID PLAY_MUSICPLAYLIST = 2585924577U;
         static const AkUniqueID PLAY_NOTHING = 4237641461U;
         static const AkUniqueID PLAY_TBDIE = 1340998758U;
@@ -56,6 +58,18 @@ namespace AK
                 static const AkUniqueID WIN = 979765101U;
             } // namespace STATE
         } // namespace MUSICSTATEGROUP
+
+        namespace PAUSEORPLAY
+        {
+            static const AkUniqueID GROUP = 2305032264U;
+
+            namespace STATE
+            {
+                static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID PAUSE = 3092587493U;
+                static const AkUniqueID PLAY = 1256202815U;
+            } // namespace STATE
+        } // namespace PAUSEORPLAY
 
     } // namespace STATES
 

@@ -1,5 +1,6 @@
 State Group	ID	Name			Wwise Object Path	Notes
 	2163007642	MusicStateGroup			\Default Work Unit\MusicStateGroup	
+	2305032264	PauseOrPlay			\Default Work Unit\PauseOrPlay	
 
 State	ID	Name	State Group			Notes
 	221232726	Lose	MusicStateGroup			
@@ -9,6 +10,9 @@ State	ID	Name	State Group			Notes
 	2813898846	Battle3	MusicStateGroup			
 	2813898847	Battle2	MusicStateGroup			
 	3705726509	Title	MusicStateGroup			
+	748895195	None	PauseOrPlay			
+	1256202815	Play	PauseOrPlay			
+	3092587493	Pause	PauseOrPlay			
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	2246998526	Main Audio Bus			\Default Work Unit\Main Audio Bus	

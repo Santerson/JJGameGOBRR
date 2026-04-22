@@ -5,6 +5,8 @@
 			<ChildrenList>
 				<SoundBank Name="Music" ID="{62E37DE2-229F-4C94-AF0B-DEED7E1CA4CC}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Play_MMusicPlaylistPlaying" ID="{025405B0-2F42-42E9-A2F5-9B987C58E1E5}" WorkUnitID="{387072C7-A7CF-4480-B8F0-2D62B0219160}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_MMusicPlaylistPaused" ID="{3FF63824-8853-4804-98CD-5326AC6B647F}" WorkUnitID="{387072C7-A7CF-4480-B8F0-2D62B0219160}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_MusicPlaylist" ID="{D5CA57AC-3DC9-4CA8-BB98-3A5E555913B0}" WorkUnitID="{387072C7-A7CF-4480-B8F0-2D62B0219160}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>

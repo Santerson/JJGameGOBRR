@@ -14,6 +14,13 @@
 						<State Name="Battle3" ID="{C03F85D9-E4DA-4B7F-8938-2663CD0884AE}"/>
 					</ChildrenList>
 				</StateGroup>
+				<StateGroup Name="PauseOrPlay" ID="{6115CEEA-C646-4B6F-BD26-DC6ECA50C04C}">
+					<ChildrenList>
+						<State Name="None" ID="{8BCE3D90-012F-42FC-A104-3B1637A1606F}"/>
+						<State Name="Pause" ID="{AD194A52-56D2-4996-9171-287E0BF1528B}"/>
+						<State Name="Play" ID="{F49FEC07-288F-4309-994A-61A27994A5C4}"/>
+					</ChildrenList>
+				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</States>
