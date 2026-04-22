@@ -27,6 +27,7 @@ namespace AK
         static const AkUniqueID PLAY_TGPLACE = 4094970478U;
         static const AkUniqueID PLAY_TGSHOOT = 1341661114U;
         static const AkUniqueID PLAY_THURT = 2465328249U;
+        static const AkUniqueID PLAY_TMPLACE = 102394944U;
         static const AkUniqueID PLAY_TMSHOOT = 4112018788U;
         static const AkUniqueID PLAY_TPLACE = 2363708467U;
         static const AkUniqueID PLAY_TREMOVE = 1130750870U;

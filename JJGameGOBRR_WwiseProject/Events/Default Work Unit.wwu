@@ -209,6 +209,17 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Event Name="Play_TMPlace" ID="{77B4B554-8521-4CAB-B5E6-4BC564EA4242}">
+					<ChildrenList>
+						<Action Name="" ID="{A60F66B8-9C77-4490-BC2D-F84D6CF85194}" ShortID="614262081">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Place" ID="{DBE3E0F7-374F-429A-B5B0-F0D39ACBD903}" WorkUnitID="{C9DDC0B8-4122-402E-850F-253503C47F0F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

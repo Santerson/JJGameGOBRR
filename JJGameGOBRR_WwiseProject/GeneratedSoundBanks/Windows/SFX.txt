@@ -1,4 +1,5 @@
 Event	ID	Name			Wwise Object Path	Notes
+	102394944	Play_TMPlace			\Default Work Unit\SoundEffects\Play_TMPlace	
 	282744853	Play_EGHurt			\Default Work Unit\SoundEffects\Play_EGHurt	
 	401033372	Play_EGDie			\Default Work Unit\SoundEffects\Play_EGDie	
 	484766513	Play_UClick			\Default Work Unit\SoundEffects\Play_UClick	
@@ -15,6 +16,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	4112018788	Play_TMShoot			\Default Work Unit\SoundEffects\Play_TMShoot	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	2314969	Place	.cache\8F\{8F0F9838-DC6B-A570-14D7-7B9713773AC5}.wem		\Containers\Default Work Unit\TowerMixer\MushMixer\Place		49800
 	19713553	Hurt	.cache\9D\{9D8FC875-2AC7-E7F5-7B3B-7EDBEAEAA0F6}.wem		\Containers\Default Work Unit\TowerMixer\Hurt		109320
 	36569900	Death	.cache\9B\{9B0209DF-993A-224D-A2C1-255BB1D4F6C1}.wem		\Containers\Default Work Unit\TowerMixer\Death		296020
 	225219682	Spawn	.cache\60\{604B6AF6-1CDA-33D4-EFE1-54BD22C71232}.wem		\Containers\Default Work Unit\EnemyMixer\GuyMixer\Spawn		109632

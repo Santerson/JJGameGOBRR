@@ -10,11 +10,19 @@
     "Type": "User",
     "GUID": "{1B1FEBF3-0FD8-419E-9E0B-3423DC0D482B}",
     "Language": "SFX",
-    "Hash": "{326900C9-84F5-E0CE-00B6-591E697FAEFF}",
+    "Hash": "{27B9385F-92A6-F9B8-72D6-BE5845827505}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\SFX",
     "ShortName": "SFX",
     "Path": "SFX.bnk",
     "Media": [
+     {
+      "Id": "2314969",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "MushroomPlace.wav",
+      "CachePath": "8F/{8F0F9838-DC6B-A570-14D7-7B9713773AC5}.wem"
+     },
      {
       "Id": "19713553",
       "Language": "SFX",
@@ -270,6 +278,20 @@
       ]
      },
      {
+      "Id": "102394944",
+      "Name": "Play_TMPlace",
+      "ObjectPath": "\\Events\\Default Work Unit\\SoundEffects\\Play_TMPlace",
+      "GUID": "{77B4B554-8521-4CAB-B5E6-4BC564EA4242}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.2817687",
+      "DurationMax": "0.2817687",
+      "MediaRefs": [
+       {
+        "Id": "2314969"
+       }
+      ]
+     },
+     {
       "Id": "4112018788",
       "Name": "Play_TMShoot",
       "ObjectPath": "\\Events\\Default Work Unit\\SoundEffects\\Play_TMShoot",
@@ -328,6 +350,6 @@
     ]
    }
   ],
-  "FileHash": "{5BF08E97-261D-6812-738D-9CA89C31AC16}"
+  "FileHash": "{96E3F273-A6B5-09A1-02E4-462DFA2A6675}"
  }
 }
