@@ -77,8 +77,8 @@ public class AudioManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         // Tell WWise MusicStateGroup should exist because it is needed for music to play
         AkUnitySoundEngine.PostEvent("Play_MusicPlaylist", gameObject);
-        AkUnitySoundEngine.PostEvent("Play_MMusicPlaylistPlaying", gameObject);
-        AkUnitySoundEngine.PostEvent("Play_MMusicPlaylistPaused", gameObject);
+/*        AkUnitySoundEngine.PostEvent("Play_MMusicPlaylistPlaying", gameObject);
+        AkUnitySoundEngine.PostEvent("Play_MMusicPlaylistPaused", gameObject);*/
         // Plays the main menu music if it is not playing
         if (PlayMainMenu && !HasStartedMenuMusic)
         {
@@ -209,6 +209,7 @@ public class AudioManager : MonoBehaviour
     {
         //AkUnitySoundEngine.PostEvent(LoseLevelSFX.Id, gameObject);
         AkUnitySoundEngine.SetState("MusicStateGroup", "Lose");
+        MuffleorUnmuffleMusic(false);
     }
 
     /// <summary>
@@ -217,6 +218,7 @@ public class AudioManager : MonoBehaviour
     public void PlayWinLevelMusic()
     {
         AkUnitySoundEngine.SetState("MusicStateGroup", "Win");
+        MuffleorUnmuffleMusic(false);
     }
 
 #pragma warning disable IDE0060 // Remove unused parameter warnings
@@ -253,6 +255,7 @@ public class AudioManager : MonoBehaviour
     public void PlayMenuMusic()
     {
         AkUnitySoundEngine.SetState("MusicStateGroup", "Title");
+        MuffleorUnmuffleMusic(false);
     }
 
     /// <summary>
@@ -263,20 +266,26 @@ public class AudioManager : MonoBehaviour
     public void PlayGameMusic(int waveIntensity)
     {
         AkUnitySoundEngine.SetState("MusicStateGroup", $"Battle{waveIntensity}");
+        MuffleorUnmuffleMusic(false);
     }
 
     /// <summary>
     /// Plays or pauses the sound muffling when the game is paused
     /// </summary>
-    /// <param name="paused">True if the game is NOT paused, false if it is being paused</param>
-    public void PlayPauseMusic(bool paused)
+    /// <param name="Muffle">True if the game is NOT paused, false if it is being paused</param>
+    public void MuffleorUnmuffleMusic(bool Muffle)
     {
-        if (paused)
+        if (Muffle)
+        {
             // Muffle music
-            AkUnitySoundEngine.SetState("PauseOrPlay", "Pause");
+            AkUnitySoundEngine.SetState("MuffledOrUnmuffled", "Muffled");
+            // Debug.Log("Muffle");
+        }
         else
+        {
             // Unmuffle music
-            AkUnitySoundEngine.SetState("PauseOrPlay", "Play");
-
+            AkUnitySoundEngine.SetState("MuffledOrUnmuffled", "Unmuffled");
+            // Debug.Log("Unmuffled");
+        }
     }
 }
