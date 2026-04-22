@@ -12,6 +12,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: GoelmBullet
       objectReference: {fileID: 0}
+    - target: {fileID: 4051352940268235715, guid: 71f4225f6a5e1d84fa90782979b0c8cb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 4924771341496144442, guid: 71f4225f6a5e1d84fa90782979b0c8cb, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.448472
+      objectReference: {fileID: 0}
+    - target: {fileID: 4924771341496144442, guid: 71f4225f6a5e1d84fa90782979b0c8cb, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.4228168
+      objectReference: {fileID: 0}
+    - target: {fileID: 4924771341496144442, guid: 71f4225f6a5e1d84fa90782979b0c8cb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0257
+      objectReference: {fileID: 0}
+    - target: {fileID: 4924771341496144442, guid: 71f4225f6a5e1d84fa90782979b0c8cb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0199
+      objectReference: {fileID: 0}
+    - target: {fileID: 5836182153909750631, guid: 71f4225f6a5e1d84fa90782979b0c8cb, type: 3}
+      propertyPath: m_Size.x
+      value: 0.687463
+      objectReference: {fileID: 0}
+    - target: {fileID: 5836182153909750631, guid: 71f4225f6a5e1d84fa90782979b0c8cb, type: 3}
+      propertyPath: m_Size.y
+      value: 0.7087725
+      objectReference: {fileID: 0}
+    - target: {fileID: 5836182153909750631, guid: 71f4225f6a5e1d84fa90782979b0c8cb, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.02841261
+      objectReference: {fileID: 0}
+    - target: {fileID: 5836182153909750631, guid: 71f4225f6a5e1d84fa90782979b0c8cb, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.0035516322
+      objectReference: {fileID: 0}
     - target: {fileID: 7472844607871682638, guid: 71f4225f6a5e1d84fa90782979b0c8cb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -66,15 +102,15 @@ PrefabInstance:
       objectReference: {fileID: 7743653848374711142, guid: 5de1dbcfeed2edd4aaa9c370efb74c39, type: 3}
     - target: {fileID: 8867111219507901984, guid: 71f4225f6a5e1d84fa90782979b0c8cb, type: 3}
       propertyPath: refcolor.b
-      value: 0.5773585
+      value: 0.3019608
       objectReference: {fileID: 0}
     - target: {fileID: 8867111219507901984, guid: 71f4225f6a5e1d84fa90782979b0c8cb, type: 3}
       propertyPath: refcolor.g
-      value: 0.5773585
+      value: 0.39607847
       objectReference: {fileID: 0}
     - target: {fileID: 8867111219507901984, guid: 71f4225f6a5e1d84fa90782979b0c8cb, type: 3}
       propertyPath: refcolor.r
-      value: 0.5773585
+      value: 0.5411765
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
