@@ -25,16 +25,36 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: ba3c5085d27ba1d44898757646d410e4, type: 3}
     - target: {fileID: 4466847123923408407, guid: 01a5586a081987349ade83957f7874d8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 8610962892369958692, guid: 3c3adb71a8707e943a8c6b6a2a7c307a, type: 3}
+    - target: {fileID: 4466847123923408407, guid: 01a5586a081987349ade83957f7874d8, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4466847123923408407, guid: 01a5586a081987349ade83957f7874d8, type: 3}
       propertyPath: m_Color.g
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4466847123923408407, guid: 01a5586a081987349ade83957f7874d8, type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4720349265970859464, guid: 01a5586a081987349ade83957f7874d8, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4720349265970859464, guid: 01a5586a081987349ade83957f7874d8, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4720349265970859464, guid: 01a5586a081987349ade83957f7874d8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.134
+      objectReference: {fileID: 0}
+    - target: {fileID: 4720349265970859464, guid: 01a5586a081987349ade83957f7874d8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.472
       objectReference: {fileID: 0}
     - target: {fileID: 6262921784777582634, guid: 01a5586a081987349ade83957f7874d8, type: 3}
       propertyPath: TowerManaCost
@@ -113,8 +133,16 @@ PrefabInstance:
       value: Play_TMShoot
       objectReference: {fileID: 0}
     - target: {fileID: 7530514561817378367, guid: 01a5586a081987349ade83957f7874d8, type: 3}
+      propertyPath: FirePositionX
+      value: 0.757
+      objectReference: {fileID: 0}
+    - target: {fileID: 7530514561817378367, guid: 01a5586a081987349ade83957f7874d8, type: 3}
+      propertyPath: FirePositiony
+      value: 0.509
+      objectReference: {fileID: 0}
+    - target: {fileID: 7530514561817378367, guid: 01a5586a081987349ade83957f7874d8, type: 3}
       propertyPath: LengthOfAnimaton
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7530514561817378367, guid: 01a5586a081987349ade83957f7874d8, type: 3}
       propertyPath: DeathSFX.WwiseObjectReference
