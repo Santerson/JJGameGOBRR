@@ -174,10 +174,10 @@ public class AudioManager : MonoBehaviour
     /// Plays the walk sfx for a given enemy
     /// </summary>
     /// <param name="enemy">The ID of the enemy</param>
-    public void PlayEnemyWalkSFX(Enemies enemy)
+    public void PlayEnemyWalkSFX(GameObject spawnLocation, Enemies enemy)
     {
         AK.Wwise.Event refSound = EnemyWalkSFXs[(int)enemy];
-        AkUnitySoundEngine.PostEvent(refSound.Id, gameObject);
+        AkUnitySoundEngine.PostEvent(refSound.Id, spawnLocation);
     }
 
     /// <summary>

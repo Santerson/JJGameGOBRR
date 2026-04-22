@@ -87,7 +87,7 @@ public class EnemyAi : MonoBehaviour
             if (timeToNextEnemyWalkSound <= 0)
             {
                 if (refAudioManager != null)
-                    refAudioManager.PlayEnemyWalkSFX(EnemyID);
+                    refAudioManager.PlayEnemyWalkSFX(gameObject, EnemyID);
                 timeToNextEnemyWalkSound = TimeInbetweenWalkSounds;
             }
         }
