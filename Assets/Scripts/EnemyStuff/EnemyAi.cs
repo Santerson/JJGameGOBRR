@@ -73,7 +73,7 @@ public class EnemyAi : MonoBehaviour
         // play Spawn Sound
         refAudioManager = FindFirstObjectByType<AudioManager>();
         if (refAudioManager != null)
-            refAudioManager.PlayEnemySpawnSFX(EnemyID);
+            refAudioManager.PlayEnemySpawnSFX(gameObject, EnemyID);
     }
     void FixedUpdate()
     {
@@ -82,7 +82,7 @@ public class EnemyAi : MonoBehaviour
         // play the audio for the enemy
         if (!StoppedEnemy)
         {
-            if (Random.Range(0, RandomVoiceChance) == 0 && refAudioManager != null) refAudioManager.PlayEnemyVoiceSFX(EnemyID);
+            if (Random.Range(0, RandomVoiceChance) == 0 && refAudioManager != null) refAudioManager.PlayEnemyVoiceSFX(gameObject, EnemyID);
             timeToNextEnemyWalkSound -= Time.fixedDeltaTime;
             if (timeToNextEnemyWalkSound <= 0)
             {
@@ -114,7 +114,7 @@ public class EnemyAi : MonoBehaviour
             if (refBullet != null)
             {
                 
-                refAudioManager?.PlayEnemyHurtSFX(EnemyID);
+                refAudioManager?.PlayEnemyHurtSFX(gameObject, EnemyID);
                 int dmg = (int)refBullet.GetDamage();
                 Health -= dmg;
                 // checks if dead
@@ -142,7 +142,7 @@ public class EnemyAi : MonoBehaviour
             // shoots a bullet when cooldown is ready
             if (coolDownAttack <= 0)
             {
-                refAudioManager?.PlayEnemyAttackSFX(EnemyID);
+                refAudioManager?.PlayEnemyAttackSFX(gameObject, EnemyID);
                 coolDownAttack = AttackCooldown;
                 Instantiate(Hurtfield, FirePosition, Quaternion.identity);
                 MaxSpeed = 0;
@@ -166,7 +166,7 @@ public class EnemyAi : MonoBehaviour
         {
             // animator.SetInteger("State", (int)animatons.die);
         }
-        refAudioManager?.PlayEnemyDieSFX(EnemyID);
+        refAudioManager?.PlayEnemyDieSFX(gameObject, EnemyID);
         FindFirstObjectByType<LaneCheck>().Lanedecreesss(lane);
         Destroy(gameObject);
     }

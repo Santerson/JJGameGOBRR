@@ -180,7 +180,7 @@ public class Mana : MonoBehaviour
         // Check if the mana has grown past a threshold
         if ((NewProgress > ManaSFXInterval || NewProgress < 0))
         {
-            refAudioManager?.PlayManaGainOrLossSFX(generation, MaxMana);
+            refAudioManager?.PlayManaGainOrLossSFX(gameObject, generation, MaxMana);
         }
     }
 

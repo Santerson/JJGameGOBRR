@@ -89,85 +89,85 @@ public class AudioManager : MonoBehaviour
     /// Plays a drop sfx for a given tower
     /// </summary>
     /// <param name="tower">The ID of the tower</param>
-    public void PlayTowerDropSFXs(Towers tower)
+    public void PlayTowerDropSFXs(GameObject spawnLocation, Towers tower)
     {
         AK.Wwise.Event refSound = TowerDropSFXs[(int)tower];
-        AkUnitySoundEngine.PostEvent(refSound.Id, gameObject);
-        AkUnitySoundEngine.PostEvent(TowerGenericDrop.Id, gameObject);
+        AkUnitySoundEngine.PostEvent(refSound.Id, spawnLocation);
+        AkUnitySoundEngine.PostEvent(TowerGenericDrop.Id, spawnLocation);
     }
 
     /// <summary>
     /// Plays a shoot sfx for a given tower
     /// </summary>
     /// <param name="tower">The ID of the tower</param>
-    public void PlayTowerShootSFX(Towers tower)
+    public void PlayTowerShootSFX(GameObject spawnLocation, Towers tower)
     {
         AK.Wwise.Event refSound = TowerShootSFXs[(int)tower];
-        AkUnitySoundEngine.PostEvent(refSound.Id, gameObject);
+        AkUnitySoundEngine.PostEvent(refSound.Id, spawnLocation);
     }
 
     /// <summary>
     /// Plays a death sfx for a given tower
     /// </summary>
     /// <param name="tower">The ID of the tower</param>
-    public void PlayTowerDieSFX(Towers tower)
+    public void PlayTowerDieSFX(GameObject spawnLocation, Towers tower)
     {
         AK.Wwise.Event refSound = TowerDieSFXs[(int)tower]; 
-        AkUnitySoundEngine.PostEvent(refSound.Id, gameObject);
-        AkUnitySoundEngine.PostEvent(TowerGenericDeath.Id, gameObject);
+        AkUnitySoundEngine.PostEvent(refSound.Id, spawnLocation);
+        AkUnitySoundEngine.PostEvent(TowerGenericDeath.Id, spawnLocation);
     }
 
-    public void PlayTowerSellSFX(Towers tower)
+    public void PlayTowerSellSFX(GameObject spawnLocation, Towers tower)
     {
         AK.Wwise.Event refSound = TowerRemoveSFXs[(int)tower];
-        AkUnitySoundEngine.PostEvent(refSound.Id, gameObject);
-        AkUnitySoundEngine.PostEvent(TowerGenericRemove.Id, gameObject);
+        AkUnitySoundEngine.PostEvent(refSound.Id, spawnLocation);
+        AkUnitySoundEngine.PostEvent(TowerGenericRemove.Id, spawnLocation);
     }
 
     /// <summary>
     /// Plays a hurt sfx for a tower
     /// </summary>
-    public void PlayTowerHurtSFX()
+    public void PlayTowerHurtSFX(GameObject spawnLocation)
     {
-        AkUnitySoundEngine.PostEvent(TowerGenericHurt.Id, gameObject);
+        AkUnitySoundEngine.PostEvent(TowerGenericHurt.Id, spawnLocation);
     }
 
     /// <summary>
     /// Plays a click sfx for a tower
     /// </summary>
-    public void PlayTowercClickSFX()
+    public void PlayTowercClickSFX(GameObject spawnLocation)
     {
-        AkUnitySoundEngine.PostEvent(TowerGenericClick.Id, gameObject);
+        AkUnitySoundEngine.PostEvent(TowerGenericClick.Id, spawnLocation);
     }
 
     /// <summary>
     /// Plays the attack sfx for a given enemy
     /// </summary>
     /// <param name="enemy">The ID of the enemy</param>
-    public void PlayEnemyAttackSFX(Enemies enemy)
+    public void PlayEnemyAttackSFX(GameObject spawnLocation, Enemies enemy)
     {
         AK.Wwise.Event refSound = EnemyAttackSFXs[(int)enemy];
-        AkUnitySoundEngine.PostEvent(refSound.Id, gameObject);
+        AkUnitySoundEngine.PostEvent(refSound.Id, spawnLocation);
     }
     
     /// <summary>
     /// Plays the hurt sfx for a given enemy
     /// </summary>
     /// <param name="enemy">The ID of the enemy</param>
-    public void PlayEnemyHurtSFX(Enemies enemy)
+    public void PlayEnemyHurtSFX(GameObject spawnLocation, Enemies enemy)
     {
         AK.Wwise.Event refSound = EnemyHurtSFXs[(int)enemy];
-        AkUnitySoundEngine.PostEvent(refSound.Id, gameObject);
+        AkUnitySoundEngine.PostEvent(refSound.Id, spawnLocation);
     }
 
     /// <summary>
     /// Plays the die sfx for a given enemy
     /// </summary>
     /// <param name="enemy">The ID of the enemy</param>
-    public void PlayEnemyDieSFX(Enemies enemy)
+    public void PlayEnemyDieSFX(GameObject spawnLocation, Enemies enemy)
     {
         AK.Wwise.Event refSound = EnemyDieSFXs[(int)enemy];
-        AkUnitySoundEngine.PostEvent(refSound.Id, gameObject);
+        AkUnitySoundEngine.PostEvent(refSound.Id, spawnLocation);
     }
 
     /// <summary>
@@ -184,20 +184,20 @@ public class AudioManager : MonoBehaviour
     /// Plays the voice sfx for a given enemy
     /// </summary>
     /// <param name="enemy">The ID of the enemy</param>
-    public void PlayEnemyVoiceSFX(Enemies enemy)
+    public void PlayEnemyVoiceSFX(GameObject spawnLocation, Enemies enemy)
     {
         AK.Wwise.Event refSound = EnemyVoiceSFXs[(int)enemy];
-        AkUnitySoundEngine.PostEvent(refSound.Id, gameObject);
+        AkUnitySoundEngine.PostEvent(refSound.Id, spawnLocation);
     }
 
     /// <summary>
     /// Plays the spawn sfx for a given enemy
     /// </summary>
     /// <param name="enemy">The ID of the enemy</param>
-    public void PlayEnemySpawnSFX(Enemies enemy)
+    public void PlayEnemySpawnSFX(GameObject spawnLocation, Enemies enemy)
     {
         AK.Wwise.Event refSound = EnemySpawnSFXs[(int)enemy];
-        AkUnitySoundEngine.PostEvent(refSound.Id, gameObject);
+        AkUnitySoundEngine.PostEvent(refSound.Id, spawnLocation);
     }
 
     /// <summary>
@@ -223,7 +223,7 @@ public class AudioManager : MonoBehaviour
     /// </summary>
     /// <param name="manaGain">The current mana gain of the manabar</param>
     /// <param name="maxMana">The maximum amount of mana</param>
-    public void PlayManaGainOrLossSFX(float manaGain, float maxMana)
+    public void PlayManaGainOrLossSFX(GameObject spawnLocation, float manaGain, float maxMana)
     {
         // Placeholder, do whatever you need here henry (and remove the pragmas)
         if (manaGain > 0)
@@ -261,10 +261,5 @@ public class AudioManager : MonoBehaviour
     public void PlayGameMusic(int waveIntensity)
     {
         AkSoundEngine.SetState("MusicStateGroup", $"Battle{waveIntensity}");
-    }
-
-    public void PlayPauseSFX()
-    {
-        AkUnitySoundEngine.PostEvent(PauseSFX.Id, gameObject);
     }
 }

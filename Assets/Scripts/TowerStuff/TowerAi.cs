@@ -64,7 +64,7 @@ public class TowerAi : MonoBehaviour
         }
         refAudioManager = FindFirstObjectByType<AudioManager>();
         if (refAudioManager != null)
-            refAudioManager.PlayTowerDropSFXs(TowerID);
+            refAudioManager.PlayTowerDropSFXs(gameObject, TowerID);
     }
 
     // Update is called once per frame
@@ -77,7 +77,7 @@ public class TowerAi : MonoBehaviour
         // Destroy the object if it is out of hitpoints and plays sound
         if (Health <= 0)
         {
-            refAudioManager?.PlayTowerDieSFX(TowerID);
+            refAudioManager?.PlayTowerDieSFX(gameObject, TowerID);
             Instantiate(particls, gameObject.transform.position, Quaternion.identity);
             // Instantiate(DeathSFX, transform.position, Quaternion.identity);
             Die();
@@ -110,7 +110,7 @@ public class TowerAi : MonoBehaviour
                 // Shoot
                 Instantiate(Bullet, FirePosition, Quaternion.identity);
                 // Sfx
-                refAudioManager?.PlayTowerShootSFX(TowerID);
+                refAudioManager?.PlayTowerShootSFX(gameObject, TowerID);
                 // Reset cooldown
                 CoolDown = RateOfFire;
             }
@@ -153,7 +153,7 @@ public class TowerAi : MonoBehaviour
             {
                 int dmg = (int)refDamageBox.GetDamage();
                 Health -= dmg;
-                refAudioManager?.PlayTowerHurtSFX();
+                refAudioManager?.PlayTowerHurtSFX(gameObject);
             }
         }
     }
@@ -166,13 +166,13 @@ public class TowerAi : MonoBehaviour
         if (Input.GetMouseButtonDown(1) && canBeSold)
         {
             Instantiate(particlsRemove, gameObject.transform.position, Quaternion.identity);
-            refAudioManager?.PlayTowerSellSFX(TowerID);
+            refAudioManager?.PlayTowerSellSFX(gameObject, TowerID);
             Die();
         }
         else if (Input.GetMouseButtonDown(0) && canBeSold && TowerID != AudioManager.Towers.bunny)
         {
             Instantiate(particlsRemove, gameObject.transform.position, Quaternion.identity);
-            refAudioManager?.PlayTowerSellSFX(TowerID);
+            refAudioManager?.PlayTowerSellSFX(gameObject, TowerID);
             Die();
             UIDraggableTower[] allTowerDrags = FindObjectsByType<UIDraggableTower>(FindObjectsSortMode.None);
             // Make the player now hold a copy of this tower

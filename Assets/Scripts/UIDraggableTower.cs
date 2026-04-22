@@ -160,7 +160,7 @@ public class UIDraggableTower : MonoBehaviour
             return;
         }
         followingMouse = true;
-        RefAudioManager?.PlayTowercClickSFX();
+        RefAudioManager?.PlayTowercClickSFX(gameObject);
     }
 
     /// <summary>
