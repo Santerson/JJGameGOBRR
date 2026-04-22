@@ -161,7 +161,7 @@ public class TowerGrid : MonoBehaviour
     /// <param name="position">A position to place the tower in gridscale, in row col. NOTE: should be a vector2Int, using a different constructor.
     ///      SO CALL THAT ONE. >:( </param>
     /// <return>true if the tower was successfully placed, false otherwise</return>"
-    public bool DropTower(GameObject tower, Vector2Int position)
+    public bool DropTower(GameObject tower, Vector2Int position, float AtkCD = 0)
     {
         // Check if there is a open slot (SpaceStatus = unused) at this point
         SpaceStatus refSpace = SpaceStatuses[position.x, position.y];
@@ -188,7 +188,9 @@ public class TowerGrid : MonoBehaviour
             refTower.GetComponentInChildren<SpriteRenderer>().sortingOrder = 2 - position.y;
 
             // Save the position in the towerai script of the tower
-            refTower.GetComponent<TowerAi>().GridPosition = new Vector2Int(position.x, position.y);
+            TowerAi refTowerAI = refTower.GetComponent<TowerAi>();
+            refTowerAI.GridPosition = new Vector2Int(position.x, position.y);
+            refTowerAI.CoolDown = (AtkCD > refTowerAI.LengthOfAnimaton ? AtkCD : refTowerAI.LengthOfAnimaton);
             // return true
             if (EnableLogs) Debug.Log($"Placed a tower at {position.x}, {position.y}.");
             return true;
