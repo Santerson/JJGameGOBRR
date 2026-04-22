@@ -6,7 +6,7 @@
 				<SoundcasterSession Name="MusicSession" ID="{C496D2F2-1D5D-4830-A0DD-DF15EC00EF81}">
 					<ModuleList>
 						<Module>
-							<ObjectRef Name="Play_MusicPlaylist" ID="{D5CA57AC-3DC9-4CA8-BB98-3A5E555913B0}" WorkUnitID="{387072C7-A7CF-4480-B8F0-2D62B0219160}"/>
+							<ObjectRef Name="Play_MusicPlaylist" ID="{E6D6FB85-7AD8-4FAB-9BF4-8D6C31947A93}" WorkUnitID="{387072C7-A7CF-4480-B8F0-2D62B0219160}"/>
 							<Position X="0" Y="0"/>
 						</Module>
 					</ModuleList>

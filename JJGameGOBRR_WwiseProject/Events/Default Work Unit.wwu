@@ -258,34 +258,12 @@
 				</Folder>
 				<Folder Name="MusicThings" ID="{09F339EE-521F-45D9-BA4D-86CA6D483AA9}" ShortID="825185757">
 					<ChildrenList>
-						<Event Name="Play_MusicPlaylist" ID="{D5CA57AC-3DC9-4CA8-BB98-3A5E555913B0}">
+						<Event Name="Play_MusicPlaylist" ID="{E6D6FB85-7AD8-4FAB-9BF4-8D6C31947A93}">
 							<ChildrenList>
-								<Action Name="" ID="{B1B5037C-1F2A-4F47-A86F-E5FDA0A8343D}" ShortID="63542908">
+								<Action Name="" ID="{894B721C-FDA1-46B1-9363-65AF098AFC02}" ShortID="1071593437">
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="MusicPlaylist" ID="{D59E19F4-6B55-455E-9059-410828695279}" WorkUnitID="{C9DDC0B8-4122-402E-850F-253503C47F0F}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Play_MMusicPlaylistPaused" ID="{3FF63824-8853-4804-98CD-5326AC6B647F}">
-							<ChildrenList>
-								<Action Name="" ID="{5131DB71-0FD6-4225-87E9-68A4AE384859}" ShortID="698770092">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="MusicPlaylistPaused" ID="{F6C4191E-B75E-4B65-8697-76520DFE0D65}" WorkUnitID="{C9DDC0B8-4122-402E-850F-253503C47F0F}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Play_MMusicPlaylistPlaying" ID="{025405B0-2F42-42E9-A2F5-9B987C58E1E5}">
-							<ChildrenList>
-								<Action Name="" ID="{E5682851-2464-4C4F-A925-59FB23A09CB8}" ShortID="275397871">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="MusicPlaylistPlaying" ID="{850B5D9C-D588-49AF-99BF-667876411359}" WorkUnitID="{C9DDC0B8-4122-402E-850F-253503C47F0F}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

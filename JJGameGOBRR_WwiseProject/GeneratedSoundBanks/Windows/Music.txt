@@ -1,11 +1,9 @@
 Event	ID	Name			Wwise Object Path	Notes
-	468706480	Play_MMusicPlaylistPlaying			\Default Work Unit\MusicThings\Play_MMusicPlaylistPlaying	
-	1326554868	Play_MMusicPlaylistPaused			\Default Work Unit\MusicThings\Play_MMusicPlaylistPaused	
 	2585924577	Play_MusicPlaylist			\Default Work Unit\MusicThings\Play_MusicPlaylist	
 
 State Group	ID	Name			Wwise Object Path	Notes
 	2163007642	MusicStateGroup			\Default Work Unit\MusicStateGroup	
-	2305032264	PauseOrPlay			\Default Work Unit\PauseOrPlay	
+	2466022301	MuffledOrUnmuffled			\Default Work Unit\MuffledOrUnmuffled	
 
 State	ID	Name	State Group			Notes
 	221232726	Lose	MusicStateGroup			
@@ -15,15 +13,15 @@ State	ID	Name	State Group			Notes
 	2813898846	Battle3	MusicStateGroup			
 	2813898847	Battle2	MusicStateGroup			
 	3705726509	Title	MusicStateGroup			
-	748895195	None	PauseOrPlay			
-	1256202815	Play	PauseOrPlay			
-	3092587493	Pause	PauseOrPlay			
+	748895195	None	MuffledOrUnmuffled			
+	3603405849	Unmuffled	MuffledOrUnmuffled			
+	4200322818	Muffled	MuffledOrUnmuffled			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	371096670	Music2	.cache\10\{10C7C072-102E-72D2-1CA7-B02E4FF7FF0D}.wem		\Containers\Default Work Unit\MusicPlaylist\MusicPlaylistPlaying\Battle2\Battle2\Music2		5556304
-	408197109	JsongDraft	.cache\AF\{AF5189A0-9E0E-2023-3764-EEED6B1F89A7}.wem		\Containers\Default Work Unit\MusicPlaylist\MusicPlaylistPaused\Title\Title\JsongDraft		16934496
-	938029413	Win	.cache\B6\{B6401708-BA78-AD65-0EF3-BD2028DF8054}.wem		\Containers\Default Work Unit\MusicPlaylist\MusicPlaylistPlaying\Win\Win\Win		203188
-	989487855	Music3	.cache\00\{00161964-ABB0-6D7B-5CB4-C2AA03314C53}.wem		\Containers\Default Work Unit\MusicPlaylist\MusicPlaylistPlaying\Battle3\Battle3\Music3		5830972
-	1005246337	Music1	.cache\74\{741D1A0E-F747-0F1D-207A-7AB33E10CDE4}.wem		\Containers\Default Work Unit\MusicPlaylist\MusicPlaylistPlaying\Battle1\Battle1\Music1		5556304
-	1017932379	Lose	.cache\F8\{F878E9BC-ACFD-D347-2758-E47EC74C548C}.wem		\Containers\Default Work Unit\MusicPlaylist\MusicPlaylistPlaying\Lose\Lose\Lose		285940
+	371096670	Music2	.cache\10\{10C7C072-102E-72D2-1CA7-B02E4FF7FF0D}.wem		\Containers\Default Work Unit\MusicPlaylist\MusicPlaylistUnmuffle\Battle2\Battle2\Music2		5556304
+	408197109	JsongDraft	.cache\AF\{AF5189A0-9E0E-2023-3764-EEED6B1F89A7}.wem		\Containers\Default Work Unit\MusicPlaylist\MusicPlaylistMuffled\Title\Title\JsongDraft		16934496
+	938029413	Win	.cache\B6\{B6401708-BA78-AD65-0EF3-BD2028DF8054}.wem		\Containers\Default Work Unit\MusicPlaylist\MusicPlaylistUnmuffle\Win\Win\Win		203188
+	989487855	Music3	.cache\00\{00161964-ABB0-6D7B-5CB4-C2AA03314C53}.wem		\Containers\Default Work Unit\MusicPlaylist\MusicPlaylistUnmuffle\Battle3\Battle3\Music3		5830972
+	1005246337	Music1	.cache\74\{741D1A0E-F747-0F1D-207A-7AB33E10CDE4}.wem		\Containers\Default Work Unit\MusicPlaylist\MusicPlaylistUnmuffle\Battle1\Battle1\Music1		5556304
+	1017932379	Lose	.cache\F8\{F878E9BC-ACFD-D347-2758-E47EC74C548C}.wem		\Containers\Default Work Unit\MusicPlaylist\MusicPlaylistUnmuffle\Lose\Lose\Lose		285940
 

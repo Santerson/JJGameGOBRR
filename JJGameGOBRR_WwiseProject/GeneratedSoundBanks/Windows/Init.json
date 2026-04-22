@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{F87120D4-06F1-33E8-F547-15D5A4D82D05}",
+    "Hash": "{A657373E-0C91-B792-8730-5E64F25EA597}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -100,27 +100,27 @@
       ]
      },
      {
-      "Id": "2305032264",
-      "Name": "PauseOrPlay",
-      "ObjectPath": "\\States\\Default Work Unit\\PauseOrPlay",
+      "Id": "2466022301",
+      "Name": "MuffledOrUnmuffled",
+      "ObjectPath": "\\States\\Default Work Unit\\MuffledOrUnmuffled",
       "GUID": "{6115CEEA-C646-4B6F-BD26-DC6ECA50C04C}",
       "States": [
        {
         "Id": "748895195",
         "Name": "None",
-        "ObjectPath": "\\States\\Default Work Unit\\PauseOrPlay\\None",
+        "ObjectPath": "\\States\\Default Work Unit\\MuffledOrUnmuffled\\None",
         "GUID": "{8BCE3D90-012F-42FC-A104-3B1637A1606F}"
        },
        {
-        "Id": "1256202815",
-        "Name": "Play",
-        "ObjectPath": "\\States\\Default Work Unit\\PauseOrPlay\\Play",
+        "Id": "3603405849",
+        "Name": "Unmuffled",
+        "ObjectPath": "\\States\\Default Work Unit\\MuffledOrUnmuffled\\Unmuffled",
         "GUID": "{F49FEC07-288F-4309-994A-61A27994A5C4}"
        },
        {
-        "Id": "3092587493",
-        "Name": "Pause",
-        "ObjectPath": "\\States\\Default Work Unit\\PauseOrPlay\\Pause",
+        "Id": "4200322818",
+        "Name": "Muffled",
+        "ObjectPath": "\\States\\Default Work Unit\\MuffledOrUnmuffled\\Muffled",
         "GUID": "{AD194A52-56D2-4996-9171-287E0BF1528B}"
        }
       ]
@@ -128,6 +128,6 @@
     ]
    }
   ],
-  "FileHash": "{AA61B2DC-1FFB-E52D-8387-910C36ECC183}"
+  "FileHash": "{FED53AE9-675B-9291-6BDA-20DA6AC4F3D7}"
  }
 }

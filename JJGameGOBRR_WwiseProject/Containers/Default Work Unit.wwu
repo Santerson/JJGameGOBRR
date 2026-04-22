@@ -88,7 +88,7 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<MusicSwitchContainer Name="MusicPlaylistPlaying" ID="{850B5D9C-D588-49AF-99BF-667876411359}" ShortID="748674905">
+						<MusicSwitchContainer Name="MusicPlaylistUnmuffle" ID="{850B5D9C-D588-49AF-99BF-667876411359}" ShortID="748674905">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9178FA55-D303-4149-A5D8-ACE42835274F}"/>
@@ -1119,11 +1119,16 @@
 								</ObjectList>
 							</ObjectLists>
 						</MusicSwitchContainer>
-						<MusicSwitchContainer Name="MusicPlaylistPaused" ID="{F6C4191E-B75E-4B65-8697-76520DFE0D65}" ShortID="610299899">
+						<MusicSwitchContainer Name="MusicPlaylistMuffled" ID="{F6C4191E-B75E-4B65-8697-76520DFE0D65}" ShortID="610299899">
 							<PropertyList>
 								<Property Name="Highpass" Type="int16">
 									<ValueList>
-										<Value>51</Value>
+										<Value>67</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>12</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -2201,7 +2206,7 @@
 							<PluginInnerObject Name="" ID="{40127944-B662-4F75-8B91-4726B63D7883}" PluginName="MusicArgumentsSlot" CompanyID="0" PluginID="89">
 								<ReferenceList>
 									<Reference Name="Argument">
-										<ObjectRef Name="PauseOrPlay" ID="{6115CEEA-C646-4B6F-BD26-DC6ECA50C04C}" WorkUnitID="{997F274A-A4F9-487B-AE57-DB9ADFD7D4FE}"/>
+										<ObjectRef Name="MuffledOrUnmuffled" ID="{6115CEEA-C646-4B6F-BD26-DC6ECA50C04C}" WorkUnitID="{997F274A-A4F9-487B-AE57-DB9ADFD7D4FE}"/>
 									</Reference>
 								</ReferenceList>
 							</PluginInnerObject>
@@ -2210,7 +2215,7 @@
 							<MultiSwitchEntry Name="" ID="{A0FE795E-5883-44B4-BB51-2E12588B72B9}">
 								<ReferenceList>
 									<Reference Name="AudioNode">
-										<ObjectRef Name="MusicPlaylistPaused" ID="{F6C4191E-B75E-4B65-8697-76520DFE0D65}" WorkUnitID="{C9DDC0B8-4122-402E-850F-253503C47F0F}"/>
+										<ObjectRef Name="MusicPlaylistMuffled" ID="{F6C4191E-B75E-4B65-8697-76520DFE0D65}" WorkUnitID="{C9DDC0B8-4122-402E-850F-253503C47F0F}"/>
 									</Reference>
 								</ReferenceList>
 								<ObjectLists>
@@ -2218,7 +2223,7 @@
 										<PluginInnerObject Name="" ID="{F4A65DCF-22E7-42AF-A081-6EC14A0B8E88}" PluginName="EntryPathSlot" CompanyID="0" PluginID="88">
 											<ReferenceList>
 												<Reference Name="EntryPathObject">
-													<ObjectRef Name="Pause" ID="{AD194A52-56D2-4996-9171-287E0BF1528B}" WorkUnitID="{997F274A-A4F9-487B-AE57-DB9ADFD7D4FE}"/>
+													<ObjectRef Name="Muffled" ID="{AD194A52-56D2-4996-9171-287E0BF1528B}" WorkUnitID="{997F274A-A4F9-487B-AE57-DB9ADFD7D4FE}"/>
 												</Reference>
 											</ReferenceList>
 										</PluginInnerObject>
@@ -2228,7 +2233,7 @@
 							<MultiSwitchEntry Name="" ID="{1D521330-E951-44A0-9273-CEA9B7E61054}">
 								<ReferenceList>
 									<Reference Name="AudioNode">
-										<ObjectRef Name="MusicPlaylistPlaying" ID="{850B5D9C-D588-49AF-99BF-667876411359}" WorkUnitID="{C9DDC0B8-4122-402E-850F-253503C47F0F}"/>
+										<ObjectRef Name="MusicPlaylistUnmuffle" ID="{850B5D9C-D588-49AF-99BF-667876411359}" WorkUnitID="{C9DDC0B8-4122-402E-850F-253503C47F0F}"/>
 									</Reference>
 								</ReferenceList>
 								<ObjectLists>
@@ -2236,7 +2241,7 @@
 										<PluginInnerObject Name="" ID="{F878AE55-144B-41B5-9D3F-ACAE6CC2CC27}" PluginName="EntryPathSlot" CompanyID="0" PluginID="88">
 											<ReferenceList>
 												<Reference Name="EntryPathObject">
-													<ObjectRef Name="Play" ID="{F49FEC07-288F-4309-994A-61A27994A5C4}" WorkUnitID="{997F274A-A4F9-487B-AE57-DB9ADFD7D4FE}"/>
+													<ObjectRef Name="Unmuffled" ID="{F49FEC07-288F-4309-994A-61A27994A5C4}" WorkUnitID="{997F274A-A4F9-487B-AE57-DB9ADFD7D4FE}"/>
 												</Reference>
 											</ReferenceList>
 										</PluginInnerObject>
