@@ -22,12 +22,12 @@ public class TowerAi : MonoBehaviour
     [SerializeField] float FirePositionX = 0;
     [SerializeField] float FirePositiony = 0;
     // Timer for animaton to start - fire cooldown
-    [SerializeField] float LengthOfAnimaton = 0;
+    [SerializeField] public float LengthOfAnimaton = 0;
     [SerializeField] public AudioManager.Towers TowerID;
     // Variables that are changed in the code
     private Animator Animator;
     private int Health = 1;
-    private float CoolDown;
+    [HideInInspector] public float CoolDown;
     [HideInInspector] public bool TowerAttacking = true;
     TowerGrid refGrid;
     LaneCheck refLaneCheck;
@@ -55,7 +55,7 @@ public class TowerAi : MonoBehaviour
         Vector3 Size = new Vector3(SizeX, SizeY);
         Health = HealthMax;
         gameObject.transform.localScale = Size;
-        CoolDown = LengthOfAnimaton;
+        CoolDown = CoolDown < LengthOfAnimaton ? LengthOfAnimaton : CoolDown;
         refGrid = FindFirstObjectByType<TowerGrid>();
         refLaneCheck = FindFirstObjectByType<LaneCheck>();
         if (refLaneCheck == null)
@@ -181,6 +181,7 @@ public class TowerAi : MonoBehaviour
                 if (towerDrag.TowerPrefab.GetComponent<TowerAi>().TowerID == TowerID)
                 {
                     towerDrag.followingMouse = true;
+                    towerDrag.SavedLastAtkCD = CoolDown;
                 }
             }
         }

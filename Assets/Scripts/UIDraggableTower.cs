@@ -43,6 +43,9 @@ public class UIDraggableTower : MonoBehaviour
     GameObject TowerShadow;
     GameObject InactiveTowerThatFollowsMouse = null;
 
+    // SPaghetti time
+    public float SavedLastAtkCD = 0;
+
     public static Vector2Int forcedNextTowerPosition { get; private set; } = new Vector2Int(-1, -1);
     static AudioManager.Towers forcedNextTower = AudioManager.Towers.bunny;
 
@@ -84,6 +87,7 @@ public class UIDraggableTower : MonoBehaviour
     {
         // Reduce the time to the next tower placement if it is not 0
         timeToNextTowerPlacement = timeToNextTowerPlacement > 0 ? timeToNextTowerPlacement - Time.deltaTime : 0;
+        SavedLastAtkCD = SavedLastAtkCD > 0 ? SavedLastAtkCD - Time.deltaTime : 0;
         if (timeToNextTowerPlacement > 0)
         {
             // Change the cooldown to the next tower
@@ -197,12 +201,12 @@ public class UIDraggableTower : MonoBehaviour
             if (forcedNextTowerPosition == new Vector2Int(-1, -1))
             {
                 // Try to drop a tower there
-                bool placed = refTowerGrid.DropTower(TowerPrefab, gridTile);
+                bool placed = refTowerGrid.DropTower(TowerPrefab, gridTile, SavedLastAtkCD);
                 // If successfully placed
                 if (placed)
                 {
                     // Reset the tower's cooldown
-                    timeToNextTowerPlacement = towerCooldown;
+                    timeToNextTowerPlacement = towerCooldown;   
                 }
             }
             // Update stuff for the towergrid
