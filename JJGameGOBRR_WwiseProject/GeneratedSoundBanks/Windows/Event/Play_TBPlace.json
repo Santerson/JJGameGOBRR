@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{58D66B10-76D8-4F4B-95E6-35D170AE66F8}",
     "Language": "SFX",
-    "Hash": "{2A62B280-9FE2-E7B2-A803-AF725FB1C6C3}",
+    "Hash": "{26ACF107-8F1C-5201-DB23-AA52195107A2}",
     "ObjectPath": "Play_TBPlace",
     "ShortName": "Play_TBPlace",
     "Path": "Event/Play_TBPlace.bnk",
@@ -43,6 +43,6 @@
     ]
    }
   ],
-  "FileHash": "{B8CD110D-673D-5D60-1573-5F628F273C62}"
+  "FileHash": "{0A3E3576-518D-5A61-4B40-A5D1E7597F4B}"
  }
 }

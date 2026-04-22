@@ -22,9 +22,13 @@ namespace AK
         static const AkUniqueID PLAY_MDECREASING = 2591182578U;
         static const AkUniqueID PLAY_MINCREASING = 353692838U;
         static const AkUniqueID PLAY_MUSICPLAYLIST = 2585924577U;
+        static const AkUniqueID PLAY_NOTHING = 4237641461U;
+        static const AkUniqueID PLAY_TBDIE = 1340998758U;
         static const AkUniqueID PLAY_TBPLACE = 3957186333U;
         static const AkUniqueID PLAY_TCLICK = 2269172114U;
         static const AkUniqueID PLAY_TDEATH = 2689049308U;
+        static const AkUniqueID PLAY_TFPLACE = 3949267617U;
+        static const AkUniqueID PLAY_TFSHOOT = 929142997U;
         static const AkUniqueID PLAY_TGPLACE = 4094970478U;
         static const AkUniqueID PLAY_TGSHOOT = 1341661114U;
         static const AkUniqueID PLAY_THURT = 2465328249U;

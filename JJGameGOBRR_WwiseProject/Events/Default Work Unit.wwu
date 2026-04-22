@@ -221,6 +221,39 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_TFPlace" ID="{D9994493-1943-4B1C-B122-5C190ED8BC0E}">
+							<ChildrenList>
+								<Action Name="" ID="{C70575C4-5D95-41C2-B8EF-189A2A9B4D71}" ShortID="82650706">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Place" ID="{82B4ABF5-91B9-4E60-B6C5-5A5499DCCBCE}" WorkUnitID="{C9DDC0B8-4122-402E-850F-253503C47F0F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_TFShoot" ID="{574A5A68-DEDC-4A83-BADC-ABE0686753D6}">
+							<ChildrenList>
+								<Action Name="" ID="{95E420E6-2ED3-43B3-A3CB-3ACA31090EF6}" ShortID="241571675">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Shoot" ID="{F688D076-7FDD-4FA1-8323-87E64449DDDE}" WorkUnitID="{C9DDC0B8-4122-402E-850F-253503C47F0F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_TBDie" ID="{B7F74317-FAC4-44A4-BA29-A0616016DBD1}">
+							<ChildrenList>
+								<Action Name="" ID="{A928C631-6BCB-41A2-8F1D-0813EA550AFB}" ShortID="839990734">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Die" ID="{32892111-9482-4F76-9FF1-8A8FA17BC97E}" WorkUnitID="{C9DDC0B8-4122-402E-850F-253503C47F0F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="MusicThings" ID="{09F339EE-521F-45D9-BA4D-86CA6D483AA9}" ShortID="825185757">
@@ -238,6 +271,17 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Event Name="Play_Nothing" ID="{CE64BF92-0FD7-4DD9-93EF-967057E588F5}">
+					<ChildrenList>
+						<Action Name="" ID="{3806D0BF-60E0-435C-B364-90EC581E5904}" ShortID="590434739">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Nothing" ID="{0142E37B-DFA4-4B38-8F64-01A662D43EA2}" WorkUnitID="{C9DDC0B8-4122-402E-850F-253503C47F0F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

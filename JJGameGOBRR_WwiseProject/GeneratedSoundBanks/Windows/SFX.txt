@@ -3,8 +3,10 @@ Event	ID	Name			Wwise Object Path	Notes
 	282744853	Play_EGHurt			\Default Work Unit\SoundEffects\Play_EGHurt	
 	401033372	Play_EGDie			\Default Work Unit\SoundEffects\Play_EGDie	
 	484766513	Play_UClick			\Default Work Unit\SoundEffects\Play_UClick	
+	929142997	Play_TFShoot			\Default Work Unit\SoundEffects\Play_TFShoot	
 	1130750870	Play_TRemove			\Default Work Unit\SoundEffects\Play_TRemove	
 	1314935524	Play_EGVoice			\Default Work Unit\SoundEffects\Play_EGVoice	
+	1340998758	Play_TBDie			\Default Work Unit\SoundEffects\Play_TBDie	
 	1341661114	Play_TGShoot			\Default Work Unit\SoundEffects\Play_TGShoot	
 	2269172114	Play_TClick			\Default Work Unit\SoundEffects\Play_TClick	
 	2363708467	Play_TPlace			\Default Work Unit\SoundEffects\Play_TPlace	
@@ -13,15 +15,19 @@ Event	ID	Name			Wwise Object Path	Notes
 	2567734897	Play_EGWalk			\Default Work Unit\SoundEffects\Play_EGWalk	
 	2689049308	Play_TDeath			\Default Work Unit\SoundEffects\Play_TDeath	
 	3350535243	Play_EGSpawn			\Default Work Unit\SoundEffects\Play_EGSpawn	
+	3949267617	Play_TFPlace			\Default Work Unit\SoundEffects\Play_TFPlace	
 	4094970478	Play_TGPlace			\Default Work Unit\SoundEffects\Play_TGPlace	
 	4112018788	Play_TMShoot			\Default Work Unit\SoundEffects\Play_TMShoot	
+	4237641461	Play_Nothing			\Default Work Unit\Play_Nothing	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	2314969	Place	.cache\8F\{8F0F9838-DC6B-A570-14D7-7B9713773AC5}.wem		\Containers\Default Work Unit\RouteToSFXBus\TowerMixer\MushMixer\Place		49800
 	19713553	Hurt	.cache\9D\{9D8FC875-2AC7-E7F5-7B3B-7EDBEAEAA0F6}.wem		\Containers\Default Work Unit\RouteToSFXBus\TowerMixer\Hurt		109320
 	36569900	Death	.cache\9B\{9B0209DF-993A-224D-A2C1-255BB1D4F6C1}.wem		\Containers\Default Work Unit\RouteToSFXBus\TowerMixer\Death		296020
+	93329577	Shoot	.cache\82\{82039A64-5AD4-9AC8-7A85-0D98FC4E9FC9}.wem		\Containers\Default Work Unit\RouteToSFXBus\TowerMixer\FairyMixer\Shoot		172088
 	132091408	Walk_00	.cache\9F\{9F68CFCD-B24C-68AC-AA2A-957967E54514}.wem		\Containers\Default Work Unit\RouteToSFXBus\EnemyMixer\GuyMixer\WalkRandom\Walk_00		61192
 	172143760	Walk_07	.cache\C1\{C1155211-6F59-06B2-91D9-C009F5B6107F}.wem		\Containers\Default Work Unit\RouteToSFXBus\EnemyMixer\GuyMixer\WalkRandom\Walk_07		91136
+	207834142	Nothing	.cache\3D\{3D80364F-D7E9-2BC5-EA84-9F867170F42B}.wem		\Containers\Default Work Unit\Nothing		77020
 	225219682	Spawn	.cache\60\{604B6AF6-1CDA-33D4-EFE1-54BD22C71232}.wem		\Containers\Default Work Unit\RouteToSFXBus\EnemyMixer\GuyMixer\Spawn		109632
 	235098223	Walk_01	.cache\B0\{B0718D4D-7323-5777-6E60-33BE8B38FF3A}.wem		\Containers\Default Work Unit\RouteToSFXBus\EnemyMixer\GuyMixer\WalkRandom\Walk_01		68020
 	238697150	Walk_04	.cache\27\{27BCE9F5-EBC9-83D2-3ACD-588329D405FF}.wem		\Containers\Default Work Unit\RouteToSFXBus\EnemyMixer\GuyMixer\WalkRandom\Walk_04		53876
@@ -39,8 +45,10 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	738599819	Hurt	.cache\80\{80114EC7-6832-5CA4-B7E8-E66739F1F1D0}.wem		\Containers\Default Work Unit\RouteToSFXBus\EnemyMixer\GuyMixer\Hurt		49100
 	826742836	Click	.cache\A1\{A11A05AB-BCFD-C303-65E4-60D53CCF5822}.wem		\Containers\Default Work Unit\UI\Click		44348
 	865451487	Shoot	.cache\3F\{3F39DC8D-0C0B-DC1C-3631-56E7980AEB3C}.wem		\Containers\Default Work Unit\RouteToSFXBus\TowerMixer\GolemMixer\Shoot		59072
+	875373321	Die	.cache\D9\{D9FA72F1-0AA6-F860-22FB-5464B0D61FC4}.wem		\Containers\Default Work Unit\RouteToSFXBus\TowerMixer\BunnyMixer\Die		296960
 	887464942	Click	.cache\FE\{FE8B806C-DB0C-89C0-39B8-93E4D538A8C5}.wem		\Containers\Default Work Unit\RouteToSFXBus\TowerMixer\Click		79964
 	964520397	Remove	.cache\11\{11AA256F-DEC8-0DD2-3B9A-64F248982645}.wem		\Containers\Default Work Unit\RouteToSFXBus\TowerMixer\Remove		102152
+	969115984	Place	.cache\57\{5736BEE0-1FB3-61F6-2E2F-AFFC642FD56D}.wem		\Containers\Default Work Unit\RouteToSFXBus\TowerMixer\FairyMixer\Place		77020
 	1031884798	Walk_09	.cache\51\{512AF2BB-AD2A-BAD9-37E3-3CD4DC815B10}.wem		\Containers\Default Work Unit\RouteToSFXBus\EnemyMixer\GuyMixer\WalkRandom\Walk_09		95368
 	1039651886	Walk_10	.cache\1A\{1A2A11A7-A72D-619E-56F6-98F0BE73C7E2}.wem		\Containers\Default Work Unit\RouteToSFXBus\EnemyMixer\GuyMixer\WalkRandom\Walk_10		91376
 

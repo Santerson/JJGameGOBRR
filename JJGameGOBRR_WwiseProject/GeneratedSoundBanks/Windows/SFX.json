@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{1B1FEBF3-0FD8-419E-9E0B-3423DC0D482B}",
     "Language": "SFX",
-    "Hash": "{D112295D-A345-CB81-FB09-5CB599F3E3E9}",
+    "Hash": "{DB233A03-FB5B-CA48-F8E6-12405E8E7F41}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\SFX",
     "ShortName": "SFX",
     "Path": "SFX.bnk",
@@ -40,6 +40,14 @@
       "CachePath": "9B/{9B0209DF-993A-224D-A2C1-255BB1D4F6C1}.wem"
      },
      {
+      "Id": "93329577",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "FairyShooty.wav",
+      "CachePath": "82/{82039A64-5AD4-9AC8-7A85-0D98FC4E9FC9}.wem"
+     },
+     {
       "Id": "132091408",
       "Language": "SFX",
       "Streaming": "false",
@@ -54,6 +62,14 @@
       "Location": "Memory",
       "ShortName": "Step-008.wav",
       "CachePath": "C1/{C1155211-6F59-06B2-91D9-C009F5B6107F}.wem"
+     },
+     {
+      "Id": "207834142",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Nothing.wav",
+      "CachePath": "3D/{3D80364F-D7E9-2BC5-EA84-9F867170F42B}.wem"
      },
      {
       "Id": "225219682",
@@ -192,6 +208,14 @@
       "CachePath": "3F/{3F39DC8D-0C0B-DC1C-3631-56E7980AEB3C}.wem"
      },
      {
+      "Id": "875373321",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "BunnyDie.wav",
+      "CachePath": "D9/{D9FA72F1-0AA6-F860-22FB-5464B0D61FC4}.wem"
+     },
+     {
       "Id": "887464942",
       "Language": "SFX",
       "Streaming": "false",
@@ -206,6 +230,14 @@
       "Location": "Memory",
       "ShortName": "TowerRemove.wav",
       "CachePath": "11/{11AA256F-DEC8-0DD2-3B9A-64F248982645}.wem"
+     },
+     {
+      "Id": "969115984",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "fairyPlace.wav",
+      "CachePath": "57/{5736BEE0-1FB3-61F6-2E2F-AFFC642FD56D}.wem"
      },
      {
       "Id": "1031884798",
@@ -340,6 +372,34 @@
       ]
      },
      {
+      "Id": "4237641461",
+      "Name": "Play_Nothing",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Nothing",
+      "GUID": "{CE64BF92-0FD7-4DD9-93EF-967057E588F5}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.4360771",
+      "DurationMax": "0.4360771",
+      "MediaRefs": [
+       {
+        "Id": "207834142"
+       }
+      ]
+     },
+     {
+      "Id": "1340998758",
+      "Name": "Play_TBDie",
+      "ObjectPath": "\\Events\\Default Work Unit\\SoundEffects\\Play_TBDie",
+      "GUID": "{B7F74317-FAC4-44A4-BA29-A0616016DBD1}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.6829025",
+      "DurationMax": "1.6829025",
+      "MediaRefs": [
+       {
+        "Id": "875373321"
+       }
+      ]
+     },
+     {
       "Id": "2269172114",
       "Name": "Play_TClick",
       "ObjectPath": "\\Events\\Default Work Unit\\SoundEffects\\Play_TClick",
@@ -364,6 +424,34 @@
       "MediaRefs": [
        {
         "Id": "36569900"
+       }
+      ]
+     },
+     {
+      "Id": "3949267617",
+      "Name": "Play_TFPlace",
+      "ObjectPath": "\\Events\\Default Work Unit\\SoundEffects\\Play_TFPlace",
+      "GUID": "{D9994493-1943-4B1C-B122-5C190ED8BC0E}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.4360771",
+      "DurationMax": "0.4360771",
+      "MediaRefs": [
+       {
+        "Id": "969115984"
+       }
+      ]
+     },
+     {
+      "Id": "929142997",
+      "Name": "Play_TFShoot",
+      "ObjectPath": "\\Events\\Default Work Unit\\SoundEffects\\Play_TFShoot",
+      "GUID": "{574A5A68-DEDC-4A83-BADC-ABE0686753D6}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.97501135",
+      "DurationMax": "0.97501135",
+      "MediaRefs": [
+       {
+        "Id": "93329577"
        }
       ]
      },
@@ -482,6 +570,6 @@
     ]
    }
   ],
-  "FileHash": "{0EA46673-5B9C-66E1-7DF8-B6C01AE7AF47}"
+  "FileHash": "{87BA3AE9-76A5-4AA4-EFEA-518F753E0231}"
  }
 }

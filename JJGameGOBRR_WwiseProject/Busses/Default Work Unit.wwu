@@ -12,10 +12,15 @@
 					<ChildrenList>
 						<Bus Name="SFX Audio Bus" ID="{30F7FAA6-CB0C-40EA-84A5-3CF437AA2FB5}">
 							<PropertyList>
-								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
 								<Property Name="BusChannelConfig" Type="int32">
 									<ValueList>
 										<Value>768</Value>
+									</ValueList>
+								</Property>
+								<Property Name="CenterPercentage" Type="int32">
+									<ValueList>
+										<Value>76</Value>
 									</ValueList>
 								</Property>
 								<Property Name="ListenerRelativeRouting" Type="bool" Value="True"/>

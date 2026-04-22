@@ -1073,7 +1073,7 @@
 						<Property Name="3DSpatialization" Type="int16" Value="1"/>
 						<Property Name="CenterPercentage" Type="int32">
 							<ValueList>
-								<Value>100</Value>
+								<Value>76</Value>
 							</ValueList>
 						</Property>
 						<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
@@ -1824,6 +1824,28 @@
 												<ActiveSource Name="BunnySpawn2" ID="{D1C8ED0E-3EDB-44A1-96D3-5AFB37E0D884}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
+										<Sound Name="Die" ID="{32892111-9482-4F76-9FF1-8A8FA17BC97E}" ShortID="239229666">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9178FA55-D303-4149-A5D8-ACE42835274F}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84580E68-76CE-4E53-85DC-C1911E9315F6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="BunnyDie" ID="{6D120FD0-B9B5-4CAC-9756-D33DC4528E05}">
+													<Language>SFX</Language>
+													<AudioFile>BunnyDie.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="875373321"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="BunnyDie" ID="{6D120FD0-B9B5-4CAC-9756-D33DC4528E05}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
 									</ChildrenList>
 								</PropertyContainer>
 								<PropertyContainer Name="FairyMixer" ID="{9E126219-2A71-44A2-9C4D-1A1584147BBA}" ShortID="41140270">
@@ -1837,6 +1859,13 @@
 									</ReferenceList>
 									<ChildrenList>
 										<Sound Name="Shoot" ID="{F688D076-7FDD-4FA1-8323-87E64449DDDE}" ShortID="420810900">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>7</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9178FA55-D303-4149-A5D8-ACE42835274F}"/>
@@ -1845,6 +1874,18 @@
 													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84580E68-76CE-4E53-85DC-C1911E9315F6}"/>
 												</Reference>
 											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="FairyShooty" ID="{6390C629-ECFF-4867-844D-8B7981CB255A}">
+													<Language>SFX</Language>
+													<AudioFile>FairyShooty.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="93329577"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="FairyShooty" ID="{6390C629-ECFF-4867-844D-8B7981CB255A}" Platform="Linked"/>
+											</ActiveSourceList>
 										</Sound>
 										<Sound Name="Place" ID="{82B4ABF5-91B9-4E60-B6C5-5A5499DCCBCE}" ShortID="161289363">
 											<ReferenceList>
@@ -1855,6 +1896,18 @@
 													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84580E68-76CE-4E53-85DC-C1911E9315F6}"/>
 												</Reference>
 											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="fairyPlace" ID="{9D27839F-3555-45B1-84D8-CCA328882D58}">
+													<Language>SFX</Language>
+													<AudioFile>fairyPlace.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="969115984"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="fairyPlace" ID="{9D27839F-3555-45B1-84D8-CCA328882D58}" Platform="Linked"/>
+											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
 								</PropertyContainer>
@@ -2000,6 +2053,28 @@
 						</PropertyContainer>
 					</ChildrenList>
 				</PropertyContainer>
+				<Sound Name="Nothing" ID="{0142E37B-DFA4-4B38-8F64-01A662D43EA2}" ShortID="629075228">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9178FA55-D303-4149-A5D8-ACE42835274F}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84580E68-76CE-4E53-85DC-C1911E9315F6}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Nothing" ID="{21939FDF-DB37-4D21-8CCB-CD31B21A8FBA}">
+							<Language>SFX</Language>
+							<AudioFile>Nothing.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="207834142"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Nothing" ID="{21939FDF-DB37-4D21-8CCB-CD31B21A8FBA}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</Containers>

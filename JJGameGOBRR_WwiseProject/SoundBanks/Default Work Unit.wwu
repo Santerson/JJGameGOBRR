@@ -17,15 +17,19 @@
 						<ObjectRef Name="Play_EGHurt" ID="{00619A6E-27F5-4244-8F7B-8A5CBDDFFC5F}" WorkUnitID="{387072C7-A7CF-4480-B8F0-2D62B0219160}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_TMShoot" ID="{B6D1461F-E233-432D-AF0B-E39D3F9D7FD9}" WorkUnitID="{387072C7-A7CF-4480-B8F0-2D62B0219160}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_TClick" ID="{33A62A1B-52EE-440C-8692-B8E22C9461E4}" WorkUnitID="{387072C7-A7CF-4480-B8F0-2D62B0219160}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_TBDie" ID="{B7F74317-FAC4-44A4-BA29-A0616016DBD1}" WorkUnitID="{387072C7-A7CF-4480-B8F0-2D62B0219160}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_EGSpawn" ID="{F651BDAD-7A9D-44AA-AD4E-63FE036E2177}" WorkUnitID="{387072C7-A7CF-4480-B8F0-2D62B0219160}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_UClick" ID="{AA9452D3-5800-4804-A136-1DEB28C68AE8}" WorkUnitID="{387072C7-A7CF-4480-B8F0-2D62B0219160}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_THurt" ID="{0F5C36BE-DBBC-4815-9234-1F8673BDC1D9}" WorkUnitID="{387072C7-A7CF-4480-B8F0-2D62B0219160}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_TRemove" ID="{274B90E1-46B4-4A1F-9125-ED63C01B6DD9}" WorkUnitID="{387072C7-A7CF-4480-B8F0-2D62B0219160}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_TGShoot" ID="{3E2A3678-6C4E-4A4C-BE3E-F2DC66DA12EE}" WorkUnitID="{387072C7-A7CF-4480-B8F0-2D62B0219160}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_TFShoot" ID="{574A5A68-DEDC-4A83-BADC-ABE0686753D6}" WorkUnitID="{387072C7-A7CF-4480-B8F0-2D62B0219160}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_TFPlace" ID="{D9994493-1943-4B1C-B122-5C190ED8BC0E}" WorkUnitID="{387072C7-A7CF-4480-B8F0-2D62B0219160}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_EGDie" ID="{8A12C26B-8B8F-4BD6-8D7F-7A57DF9E3E39}" WorkUnitID="{387072C7-A7CF-4480-B8F0-2D62B0219160}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_TPlace" ID="{50DB0A5A-E1E8-4C16-9396-EDCA8D188111}" WorkUnitID="{387072C7-A7CF-4480-B8F0-2D62B0219160}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_TMPlace" ID="{77B4B554-8521-4CAB-B5E6-4BC564EA4242}" WorkUnitID="{387072C7-A7CF-4480-B8F0-2D62B0219160}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_TDeath" ID="{26656795-D73F-4DCB-915C-1EE27CC8D0F2}" WorkUnitID="{387072C7-A7CF-4480-B8F0-2D62B0219160}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Nothing" ID="{CE64BF92-0FD7-4DD9-93EF-967057E588F5}" WorkUnitID="{387072C7-A7CF-4480-B8F0-2D62B0219160}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_EGVoice" ID="{998513C1-BC0E-4E06-8357-997F0EF4A7CB}" WorkUnitID="{387072C7-A7CF-4480-B8F0-2D62B0219160}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_TGPlace" ID="{D7301991-B4FB-4E9D-AE77-4A5CC238FB77}" WorkUnitID="{387072C7-A7CF-4480-B8F0-2D62B0219160}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
