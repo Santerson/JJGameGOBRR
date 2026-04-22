@@ -9,6 +9,22 @@
 							<ObjectRef Name="System" ID="{5C0B8D95-8EF5-49FB-B310-D701852EC4FD}" WorkUnitID="{BD667F19-FA8E-4522-A10B-C40BA9E848E0}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<Bus Name="SFX Audio Bus" ID="{30F7FAA6-CB0C-40EA-84A5-3CF437AA2FB5}">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="BusChannelConfig" Type="int32">
+									<ValueList>
+										<Value>768</Value>
+									</ValueList>
+								</Property>
+								<Property Name="ListenerRelativeRouting" Type="bool" Value="True"/>
+							</PropertyList>
+							<PositioningInfo>
+								<Position Name="" ID="{654E0AB3-385D-4C55-AA13-94A316E164E4}"/>
+							</PositioningInfo>
+						</Bus>
+					</ChildrenList>
 				</Bus>
 			</ChildrenList>
 		</WorkUnit>

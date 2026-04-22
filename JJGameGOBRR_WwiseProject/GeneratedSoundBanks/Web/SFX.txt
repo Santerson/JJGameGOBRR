@@ -17,30 +17,30 @@ Event	ID	Name			Wwise Object Path	Notes
 	4112018788	Play_TMShoot			\Default Work Unit\SoundEffects\Play_TMShoot	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	2314969	Place	.cache\8F\{8F0F9838-DC6B-A570-14D7-7B9713773AC5}.wem		\Containers\Default Work Unit\TowerMixer\MushMixer\Place		49800
-	19713553	Hurt	.cache\9D\{9D8FC875-2AC7-E7F5-7B3B-7EDBEAEAA0F6}.wem		\Containers\Default Work Unit\TowerMixer\Hurt		109320
-	36569900	Death	.cache\9B\{9B0209DF-993A-224D-A2C1-255BB1D4F6C1}.wem		\Containers\Default Work Unit\TowerMixer\Death		296020
-	132091408	Walk_00	.cache\9F\{9F68CFCD-B24C-68AC-AA2A-957967E54514}.wem		\Containers\Default Work Unit\EnemyMixer\GuyMixer\WalkRandom\Walk_00		61192
-	172143760	Walk_07	.cache\C1\{C1155211-6F59-06B2-91D9-C009F5B6107F}.wem		\Containers\Default Work Unit\EnemyMixer\GuyMixer\WalkRandom\Walk_07		91136
-	225219682	Spawn	.cache\60\{604B6AF6-1CDA-33D4-EFE1-54BD22C71232}.wem		\Containers\Default Work Unit\EnemyMixer\GuyMixer\Spawn		109632
-	235098223	Walk_01	.cache\B0\{B0718D4D-7323-5777-6E60-33BE8B38FF3A}.wem		\Containers\Default Work Unit\EnemyMixer\GuyMixer\WalkRandom\Walk_01		68020
-	238697150	Walk_04	.cache\27\{27BCE9F5-EBC9-83D2-3ACD-588329D405FF}.wem		\Containers\Default Work Unit\EnemyMixer\GuyMixer\WalkRandom\Walk_04		53876
-	243047079	Die	.cache\BD\{BD66DFE2-24E0-13EE-3EDF-0C4C017BD402}.wem		\Containers\Default Work Unit\EnemyMixer\GuyMixer\Die		259288
-	347852687	Voice	.cache\A0\{A07D45CB-6159-190D-E846-C3EC20833FEE}.wem		\Containers\Default Work Unit\EnemyMixer\GuyMixer\Voice		289796
-	362161334	Walk_05	.cache\C2\{C2D3F6AC-C53B-53B6-DD42-C0489F3FCC6C}.wem		\Containers\Default Work Unit\EnemyMixer\GuyMixer\WalkRandom\Walk_05		91200
-	383884461	Walk_03	.cache\D1\{D1A58E5D-C712-E20A-3A0A-275E8E39417B}.wem		\Containers\Default Work Unit\EnemyMixer\GuyMixer\WalkRandom\Walk_03		39988
-	483462771	Walk_08	.cache\0E\{0EE89B24-709A-C7EB-847D-37A7F92E4098}.wem		\Containers\Default Work Unit\EnemyMixer\GuyMixer\WalkRandom\Walk_08		103812
-	503869253	Shoot	.cache\3A\{3A34253B-6903-2C4B-2766-37FB6AC6B82A}.wem		\Containers\Default Work Unit\TowerMixer\MushMixer\Shoot		107712
-	547085646	Attack	.cache\D9\{D9A54542-ED4F-61A7-CF0D-CC8396AA611D}.wem		\Containers\Default Work Unit\EnemyMixer\GuyMixer\Attack		88976
-	553902017	Walk_02	.cache\FC\{FCFBDC7F-B701-1664-FF9F-62E3A7D1BE71}.wem		\Containers\Default Work Unit\EnemyMixer\GuyMixer\WalkRandom\Walk_02		56560
-	593716501	Walk_06	.cache\26\{266428F8-87EC-4B15-E532-532B55156355}.wem		\Containers\Default Work Unit\EnemyMixer\GuyMixer\WalkRandom\Walk_06		83832
-	681854957	Place	.cache\A8\{A8D75D23-5F1B-5FF7-AA52-3FEF5FB43E47}.wem		\Containers\Default Work Unit\TowerMixer\Place		147548
-	736745190	Place	.cache\07\{0782F1F4-AE44-B08C-5DA2-69BAC837489A}.wem		\Containers\Default Work Unit\TowerMixer\GolemMixer\Place		158560
-	738599819	Hurt	.cache\80\{80114EC7-6832-5CA4-B7E8-E66739F1F1D0}.wem		\Containers\Default Work Unit\EnemyMixer\GuyMixer\Hurt		49100
+	2314969	Place	.cache\8F\{8F0F9838-DC6B-A570-14D7-7B9713773AC5}.wem		\Containers\Default Work Unit\RouteToSFXBus\TowerMixer\MushMixer\Place		49800
+	19713553	Hurt	.cache\9D\{9D8FC875-2AC7-E7F5-7B3B-7EDBEAEAA0F6}.wem		\Containers\Default Work Unit\RouteToSFXBus\TowerMixer\Hurt		109320
+	36569900	Death	.cache\9B\{9B0209DF-993A-224D-A2C1-255BB1D4F6C1}.wem		\Containers\Default Work Unit\RouteToSFXBus\TowerMixer\Death		296020
+	132091408	Walk_00	.cache\9F\{9F68CFCD-B24C-68AC-AA2A-957967E54514}.wem		\Containers\Default Work Unit\RouteToSFXBus\EnemyMixer\GuyMixer\WalkRandom\Walk_00		61192
+	172143760	Walk_07	.cache\C1\{C1155211-6F59-06B2-91D9-C009F5B6107F}.wem		\Containers\Default Work Unit\RouteToSFXBus\EnemyMixer\GuyMixer\WalkRandom\Walk_07		91136
+	225219682	Spawn	.cache\60\{604B6AF6-1CDA-33D4-EFE1-54BD22C71232}.wem		\Containers\Default Work Unit\RouteToSFXBus\EnemyMixer\GuyMixer\Spawn		109632
+	235098223	Walk_01	.cache\B0\{B0718D4D-7323-5777-6E60-33BE8B38FF3A}.wem		\Containers\Default Work Unit\RouteToSFXBus\EnemyMixer\GuyMixer\WalkRandom\Walk_01		68020
+	238697150	Walk_04	.cache\27\{27BCE9F5-EBC9-83D2-3ACD-588329D405FF}.wem		\Containers\Default Work Unit\RouteToSFXBus\EnemyMixer\GuyMixer\WalkRandom\Walk_04		53876
+	243047079	Die	.cache\BD\{BD66DFE2-24E0-13EE-3EDF-0C4C017BD402}.wem		\Containers\Default Work Unit\RouteToSFXBus\EnemyMixer\GuyMixer\Die		259288
+	347852687	Voice	.cache\A0\{A07D45CB-6159-190D-E846-C3EC20833FEE}.wem		\Containers\Default Work Unit\RouteToSFXBus\EnemyMixer\GuyMixer\Voice		289796
+	362161334	Walk_05	.cache\C2\{C2D3F6AC-C53B-53B6-DD42-C0489F3FCC6C}.wem		\Containers\Default Work Unit\RouteToSFXBus\EnemyMixer\GuyMixer\WalkRandom\Walk_05		91200
+	383884461	Walk_03	.cache\D1\{D1A58E5D-C712-E20A-3A0A-275E8E39417B}.wem		\Containers\Default Work Unit\RouteToSFXBus\EnemyMixer\GuyMixer\WalkRandom\Walk_03		39988
+	483462771	Walk_08	.cache\0E\{0EE89B24-709A-C7EB-847D-37A7F92E4098}.wem		\Containers\Default Work Unit\RouteToSFXBus\EnemyMixer\GuyMixer\WalkRandom\Walk_08		103812
+	503869253	Shoot	.cache\3A\{3A34253B-6903-2C4B-2766-37FB6AC6B82A}.wem		\Containers\Default Work Unit\RouteToSFXBus\TowerMixer\MushMixer\Shoot		107712
+	547085646	Attack	.cache\D9\{D9A54542-ED4F-61A7-CF0D-CC8396AA611D}.wem		\Containers\Default Work Unit\RouteToSFXBus\EnemyMixer\GuyMixer\Attack		88976
+	553902017	Walk_02	.cache\FC\{FCFBDC7F-B701-1664-FF9F-62E3A7D1BE71}.wem		\Containers\Default Work Unit\RouteToSFXBus\EnemyMixer\GuyMixer\WalkRandom\Walk_02		56560
+	593716501	Walk_06	.cache\26\{266428F8-87EC-4B15-E532-532B55156355}.wem		\Containers\Default Work Unit\RouteToSFXBus\EnemyMixer\GuyMixer\WalkRandom\Walk_06		83832
+	681854957	Place	.cache\A8\{A8D75D23-5F1B-5FF7-AA52-3FEF5FB43E47}.wem		\Containers\Default Work Unit\RouteToSFXBus\TowerMixer\Place		147548
+	736745190	Place	.cache\07\{0782F1F4-AE44-B08C-5DA2-69BAC837489A}.wem		\Containers\Default Work Unit\RouteToSFXBus\TowerMixer\GolemMixer\Place		158560
+	738599819	Hurt	.cache\80\{80114EC7-6832-5CA4-B7E8-E66739F1F1D0}.wem		\Containers\Default Work Unit\RouteToSFXBus\EnemyMixer\GuyMixer\Hurt		49100
 	826742836	Click	.cache\A1\{A11A05AB-BCFD-C303-65E4-60D53CCF5822}.wem		\Containers\Default Work Unit\UI\Click		44348
-	865451487	Shoot	.cache\3F\{3F39DC8D-0C0B-DC1C-3631-56E7980AEB3C}.wem		\Containers\Default Work Unit\TowerMixer\GolemMixer\Shoot		59072
-	887464942	Click	.cache\FE\{FE8B806C-DB0C-89C0-39B8-93E4D538A8C5}.wem		\Containers\Default Work Unit\TowerMixer\Click		79964
-	964520397	Remove	.cache\11\{11AA256F-DEC8-0DD2-3B9A-64F248982645}.wem		\Containers\Default Work Unit\TowerMixer\Remove		102152
-	1031884798	Walk_09	.cache\51\{512AF2BB-AD2A-BAD9-37E3-3CD4DC815B10}.wem		\Containers\Default Work Unit\EnemyMixer\GuyMixer\WalkRandom\Walk_09		95368
-	1039651886	Walk_10	.cache\1A\{1A2A11A7-A72D-619E-56F6-98F0BE73C7E2}.wem		\Containers\Default Work Unit\EnemyMixer\GuyMixer\WalkRandom\Walk_10		91376
+	865451487	Shoot	.cache\3F\{3F39DC8D-0C0B-DC1C-3631-56E7980AEB3C}.wem		\Containers\Default Work Unit\RouteToSFXBus\TowerMixer\GolemMixer\Shoot		59072
+	887464942	Click	.cache\FE\{FE8B806C-DB0C-89C0-39B8-93E4D538A8C5}.wem		\Containers\Default Work Unit\RouteToSFXBus\TowerMixer\Click		79964
+	964520397	Remove	.cache\11\{11AA256F-DEC8-0DD2-3B9A-64F248982645}.wem		\Containers\Default Work Unit\RouteToSFXBus\TowerMixer\Remove		102152
+	1031884798	Walk_09	.cache\51\{512AF2BB-AD2A-BAD9-37E3-3CD4DC815B10}.wem		\Containers\Default Work Unit\RouteToSFXBus\EnemyMixer\GuyMixer\WalkRandom\Walk_09		95368
+	1039651886	Walk_10	.cache\1A\{1A2A11A7-A72D-619E-56F6-98F0BE73C7E2}.wem		\Containers\Default Work Unit\RouteToSFXBus\EnemyMixer\GuyMixer\WalkRandom\Walk_10		91376
 

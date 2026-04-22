@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{C929B1E9-DC16-4373-91E6-3D84251BF915}",
     "Language": "SFX",
-    "Hash": "{CBDC58BA-88BE-6EDB-2477-AC25BB76626B}",
+    "Hash": "{3980A0FC-63A7-D168-51C3-42F37E7F7494}",
     "ObjectPath": "Play_MIncreasing",
     "ShortName": "Play_MIncreasing",
     "Path": "Event/Play_MIncreasing.bnk",
@@ -43,6 +43,6 @@
     ]
    }
   ],
-  "FileHash": "{842E1B55-C034-929D-A01C-67EF81A4495B}"
+  "FileHash": "{EE1274F3-9E11-B347-ECC0-7D98C5629868}"
  }
 }

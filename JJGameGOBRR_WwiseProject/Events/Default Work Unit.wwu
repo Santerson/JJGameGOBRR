@@ -204,6 +204,13 @@
 							</ChildrenList>
 						</Event>
 						<Event Name="Play_EGWalk" ID="{20E31CEF-2FF1-4054-BE91-3B323787DE7D}">
+							<PropertyList>
+								<Property Name="LimitScope" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ChildrenList>
 								<Action Name="" ID="{3AA91198-0F4A-409E-AF64-C0949412FD3C}" ShortID="146294691">
 									<ReferenceList>
