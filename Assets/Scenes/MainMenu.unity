@@ -1661,21 +1661,45 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 4baca3d19b6267448904299325ac32b8, type: 2}
     - target: {fileID: 5812513164392073569, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
+      propertyPath: EnemyDieSFXs.Array.data[0].WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 98c342054e310b94e871c7aab87f217e, type: 2}
+    - target: {fileID: 5812513164392073569, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
+      propertyPath: EnemyDieSFXs.Array.data[1].WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: b81d1aef8c2cb734facc687b0de71ec5, type: 2}
+    - target: {fileID: 5812513164392073569, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
       propertyPath: EnemyHurtSFXs.Array.data[0].WwiseObjectReference
       value: 
       objectReference: {fileID: 11400000, guid: c18b9a992aa87ac4a9688ce58494aaf3, type: 2}
     - target: {fileID: 5812513164392073569, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
       propertyPath: EnemyHurtSFXs.Array.data[1].WwiseObjectReference
       value: 
-      objectReference: {fileID: 11400000, guid: a6f35f4eda3db7549a59297762bf73d5, type: 2}
+      objectReference: {fileID: 11400000, guid: b81d1aef8c2cb734facc687b0de71ec5, type: 2}
     - target: {fileID: 5812513164392073569, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
       propertyPath: TowerDropSFXs.Array.data[3].WwiseObjectReference
       value: 
       objectReference: {fileID: 11400000, guid: aac9fb0b9630c0c42ac4f1ad220229be, type: 2}
     - target: {fileID: 5812513164392073569, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
+      propertyPath: EnemySpawnSFXs.Array.data[0].WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 02058a9b2e7564d49a97a67c1a8e51ba, type: 2}
+    - target: {fileID: 5812513164392073569, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
+      propertyPath: EnemySpawnSFXs.Array.data[1].WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: b81d1aef8c2cb734facc687b0de71ec5, type: 2}
+    - target: {fileID: 5812513164392073569, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
+      propertyPath: EnemyVoiceSFXs.Array.data[1].WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: b81d1aef8c2cb734facc687b0de71ec5, type: 2}
+    - target: {fileID: 5812513164392073569, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
       propertyPath: TowerShootSFXs.Array.data[3].WwiseObjectReference
       value: 
       objectReference: {fileID: 11400000, guid: 19c7b3d85ee0f0643a0c7263f024fdc9, type: 2}
+    - target: {fileID: 5812513164392073569, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
+      propertyPath: EnemyAttackSFXs.Array.data[1].WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: b81d1aef8c2cb734facc687b0de71ec5, type: 2}
     - target: {fileID: 7903793231949837847, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
       propertyPath: m_Name
       value: AudioManager

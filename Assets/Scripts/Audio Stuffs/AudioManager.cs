@@ -206,7 +206,7 @@ public class AudioManager : MonoBehaviour
     public void PlayLoseLevelMusic()
     {
         //AkUnitySoundEngine.PostEvent(LoseLevelSFX.Id, gameObject);
-        AkSoundEngine.SetState("MusicStateGroup", "Lose");
+        AkUnitySoundEngine.SetState("MusicStateGroup", "Lose");
     }
 
     /// <summary>
@@ -214,7 +214,7 @@ public class AudioManager : MonoBehaviour
     /// </summary>
     public void PlayWinLevelMusic()
     {
-        AkSoundEngine.SetState("MusicStateGroup", "Win");
+        AkUnitySoundEngine.SetState("MusicStateGroup", "Win");
     }
 
 #pragma warning disable IDE0060 // Remove unused parameter warnings
@@ -250,7 +250,7 @@ public class AudioManager : MonoBehaviour
     /// </summary>
     public void PlayMenuMusic()
     {
-        AkSoundEngine.SetState("MusicStateGroup", "Title");
+        AkUnitySoundEngine.SetState("MusicStateGroup", "Title");
     }
 
     /// <summary>
@@ -260,6 +260,6 @@ public class AudioManager : MonoBehaviour
     /// </summary>
     public void PlayGameMusic(int waveIntensity)
     {
-        AkSoundEngine.SetState("MusicStateGroup", $"Battle{waveIntensity}");
+        AkUnitySoundEngine.SetState("MusicStateGroup", $"Battle{waveIntensity}");
     }
 }
