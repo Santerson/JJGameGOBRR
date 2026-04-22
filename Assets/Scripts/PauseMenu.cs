@@ -39,5 +39,6 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = (paused ? 0.0f : 1.0f);
         // Enable or disable the pause menu
         pauseMenu.SetActive(paused);
+        RefAudioManager.PlayPauseMusic(paused);
     }
 }

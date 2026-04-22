@@ -77,6 +77,8 @@ public class AudioManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         // Tell WWise MusicStateGroup should exist because it is needed for music to play
         AkUnitySoundEngine.PostEvent("Play_MusicPlaylist", gameObject);
+        AkUnitySoundEngine.PostEvent("Play_MMusicPlaylistPlaying", gameObject);
+        AkUnitySoundEngine.PostEvent("Play_MMusicPlaylistPaused", gameObject);
         // Plays the main menu music if it is not playing
         if (PlayMainMenu && !HasStartedMenuMusic)
         {
@@ -261,5 +263,20 @@ public class AudioManager : MonoBehaviour
     public void PlayGameMusic(int waveIntensity)
     {
         AkUnitySoundEngine.SetState("MusicStateGroup", $"Battle{waveIntensity}");
+    }
+
+    /// <summary>
+    /// Plays or pauses the sound muffling when the game is paused
+    /// </summary>
+    /// <param name="paused">True if the game is NOT paused, false if it is being paused</param>
+    public void PlayPauseMusic(bool paused)
+    {
+        if (paused)
+            // Muffle music
+            AkUnitySoundEngine.SetState("PauseOrPlay", "Pause");
+        else
+            // Unmuffle music
+            AkUnitySoundEngine.SetState("PauseOrPlay", "Play");
+
     }
 }
