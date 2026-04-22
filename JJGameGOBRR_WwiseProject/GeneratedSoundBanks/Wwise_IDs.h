@@ -18,6 +18,7 @@ namespace AK
         static const AkUniqueID PLAY_EGHURT = 282744853U;
         static const AkUniqueID PLAY_EGSPAWN = 3350535243U;
         static const AkUniqueID PLAY_EGVOICE = 1314935524U;
+        static const AkUniqueID PLAY_EGWALK = 2567734897U;
         static const AkUniqueID PLAY_MDECREASING = 2591182578U;
         static const AkUniqueID PLAY_MINCREASING = 353692838U;
         static const AkUniqueID PLAY_MUSICPLAYLIST = 2585924577U;

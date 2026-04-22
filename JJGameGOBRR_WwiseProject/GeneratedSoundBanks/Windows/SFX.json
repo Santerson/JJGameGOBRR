@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{1B1FEBF3-0FD8-419E-9E0B-3423DC0D482B}",
     "Language": "SFX",
-    "Hash": "{27B9385F-92A6-F9B8-72D6-BE5845827505}",
+    "Hash": "{CA5481CA-789B-654F-F4B5-A59956BC5797}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\SFX",
     "ShortName": "SFX",
     "Path": "SFX.bnk",
@@ -40,12 +40,44 @@
       "CachePath": "9B/{9B0209DF-993A-224D-A2C1-255BB1D4F6C1}.wem"
      },
      {
+      "Id": "132091408",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Step-001.wav",
+      "CachePath": "9F/{9F68CFCD-B24C-68AC-AA2A-957967E54514}.wem"
+     },
+     {
+      "Id": "172143760",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Step-008.wav",
+      "CachePath": "C1/{C1155211-6F59-06B2-91D9-C009F5B6107F}.wem"
+     },
+     {
       "Id": "225219682",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "GuySpawnm.wav",
       "CachePath": "60/{604B6AF6-1CDA-33D4-EFE1-54BD22C71232}.wem"
+     },
+     {
+      "Id": "235098223",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Step-002.wav",
+      "CachePath": "B0/{B0718D4D-7323-5777-6E60-33BE8B38FF3A}.wem"
+     },
+     {
+      "Id": "238697150",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Step-005.wav",
+      "CachePath": "27/{27BCE9F5-EBC9-83D2-3ACD-588329D405FF}.wem"
      },
      {
       "Id": "243047079",
@@ -64,6 +96,30 @@
       "CachePath": "A0/{A07D45CB-6159-190D-E846-C3EC20833FEE}.wem"
      },
      {
+      "Id": "362161334",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Step-006.wav",
+      "CachePath": "C2/{C2D3F6AC-C53B-53B6-DD42-C0489F3FCC6C}.wem"
+     },
+     {
+      "Id": "383884461",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Step-004.wav",
+      "CachePath": "D1/{D1A58E5D-C712-E20A-3A0A-275E8E39417B}.wem"
+     },
+     {
+      "Id": "483462771",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Step-009.wav",
+      "CachePath": "0E/{0EE89B24-709A-C7EB-847D-37A7F92E4098}.wem"
+     },
+     {
       "Id": "503869253",
       "Language": "SFX",
       "Streaming": "false",
@@ -78,6 +134,22 @@
       "Location": "Memory",
       "ShortName": "Guy_Attack.wav",
       "CachePath": "D9/{D9A54542-ED4F-61A7-CF0D-CC8396AA611D}.wem"
+     },
+     {
+      "Id": "553902017",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Step-003.wav",
+      "CachePath": "FC/{FCFBDC7F-B701-1664-FF9F-62E3A7D1BE71}.wem"
+     },
+     {
+      "Id": "593716501",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Step-007.wav",
+      "CachePath": "26/{266428F8-87EC-4B15-E532-532B55156355}.wem"
      },
      {
       "Id": "681854957",
@@ -134,6 +206,22 @@
       "Location": "Memory",
       "ShortName": "TowerRemove.wav",
       "CachePath": "11/{11AA256F-DEC8-0DD2-3B9A-64F248982645}.wem"
+     },
+     {
+      "Id": "1031884798",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Step-010.wav",
+      "CachePath": "51/{512AF2BB-AD2A-BAD9-37E3-3CD4DC815B10}.wem"
+     },
+     {
+      "Id": "1039651886",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Step-011.wav",
+      "CachePath": "1A/{1A2A11A7-A72D-619E-56F6-98F0BE73C7E2}.wem"
      }
     ],
     "Events": [
@@ -204,6 +292,50 @@
       "MediaRefs": [
        {
         "Id": "347852687"
+       }
+      ]
+     },
+     {
+      "Id": "2567734897",
+      "Name": "Play_EGWalk",
+      "ObjectPath": "\\Events\\Default Work Unit\\SoundEffects\\Play_EGWalk",
+      "GUID": "{20E31CEF-2FF1-4054-BE91-3B323787DE7D}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.22614512",
+      "DurationMax": "0.5879592",
+      "MediaRefs": [
+       {
+        "Id": "132091408"
+       },
+       {
+        "Id": "172143760"
+       },
+       {
+        "Id": "235098223"
+       },
+       {
+        "Id": "238697150"
+       },
+       {
+        "Id": "362161334"
+       },
+       {
+        "Id": "383884461"
+       },
+       {
+        "Id": "483462771"
+       },
+       {
+        "Id": "553902017"
+       },
+       {
+        "Id": "593716501"
+       },
+       {
+        "Id": "1031884798"
+       },
+       {
+        "Id": "1039651886"
        }
       ]
      },
@@ -350,6 +482,6 @@
     ]
    }
   ],
-  "FileHash": "{96E3F273-A6B5-09A1-02E4-462DFA2A6675}"
+  "FileHash": "{7261ECA6-9209-3D54-82AC-90D46ACCD51D}"
  }
 }

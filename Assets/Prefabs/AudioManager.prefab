@@ -115,7 +115,7 @@ MonoBehaviour:
     WwiseObjectReference: {fileID: 11400000, guid: 29da9eba11ff69d4dbabd74d0ebaf399, type: 2}
   - idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: a6f35f4eda3db7549a59297762bf73d5, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 2abbabee60e74b94eb121b515908ef6b, type: 2}
   - idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: a6f35f4eda3db7549a59297762bf73d5, type: 2}
@@ -184,7 +184,7 @@ MonoBehaviour:
   EnemyWalkSFXs:
   - idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: a6f35f4eda3db7549a59297762bf73d5, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 7503bc721bea5a74f8226658e944347c, type: 2}
   - idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: a6f35f4eda3db7549a59297762bf73d5, type: 2}

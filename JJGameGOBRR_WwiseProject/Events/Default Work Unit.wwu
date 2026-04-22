@@ -192,6 +192,28 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_TMPlace" ID="{77B4B554-8521-4CAB-B5E6-4BC564EA4242}">
+							<ChildrenList>
+								<Action Name="" ID="{A60F66B8-9C77-4490-BC2D-F84D6CF85194}" ShortID="614262081">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Place" ID="{DBE3E0F7-374F-429A-B5B0-F0D39ACBD903}" WorkUnitID="{C9DDC0B8-4122-402E-850F-253503C47F0F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_EGWalk" ID="{20E31CEF-2FF1-4054-BE91-3B323787DE7D}">
+							<ChildrenList>
+								<Action Name="" ID="{3AA91198-0F4A-409E-AF64-C0949412FD3C}" ShortID="146294691">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="WalkRandom" ID="{9CC38724-F99A-4B3F-9FD6-8694AD8E043A}" WorkUnitID="{C9DDC0B8-4122-402E-850F-253503C47F0F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="MusicThings" ID="{09F339EE-521F-45D9-BA4D-86CA6D483AA9}" ShortID="825185757">
@@ -209,17 +231,6 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
-				<Event Name="Play_TMPlace" ID="{77B4B554-8521-4CAB-B5E6-4BC564EA4242}">
-					<ChildrenList>
-						<Action Name="" ID="{A60F66B8-9C77-4490-BC2D-F84D6CF85194}" ShortID="614262081">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Place" ID="{DBE3E0F7-374F-429A-B5B0-F0D39ACBD903}" WorkUnitID="{C9DDC0B8-4122-402E-850F-253503C47F0F}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
