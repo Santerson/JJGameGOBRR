@@ -163,6 +163,8 @@ public class TowerAi : MonoBehaviour
     /// </summary>
     private void OnMouseOver()
     {
+        if (Time.timeScale == 0)
+            return;
         if (Input.GetMouseButtonDown(1) && canBeSold)
         {
             Instantiate(particlsRemove, gameObject.transform.position, Quaternion.identity);
