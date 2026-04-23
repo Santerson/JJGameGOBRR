@@ -1672,28 +1672,32 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5161085203479588299, guid: a1d4d8b83f75d0042b0b3e85fb1203de, type: 3}
+      propertyPath: EndBarGradient.ctime0
+      value: 38010
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161085203479588299, guid: a1d4d8b83f75d0042b0b3e85fb1203de, type: 3}
       propertyPath: EndBarGradient.key0.b
-      value: 0
+      value: 0.4666667
       objectReference: {fileID: 0}
     - target: {fileID: 5161085203479588299, guid: a1d4d8b83f75d0042b0b3e85fb1203de, type: 3}
       propertyPath: EndBarGradient.key0.g
-      value: 0.99722207
+      value: 0.9725491
       objectReference: {fileID: 0}
     - target: {fileID: 5161085203479588299, guid: a1d4d8b83f75d0042b0b3e85fb1203de, type: 3}
       propertyPath: EndBarGradient.key0.r
-      value: 1
+      value: 0.9803922
       objectReference: {fileID: 0}
     - target: {fileID: 5161085203479588299, guid: a1d4d8b83f75d0042b0b3e85fb1203de, type: 3}
       propertyPath: EndBarGradient.key1.b
-      value: 0
+      value: 0.74509805
       objectReference: {fileID: 0}
     - target: {fileID: 5161085203479588299, guid: a1d4d8b83f75d0042b0b3e85fb1203de, type: 3}
       propertyPath: EndBarGradient.key1.g
-      value: 0.54901963
+      value: 0.909804
       objectReference: {fileID: 0}
     - target: {fileID: 5161085203479588299, guid: a1d4d8b83f75d0042b0b3e85fb1203de, type: 3}
       propertyPath: EndBarGradient.key1.r
-      value: 0.54476726
+      value: 0.9725491
       objectReference: {fileID: 0}
     - target: {fileID: 5161085203479588299, guid: a1d4d8b83f75d0042b0b3e85fb1203de, type: 3}
       propertyPath: StartBarGradient.key0.b
@@ -4208,6 +4212,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2278994216011503676, guid: 22927ea945a9bce46a8cbb09c532b58d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3459731652145170741, guid: 22927ea945a9bce46a8cbb09c532b58d, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
