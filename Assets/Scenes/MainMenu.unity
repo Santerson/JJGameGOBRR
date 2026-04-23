@@ -1641,6 +1641,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: e8996b53713a86143947fd10593120ac, type: 2}
     - target: {fileID: 5812513164392073569, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
+      propertyPath: TowerFailPlace.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: ddf9560d5bec1064b90495bf79b8e155, type: 2}
+    - target: {fileID: 5812513164392073569, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
       propertyPath: TowerGenericDrop.WwiseObjectReference
       value: 
       objectReference: {fileID: 11400000, guid: 9e512db37a24b1b479ebe0b857040d53, type: 2}
