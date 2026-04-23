@@ -50,7 +50,7 @@ public class TutorialManager : MonoBehaviour
     [SerializeField] GameObject tutorial13_2;
 
     SpawnerEnemy refEnemySpawner;
-    static bool tutorialOccured = false;
+    public static bool tutorialOccured = false;
 
     public bool IsTutorialing { get; private set; } = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
