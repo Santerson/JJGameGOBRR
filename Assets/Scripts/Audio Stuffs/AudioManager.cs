@@ -26,6 +26,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AK.Wwise.Event TowerGenericClick;
     [SerializeField] AK.Wwise.Event TowerGenericHurt;
     [SerializeField] AK.Wwise.Event TowerGenericRemove;
+    [SerializeField] AK.Wwise.Event TowerFailPlace; 
 
     [Header("Enemies")]
     [SerializeField] List<AK.Wwise.Event> EnemyWalkSFXs;
@@ -285,5 +286,14 @@ public class AudioManager : MonoBehaviour
             AkUnitySoundEngine.SetState("MuffledOrUnmuffled", "Unmuffled");
             // Debug.Log("Unmuffled");
         }
+    }
+
+    /// <summary>
+    /// Plays the sfx for failing to place a tower
+    /// </summary>
+    /// <param name="spawnLocation">The location of the sfx to place</param>
+    public void PlayTowerFailPlacementSFX(GameObject spawnLocation)
+    {
+        AkUnitySoundEngine.PostEvent(TowerFailPlace.Id, spawnLocation);
     }
 }

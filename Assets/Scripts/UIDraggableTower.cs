@@ -206,12 +206,20 @@ public class UIDraggableTower : MonoBehaviour
                 if (placed)
                 {
                     // Reset the tower's cooldown
-                    timeToNextTowerPlacement = towerCooldown;   
+                    timeToNextTowerPlacement = towerCooldown;
                 }
+                else
+                    RefAudioManager?.PlayTowerFailPlacementSFX(gameObject);
             }
+            else
+                RefAudioManager?.PlayTowerFailPlacementSFX(gameObject);
             // Update stuff for the towergrid
             Destroy(TowerShadow);
             TowerShadowPosition = new Vector2Int(-1, -1);
+        }
+        else
+        {
+            RefAudioManager?.PlayTowerFailPlacementSFX(gameObject);
         }
         // Stop following the mouse
         followingMouse = false;

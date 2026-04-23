@@ -55,7 +55,8 @@ public class TowerGrid : MonoBehaviour
         [SerializeField] bool DrawGridInGame = false;
         [SerializeField] bool AlwaysDrawGrid = false;
         [SerializeField] GameObject RefTower1;
-    
+
+    AudioManager refAudioManager;
     // An array of the SpaceStatus enum to contain the status of each space
     public SpaceStatus[,] SpaceStatuses { get; private set; }
     /// <summary>
@@ -111,6 +112,7 @@ public class TowerGrid : MonoBehaviour
         SpaceStatuses = new SpaceStatus[GridLength, GridHeight];
         TowersInSpots = new GameObject[GridLength, GridHeight];
         SpacePositions = new Vector2[GridLength, GridHeight];
+        refAudioManager = FindFirstObjectByType<AudioManager>();
 
         // Fill the space positions in the grid
         for (int x = 0; x < GridLength; x++)
@@ -197,6 +199,7 @@ public class TowerGrid : MonoBehaviour
         }
         // otherwise, return false
         if (EnableLogs) Debug.Log($"Failed to place a tower at {position.x}, {position.y}.");
+        refAudioManager?.PlayTowerFailPlacementSFX(gameObject);
         return false;
     }
 
