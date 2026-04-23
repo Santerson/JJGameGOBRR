@@ -199,7 +199,6 @@ public class TowerGrid : MonoBehaviour
         }
         // otherwise, return false
         if (EnableLogs) Debug.Log($"Failed to place a tower at {position.x}, {position.y}.");
-        refAudioManager?.PlayTowerFailPlacementSFX(gameObject);
         return false;
     }
 
