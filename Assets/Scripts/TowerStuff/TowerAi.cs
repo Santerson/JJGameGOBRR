@@ -40,6 +40,7 @@ public class TowerAi : MonoBehaviour
     [HideInInspector] public Vector2Int GridPosition = Vector2Int.zero;
 
     public bool canBeSold = true;
+    public bool canBeQuickMoved = true;
 
     // List of animatons
     enum Animatons
@@ -171,7 +172,7 @@ public class TowerAi : MonoBehaviour
             refAudioManager?.PlayTowerSellSFX(gameObject, TowerID);
             Die();
         }
-        else if (Input.GetMouseButtonDown(0) && canBeSold && TowerID != AudioManager.Towers.bunny)
+        else if (Input.GetMouseButtonDown(0) && canBeSold && canBeQuickMoved && TowerID != AudioManager.Towers.bunny)
         {
             Instantiate(particlsRemove, gameObject.transform.position, Quaternion.identity);
             refAudioManager?.PlayTowerSellSFX(gameObject, TowerID);

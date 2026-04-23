@@ -271,6 +271,7 @@ public class TutorialManager : MonoBehaviour
             if (tower.TowerID == AudioManager.Towers.mushman)
             {
                 tower.canBeSold = true;
+                tower.canBeQuickMoved = false;
             }
         }
         tutorial12.SetActive(true);
@@ -326,6 +327,11 @@ public class TutorialManager : MonoBehaviour
                 bunnyPortrait = towerProfile;
                 break;
             }
+        }
+        towers = FindObjectsByType<TowerAi>(FindObjectsSortMode.None);
+        foreach (TowerAi tower in towers)
+        {
+            tower.canBeSold = false;
         }
         tutorial14.SetActive(false);
         tutorial15.SetActive(true);
