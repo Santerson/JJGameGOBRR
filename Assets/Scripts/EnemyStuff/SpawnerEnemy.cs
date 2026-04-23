@@ -34,6 +34,8 @@ public class SpawnerEnemy : MonoBehaviour
     bool allMobsInWaveSpawned = false;
     bool EndOfGameCheckedThisWave = false;
 
+    float EmergencyWaveEnd = 25f;
+
     /// <summary>
     /// A struct containing data for spawning enemies
     /// </summary>
@@ -96,11 +98,15 @@ public class SpawnerEnemy : MonoBehaviour
         // Otherwise, check if all lanes are empty
         else
         {
-            if (refLaneCheck.Lane0 == 0 && refLaneCheck.Lane1 == 0 && refLaneCheck.Lane2 == 0)
+            // Failsafe, increase time gap after wave end
+            EmergencyWaveEnd -= Time.deltaTime;
+            if ((refLaneCheck.Lane0 == 0 && refLaneCheck.Lane1 == 0 && refLaneCheck.Lane2 == 0) || EmergencyWaveEnd <= 0)
             {
                 // Restart the cooldown
                 allMobsInWaveSpawned = false;
                 EndOfGameCheckedThisWave = false;
+                if (EmergencyWaveEnd <= 0) Debug.LogError("GAME SOFTLOCKED, PROGRESSING VIA EMERGENCY FAIL SAFE! THIS IS A PROBLEM");
+                EmergencyWaveEnd = 25f;
             }
         }
         // Update stage text
