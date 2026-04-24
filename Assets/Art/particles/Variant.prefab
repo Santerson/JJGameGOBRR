@@ -81,6 +81,10 @@ PrefabInstance:
       value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 3244115918783990471, guid: 00c4fa796eb37854d898c375b76c6df6, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 2.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 3244115918783990471, guid: 00c4fa796eb37854d898c375b76c6df6, type: 3}
       propertyPath: ShapeModule.donutRadius
       value: 0.0001
       objectReference: {fileID: 0}
