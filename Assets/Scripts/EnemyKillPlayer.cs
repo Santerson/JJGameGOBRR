@@ -17,8 +17,10 @@ public class EnemyKillPlayer : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        // If an enemy is hitting the collider
         if (collision.CompareTag("Enemy"))
         {
+            // Lose the game
             refAudioManager?.PlayMenuMusic();
             refAudioManager?.PlayLoseLevelMusic();
             UnityEngine.SceneManagement.SceneManager.LoadScene("SkillIssue");
