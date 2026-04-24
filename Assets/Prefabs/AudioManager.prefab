@@ -181,6 +181,10 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: ddf9560d5bec1064b90495bf79b8e155, type: 2}
+  TowerFailPlace:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: b81d1aef8c2cb734facc687b0de71ec5, type: 2}
   EnemyWalkSFXs:
   - idInternal: 0
     valueGuidInternal: 
@@ -222,7 +226,7 @@ MonoBehaviour:
     WwiseObjectReference: {fileID: 11400000, guid: 79ded2c8e634ba94c9e3fb0db696f23c, type: 2}
   - idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: a6f35f4eda3db7549a59297762bf73d5, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 79ded2c8e634ba94c9e3fb0db696f23c, type: 2}
   LoseLevelSFX:
     idInternal: 0
     valueGuidInternal: 

@@ -2495,6 +2495,19 @@
 									</ReferenceList>
 									<ChildrenList>
 										<Sound Name="Attack" ID="{D4E0AB75-2BBD-44BB-9544-F7E7102EE8B2}" ShortID="884910764">
+											<Comment>testing how wwise works</Comment>
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>1000</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>9</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9178FA55-D303-4149-A5D8-ACE42835274F}"/>
@@ -2503,6 +2516,18 @@
 													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84580E68-76CE-4E53-85DC-C1911E9315F6}"/>
 												</Reference>
 											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GuyVoice" ID="{192FE56C-D8D2-447F-BC29-4DB531DACD1D}">
+													<Language>SFX</Language>
+													<AudioFile>GuyVoice.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="347852687"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GuyVoice" ID="{192FE56C-D8D2-447F-BC29-4DB531DACD1D}" Platform="Linked"/>
+											</ActiveSourceList>
 										</Sound>
 										<Sound Name="Die" ID="{065E3807-EA14-4E7D-93C5-D57D6282E44F}" ShortID="570504390">
 											<ReferenceList>
@@ -2655,6 +2680,21 @@
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="Hurt" ID="{EC511FA5-4F6F-463A-8268-F6F19587D3D1}" ShortID="309035901">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{A0455155-388B-4203-A989-5BCBE2551E17}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="600"/>
+																	<Property Name="Min" Type="Real64" Value="-500"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9178FA55-D303-4149-A5D8-ACE42835274F}"/>
@@ -3054,6 +3094,42 @@
 																	<Point>
 																		<XPos>10.15284</XPos>
 																		<YPos>0</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>30</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+											<RTPC Name="" ID="{7DD3FC44-1A5B-4AEE-9086-5CB3A8BE42A1}" ShortID="694045775">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Pitch"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="curMana" ID="{D3891064-1AFB-4042-A0CC-97B00B1F828E}" WorkUnitID="{B96D6C72-6655-47FA-9070-9042865D2A23}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{EC9E6FDC-9769-4E45-8F53-F1971B6CF65F}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="65537"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-2585</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>9.9359</XPos>
+																		<YPos>49</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
