@@ -233,7 +233,7 @@
 														<Property Name="DestinationContextType" Type="int16" Value="2"/>
 														<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
 														<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
-														<Property Name="ExitSourceAt" Type="int16" Value="3"/>
+														<Property Name="ExitSourceAt" Type="int16" Value="0"/>
 														<Property Name="PlayDestinationPreEntry" Type="bool" Value="False"/>
 														<Property Name="PlaySourcePostExit" Type="bool" Value="False"/>
 													</PropertyList>
@@ -265,7 +265,7 @@
 														<Property Name="DestinationContextType" Type="int16" Value="2"/>
 														<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
 														<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
-														<Property Name="ExitSourceAt" Type="int16" Value="3"/>
+														<Property Name="ExitSourceAt" Type="int16" Value="0"/>
 														<Property Name="PlayDestinationPreEntry" Type="bool" Value="False"/>
 														<Property Name="PlaySourcePostExit" Type="bool" Value="False"/>
 													</PropertyList>
@@ -1340,7 +1340,7 @@
 														<Property Name="DestinationContextType" Type="int16" Value="2"/>
 														<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
 														<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
-														<Property Name="ExitSourceAt" Type="int16" Value="3"/>
+														<Property Name="ExitSourceAt" Type="int16" Value="0"/>
 														<Property Name="PlayDestinationPreEntry" Type="bool" Value="False"/>
 														<Property Name="PlaySourcePostExit" Type="bool" Value="False"/>
 													</PropertyList>
@@ -1372,7 +1372,7 @@
 														<Property Name="DestinationContextType" Type="int16" Value="2"/>
 														<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
 														<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
-														<Property Name="ExitSourceAt" Type="int16" Value="3"/>
+														<Property Name="ExitSourceAt" Type="int16" Value="0"/>
 														<Property Name="PlayDestinationPreEntry" Type="bool" Value="False"/>
 														<Property Name="PlaySourcePostExit" Type="bool" Value="False"/>
 													</PropertyList>
