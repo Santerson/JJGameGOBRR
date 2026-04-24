@@ -1,5 +1,5 @@
 /**********************************************
- * Filename: SpawnerEnemy
+ * Filename: SpawnerEnemy.cs
  * Author: Micaiah Mariano, Santiago Caprarulo
  * Description: Handles all enemy spawn logic
  * *******************************************/

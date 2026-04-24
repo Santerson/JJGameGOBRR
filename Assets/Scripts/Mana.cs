@@ -1,8 +1,15 @@
+/**********************************************
+ * Filename: Mana.cs
+ * Author: Santiago Caprarulo
+ * Description: Handles all mana logic
+ * *******************************************/
+
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.Rendering;
+
 
 public class Mana : MonoBehaviour
 {
