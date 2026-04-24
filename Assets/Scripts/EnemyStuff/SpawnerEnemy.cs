@@ -67,6 +67,7 @@ public class SpawnerEnemy : MonoBehaviour
     void Start()
     {
         refLaneCheck = FindAnyObjectByType<LaneCheck>();
+        stageText.text = $"{stage: 0} / {EnemyNodes.Count + stage}";
     }
 
     // Update is called once per frame
@@ -86,7 +87,7 @@ public class SpawnerEnemy : MonoBehaviour
                 {
                     // Increase the wave count
                     stage++;
-                    stageText.text = $"{stage}";
+                    stageText.text = $"{stage: 0} / {EnemyNodes.Count + stage - 1}";
                     if (!CheckIfGameWin()) // CheckIfGameWin will change scenes if the game is won
                         EndOfGameCheckedThisWave = true;
                     else
@@ -110,7 +111,6 @@ public class SpawnerEnemy : MonoBehaviour
             }
         }
         // Update stage text
-        stageText.text = $"{stage : 0}";
     }
 
     /// <summary>
