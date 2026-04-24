@@ -7,10 +7,23 @@ using UnityEngine;
 
 public class LaneCheck : MonoBehaviour
 {
+    /// <summary>
+    /// Enemies in lane 0
+    /// </summary>
     public int Lane0 { get; private set; }
+    /// <summary>
+    /// Enemies in lane 1
+    /// </summary>
     public int Lane1 { get; private set; }
+    /// <summary>
+    /// Enemies in lane 2
+    /// </summary>
     public int Lane2 { get; private set; }
     
+    /// <summary>
+    /// Increase the amount of enemies in a lane
+    /// </summary>
+    /// <param name="lane">The lane number</param>
     public void Laneincress(int lane)
     {
         if (lane == 0)
@@ -26,7 +39,12 @@ public class LaneCheck : MonoBehaviour
             Lane2++;
         }
     }
-        public void Lanedecreesss(int lane)
+
+    /// <summary>
+    /// Decreases the amount of enemies in a lane
+    /// </summary>
+    /// <param name="lane">the lane number</param>
+    public void Lanedecreesss(int lane)
     {
         if (lane == 0)
         {
