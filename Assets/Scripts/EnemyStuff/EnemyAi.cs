@@ -51,8 +51,6 @@ public class EnemyAi : MonoBehaviour
     {
         walk,
         attack,
-        die,
-        idale
     }
     void Start()
     {
@@ -102,7 +100,7 @@ public class EnemyAi : MonoBehaviour
             RB.linearVelocityX = MaxSpeed;
             MaxSpeed = Speed;
         }
-        // animator.SetInteger("State", (int)animatons.walk);
+        animator.SetInteger("State", (int)animations.walk);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -137,7 +135,7 @@ public class EnemyAi : MonoBehaviour
             // starts to play animaton befor the tower shoots
             if (coolDownAttack <= LengthOfAnimaton)
             {
-                // animator.SetInteger("State", (int)animatons.attack);
+                animator.SetInteger("State", (int)animations.attack);
             }
             // shoots a bullet when cooldown is ready
             if (coolDownAttack <= 0)
@@ -150,7 +148,7 @@ public class EnemyAi : MonoBehaviour
             // plays idale 
             else
             {
-                // animator.SetInteger("State", (int)animatons.idale);
+                
                 MaxSpeed = 0;
             }
         }

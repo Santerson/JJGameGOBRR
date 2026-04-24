@@ -48,6 +48,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BuffGuy
       objectReference: {fileID: 0}
+    - target: {fileID: 5921527740426608879, guid: 7dd82a7487d558b4ea1bd8c48c4c36b6, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: c0af647bb14bda549bb09a9170fa1abd, type: 2}
     - target: {fileID: 8739190997981608907, guid: 7dd82a7487d558b4ea1bd8c48c4c36b6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
