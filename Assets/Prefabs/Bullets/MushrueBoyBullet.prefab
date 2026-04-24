@@ -12,6 +12,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: MushrueBoyBullet
       objectReference: {fileID: 0}
+    - target: {fileID: 4051352940268235715, guid: 71f4225f6a5e1d84fa90782979b0c8cb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6126433984668541479, guid: 8510d25e3a55134419df4c85e6083085, type: 3}
+    - target: {fileID: 4924771341496144442, guid: 71f4225f6a5e1d84fa90782979b0c8cb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7472844607871682638, guid: 71f4225f6a5e1d84fa90782979b0c8cb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -83,5 +91,25 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5811714018859011021, guid: 71f4225f6a5e1d84fa90782979b0c8cb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7780556152626249584}
   m_SourcePrefab: {fileID: 100100000, guid: 71f4225f6a5e1d84fa90782979b0c8cb, type: 3}
+--- !u!1 &7149042682771019560 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5811714018859011021, guid: 71f4225f6a5e1d84fa90782979b0c8cb, type: 3}
+  m_PrefabInstance: {fileID: 3715992419772390629}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7780556152626249584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7149042682771019560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0dfbb23524173c4bb8944667a3406eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
