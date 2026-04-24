@@ -228,6 +228,70 @@
 														</DestinationFadeIn>
 													</TransitionInfo>
 												</MusicTransition>
+												<MusicTransition Name="Transition" ID="{5199F849-EA21-4F6F-8A39-E3ADDFD9B6F7}">
+													<PropertyList>
+														<Property Name="DestinationContextType" Type="int16" Value="2"/>
+														<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
+														<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
+														<Property Name="ExitSourceAt" Type="int16" Value="3"/>
+														<Property Name="PlayDestinationPreEntry" Type="bool" Value="False"/>
+														<Property Name="PlaySourcePostExit" Type="bool" Value="False"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="DestinationContextObject">
+															<ObjectRef Name="Win" ID="{064D2B0F-616A-4494-8E8C-27E5BDA062E9}" WorkUnitID="{C9DDC0B8-4122-402E-850F-253503C47F0F}"/>
+														</Reference>
+													</ReferenceList>
+													<TransitionInfo>
+														<SourceFadeOut>
+															<MusicFade Name="Source Fade-out" ID="{7CA0A3EB-9947-4E66-8683-C08A74A42CF4}">
+																<PropertyList>
+																	<Property Name="FadeTime" Type="Real64" Value="0.4"/>
+																	<Property Name="FadeType" Type="int16" Value="1"/>
+																</PropertyList>
+															</MusicFade>
+														</SourceFadeOut>
+														<DestinationFadeIn>
+															<MusicFade Name="Destination Fade-in" ID="{AF3C2A44-6D36-450F-A5E0-0966DB39A58A}">
+																<PropertyList>
+																	<Property Name="FadeTime" Type="Real64" Value="0.4"/>
+																</PropertyList>
+															</MusicFade>
+														</DestinationFadeIn>
+													</TransitionInfo>
+												</MusicTransition>
+												<MusicTransition Name="Transition" ID="{B63F684F-B777-46D5-8697-7BE45B541366}">
+													<PropertyList>
+														<Property Name="DestinationContextType" Type="int16" Value="2"/>
+														<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
+														<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
+														<Property Name="ExitSourceAt" Type="int16" Value="3"/>
+														<Property Name="PlayDestinationPreEntry" Type="bool" Value="False"/>
+														<Property Name="PlaySourcePostExit" Type="bool" Value="False"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="DestinationContextObject">
+															<ObjectRef Name="Lose" ID="{BDCE0C4A-AA98-47E8-956A-968B18CEAF41}" WorkUnitID="{C9DDC0B8-4122-402E-850F-253503C47F0F}"/>
+														</Reference>
+													</ReferenceList>
+													<TransitionInfo>
+														<SourceFadeOut>
+															<MusicFade Name="Source Fade-out" ID="{01EF85B3-7C8E-4D1A-8C17-D2445EED5237}">
+																<PropertyList>
+																	<Property Name="FadeTime" Type="Real64" Value="0.4"/>
+																	<Property Name="FadeType" Type="int16" Value="1"/>
+																</PropertyList>
+															</MusicFade>
+														</SourceFadeOut>
+														<DestinationFadeIn>
+															<MusicFade Name="Destination Fade-in" ID="{F6F5DB39-F9D8-49F6-A093-D01348163610}">
+																<PropertyList>
+																	<Property Name="FadeTime" Type="Real64" Value="0.4"/>
+																</PropertyList>
+															</MusicFade>
+														</DestinationFadeIn>
+													</TransitionInfo>
+												</MusicTransition>
 											</ChildrenList>
 											<TransitionInfo/>
 										</MusicTransition>
@@ -1266,6 +1330,70 @@
 															<MusicFade Name="Destination Fade-in" ID="{A6CFB7A7-2E80-4825-B0FE-52189E54CCC8}">
 																<PropertyList>
 																	<Property Name="FadeTime" Type="Real64" Value="2.7"/>
+																</PropertyList>
+															</MusicFade>
+														</DestinationFadeIn>
+													</TransitionInfo>
+												</MusicTransition>
+												<MusicTransition Name="Transition" ID="{0497EC74-F351-48A2-91E0-9D7EC5499069}">
+													<PropertyList>
+														<Property Name="DestinationContextType" Type="int16" Value="2"/>
+														<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
+														<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
+														<Property Name="ExitSourceAt" Type="int16" Value="3"/>
+														<Property Name="PlayDestinationPreEntry" Type="bool" Value="False"/>
+														<Property Name="PlaySourcePostExit" Type="bool" Value="False"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="DestinationContextObject">
+															<ObjectRef Name="Lose" ID="{97A4C516-EE3E-4C91-A82D-7E0A98467040}" WorkUnitID="{C9DDC0B8-4122-402E-850F-253503C47F0F}"/>
+														</Reference>
+													</ReferenceList>
+													<TransitionInfo>
+														<SourceFadeOut>
+															<MusicFade Name="Source Fade-out" ID="{BE64EE76-CC80-49ED-B1F5-7B1CAC3453A9}">
+																<PropertyList>
+																	<Property Name="FadeTime" Type="Real64" Value="0.4"/>
+																	<Property Name="FadeType" Type="int16" Value="1"/>
+																</PropertyList>
+															</MusicFade>
+														</SourceFadeOut>
+														<DestinationFadeIn>
+															<MusicFade Name="Destination Fade-in" ID="{2E751127-549F-42B5-950C-ED532300A88E}">
+																<PropertyList>
+																	<Property Name="FadeTime" Type="Real64" Value="0.4"/>
+																</PropertyList>
+															</MusicFade>
+														</DestinationFadeIn>
+													</TransitionInfo>
+												</MusicTransition>
+												<MusicTransition Name="Transition" ID="{086F176E-8B3A-477D-9A2D-ABEFCFC56208}">
+													<PropertyList>
+														<Property Name="DestinationContextType" Type="int16" Value="2"/>
+														<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
+														<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
+														<Property Name="ExitSourceAt" Type="int16" Value="3"/>
+														<Property Name="PlayDestinationPreEntry" Type="bool" Value="False"/>
+														<Property Name="PlaySourcePostExit" Type="bool" Value="False"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="DestinationContextObject">
+															<ObjectRef Name="Win" ID="{F6D40759-8FEF-42FE-8A10-B7A9A9B3C2F1}" WorkUnitID="{C9DDC0B8-4122-402E-850F-253503C47F0F}"/>
+														</Reference>
+													</ReferenceList>
+													<TransitionInfo>
+														<SourceFadeOut>
+															<MusicFade Name="Source Fade-out" ID="{1E00EE93-E564-404E-88D5-29FE332B7CE0}">
+																<PropertyList>
+																	<Property Name="FadeTime" Type="Real64" Value="0.4"/>
+																	<Property Name="FadeType" Type="int16" Value="1"/>
+																</PropertyList>
+															</MusicFade>
+														</SourceFadeOut>
+														<DestinationFadeIn>
+															<MusicFade Name="Destination Fade-in" ID="{E7BBE881-DDF7-4140-AEF2-99196EE22CDA}">
+																<PropertyList>
+																	<Property Name="FadeTime" Type="Real64" Value="0.4"/>
 																</PropertyList>
 															</MusicFade>
 														</DestinationFadeIn>
