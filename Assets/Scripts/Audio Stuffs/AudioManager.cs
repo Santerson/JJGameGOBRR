@@ -74,6 +74,7 @@ public class AudioManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+        AkUnitySoundEngine.SetRTPCValue("curMana", 30);
         Instance = GetComponent<AudioManager>();
         DontDestroyOnLoad(gameObject);
         // Tell WWise MusicStateGroup should exist because it is needed for music to play
@@ -225,8 +226,8 @@ public class AudioManager : MonoBehaviour
     /// Plays a mana gain or loss sfx
     /// </summary>
     /// <param name="manaGain">The current mana gain of the manabar</param>
-    /// <param name="maxMana">The maximum amount of mana</param>
-    public void PlayManaGainOrLossSFX(GameObject spawnLocation, float manaGain, float maxMana)
+    /// <param name="CurrentMana">The current amount of mana</param>
+    public void PlayManaGainOrLossSFX(GameObject spawnLocation, float manaGain, float CurrentMana)
     {
         // Placeholder, do whatever you need here henry (and remove the pragmas)
         if (manaGain > 0)

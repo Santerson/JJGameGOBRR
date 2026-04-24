@@ -103,6 +103,7 @@ public class Mana : MonoBehaviour
     /// </summary>
     void HandleManaRegeneration()
     {
+        AkUnitySoundEngine.SetRTPCValue("curMana", CurrentMana);
         // Get the mana regen
         float manaRegen = CalculateCurrentManaRegen();
         // Calculate if a sound should play
@@ -180,7 +181,7 @@ public class Mana : MonoBehaviour
         // Check if the mana has grown past a threshold
         if ((NewProgress > ManaSFXInterval || NewProgress < 0))
         {
-            refAudioManager?.PlayManaGainOrLossSFX(gameObject, generation, MaxMana);
+            refAudioManager?.PlayManaGainOrLossSFX(gameObject, generation, CurrentMana);
         }
     }
 
@@ -233,5 +234,10 @@ public class Mana : MonoBehaviour
             if (LossPX.isPlaying) LossPX.Stop();
             if (GainPX.isPlaying) GainPX.Stop();
         }
+    }
+
+    private void OnDestroy()
+    {
+        AkUnitySoundEngine.SetRTPCValue("curMana", 30);
     }
 }
