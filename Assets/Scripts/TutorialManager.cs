@@ -10,6 +10,7 @@
 
 using UnityEngine;
 using System.Collections; /* IEnumerator */
+using static AudioManager;
 
 
 public class TutorialManager : MonoBehaviour
@@ -173,21 +174,25 @@ public class TutorialManager : MonoBehaviour
         }
         // Wait for a bit
         yield return new WaitForSeconds(waitTime5);
-        // Stop time a bit
+        // Stop time
         tutorial5.SetActive(false);
         refEnemy.StoppedEnemy = true;
+        // Allow player to grab mushman
         TowerAi PlacedMushMan1 = FindFirstObjectByType<TowerAi>();
         PlacedMushMan1.TowerAttacking = false;
         mushManPortrait.CanDrag = true;
-        // Make the player place another mushman down
+        // Make the player place another mushman down at 0,1
         tutorial6.SetActive(true);
         mushManPortrait.ForceNextPositionTower(AudioManager.Towers.mushman, new Vector2Int(0, 1));
+        // Wait for them to do that
         while (UIDraggableTower.forcedNextTowerPosition != new Vector2Int(-1, -1))
         {
             yield return new WaitForEndOfFrame();
         }
         
+        // Disable the popup
         tutorial6.SetActive(false);
+        // Stop the player from doing anything
         refEnemy.StoppedEnemy = false;
         PlacedMushMan1.TowerAttacking = true;
         mushManPortrait.CanDrag = false;
@@ -196,14 +201,18 @@ public class TutorialManager : MonoBehaviour
         {
             tower.canBeSold = false;
         }
+
         // Wait for the enemies to destroy the enemy
         tutorial7.SetActive(true);
         yield return new WaitForSeconds(waitTime7);
+
         // Spawn the next enemy
         tutorial7.SetActive(false);
         tutorial8.SetActive(true);
         refEnemySpawner.SpawnEnemy(tutorialEnemy, 0, false);
+        // Wait for them to walk onscreen
         yield return new WaitForSeconds(waitTime8);
+        // Stop the enemy
         refEnemy = FindFirstObjectByType<EnemyAi>();
         refEnemy.StoppedEnemy = true;
         tutorial8.SetActive(false);
@@ -243,6 +252,7 @@ public class TutorialManager : MonoBehaviour
         // Show the next text box
         tutorial10.SetActive(true);
         Mana manaBar = FindFirstObjectByType<Mana>();
+        // Let the mana bar start draining and stop it
         while (!Input.GetKey(ContinueButton))
         {
             if (manaBar.CurrentMana <= 3)
@@ -259,6 +269,7 @@ public class TutorialManager : MonoBehaviour
         manaBar.ManaDraining = false;
         tutorial10.SetActive(false);
         tutorial11.SetActive(true);
+        // Make the player read through the next batches of text
         while (!Input.GetKey(ContinueButton))
             yield return new WaitForEndOfFrame();
         while (Input.GetKey(ContinueButton))
@@ -275,15 +286,17 @@ public class TutorialManager : MonoBehaviour
             }
         }
         tutorial12.SetActive(true);
-        // freeze time until the player does the thing again
+        // freeze time until the player sells off the mushman
         while (towers.Length != 1)
         {
             towers = FindObjectsByType<TowerAi>(FindObjectsSortMode.None);
             yield return new WaitForEndOfFrame();
         }
+        // Allow mana to keep draining
         tutorial12.SetActive(false);
         manaBar.ManaDraining = true;
         tutorial13.SetActive(true);
+        // Allow the player to keep oging through the tutorial
         while (!Input.GetKey(ContinueButton))
             yield return new WaitForEndOfFrame();
         while (Input.GetKey(ContinueButton))
@@ -328,24 +341,28 @@ public class TutorialManager : MonoBehaviour
                 break;
             }
         }
+        // Make every tower unsellable
         towers = FindObjectsByType<TowerAi>(FindObjectsSortMode.None);
         foreach (TowerAi tower in towers)
         {
             tower.canBeSold = false;
         }
         tutorial14.SetActive(false);
+        // A bunch more textboxes to click through at the end of the tutorial
         tutorial15.SetActive(true);
         while (!Input.GetKey(ContinueButton))
             yield return new WaitForEndOfFrame();
         while (Input.GetKey(ContinueButton))
             yield return new WaitForEndOfFrame();
         tutorial15.SetActive(false);
+        // Another text box
         tutorial16.SetActive(true);
         while (!Input.GetKey(ContinueButton))
             yield return new WaitForEndOfFrame();
         while (Input.GetKey(ContinueButton))
             yield return new WaitForEndOfFrame();
         tutorial16.SetActive(false);
+        // Yet another text box
         tutorial17.SetActive(true);
         while (!Input.GetKey(ContinueButton))
             yield return new WaitForEndOfFrame();
@@ -364,5 +381,22 @@ public class TutorialManager : MonoBehaviour
         {
             tower.canBeSold = true;
         }
+    }
+
+    private void OnDestroy()
+    {
+        // Restart the game and keep it going
+        foreach (UIDraggableTower towerProfile in FindObjectsByType<UIDraggableTower>(FindObjectsSortMode.None))
+        {
+            towerProfile.CanDrag = true;
+        }
+        refEnemySpawner.EnemiesSpawning = true;
+        // make every tower avaliable to be sold
+        foreach (TowerAi tower in FindObjectsByType<TowerAi>(FindObjectsSortMode.None))
+        {
+            tower.canBeSold = true;
+        }
+        Mana refOBJ = FindFirstObjectByType<Mana>();
+        if (refOBJ != null) refOBJ.ManaDraining = true;
     }
 }
