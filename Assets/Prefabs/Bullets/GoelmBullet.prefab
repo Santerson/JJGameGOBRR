@@ -12,17 +12,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: GoelmBullet
       objectReference: {fileID: 0}
+    - target: {fileID: 521497994854751552, guid: 71f4225f6a5e1d84fa90782979b0c8cb, type: 3}
+      propertyPath: m_Constraints
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 521497994854751552, guid: 71f4225f6a5e1d84fa90782979b0c8cb, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 521497994854751552, guid: 71f4225f6a5e1d84fa90782979b0c8cb, type: 3}
+      propertyPath: m_AngularDamping
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4051352940268235715, guid: 71f4225f6a5e1d84fa90782979b0c8cb, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+      objectReference: {fileID: 7346704295023467339, guid: 76ecbf85c55ae9e40be03d243c273a80, type: 3}
     - target: {fileID: 4924771341496144442, guid: 71f4225f6a5e1d84fa90782979b0c8cb, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3.448472
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4924771341496144442, guid: 71f4225f6a5e1d84fa90782979b0c8cb, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3.4228168
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4924771341496144442, guid: 71f4225f6a5e1d84fa90782979b0c8cb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -115,5 +127,26 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 325832782174423122, guid: 71f4225f6a5e1d84fa90782979b0c8cb, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 6887762459966045946}
   m_SourcePrefab: {fileID: 100100000, guid: 71f4225f6a5e1d84fa90782979b0c8cb, type: 3}
+--- !u!1 &6471272540912652351 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 325832782174423122, guid: 71f4225f6a5e1d84fa90782979b0c8cb, type: 3}
+  m_PrefabInstance: {fileID: 6722470332948125805}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6887762459966045946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6471272540912652351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0dfbb23524173c4bb8944667a3406eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RotateAmount: 600
