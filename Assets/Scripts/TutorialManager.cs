@@ -389,6 +389,7 @@ public class TutorialManager : MonoBehaviour
         foreach (UIDraggableTower towerProfile in FindObjectsByType<UIDraggableTower>(FindObjectsSortMode.None))
         {
             towerProfile.CanDrag = true;
+            towerProfile.ForceNextPositionTower(Towers.bunny,new Vector2Int(-1, -1));
         }
         refEnemySpawner.EnemiesSpawning = true;
         // make every tower avaliable to be sold
@@ -398,5 +399,6 @@ public class TutorialManager : MonoBehaviour
         }
         Mana refOBJ = FindFirstObjectByType<Mana>();
         if (refOBJ != null) refOBJ.ManaDraining = true;
+
     }
 }
