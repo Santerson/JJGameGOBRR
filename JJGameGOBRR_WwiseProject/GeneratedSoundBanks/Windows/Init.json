@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{A657373E-0C91-B792-8730-5E64F25EA597}",
+    "Hash": "{28B1219D-BCDA-15A5-C2AF-AF8F19960321}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -46,6 +46,14 @@
       "Name": "SFX Audio Bus",
       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\SFX Audio Bus",
       "GUID": "{30F7FAA6-CB0C-40EA-84A5-3CF437AA2FB5}"
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "3505915932",
+      "Name": "curMana",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\curMana",
+      "GUID": "{D3891064-1AFB-4042-A0CC-97B00B1F828E}"
      }
     ],
     "StateGroups": [
@@ -128,6 +136,6 @@
     ]
    }
   ],
-  "FileHash": "{FED53AE9-675B-9291-6BDA-20DA6AC4F3D7}"
+  "FileHash": "{EDB58024-6361-4E98-D9AD-14D888DC6EF5}"
  }
 }

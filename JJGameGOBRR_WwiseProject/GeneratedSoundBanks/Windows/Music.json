@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{62E37DE2-229F-4C94-AF0B-DEED7E1CA4CC}",
     "Language": "SFX",
-    "Hash": "{1BFEB43B-9942-33D7-3D30-A8A886C94A95}",
+    "Hash": "{68EDBB8A-20FA-38C1-A991-99E13BCA9D7B}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Music",
     "ShortName": "Music",
     "Path": "Music.bnk",
@@ -251,6 +251,14 @@
       ]
      }
     ],
+    "GameParameters": [
+     {
+      "Id": "3505915932",
+      "Name": "curMana",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\curMana",
+      "GUID": "{D3891064-1AFB-4042-A0CC-97B00B1F828E}"
+     }
+    ],
     "StateGroups": [
      {
       "Id": "2163007642",
@@ -331,6 +339,6 @@
     ]
    }
   ],
-  "FileHash": "{922C26F5-446A-F9DE-F5F2-9E06DFF3CAEB}"
+  "FileHash": "{1401270D-FCDE-0B33-5F7D-2C277D7A12B1}"
  }
 }

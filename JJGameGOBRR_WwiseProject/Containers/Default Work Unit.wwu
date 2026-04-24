@@ -2249,6 +2249,82 @@
 								</ObjectLists>
 							</MultiSwitchEntry>
 						</ObjectList>
+						<ObjectList Name="RTPC">
+							<RTPC Name="" ID="{BFDF7DD2-9B14-436C-8EF5-D449BB69E62D}" ShortID="822438375">
+								<PropertyList>
+									<Property Name="PropertyName" Type="string" Value="PlaybackSpeed"/>
+								</PropertyList>
+								<ReferenceList>
+									<Reference Name="ControlInput">
+										<ObjectRef Name="curMana" ID="{D3891064-1AFB-4042-A0CC-97B00B1F828E}" WorkUnitID="{B96D6C72-6655-47FA-9070-9042865D2A23}"/>
+									</Reference>
+									<Reference Name="Curve">
+										<Custom>
+											<Curve Name="" ID="{D2BC24C5-EEA4-40BC-AC70-DA48D5E96B8B}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="1"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>0.47733</YPos>
+														<Flags>5</Flags>
+														<SegmentShape>Log3</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>10.0641</XPos>
+														<YPos>1</YPos>
+														<Flags>0</Flags>
+													</Point>
+													<Point>
+														<XPos>30</XPos>
+														<YPos>1</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</Custom>
+									</Reference>
+								</ReferenceList>
+							</RTPC>
+							<RTPC Name="" ID="{4196A3D8-527C-4F40-AEF4-AF965A17736F}" ShortID="281720821">
+								<PropertyList>
+									<Property Name="PropertyName" Type="string" Value="OutputBusVolume"/>
+								</PropertyList>
+								<ReferenceList>
+									<Reference Name="ControlInput">
+										<ObjectRef Name="curMana" ID="{D3891064-1AFB-4042-A0CC-97B00B1F828E}" WorkUnitID="{B96D6C72-6655-47FA-9070-9042865D2A23}"/>
+									</Reference>
+									<Reference Name="Curve">
+										<Custom>
+											<Curve Name="" ID="{C2D93F1C-81C4-4EE1-B8AE-F4A550B70414}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-200</YPos>
+														<Flags>5</Flags>
+														<SegmentShape>Log3</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>10.08733</XPos>
+														<YPos>0.0037</YPos>
+														<Flags>0</Flags>
+													</Point>
+													<Point>
+														<XPos>30</XPos>
+														<YPos>0</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</Custom>
+									</Reference>
+								</ReferenceList>
+							</RTPC>
+						</ObjectList>
 					</ObjectLists>
 				</MusicSwitchContainer>
 				<PropertyContainer Name="RouteToSFXBus" ID="{F4F980F1-5952-42F2-BE2F-15F7D7D60B00}" ShortID="469989188">
@@ -2824,6 +2900,47 @@
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="RTPC">
+											<RTPC Name="" ID="{880FEB8A-59B6-46D0-9D74-4907B96F613C}" ShortID="548803535">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Volume"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="curMana" ID="{D3891064-1AFB-4042-A0CC-97B00B1F828E}" WorkUnitID="{B96D6C72-6655-47FA-9070-9042865D2A23}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{DA102A1D-E073-4D22-BC9F-715F981AD52A}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>4.41675</YPos>
+																		<Flags>5</Flags>
+																		<SegmentShape>Log3</SegmentShape>
+																	</Point>
+																	<Point>
+																		<XPos>10.15284</XPos>
+																		<YPos>0</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>30</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</ObjectList>
+									</ObjectLists>
 									<ActiveSourceList>
 										<ActiveSource Name="Mana_Decreasing" ID="{DE9C5EF1-7513-413F-8BB4-FD720C9D569E}" Platform="Linked"/>
 									</ActiveSourceList>

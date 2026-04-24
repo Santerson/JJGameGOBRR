@@ -17,6 +17,9 @@ State	ID	Name	State Group			Notes
 	3603405849	Unmuffled	MuffledOrUnmuffled			
 	4200322818	Muffled	MuffledOrUnmuffled			
 
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	3505915932	curMana			\Default Work Unit\curMana	
+
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	371096670	Music2	.cache\10\{10C7C072-102E-72D2-1CA7-B02E4FF7FF0D}.wem		\Containers\Default Work Unit\MusicPlaylist\MusicPlaylistUnmuffle\Battle2\Battle2\Music2		5556304
 	408197109	JsongDraft	.cache\AF\{AF5189A0-9E0E-2023-3764-EEED6B1F89A7}.wem		\Containers\Default Work Unit\MusicPlaylist\MusicPlaylistMuffled\Title\Title\JsongDraft		16934496

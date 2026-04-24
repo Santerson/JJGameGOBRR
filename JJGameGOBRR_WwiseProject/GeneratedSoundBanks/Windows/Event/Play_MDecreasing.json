@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{822FDE62-0D80-458A-92E5-C3B4EC6E7FFA}",
     "Language": "SFX",
-    "Hash": "{29BB73B9-BAB4-3B54-290E-4BA2D99E28FD}",
+    "Hash": "{4D48F660-FBB1-10FC-3510-7A586F9DBF09}",
     "ObjectPath": "Play_MDecreasing",
     "ShortName": "Play_MDecreasing",
     "Path": "Event/Play_MDecreasing.bnk",
@@ -40,9 +40,17 @@
        }
       ]
      }
+    ],
+    "GameParameters": [
+     {
+      "Id": "3505915932",
+      "Name": "curMana",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\curMana",
+      "GUID": "{D3891064-1AFB-4042-A0CC-97B00B1F828E}"
+     }
     ]
    }
   ],
-  "FileHash": "{2DF48961-6BC9-D4F0-2BC8-83ADC79777F9}"
+  "FileHash": "{3B79DE56-9408-5681-1615-89D05CF0D7B7}"
  }
 }

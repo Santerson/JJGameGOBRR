@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{B96D6C72-6655-47FA-9070-9042865D2A23}" SchemaVersion="133">
 	<GameParameters>
-		<WorkUnit Name="Default Work Unit" ID="{B96D6C72-6655-47FA-9070-9042865D2A23}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{B96D6C72-6655-47FA-9070-9042865D2A23}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="curMana" ID="{D3891064-1AFB-4042-A0CC-97B00B1F828E}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="30"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
 	</GameParameters>
 </WwiseDocument>
