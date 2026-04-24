@@ -15,6 +15,9 @@ public class PlayClickSound : MonoBehaviour
         refAudioManager = FindFirstObjectByType<AudioManager>();
     }
 
+    /// <summary>
+    /// tries to play a click sound
+    /// </summary>
     public void PlaySound()
     {
         refAudioManager?.PlayClickSFX();
