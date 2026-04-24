@@ -1,4 +1,9 @@
 using UnityEngine;
+/************************************
+ * Filename: TutorialButten.cs
+ * Author: Micaiah Mariano
+ * Description: destroys TutorialButten if Tutorial is already ready
+ * *********************************/
 
 public class TutorialButten : MonoBehaviour
 {
@@ -7,11 +12,7 @@ public class TutorialButten : MonoBehaviour
         if (TutorialManager.tutorialOccured == false)
             Destroy(gameObject);
     }
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+    // turns on Tutorial
     public void scoobydoo()
     {
         TutorialManager.tutorialOccured = false;
