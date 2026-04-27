@@ -101,7 +101,7 @@ public class SpawnerEnemy : MonoBehaviour
         {
             // Failsafe, increase time gap after wave end
             EmergencyWaveEnd -= Time.deltaTime;
-            if ((refLaneCheck.Lane0 == 0 && refLaneCheck.Lane1 == 0 && refLaneCheck.Lane2 == 0) || EmergencyWaveEnd <= 0)
+            if (FindObjectsByType<EnemyAi>(FindObjectsSortMode.None).Length == 0 || EmergencyWaveEnd <= 0)
             {
                 // Restart the cooldown
                 allMobsInWaveSpawned = false;
@@ -156,7 +156,6 @@ public class SpawnerEnemy : MonoBehaviour
         Vector2 spawnPos = SpawnPositions[selectedSpawnLocation];
         GameObject spawndenemy = Instantiate(spawnedEnemy, spawnPos, Quaternion.identity);
         spawndenemy.GetComponent<EnemyAi>().lane = selectedSpawnLocation;
-        refLaneCheck.Laneincress(selectedSpawnLocation);
         return spawndenemy;
     }
 

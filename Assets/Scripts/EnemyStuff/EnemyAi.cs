@@ -165,7 +165,6 @@ public class EnemyAi : MonoBehaviour
             // animator.SetInteger("State", (int)animatons.die);
         }
         refAudioManager?.PlayEnemyDieSFX(gameObject, EnemyID);
-        FindFirstObjectByType<LaneCheck>().Lanedecreesss(lane);
         Destroy(gameObject);
     }
 }

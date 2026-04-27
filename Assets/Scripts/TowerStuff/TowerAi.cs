@@ -91,8 +91,8 @@ public class TowerAi : MonoBehaviour
         }
         // Cooldown for a shot
         CoolDown -= Time.fixedDeltaTime;
-        if ((GridPosition.y == 0 && refLaneCheck.Lane2 != 0) || (GridPosition.y == 1 && refLaneCheck.Lane1 != 0)
-            || (GridPosition.y == 2 && refLaneCheck.Lane0 != 0))
+        if ((GridPosition.y == 0 && refLaneCheck.EnemiesInLane(0)) || (GridPosition.y == 1 && refLaneCheck.EnemiesInLane(1))
+            || (GridPosition.y == 2 && refLaneCheck.EnemiesInLane(2)))
         {
             // Make sure animaton is played befor attack
             if (CoolDown <= LengthOfAnimaton)

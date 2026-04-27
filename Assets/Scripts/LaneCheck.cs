@@ -7,56 +7,28 @@ using UnityEngine;
 
 public class LaneCheck : MonoBehaviour
 {
-    /// <summary>
-    /// Enemies in lane 0
-    /// </summary>
-    public int Lane0 { get; private set; }
-    /// <summary>
-    /// Enemies in lane 1
-    /// </summary>
-    public int Lane1 { get; private set; }
-    /// <summary>
-    /// Enemies in lane 2
-    /// </summary>
-    public int Lane2 { get; private set; }
-    
+    [SerializeField] ColliderForLane Lane0Collider;
+    [SerializeField] ColliderForLane Lane1Collider;
+    [SerializeField] ColliderForLane Lane2Collider;
+
+
     /// <summary>
     /// Increase the amount of enemies in a lane
     /// </summary>
     /// <param name="lane">The lane number</param>
-    public void Laneincress(int lane)
+    public bool EnemiesInLane(int lane)
     {
-        if (lane == 0)
+        switch (lane)
         {
-            Lane0++;
-        }
-        if (lane == 1)
-        {
-            Lane1++;
-        }
-        if (lane == 2)
-        {
-            Lane2++;
-        }
-    }
-
-    /// <summary>
-    /// Decreases the amount of enemies in a lane
-    /// </summary>
-    /// <param name="lane">the lane number</param>
-    public void Lanedecreesss(int lane)
-    {
-        if (lane == 0)
-        {
-            Lane0--;
-        }
-        if (lane == 1)
-        {
-            Lane1--;
-        }
-        if (lane == 2)
-        {
-            Lane2--;
+            case 0:
+                return Lane0Collider.EnemiesPresent;
+            case 1:
+                return Lane1Collider.EnemiesPresent;
+            case 2:
+                return Lane2Collider.EnemiesPresent;
+            default:
+                Debug.LogWarning("Bad lane!");
+                return false;
         }
     }
 }
