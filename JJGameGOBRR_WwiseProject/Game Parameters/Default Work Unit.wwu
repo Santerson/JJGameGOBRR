@@ -9,6 +9,12 @@
 						<Property Name="Max" Type="Real64" Value="30"/>
 					</PropertyList>
 				</GameParameter>
+				<GameParameter Name="enemiesPerMinute" ID="{4ACF671F-F40E-49C0-A2E1-F01A531B6129}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="1"/>
+						<Property Name="Min" Type="Real64" Value="1"/>
+					</PropertyList>
+				</GameParameter>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>
