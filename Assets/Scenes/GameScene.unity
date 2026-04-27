@@ -2595,9 +2595,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b35d3c87c0b31e746bc692a15b9a41f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Lane0Collider: {fileID: 0}
-  Lane1Collider: {fileID: 0}
-  Lane2Collider: {fileID: 0}
+  Lane0Collider: {fileID: 645671747}
+  Lane1Collider: {fileID: 1446312459}
+  Lane2Collider: {fileID: 475819313}
 --- !u!1 &1044828406
 GameObject:
   m_ObjectHideFlags: 0
