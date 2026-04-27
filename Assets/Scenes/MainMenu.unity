@@ -2250,15 +2250,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2737843157973409760, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.8957117
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2737843157973409760, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.73123336
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2737843157973409760, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.9557586
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 2737843157973409760, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2291,6 +2291,18 @@ PrefabInstance:
     - target: {fileID: 5812513164392073569, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
       propertyPath: PlayMainMenu
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5812513164392073569, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
+      propertyPath: MusicIntensity1
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5812513164392073569, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
+      propertyPath: MusicIntensity2
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5812513164392073569, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
+      propertyPath: LogEnemiesPerMinute
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5812513164392073569, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
       propertyPath: PlayMainMenuMusicOnStart
