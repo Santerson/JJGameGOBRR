@@ -32,7 +32,7 @@ public class EnemyAi : MonoBehaviour
     [SerializeField] float DeathAnimationtime;
     [SerializeField] float DeathAnimation;
     [SerializeField] private GameObject Particls;
-    
+
     // variables that are changed in the code along with particles and animations and sounds
     public int lane;
     Color refcolor = Color.white;
@@ -51,7 +51,9 @@ public class EnemyAi : MonoBehaviour
     {
         walk,
         attack,
+        stand,
     }
+
     void Start()
     {
         // initializes the animations
@@ -73,13 +75,16 @@ public class EnemyAi : MonoBehaviour
         if (refAudioManager != null)
             refAudioManager.PlayEnemySpawnSFX(gameObject, EnemyID);
     }
+
     void FixedUpdate()
     {
+        
         // minus timers
         coolDownAttack -= Time.fixedDeltaTime;
         // play the audio for the enemy
         if (!StoppedEnemy)
         {
+            animator.SetInteger("State", (int)animations.walk);
             if (Random.Range(0, RandomVoiceChance) == 0 && refAudioManager != null) refAudioManager.PlayEnemyVoiceSFX(gameObject, EnemyID);
             timeToNextEnemyWalkSound -= Time.fixedDeltaTime;
             if (timeToNextEnemyWalkSound <= 0)
@@ -93,12 +98,15 @@ public class EnemyAi : MonoBehaviour
         if (StoppedEnemy)
         {
             RB.linearVelocityX = 0;
+
         }
         else
         {
+            animator.SetInteger("State", (int)animations.walk);
             // moves enemy
             RB.linearVelocityX = MaxSpeed;
             MaxSpeed = Speed;
+
         }
         animator.SetInteger("State", (int)animations.walk);
     }
@@ -111,7 +119,7 @@ public class EnemyAi : MonoBehaviour
             BulletAi refBullet = collision.GetComponent<BulletAi>();
             if (refBullet != null)
             {
-                
+
                 refAudioManager?.PlayEnemyHurtSFX(gameObject, EnemyID);
                 int dmg = (int)refBullet.GetDamage();
                 Health -= dmg;
@@ -148,11 +156,22 @@ public class EnemyAi : MonoBehaviour
             // plays idale 
             else
             {
-                
+                animator.SetInteger("State", (int)animations.stand);
                 MaxSpeed = 0;
             }
+
         }
+
     }
+    private void Update()
+    {
+        if (RB.linearVelocityX != 0)
+        {
+            animator.SetInteger("State", (int)animations.walk);
+        }
+        
+    }
+
 
     /// <summary>
     /// Kills the enemy and does cool effects
@@ -165,6 +184,7 @@ public class EnemyAi : MonoBehaviour
             // animator.SetInteger("State", (int)animatons.die);
         }
         refAudioManager?.PlayEnemyDieSFX(gameObject, EnemyID);
+
         Destroy(gameObject);
     }
 }
