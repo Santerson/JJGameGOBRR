@@ -27,6 +27,7 @@ public class SpawnerEnemy : MonoBehaviour
     /// </summary>
     private float cooldownToNextEnemy;
     LaneCheck refLaneCheck = null;
+    AudioManager refAudioManager;
     // The current stage of the player
     uint stage = 0;
 
@@ -35,6 +36,9 @@ public class SpawnerEnemy : MonoBehaviour
     bool EndOfGameCheckedThisWave = false;
 
     float EmergencyWaveEnd = 25f;
+    public float EnemiesPerMinute { get; private set; } = 0f;
+    uint EnemiesSpawned;
+    float totalTimePassed;
 
     /// <summary>
     /// A struct containing data for spawning enemies
@@ -68,6 +72,7 @@ public class SpawnerEnemy : MonoBehaviour
     {
         refLaneCheck = FindAnyObjectByType<LaneCheck>();
         stageText.text = $"{stage: 0} / {EnemyNodes.Count + stage}";
+        refAudioManager = FindFirstObjectByType<AudioManager>();
     }
 
     // Update is called once per frame
@@ -75,6 +80,11 @@ public class SpawnerEnemy : MonoBehaviour
     {
         // Do nothing if enemies are not spawning (IE tutorial)
         if (!EnemiesSpawning) return;
+
+        // Calculate enemies per minute
+        totalTimePassed += Time.deltaTime;
+        EnemiesPerMinute = EnemiesSpawned / (totalTimePassed / 60);
+        refAudioManager?.UpdateEnemiesPerSecondRTPC(EnemiesPerMinute);
         // Check if all enemies have not been spawned
         if (!allMobsInWaveSpawned)
         {
@@ -120,7 +130,7 @@ public class SpawnerEnemy : MonoBehaviour
     {
         // Get a random spawn position
         int selectedSpawnLocation = Random.Range(0, SpawnPositions.Count);
-
+        EnemiesSpawned++;
         // TODO: create a safety so not >2 enemies spawn on the same lane
 
         // Get the next enemy in the spawnqueue

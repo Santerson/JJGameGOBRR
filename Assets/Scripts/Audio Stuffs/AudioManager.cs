@@ -36,6 +36,13 @@ public class AudioManager : MonoBehaviour
     [SerializeField] List<AK.Wwise.Event> EnemyDieSFXs;
     [SerializeField] List<AK.Wwise.Event> EnemyVoiceSFXs;
 
+    [Header("Enemy Spawning")]
+    [SerializeField] bool LogEnemiesPerMinute = false;
+    [Tooltip("Below this number is intensity 1")]
+    [SerializeField] float MusicIntensity1 = 30f;
+    [Tooltip("Below this number is intensity 2")]
+    [SerializeField] float MusicIntensity2 = 60f;
+    
     [Header("MSC")]
     [SerializeField] AK.Wwise.Event LoseLevelSFX;
     [SerializeField] AK.Wwise.Event WinLevelSFX;
@@ -296,5 +303,24 @@ public class AudioManager : MonoBehaviour
     public void PlayTowerFailPlacementSFX(GameObject spawnLocation)
     {
         AkUnitySoundEngine.PostEvent(TowerFailPlace.Id, spawnLocation);
+    }
+
+    public void UpdateEnemiesPerSecondRTPC(float EnemiesPerMinute)
+    {
+        // AkUnitySoundEngine.SetRTPCValue("enemiesPerMinute", EnemiesPerMinute);
+        if (LogEnemiesPerMinute) Debug.Log($"Enemies Per Minute: {EnemiesPerMinute}");
+        if (EnemiesPerMinute < MusicIntensity1)
+        {
+            AkUnitySoundEngine.SetState("MusicStateGroup", "Battle1");
+        } 
+        else if (EnemiesPerMinute < MusicIntensity2)
+        {
+            AkUnitySoundEngine.SetState("MusicStateGroup", "Battle2");
+        }
+        else
+        {
+            AkUnitySoundEngine.SetState("MusicStateGroup", "Battle3");
+        }
+
     }
 }
