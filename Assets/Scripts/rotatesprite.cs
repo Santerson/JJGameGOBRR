@@ -5,13 +5,14 @@
  * * ***********************/
 using UnityEngine;
 
- 
+
 public class rotatesprite : MonoBehaviour
 {
-    [SerializeField] float RotateAmount;
+    public float rotationSpeed = 100f;
 
-    private void Start()
+    void Update()
     {
-        GetComponent<Rigidbody2D>().angularVelocity = RotateAmount;
+        // Rotates the object around the Z-axis (standard 2D rotation)
+        transform.Rotate(Vector3.forward * rotationSpeed * Time.deltaTime);
     }
 }
