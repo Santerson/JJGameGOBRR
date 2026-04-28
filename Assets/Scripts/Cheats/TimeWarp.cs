@@ -26,12 +26,9 @@ public class TimeWarp : MonoBehaviour
         {
             Time.timeScale = TimeWarpedGameSpeed;
         }
-        // Otherwise, do nothing
         else
         {
-            if (Time.timeScale != baseGameSpeed && Time.timeScale != TimeWarpedGameSpeed)
-                baseGameSpeed = Time.timeScale;
-            Time.timeScale = baseGameSpeed;
+            Time.timeScale = 1;
         }
     }
 }

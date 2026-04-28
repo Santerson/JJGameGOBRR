@@ -19,6 +19,7 @@ public class TowerAi : MonoBehaviour
     [SerializeField] int HealthMax = 1;
     [Tooltip("Shots per second. set to -1 to disable")]
     [SerializeField] float RateOfFire = 5;
+    [SerializeField] float MaxDistToPickupTower = 0.5f;
     [SerializeField] float FirePositionX = 0;
     [SerializeField] float FirePositiony = 0;
     // Timer for animaton to start - fire cooldown
@@ -125,6 +126,11 @@ public class TowerAi : MonoBehaviour
         
     }
 
+    private void Update()
+    {
+        CheckMouseOver();
+    }
+
     /// <summary>
     /// Runs logic for the tower to die
     /// </summary>
@@ -159,11 +165,21 @@ public class TowerAi : MonoBehaviour
         }
     }
 
+    void CheckMouseOver()
+    {
+        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        if (Vector2.Distance(mousePos, transform.position) <= MaxDistToPickupTower)
+        {
+            MouseOverLogic();
+        }
+    }
+
     /// <summary>
     /// Destroys the tower if rightclicked on
     /// </summary>
-    private void OnMouseOver()
+    private void MouseOverLogic()
     {
+        Debug.Log($"Mouse over {gameObject.name}");
         if (Time.timeScale == 0)
             return;
         if (Input.GetMouseButtonDown(1) && canBeSold)
@@ -172,7 +188,7 @@ public class TowerAi : MonoBehaviour
             refAudioManager?.PlayTowerSellSFX(gameObject, TowerID);
             Die();
         }
-        else if (Input.GetMouseButtonDown(0) && canBeSold && canBeQuickMoved && TowerID != AudioManager.Towers.bunny)
+        if (Input.GetMouseButtonDown(0) && canBeSold && canBeQuickMoved && TowerID != AudioManager.Towers.bunny)
         {
             Instantiate(particlsRemove, gameObject.transform.position, Quaternion.identity);
             refAudioManager?.PlayTowerSellSFX(gameObject, TowerID);
