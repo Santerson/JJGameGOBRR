@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: 80b50a7e455f17a46bd84d1ed6550b73
+guid: 79969d7c1e6253e45acef092f4eb5332
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4061232686989667248
-    second: wand cursor_0
+      213: 5677138431963572760
+    second: wand cursor NEW_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 0
-    sRGBTexture: 1
+    enableMipMap: 1
+    sRGBTexture: 0
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 0
@@ -55,9 +55,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 1
+  alphaIsTransparency: 0
   spriteTessellationDetail: -1
-  textureType: 7
+  textureType: 0
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -65,7 +65,7 @@ TextureImporter:
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
-  ignorePngGamma: 1
+  ignorePngGamma: 0
   applyGammaDecoding: 0
   swizzle: 50462976
   cookieLightType: 0
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: wand cursor_0
+      name: wand cursor NEW_0
       rect:
         serializedVersion: 2
-        x: 34
-        y: 0
+        x: 36
+        y: 10
         width: 45
-        height: 127
+        height: 111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0bb693a8c956c5830800000000000000
-      internalID: 4061232686989667248
+      spriteID: 81a28e9335f39ce40800000000000000
+      internalID: 5677138431963572760
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      wand cursor_0: 4061232686989667248
+      wand cursor NEW_0: 5677138431963572760
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

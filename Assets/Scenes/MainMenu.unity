@@ -1197,8 +1197,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b676951f31db500418152bfcf4d4a2ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseTexture: {fileID: 2800000, guid: 80b50a7e455f17a46bd84d1ed6550b73, type: 3}
-  Offset: {x: 50, y: 0}
+  mouseTexture: {fileID: 2800000, guid: 79969d7c1e6253e45acef092f4eb5332, type: 3}
+  Offset: {x: 40, y: -20}
 --- !u!4 &1060625739
 Transform:
   m_ObjectHideFlags: 0
