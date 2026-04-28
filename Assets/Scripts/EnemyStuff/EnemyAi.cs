@@ -51,7 +51,6 @@ public class EnemyAi : MonoBehaviour
     {
         walk,
         attack,
-        stand,
     }
 
     void Start()
@@ -156,7 +155,7 @@ public class EnemyAi : MonoBehaviour
             // plays idale 
             else
             {
-                animator.SetInteger("State", (int)animations.stand);
+                animator.SetInteger("State", (int)animations.attack);
                 MaxSpeed = 0;
             }
 
