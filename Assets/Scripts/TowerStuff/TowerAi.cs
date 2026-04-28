@@ -19,7 +19,6 @@ public class TowerAi : MonoBehaviour
     [SerializeField] int HealthMax = 1;
     [Tooltip("Shots per second. set to -1 to disable")]
     [SerializeField] float RateOfFire = 5;
-    [SerializeField] float MaxDistToPickupTower = 0.5f;
     [SerializeField] float FirePositionX = 0;
     [SerializeField] float FirePositiony = 0;
     // Timer for animaton to start - fire cooldown
@@ -35,6 +34,8 @@ public class TowerAi : MonoBehaviour
     AudioManager refAudioManager; 
     [SerializeField] private GameObject particls;
     [SerializeField] private GameObject particlsRemove;
+    [SerializeField] Vector2 PickupOffset = new Vector2(0, 0.8f);
+    [SerializeField] float MaxDistToPickupTower = 0.5f;
     /// <summary>
     /// The position of this tower in the grid (index based, where 0,0 is the bottom left)
     /// </summary>
@@ -168,7 +169,7 @@ public class TowerAi : MonoBehaviour
     void CheckMouseOver()
     {
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        if (Vector2.Distance(mousePos, transform.position) <= MaxDistToPickupTower)
+        if (Vector2.Distance(mousePos, (Vector2)transform.position + PickupOffset) <= MaxDistToPickupTower)
         {
             MouseOverLogic();
         }

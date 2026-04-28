@@ -140,15 +140,18 @@ MonoBehaviour:
   SizeY: 1
   HealthMax: 2
   RateOfFire: 5
+  MaxDistToPickupTower: 0.8
   FirePositionX: 1
   FirePositiony: 0
   LengthOfAnimaton: 0
   TowerID: 0
+  CoolDown: 0
   TowerAttacking: 1
   particls: {fileID: 5358084528054605737, guid: d32a1798d751ca648a88763869f51917, type: 3}
   particlsRemove: {fileID: 1146853293022950771, guid: d68cc5ab47fa0b249b3d323e6aa666cc, type: 3}
   GridPosition: {x: 0, y: 0}
   canBeSold: 1
+  canBeQuickMoved: 1
 --- !u!1 &4959736575911206215
 GameObject:
   m_ObjectHideFlags: 0
