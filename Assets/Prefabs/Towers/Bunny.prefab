@@ -12,6 +12,14 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: ece1db1bd8af9a2429f5c9a7dbcef70a, type: 2}
+    - target: {fileID: 1411011776302122596, guid: 01a5586a081987349ade83957f7874d8, type: 3}
+      propertyPath: m_Size.y
+      value: 1.2998067
+      objectReference: {fileID: 0}
+    - target: {fileID: 1411011776302122596, guid: 01a5586a081987349ade83957f7874d8, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.14990336
+      objectReference: {fileID: 0}
     - target: {fileID: 2775932846833120113, guid: 01a5586a081987349ade83957f7874d8, type: 3}
       propertyPath: m_Controller
       value: 
@@ -24,6 +32,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Tower
       objectReference: {fileID: 0}
+    - target: {fileID: 4466847123923408407, guid: 01a5586a081987349ade83957f7874d8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -3567608622720266537, guid: 7828a4573fb38e64d840ae5eb7b0c9e4, type: 3}
     - target: {fileID: 4720349265970859464, guid: 01a5586a081987349ade83957f7874d8, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.75
@@ -33,8 +45,12 @@ PrefabInstance:
       value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 4720349265970859464, guid: 01a5586a081987349ade83957f7874d8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.017
+      objectReference: {fileID: 0}
+    - target: {fileID: 4720349265970859464, guid: 01a5586a081987349ade83957f7874d8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: 0.356
       objectReference: {fileID: 0}
     - target: {fileID: 6262921784777582634, guid: 01a5586a081987349ade83957f7874d8, type: 3}
       propertyPath: TowerManaCost
