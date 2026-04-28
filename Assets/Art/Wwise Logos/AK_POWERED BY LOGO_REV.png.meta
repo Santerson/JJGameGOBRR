@@ -1,0 +1,650 @@
+fileFormatVersion: 2
+guid: ad0296f14808521458d78179a9fc1a32
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2085478908688249651
+    second: AK_POWERED BY LOGO_REV_0
+  - first:
+      213: -679855382066533472
+    second: AK_POWERED BY LOGO_REV_1
+  - first:
+      213: 2234031666805561926
+    second: AK_POWERED BY LOGO_REV_2
+  - first:
+      213: 4721852683611704820
+    second: AK_POWERED BY LOGO_REV_3
+  - first:
+      213: 7895811976624666636
+    second: AK_POWERED BY LOGO_REV_4
+  - first:
+      213: 2818309387122339253
+    second: AK_POWERED BY LOGO_REV_5
+  - first:
+      213: -1121379319209482371
+    second: AK_POWERED BY LOGO_REV_6
+  - first:
+      213: -6109613245896500946
+    second: AK_POWERED BY LOGO_REV_7
+  - first:
+      213: -5682080677716383043
+    second: AK_POWERED BY LOGO_REV_8
+  - first:
+      213: 8734225582127364200
+    second: AK_POWERED BY LOGO_REV_9
+  - first:
+      213: 8923344658760801187
+    second: AK_POWERED BY LOGO_REV_10
+  - first:
+      213: -2025737436270834285
+    second: AK_POWERED BY LOGO_REV_11
+  - first:
+      213: -5284504446286213375
+    second: AK_POWERED BY LOGO_REV_12
+  - first:
+      213: -1990355993259294024
+    second: AK_POWERED BY LOGO_REV_13
+  - first:
+      213: 6909871104837439899
+    second: AK_POWERED BY LOGO_REV_14
+  - first:
+      213: -6702691479770755550
+    second: AK_POWERED BY LOGO_REV_15
+  - first:
+      213: -931559872032073931
+    second: AK_POWERED BY LOGO_REV_16
+  - first:
+      213: -8367055492987277804
+    second: AK_POWERED BY LOGO_REV_17
+  - first:
+      213: -2899461037616419599
+    second: AK_POWERED BY LOGO_REV_18
+  - first:
+      213: -2894336424187794556
+    second: AK_POWERED BY LOGO_REV_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: AK_POWERED BY LOGO_REV_0
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 1156
+        width: 99
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcc411d5bf3ee03e0800000000000000
+      internalID: -2085478908688249651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK_POWERED BY LOGO_REV_1
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 1155
+        width: 108
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ab694dc12ba096f0800000000000000
+      internalID: -679855382066533472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK_POWERED BY LOGO_REV_2
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 1154
+        width: 134
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64a5bece6ffd00f10800000000000000
+      internalID: 2234031666805561926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK_POWERED BY LOGO_REV_3
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 1154
+        width: 109
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fd86609ff3678140800000000000000
+      internalID: 4721852683611704820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK_POWERED BY LOGO_REV_4
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 1156
+        width: 52
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c08fcffa82f839d60800000000000000
+      internalID: 7895811976624666636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK_POWERED BY LOGO_REV_5
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 1154
+        width: 109
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bd639e9475ac1720800000000000000
+      internalID: 2818309387122339253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK_POWERED BY LOGO_REV_6
+      rect:
+        serializedVersion: 2
+        x: 878
+        y: 1155
+        width: 107
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d77ac04537f0070f0800000000000000
+      internalID: -1121379319209482371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK_POWERED BY LOGO_REV_7
+      rect:
+        serializedVersion: 2
+        x: 1058
+        y: 1155
+        width: 107
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e29515b7f1b463ba0800000000000000
+      internalID: -6109613245896500946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK_POWERED BY LOGO_REV_8
+      rect:
+        serializedVersion: 2
+        x: 1177
+        y: 1112
+        width: 95
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbaaa938ab13521b0800000000000000
+      internalID: -5682080677716383043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK_POWERED BY LOGO_REV_9
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 500
+        width: 137
+        height: 337
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 868b4da14e3363970800000000000000
+      internalID: 8734225582127364200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK_POWERED BY LOGO_REV_10
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 801
+        width: 136
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ab11d170b616db70800000000000000
+      internalID: 8923344658760801187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK_POWERED BY LOGO_REV_11
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 500
+        width: 136
+        height: 337
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39dcdd6d88223e3e0800000000000000
+      internalID: -2025737436270834285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK_POWERED BY LOGO_REV_12
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 623
+        width: 92
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10f4321643ba9a6b0800000000000000
+      internalID: -5284504446286213375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK_POWERED BY LOGO_REV_13
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 400
+        width: 136
+        height: 337
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b2c53df4c5d064e0800000000000000
+      internalID: -1990355993259294024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK_POWERED BY LOGO_REV_14
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 623
+        width: 92
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b915297e82bc4ef50800000000000000
+      internalID: 6909871104837439899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK_POWERED BY LOGO_REV_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 404
+        height: 283
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22e0a3d8c914bf2a0800000000000000
+      internalID: -6702691479770755550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK_POWERED BY LOGO_REV_16
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 0
+        width: 333
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53715846b3f6213f0800000000000000
+      internalID: -931559872032073931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK_POWERED BY LOGO_REV_17
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 4
+        width: 51
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41e23841c5f32eb80800000000000000
+      internalID: -8367055492987277804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK_POWERED BY LOGO_REV_18
+      rect:
+        serializedVersion: 2
+        x: 964
+        y: 4
+        width: 212
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fca9cc5c8b03c7d0800000000000000
+      internalID: -2899461037616419599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AK_POWERED BY LOGO_REV_19
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 4
+        width: 240
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48befc76b5045d7d0800000000000000
+      internalID: -2894336424187794556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      AK_POWERED BY LOGO_REV_0: -2085478908688249651
+      AK_POWERED BY LOGO_REV_1: -679855382066533472
+      AK_POWERED BY LOGO_REV_10: 8923344658760801187
+      AK_POWERED BY LOGO_REV_11: -2025737436270834285
+      AK_POWERED BY LOGO_REV_12: -5284504446286213375
+      AK_POWERED BY LOGO_REV_13: -1990355993259294024
+      AK_POWERED BY LOGO_REV_14: 6909871104837439899
+      AK_POWERED BY LOGO_REV_15: -6702691479770755550
+      AK_POWERED BY LOGO_REV_16: -931559872032073931
+      AK_POWERED BY LOGO_REV_17: -8367055492987277804
+      AK_POWERED BY LOGO_REV_18: -2899461037616419599
+      AK_POWERED BY LOGO_REV_19: -2894336424187794556
+      AK_POWERED BY LOGO_REV_2: 2234031666805561926
+      AK_POWERED BY LOGO_REV_3: 4721852683611704820
+      AK_POWERED BY LOGO_REV_4: 7895811976624666636
+      AK_POWERED BY LOGO_REV_5: 2818309387122339253
+      AK_POWERED BY LOGO_REV_6: -1121379319209482371
+      AK_POWERED BY LOGO_REV_7: -6109613245896500946
+      AK_POWERED BY LOGO_REV_8: -5682080677716383043
+      AK_POWERED BY LOGO_REV_9: 8734225582127364200
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
