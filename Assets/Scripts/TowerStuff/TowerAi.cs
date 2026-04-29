@@ -76,6 +76,8 @@ public class TowerAi : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        
+
         if (!TowerAttacking)
         {
             return;
@@ -94,11 +96,14 @@ public class TowerAi : MonoBehaviour
         {
             if (!bunnyAnimationPlaying)
             {
-                int ramdombunnyanimation = Random.Range(0,2);
+                int ramdombunnyanimation = Random.Range(0,11);
+                Debug.Log(ramdombunnyanimation);
                 Animator.SetInteger("State", ramdombunnyanimation);
                 bunnyAnimationPlaying = true;
                 StartCoroutine(DelayBunnyAnim());
+
             }
+           
             return;
             
         }
