@@ -81,10 +81,11 @@ public class SpawnerEnemy : MonoBehaviour
     {
         // Do nothing if enemies are not spawning (IE tutorial)
         if (!EnemiesSpawning) return;
+        // Calculates enemies and changes rtpc
         GetLongestLivingEnemy();
+        refAudioManager?.UpdateEnemiesPerSecondRTPC(longestLivingEnemyTime);
         // Calculate enemies per minute
         totalTimePassed += Time.deltaTime;
-        refAudioManager?.UpdateEnemiesPerSecondRTPC(longestLivingEnemyTime);
         // Check if all enemies have not been spawned
         if (!allMobsInWaveSpawned)
         {

@@ -52,6 +52,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AK.Wwise.Event PauseSFX;
 
     static bool HasStartedMenuMusic = false;
+    float banGameMusicChange = 0.01f;
 
     static AudioManager Instance;
     /// <summary>
@@ -92,6 +93,11 @@ public class AudioManager : MonoBehaviour
             PlayMenuMusic();
             HasStartedMenuMusic = true;
         }
+    }
+
+    private void Update()
+    {
+        banGameMusicChange = banGameMusicChange > 0 ? banGameMusicChange -= Time.deltaTime : 0;
     }
 
     /// <summary>
@@ -217,6 +223,7 @@ public class AudioManager : MonoBehaviour
         //AkUnitySoundEngine.PostEvent(LoseLevelSFX.Id, gameObject);
         AkUnitySoundEngine.SetState("MusicStateGroup", "Lose");
         MuffleorUnmuffleMusic(false);
+        banGameMusicChange = 0.01f;
     }
 
     /// <summary>
@@ -226,9 +233,9 @@ public class AudioManager : MonoBehaviour
     {
         AkUnitySoundEngine.SetState("MusicStateGroup", "Win");
         MuffleorUnmuffleMusic(false);
+        banGameMusicChange = 0.01f;
     }
 
-#pragma warning disable IDE0060 // Remove unused parameter warnings
     /// <summary>
     /// Plays a mana gain or loss sfx
     /// </summary>
@@ -246,7 +253,6 @@ public class AudioManager : MonoBehaviour
             AkUnitySoundEngine.PostEvent(ManaLoseSFX.Id, gameObject);
         }
     }
-    #pragma warning restore IDE0060 // Re-enable unused parameter warnings
 
     /// <summary>
     /// Plays a click sfx
@@ -263,6 +269,7 @@ public class AudioManager : MonoBehaviour
     {
         AkUnitySoundEngine.SetState("MusicStateGroup", "Title");
         MuffleorUnmuffleMusic(false);
+        banGameMusicChange = 0.01f;
     }
 
     /// <summary>
@@ -313,6 +320,7 @@ public class AudioManager : MonoBehaviour
     {
         // AkUnitySoundEngine.SetRTPCValue("enemiesPerMinute", EnemiesPerMinute);
         if (LogLongestLivingEnemy) Debug.Log($"Longest Living Enemy: {longestLivingEnemy}");
+        if (banGameMusicChange > 0) return;
         if (longestLivingEnemy < MusicIntensity1)
         {
             AkUnitySoundEngine.SetState("MusicStateGroup", "Battle1");
