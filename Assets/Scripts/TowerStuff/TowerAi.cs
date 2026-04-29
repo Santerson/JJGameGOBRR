@@ -38,6 +38,7 @@ public class TowerAi : MonoBehaviour
     [SerializeField] private GameObject particlsRemove;
     [SerializeField] Vector2 PickupOffset = new Vector2(0, 0.8f);
     [SerializeField] float MaxDistToPickupTower = 0.5f;
+    [SerializeField] Color MouseOverHighlight = Color.red;
     /// <summary>
     /// The position of this tower in the grid (index based, where 0,0 is the bottom left)
     /// </summary>
@@ -46,6 +47,9 @@ public class TowerAi : MonoBehaviour
     public bool canBeSold = true;
     public bool canBeQuickMoved = true;
     private bool bunnyAnimationPlaying = false;
+
+    Color SpriteBaseColor;
+    SpriteRenderer ChildSprite;
 
     // List of animatons
     enum Animatons
@@ -71,6 +75,8 @@ public class TowerAi : MonoBehaviour
         refAudioManager = FindFirstObjectByType<AudioManager>();
         if (refAudioManager != null)
             refAudioManager.PlayTowerDropSFXs(gameObject, TowerID);
+        ChildSprite = GetComponentInChildren<SpriteRenderer>();
+        SpriteBaseColor = ChildSprite.color;
     }
 
     // Update is called once per frame
@@ -188,6 +194,12 @@ public class TowerAi : MonoBehaviour
         if (Vector2.Distance(mousePos, (Vector2)transform.position + PickupOffset) <= MaxDistToPickupTower)
         {
             MouseOverLogic();
+
+            if (TowerID != AudioManager.Towers.bunny)ChildSprite.color = SpriteBaseColor * MouseOverHighlight;
+        }
+        else
+        {
+            ChildSprite.color = SpriteBaseColor;
         }
     }
 
@@ -196,7 +208,6 @@ public class TowerAi : MonoBehaviour
     /// </summary>
     private void MouseOverLogic()
     {
-        Debug.Log($"Mouse over {gameObject.name}");
         if (Time.timeScale == 0)
             return;
         if (Input.GetMouseButtonDown(1) && canBeSold)

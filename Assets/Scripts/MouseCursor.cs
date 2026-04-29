@@ -16,5 +16,12 @@ public class MouseCursor : MonoBehaviour
         }
         instance = this;
         Cursor.SetCursor(mouseTexture, Offset, CursorMode.ForceSoftware);
+        DontDestroyOnLoad(gameObject);
+    }
+
+    private void Update()
+    {
+        Vector2 MousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        FolloiwngEmpty.transform.position = MousePos;
     }
 }
