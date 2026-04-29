@@ -35,7 +35,7 @@ PrefabInstance:
     - target: {fileID: 4466847123923408407, guid: 01a5586a081987349ade83957f7874d8, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -3567608622720266537, guid: 7828a4573fb38e64d840ae5eb7b0c9e4, type: 3}
+      objectReference: {fileID: -5364273895412653929, guid: b26e9298bf867b74d97a3a86826380b6, type: 3}
     - target: {fileID: 4720349265970859464, guid: 01a5586a081987349ade83957f7874d8, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.75
@@ -105,12 +105,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7530514561817378367, guid: 01a5586a081987349ade83957f7874d8, type: 3}
+      propertyPath: Bullet
+      value: 
+      objectReference: {fileID: 1381937643573472228, guid: 23893b69f5e31744b92381c28102fb98, type: 3}
+    - target: {fileID: 7530514561817378367, guid: 01a5586a081987349ade83957f7874d8, type: 3}
       propertyPath: particls
       value: 
       objectReference: {fileID: 7727561059665711907, guid: 4c7e45e408f833f4b8691a8c92eb0c5f, type: 3}
     - target: {fileID: 7530514561817378367, guid: 01a5586a081987349ade83957f7874d8, type: 3}
       propertyPath: RateOfFire
-      value: -1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7530514561817378367, guid: 01a5586a081987349ade83957f7874d8, type: 3}
       propertyPath: LengthOfAnimaton
