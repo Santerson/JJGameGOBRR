@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{62E37DE2-229F-4C94-AF0B-DEED7E1CA4CC}",
     "Language": "SFX",
-    "Hash": "{AF2867D9-5F0D-AE9A-AF61-BA016A54FCAB}",
+    "Hash": "{CAD4485A-626C-996C-D226-E38CC809ED77}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Music",
     "ShortName": "Music",
     "Path": "Music.bnk",
@@ -30,14 +30,6 @@
       "Location": "Memory",
       "ShortName": "JBattleSong2.wav",
       "CachePath": "E7/{E75F18F0-D4E6-C60E-78AD-4F8C8598C713}.wem"
-     },
-     {
-      "Id": "484806778",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "Loss.wav",
-      "CachePath": "F8/{F8924AB0-BA28-7FB3-B22E-0FCB0FAF642A}.wem"
      },
      {
       "Id": "639010732",
@@ -62,6 +54,14 @@
       "Location": "Memory",
       "ShortName": "Win.wav",
       "CachePath": "B6/{B6401708-BA78-AD65-0EF3-BD2028DF8054}.wem"
+     },
+     {
+      "Id": "1040194027",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "LoseMusic.wav",
+      "CachePath": "D5/{D5D89A46-E1A4-0A87-FFB7-A7323392073D}.wem"
      }
     ],
     "Events": [
@@ -102,7 +102,7 @@
           },
           "MediaRefs": [
            {
-            "Id": "484806778"
+            "Id": "1040194027"
            }
           ]
          },
@@ -190,7 +190,7 @@
           },
           "MediaRefs": [
            {
-            "Id": "484806778"
+            "Id": "1040194027"
            }
           ]
          },
@@ -339,6 +339,6 @@
     ]
    }
   ],
-  "FileHash": "{98DD31B3-C825-C0BF-5935-3C58B2C65EF8}"
+  "FileHash": "{C9A107E3-A6FA-39F0-013A-997D21172C0D}"
  }
 }

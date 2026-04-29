@@ -359,14 +359,14 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<MusicTrack Name="LoseMusic" ID="{23A8212E-197B-40E3-8443-72B25D215123}" ShortID="566240783">
+												<MusicTrack Name="Lose" ID="{6845C1DA-054A-46D0-A10D-884ADAA8E151}" ShortID="576599499">
 													<ReferenceList>
 														<Reference Name="OutputBus">
 															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84580E68-76CE-4E53-85DC-C1911E9315F6}"/>
 														</Reference>
 														<Reference Name="TransitionRoot">
 															<Custom>
-																<MusicTransition Name="Root" ID="{98B4BAD7-5C27-4DA9-ABDF-332D52A3FECB}">
+																<MusicTransition Name="Root" ID="{09A4A482-FB83-4915-976B-F0844D0274E3}">
 																	<PropertyList>
 																		<Property Name="IsFolder" Type="bool" Value="True"/>
 																	</PropertyList>
@@ -376,26 +376,26 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="Loss" ID="{ACC5B58B-260B-45D9-BF35-09CBF13B68A1}">
+														<AudioFileSource Name="LoseMusic" ID="{AA382D90-DCAA-45F6-9223-7B40F4780FBD}">
 															<Language>SFX</Language>
-															<AudioFile>Loss.wav</AudioFile>
+															<AudioFile>LoseMusic.wav</AudioFile>
 															<MediaIDList>
-																<MediaID ID="484806778"/>
+																<MediaID ID="1040194027"/>
 															</MediaIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<ObjectLists>
 														<ObjectList Name="Sequences">
-															<MusicTrackSequence Name="" ID="{F1F72D83-813F-4100-8AAF-A07ADBEC64A7}">
+															<MusicTrackSequence Name="" ID="{5FCABD54-711B-4AB9-B826-FBE32778A26A}">
 																<ObjectLists>
 																	<ObjectList Name="Clips">
-																		<MusicClip Name="Loss" ID="{90CA592B-DA34-467A-9012-77DF6514FAF2}">
+																		<MusicClip Name="LoseMusic" ID="{0EDFFD75-BD7C-439E-9348-A86CE158BB73}">
 																			<PropertyList>
-																				<Property Name="EndTrimOffset" Type="Real64" Value="31598.1405895692"/>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="31377.029478458"/>
 																				<Property Name="FadeInMode" Type="int16" Value="0"/>
 																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																			</PropertyList>
-																			<AudioSourceRef Name="Loss" ID="{ACC5B58B-260B-45D9-BF35-09CBF13B68A1}"/>
+																			<AudioSourceRef Name="LoseMusic" ID="{AA382D90-DCAA-45F6-9223-7B40F4780FBD}"/>
 																		</MusicClip>
 																	</ObjectList>
 																</ObjectLists>
@@ -1799,14 +1799,14 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<MusicTrack Name="Lose" ID="{912EFFC5-1FE5-4192-AFE5-5B3207A74F15}" ShortID="1033208760">
+												<MusicTrack Name="LoseMusic" ID="{9D49514B-A3CD-46AE-9021-F4730D629AE2}" ShortID="439992369">
 													<ReferenceList>
 														<Reference Name="OutputBus">
 															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84580E68-76CE-4E53-85DC-C1911E9315F6}"/>
 														</Reference>
 														<Reference Name="TransitionRoot">
 															<Custom>
-																<MusicTransition Name="Root" ID="{DD0852F1-C93D-4751-A9E5-1C6F97DC7AE1}">
+																<MusicTransition Name="Root" ID="{D0DD1DF1-5F20-4531-BC1E-6585407C7E3A}">
 																	<PropertyList>
 																		<Property Name="IsFolder" Type="bool" Value="True"/>
 																	</PropertyList>
@@ -1816,26 +1816,26 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="Loss" ID="{979DD394-67B2-4082-B0F3-57F6215ED9C3}">
+														<AudioFileSource Name="LoseMusic" ID="{1F596C01-08C5-4BA1-BF80-08B322C1282C}">
 															<Language>SFX</Language>
-															<AudioFile>Loss.wav</AudioFile>
+															<AudioFile>LoseMusic.wav</AudioFile>
 															<MediaIDList>
-																<MediaID ID="484806778"/>
+																<MediaID ID="1040194027"/>
 															</MediaIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<ObjectLists>
 														<ObjectList Name="Sequences">
-															<MusicTrackSequence Name="" ID="{D6D5DDE4-05C9-45D3-9753-E8A8199AC99E}">
+															<MusicTrackSequence Name="" ID="{ED600F83-48F2-4DDB-8ECF-A08D413C7222}">
 																<ObjectLists>
 																	<ObjectList Name="Clips">
-																		<MusicClip Name="Loss" ID="{0CC98232-1239-4DE7-BB66-F080B5C0A953}">
+																		<MusicClip Name="LoseMusic" ID="{56ED12B6-F115-46F1-8304-C2B5AB68F3E5}">
 																			<PropertyList>
-																				<Property Name="EndTrimOffset" Type="Real64" Value="31598.1405895692"/>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="31377.029478458"/>
 																				<Property Name="FadeInMode" Type="int16" Value="0"/>
 																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																			</PropertyList>
-																			<AudioSourceRef Name="Loss" ID="{979DD394-67B2-4082-B0F3-57F6215ED9C3}"/>
+																			<AudioSourceRef Name="LoseMusic" ID="{1F596C01-08C5-4BA1-BF80-08B322C1282C}"/>
 																		</MusicClip>
 																	</ObjectList>
 																</ObjectLists>
