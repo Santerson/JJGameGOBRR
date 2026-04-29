@@ -2454,103 +2454,6 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<PropertyContainer Name="MechMixer" ID="{D89CD463-F8D2-49B7-879F-7BBAADA65188}" ShortID="376876729">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9178FA55-D303-4149-A5D8-ACE42835274F}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84580E68-76CE-4E53-85DC-C1911E9315F6}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<Sound Name="Attack" ID="{D4E0AB75-2BBD-44BB-9544-F7E7102EE8B2}" ShortID="884910764">
-											<Comment>testing how wwise works</Comment>
-											<PropertyList>
-												<Property Name="Pitch" Type="int32">
-													<ValueList>
-														<Value>1000</Value>
-													</ValueList>
-												</Property>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>9</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9178FA55-D303-4149-A5D8-ACE42835274F}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84580E68-76CE-4E53-85DC-C1911E9315F6}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="GuyVoice" ID="{192FE56C-D8D2-447F-BC29-4DB531DACD1D}">
-													<Language>SFX</Language>
-													<AudioFile>GuyVoice.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="347852687"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="GuyVoice" ID="{192FE56C-D8D2-447F-BC29-4DB531DACD1D}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Die" ID="{065E3807-EA14-4E7D-93C5-D57D6282E44F}" ShortID="570504390">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9178FA55-D303-4149-A5D8-ACE42835274F}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84580E68-76CE-4E53-85DC-C1911E9315F6}"/>
-												</Reference>
-											</ReferenceList>
-										</Sound>
-										<Sound Name="Hurt" ID="{09EFAEB0-3AD7-49E5-8230-4FE6E0F4F14F}" ShortID="356006696">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9178FA55-D303-4149-A5D8-ACE42835274F}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84580E68-76CE-4E53-85DC-C1911E9315F6}"/>
-												</Reference>
-											</ReferenceList>
-										</Sound>
-										<Sound Name="Spawn" ID="{4410AABE-69FA-4468-A81E-328DD6FF4415}" ShortID="195745453">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9178FA55-D303-4149-A5D8-ACE42835274F}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84580E68-76CE-4E53-85DC-C1911E9315F6}"/>
-												</Reference>
-											</ReferenceList>
-										</Sound>
-										<Sound Name="Voice" ID="{94FE5576-6D56-4EBA-8656-0B361B386060}" ShortID="56601946">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9178FA55-D303-4149-A5D8-ACE42835274F}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84580E68-76CE-4E53-85DC-C1911E9315F6}"/>
-												</Reference>
-											</ReferenceList>
-										</Sound>
-										<Sound Name="Walk" ID="{8E593619-F653-4AFF-822E-AA6C77A8F1F3}" ShortID="571842195">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9178FA55-D303-4149-A5D8-ACE42835274F}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84580E68-76CE-4E53-85DC-C1911E9315F6}"/>
-												</Reference>
-											</ReferenceList>
-										</Sound>
-									</ChildrenList>
-								</PropertyContainer>
 								<PropertyContainer Name="GuyMixer" ID="{89245C0B-C008-401C-98F6-AFF90776D145}" ShortID="295409583">
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -3145,7 +3048,7 @@
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>4</Value>
+														<Value>2</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -3170,9 +3073,16 @@
 														<MediaID ID="865451487"/>
 													</MediaIDList>
 												</AudioFileSource>
+												<AudioFileSource Name="RockThrow" ID="{038F742E-9437-4647-8A75-E91971B4C6A3}">
+													<Language>SFX</Language>
+													<AudioFile>RockThrow.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="792309316"/>
+													</MediaIDList>
+												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
-												<ActiveSource Name="GolemShoot" ID="{FBCCFD88-AA06-4D2A-B452-5CBF8CA07C95}" Platform="Linked"/>
+												<ActiveSource Name="RockThrow" ID="{038F742E-9437-4647-8A75-E91971B4C6A3}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="Place" ID="{50CB9AC1-367D-47CC-AFC3-3BC527ECE1A6}" ShortID="124825582">
@@ -3195,6 +3105,7 @@
 												<AudioFileSource Name="GolemPlace" ID="{B7766AB9-57A2-4B4D-91DF-905029723B8C}">
 													<PropertyList>
 														<Property Name="FadeInDuration" Type="Real64" Value="0.18171"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.05733"/>
 														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 													</PropertyList>
 													<Language>SFX</Language>

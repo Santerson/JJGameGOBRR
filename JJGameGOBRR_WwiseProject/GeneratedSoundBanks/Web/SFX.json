@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{1B1FEBF3-0FD8-419E-9E0B-3423DC0D482B}",
     "Language": "SFX",
-    "Hash": "{D0A004E6-7808-903F-A5DC-562AAEFF27A6}",
+    "Hash": "{69A3AEEB-A333-09B9-8BA7-BA454379C4A3}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\SFX",
     "ShortName": "SFX",
     "Path": "SFX.bnk",
@@ -181,7 +181,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "GolemPlace.wav",
-      "CachePath": "07/{0782F1F4-AE44-B08C-5DA2-69BAC837489A}.wem"
+      "CachePath": "FD/{FDD13315-6546-4C48-EE8E-395894479923}.wem"
      },
      {
       "Id": "738599819",
@@ -192,20 +192,20 @@
       "CachePath": "80/{80114EC7-6832-5CA4-B7E8-E66739F1F1D0}.wem"
      },
      {
+      "Id": "792309316",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "RockThrow.wav",
+      "CachePath": "F0/{F0418233-2D11-113B-5839-FDC8D0D6590F}.wem"
+     },
+     {
       "Id": "826742836",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "UI_Click.wav",
       "CachePath": "A1/{A11A05AB-BCFD-C303-65E4-60D53CCF5822}.wem"
-     },
-     {
-      "Id": "865451487",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "GolemShoot.wav",
-      "CachePath": "3F/{3F39DC8D-0C0B-DC1C-3631-56E7980AEB3C}.wem"
      },
      {
       "Id": "875373321",
@@ -475,11 +475,11 @@
       "ObjectPath": "\\Events\\Default Work Unit\\SoundEffects\\Play_TGShoot",
       "GUID": "{3E2A3678-6C4E-4A4C-BE3E-F2DC66DA12EE}",
       "DurationType": "OneShot",
-      "DurationMin": "0.33433",
-      "DurationMax": "0.33433",
+      "DurationMin": "1.2234467",
+      "DurationMax": "1.2234467",
       "MediaRefs": [
        {
-        "Id": "865451487"
+        "Id": "792309316"
        }
       ]
      },
@@ -570,6 +570,6 @@
     ]
    }
   ],
-  "FileHash": "{CC68F936-4E2A-72CF-6C68-FA081787AE3A}"
+  "FileHash": "{13404C0E-D1AA-5490-8C65-AE4A3BCFAE58}"
  }
 }

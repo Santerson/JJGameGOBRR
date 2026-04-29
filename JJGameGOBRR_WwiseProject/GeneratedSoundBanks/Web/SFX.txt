@@ -41,10 +41,10 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	553902017	Walk_02	.cache\FC\{FCFBDC7F-B701-1664-FF9F-62E3A7D1BE71}.wem		\Containers\Default Work Unit\RouteToSFXBus\EnemyMixer\GuyMixer\WalkRandom\Walk_02		56560
 	593716501	Walk_06	.cache\26\{266428F8-87EC-4B15-E532-532B55156355}.wem		\Containers\Default Work Unit\RouteToSFXBus\EnemyMixer\GuyMixer\WalkRandom\Walk_06		83832
 	681854957	Place	.cache\A8\{A8D75D23-5F1B-5FF7-AA52-3FEF5FB43E47}.wem		\Containers\Default Work Unit\RouteToSFXBus\TowerMixer\Place		147548
-	736745190	Place	.cache\07\{0782F1F4-AE44-B08C-5DA2-69BAC837489A}.wem		\Containers\Default Work Unit\RouteToSFXBus\TowerMixer\GolemMixer\Place		158560
+	736745190	Place	.cache\FD\{FDD13315-6546-4C48-EE8E-395894479923}.wem		\Containers\Default Work Unit\RouteToSFXBus\TowerMixer\GolemMixer\Place		158560
 	738599819	Hurt	.cache\80\{80114EC7-6832-5CA4-B7E8-E66739F1F1D0}.wem		\Containers\Default Work Unit\RouteToSFXBus\EnemyMixer\GuyMixer\Hurt		49100
+	792309316	Shoot	.cache\F0\{F0418233-2D11-113B-5839-FDC8D0D6590F}.wem		\Containers\Default Work Unit\RouteToSFXBus\TowerMixer\GolemMixer\Shoot		215912
 	826742836	Click	.cache\A1\{A11A05AB-BCFD-C303-65E4-60D53CCF5822}.wem		\Containers\Default Work Unit\UI\Click		44348
-	865451487	Shoot	.cache\3F\{3F39DC8D-0C0B-DC1C-3631-56E7980AEB3C}.wem		\Containers\Default Work Unit\RouteToSFXBus\TowerMixer\GolemMixer\Shoot		59072
 	875373321	Die	.cache\D9\{D9FA72F1-0AA6-F860-22FB-5464B0D61FC4}.wem		\Containers\Default Work Unit\RouteToSFXBus\TowerMixer\BunnyMixer\Die		296960
 	887464942	Click	.cache\FE\{FE8B806C-DB0C-89C0-39B8-93E4D538A8C5}.wem		\Containers\Default Work Unit\RouteToSFXBus\TowerMixer\Click		79964
 	964520397	Remove	.cache\11\{11AA256F-DEC8-0DD2-3B9A-64F248982645}.wem		\Containers\Default Work Unit\RouteToSFXBus\TowerMixer\Remove		102152
