@@ -2341,14 +2341,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5812513164392073569, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
       propertyPath: MusicIntensity1
-      value: 7
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5812513164392073569, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
       propertyPath: MusicIntensity2
-      value: 10
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5812513164392073569, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
       propertyPath: LogEnemiesPerMinute
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5812513164392073569, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
+      propertyPath: LogLongestLivingEnemy
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5812513164392073569, guid: ee7408d355352e845af85a32cf605d6e, type: 3}

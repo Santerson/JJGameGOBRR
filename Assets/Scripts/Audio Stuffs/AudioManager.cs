@@ -37,7 +37,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] List<AK.Wwise.Event> EnemyVoiceSFXs;
 
     [Header("Enemy Spawning")]
-    [SerializeField] bool LogEnemiesPerMinute = false;
+    [SerializeField] bool LogLongestLivingEnemy = false;
     [Tooltip("Below this number is intensity 1")]
     [SerializeField] float MusicIntensity1 = 30f;
     [Tooltip("Below this number is intensity 2")]
@@ -305,15 +305,19 @@ public class AudioManager : MonoBehaviour
         AkUnitySoundEngine.PostEvent(TowerFailPlace.Id, spawnLocation);
     }
 
-    public void UpdateEnemiesPerSecondRTPC(float EnemiesPerMinute)
+    /// <summary>
+    /// Updates the enemy audio RTPC in Wwise for scaling intensity audio
+    /// </summary>
+    /// <param name="longestLivingEnemy"></param>
+    public void UpdateEnemiesPerSecondRTPC(float longestLivingEnemy)
     {
         // AkUnitySoundEngine.SetRTPCValue("enemiesPerMinute", EnemiesPerMinute);
-        if (LogEnemiesPerMinute) Debug.Log($"Enemies Per Minute: {EnemiesPerMinute}");
-        if (EnemiesPerMinute < MusicIntensity1)
+        if (LogLongestLivingEnemy) Debug.Log($"Longest Living Enemy: {longestLivingEnemy}");
+        if (longestLivingEnemy < MusicIntensity1)
         {
             AkUnitySoundEngine.SetState("MusicStateGroup", "Battle1");
         } 
-        else if (EnemiesPerMinute < MusicIntensity2)
+        else if (longestLivingEnemy < MusicIntensity2)
         {
             AkUnitySoundEngine.SetState("MusicStateGroup", "Battle2");
         }

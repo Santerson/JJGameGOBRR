@@ -35,6 +35,10 @@ public class EnemyAi : MonoBehaviour
 
     // variables that are changed in the code along with particles and animations and sounds
     public int lane;
+    /// <summary>
+    /// The amount of time this enemy has been alive
+    /// </summary>
+    public float TimeSpentAlive { get; private set; } = 0.0f;
     Color refcolor = Color.white;
     private int Health;
     private Animator animator;
@@ -77,7 +81,7 @@ public class EnemyAi : MonoBehaviour
 
     void FixedUpdate()
     {
-        
+        TimeSpentAlive += Time.fixedDeltaTime;
         // minus timers
         coolDownAttack -= Time.fixedDeltaTime;
         // play the audio for the enemy

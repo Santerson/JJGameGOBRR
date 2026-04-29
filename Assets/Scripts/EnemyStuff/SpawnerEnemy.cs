@@ -36,9 +36,10 @@ public class SpawnerEnemy : MonoBehaviour
     bool EndOfGameCheckedThisWave = false;
 
     float EmergencyWaveEnd = 25f;
-    public float EnemiesPerMinute { get; private set; } = 0f;
     uint EnemiesSpawned;
     float totalTimePassed;
+    // The time the oldest enemy has lived for, used for audio
+    float longestLivingEnemyTime = 0;
 
     /// <summary>
     /// A struct containing data for spawning enemies
@@ -80,11 +81,10 @@ public class SpawnerEnemy : MonoBehaviour
     {
         // Do nothing if enemies are not spawning (IE tutorial)
         if (!EnemiesSpawning) return;
-
+        GetLongestLivingEnemy();
         // Calculate enemies per minute
         totalTimePassed += Time.deltaTime;
-        EnemiesPerMinute = EnemiesSpawned / (totalTimePassed / 60);
-        refAudioManager?.UpdateEnemiesPerSecondRTPC(EnemiesPerMinute);
+        refAudioManager?.UpdateEnemiesPerSecondRTPC(longestLivingEnemyTime);
         // Check if all enemies have not been spawned
         if (!allMobsInWaveSpawned)
         {
@@ -184,5 +184,17 @@ public class SpawnerEnemy : MonoBehaviour
             return true;
         }
         return false;
+    }
+
+    /// <summary>
+    /// Finds the enemy with the longest living time and stores it into the longestLivingEnemyTime variable.
+    /// </summary>
+    void GetLongestLivingEnemy()
+    {
+        float longestLivingEnemy = 0f;
+        EnemyAi[] enemies = FindObjectsByType<EnemyAi>(FindObjectsSortMode.None);
+        foreach (EnemyAi enemy in enemies)
+            longestLivingEnemy = enemy.TimeSpentAlive > longestLivingEnemy ? enemy.TimeSpentAlive : longestLivingEnemy;
+        longestLivingEnemyTime = longestLivingEnemy;
     }
 }
