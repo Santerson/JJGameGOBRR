@@ -4,6 +4,7 @@
  * 
  * Description: Contains the logic for the towers
  * ******************************************/
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -19,7 +20,7 @@ public class TowerAi : MonoBehaviour
     // Sets stats
     [SerializeField] int HealthMax = 1;
     [Tooltip("Shots per second. set to -1 to disable")]
-    [SerializeField] float RateOfFire = 5;
+    [SerializeField] float RateOfFire = -1;
     [SerializeField] float FirePositionX = 0;
     [SerializeField] float FirePositiony = 0;
     // Timer for animaton to start - fire cooldown
@@ -44,6 +45,7 @@ public class TowerAi : MonoBehaviour
 
     public bool canBeSold = true;
     public bool canBeQuickMoved = true;
+    private bool bunnyAnimationPlaying = false;
 
     // List of animatons
     enum Animatons
@@ -90,7 +92,15 @@ public class TowerAi : MonoBehaviour
         // Make sure rate of fire causes
         if (RateOfFire == -1)
         {
+            if (!bunnyAnimationPlaying)
+            {
+                int ramdombunnyanimation = Random.Range(0,2);
+                Animator.SetInteger("State", ramdombunnyanimation);
+                bunnyAnimationPlaying = true;
+                StartCoroutine(DelayBunnyAnim());
+            }
             return;
+            
         }
         // Cooldown for a shot
         CoolDown -= Time.fixedDeltaTime;
@@ -206,5 +216,11 @@ public class TowerAi : MonoBehaviour
                 }
             }
         }
+    }
+
+    IEnumerator DelayBunnyAnim()
+    {
+        yield return new WaitForSeconds(1.5f);
+        bunnyAnimationPlaying = false;
     }
 }

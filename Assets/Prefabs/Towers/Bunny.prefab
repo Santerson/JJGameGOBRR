@@ -105,20 +105,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7530514561817378367, guid: 01a5586a081987349ade83957f7874d8, type: 3}
-      propertyPath: Bullet
-      value: 
-      objectReference: {fileID: 1381937643573472228, guid: 23893b69f5e31744b92381c28102fb98, type: 3}
-    - target: {fileID: 7530514561817378367, guid: 01a5586a081987349ade83957f7874d8, type: 3}
       propertyPath: particls
       value: 
       objectReference: {fileID: 7727561059665711907, guid: 4c7e45e408f833f4b8691a8c92eb0c5f, type: 3}
     - target: {fileID: 7530514561817378367, guid: 01a5586a081987349ade83957f7874d8, type: 3}
       propertyPath: RateOfFire
-      value: 5
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 7530514561817378367, guid: 01a5586a081987349ade83957f7874d8, type: 3}
       propertyPath: LengthOfAnimaton
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
