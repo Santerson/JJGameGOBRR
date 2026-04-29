@@ -1058,7 +1058,7 @@
 									<MultiSwitchEntry Name="" ID="{E15B8E8B-182F-4627-AEB9-40D7D69855E0}">
 										<ReferenceList>
 											<Reference Name="AudioNode">
-												<ObjectRef Name="Battle1" ID="{10228F2F-D4C1-463B-A9BC-D9ED6438C29A}" WorkUnitID="{C9DDC0B8-4122-402E-850F-253503C47F0F}"/>
+												<ObjectRef Name="Battle1" ID="{6720CAD1-1670-498C-AA67-8A5016ADD3D5}" WorkUnitID="{C9DDC0B8-4122-402E-850F-253503C47F0F}"/>
 											</Reference>
 										</ReferenceList>
 										<ObjectLists>
@@ -1130,7 +1130,7 @@
 									<MultiSwitchEntry Name="" ID="{7F852532-4E73-4329-BDBE-4127ECC49048}">
 										<ReferenceList>
 											<Reference Name="AudioNode">
-												<ObjectRef Name="Battle2" ID="{C412D6F6-E796-4375-B533-DC0585B3E339}" WorkUnitID="{C9DDC0B8-4122-402E-850F-253503C47F0F}"/>
+												<ObjectRef Name="Battle2" ID="{4E9E15DC-5A43-4EBE-867B-AA3F7F498C2A}" WorkUnitID="{C9DDC0B8-4122-402E-850F-253503C47F0F}"/>
 											</Reference>
 										</ReferenceList>
 										<ObjectLists>
@@ -1148,7 +1148,7 @@
 									<MultiSwitchEntry Name="" ID="{FFE35376-1084-431B-8F4C-61FDC39B9093}">
 										<ReferenceList>
 											<Reference Name="AudioNode">
-												<ObjectRef Name="Battle3" ID="{82ADECAF-D908-4E45-8D3D-1A5190E823EF}" WorkUnitID="{C9DDC0B8-4122-402E-850F-253503C47F0F}"/>
+												<ObjectRef Name="Battle3" ID="{0C1D125D-EFC6-41B9-824C-CB681E289D72}" WorkUnitID="{C9DDC0B8-4122-402E-850F-253503C47F0F}"/>
 											</Reference>
 										</ReferenceList>
 										<ObjectLists>
@@ -1438,7 +1438,7 @@
 									<ChildrenList>
 										<MusicSegment Name="Battle1" ID="{CC13AE16-5BDB-4924-A291-AC2C3370522C}" ShortID="415034947">
 											<PropertyList>
-												<Property Name="EndPosition" Type="Real64" Value="31538.984564639"/>
+												<Property Name="EndPosition" Type="Real64" Value="147692.31292517"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
