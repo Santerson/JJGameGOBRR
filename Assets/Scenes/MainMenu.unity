@@ -1198,7 +1198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mouseTexture: {fileID: 2800000, guid: 79969d7c1e6253e45acef092f4eb5332, type: 3}
-  Offset: {x: 40, y: -12}
+  Offset: {x: 43, y: 15}
   FolloiwngEmpty: {fileID: 0}
 --- !u!4 &1060625739
 Transform:
