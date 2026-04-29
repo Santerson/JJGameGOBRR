@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{62E37DE2-229F-4C94-AF0B-DEED7E1CA4CC}",
     "Language": "SFX",
-    "Hash": "{72B5BDC2-A709-1211-895B-BEA05D1E3B05}",
+    "Hash": "{4BB9FAFC-22D3-1A61-E38E-98827CB4CADB}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Music",
     "ShortName": "Music",
     "Path": "Music.bnk",
@@ -22,14 +22,6 @@
       "Location": "Memory",
       "ShortName": "JBattleSong3.wav",
       "CachePath": "CF/{CF4DA1D3-B032-D459-D16E-34F6586832EE}.wem"
-     },
-     {
-      "Id": "408197109",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "JsongDraft.wav",
-      "CachePath": "AF/{AF5189A0-9E0E-2023-3764-EEED6B1F89A7}.wem"
      },
      {
       "Id": "467138389",
@@ -46,6 +38,14 @@
       "Location": "Memory",
       "ShortName": "JBattleSong1.wav",
       "CachePath": "20/{20B620C7-37E5-E22D-5206-FD52801762D3}.wem"
+     },
+     {
+      "Id": "702379779",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "MainMenuSong.wav",
+      "CachePath": "DF/{DFA45358-386A-92ED-2074-069E7BA93E2B}.wem"
      },
      {
       "Id": "938029413",
@@ -115,7 +115,7 @@
           },
           "MediaRefs": [
            {
-            "Id": "408197109"
+            "Id": "702379779"
            }
           ]
          },
@@ -203,7 +203,7 @@
           },
           "MediaRefs": [
            {
-            "Id": "408197109"
+            "Id": "702379779"
            }
           ]
          },
@@ -339,6 +339,6 @@
     ]
    }
   ],
-  "FileHash": "{191BA564-8BC8-962E-B274-1AFE773376F6}"
+  "FileHash": "{32333C74-0033-4046-90B4-DB7BA516993B}"
  }
 }
