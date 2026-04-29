@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{28B1219D-BCDA-15A5-C2AF-AF8F19960321}",
+    "Hash": "{7FF4648F-51F3-8416-4B71-7B7525A248A3}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -49,6 +49,12 @@
      }
     ],
     "GameParameters": [
+     {
+      "Id": "65081432",
+      "Name": "enemiesPerMinute",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\enemiesPerMinute",
+      "GUID": "{4ACF671F-F40E-49C0-A2E1-F01A531B6129}"
+     },
      {
       "Id": "3505915932",
       "Name": "curMana",
@@ -136,6 +142,6 @@
     ]
    }
   ],
-  "FileHash": "{EDB58024-6361-4E98-D9AD-14D888DC6EF5}"
+  "FileHash": "{BF408285-D033-C8A0-FD93-F0F2A7843CE1}"
  }
 }

@@ -74,6 +74,7 @@ namespace AK
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID CURMANA = 3505915932U;
+        static const AkUniqueID ENEMIESPERMINUTE = 65081432U;
     } // namespace GAME_PARAMETERS
 
     namespace BANKS

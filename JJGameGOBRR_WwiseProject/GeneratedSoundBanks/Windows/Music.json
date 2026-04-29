@@ -10,18 +10,18 @@
     "Type": "User",
     "GUID": "{62E37DE2-229F-4C94-AF0B-DEED7E1CA4CC}",
     "Language": "SFX",
-    "Hash": "{FF4F4194-E518-31EE-7FC0-5543609A08CA}",
+    "Hash": "{59EED666-FDB2-F90C-ED8D-4243F0EF8942}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Music",
     "ShortName": "Music",
     "Path": "Music.bnk",
     "Media": [
      {
-      "Id": "371096670",
+      "Id": "58476627",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "Music2.wav",
-      "CachePath": "10/{10C7C072-102E-72D2-1CA7-B02E4FF7FF0D}.wem"
+      "ShortName": "JBattleSong3.wav",
+      "CachePath": "CF/{CF4DA1D3-B032-D459-D16E-34F6586832EE}.wem"
      },
      {
       "Id": "408197109",
@@ -32,28 +32,28 @@
       "CachePath": "AF/{AF5189A0-9E0E-2023-3764-EEED6B1F89A7}.wem"
      },
      {
+      "Id": "467138389",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "JBattleSong2.wav",
+      "CachePath": "E7/{E75F18F0-D4E6-C60E-78AD-4F8C8598C713}.wem"
+     },
+     {
+      "Id": "639010732",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "JBattleSong1.wav",
+      "CachePath": "20/{20B620C7-37E5-E22D-5206-FD52801762D3}.wem"
+     },
+     {
       "Id": "938029413",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Win.wav",
       "CachePath": "B6/{B6401708-BA78-AD65-0EF3-BD2028DF8054}.wem"
-     },
-     {
-      "Id": "989487855",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "toothbrush.wav",
-      "CachePath": "00/{00161964-ABB0-6D7B-5CB4-C2AA03314C53}.wem"
-     },
-     {
-      "Id": "1005246337",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "Music1.wav",
-      "CachePath": "74/{741D1A0E-F747-0F1D-207A-7AB33E10CDE4}.wem"
      },
      {
       "Id": "1017932379",
@@ -89,7 +89,7 @@
           },
           "MediaRefs": [
            {
-            "Id": "1005246337"
+            "Id": "639010732"
            }
           ]
          },
@@ -141,7 +141,7 @@
           },
           "MediaRefs": [
            {
-            "Id": "371096670"
+            "Id": "467138389"
            }
           ]
          },
@@ -154,7 +154,7 @@
           },
           "MediaRefs": [
            {
-            "Id": "989487855"
+            "Id": "58476627"
            }
           ]
          }
@@ -177,7 +177,7 @@
           },
           "MediaRefs": [
            {
-            "Id": "1005246337"
+            "Id": "639010732"
            }
           ]
          },
@@ -229,7 +229,7 @@
           },
           "MediaRefs": [
            {
-            "Id": "371096670"
+            "Id": "467138389"
            }
           ]
          },
@@ -242,7 +242,7 @@
           },
           "MediaRefs": [
            {
-            "Id": "989487855"
+            "Id": "58476627"
            }
           ]
          }
@@ -339,6 +339,6 @@
     ]
    }
   ],
-  "FileHash": "{A70DF095-00DF-A663-D604-00A883A121BC}"
+  "FileHash": "{70C727AB-BEE9-6875-C55F-631141D58996}"
  }
 }

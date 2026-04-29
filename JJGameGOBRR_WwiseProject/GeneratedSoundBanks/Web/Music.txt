@@ -21,10 +21,10 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	3505915932	curMana			\Default Work Unit\curMana	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	371096670	Music2	.cache\10\{10C7C072-102E-72D2-1CA7-B02E4FF7FF0D}.wem		\Containers\Default Work Unit\MusicPlaylist\MusicPlaylistUnmuffle\Battle2\Battle2\Music2		5556304
+	58476627	Music3	.cache\CF\{CF4DA1D3-B032-D459-D16E-34F6586832EE}.wem		\Containers\Default Work Unit\MusicPlaylist\MusicPlaylistUnmuffle\Battle3\Battle3\Music3		26053020
 	408197109	JsongDraft	.cache\AF\{AF5189A0-9E0E-2023-3764-EEED6B1F89A7}.wem		\Containers\Default Work Unit\MusicPlaylist\MusicPlaylistMuffled\Title\Title\JsongDraft		16934496
+	467138389	Music2	.cache\E7\{E75F18F0-D4E6-C60E-78AD-4F8C8598C713}.wem		\Containers\Default Work Unit\MusicPlaylist\MusicPlaylistUnmuffle\Battle2\Battle2\Music2		26053020
+	639010732	Music1	.cache\20\{20B620C7-37E5-E22D-5206-FD52801762D3}.wem		\Containers\Default Work Unit\MusicPlaylist\MusicPlaylistMuffled\Battle1\Battle1\Music1		26053020
 	938029413	Win	.cache\B6\{B6401708-BA78-AD65-0EF3-BD2028DF8054}.wem		\Containers\Default Work Unit\MusicPlaylist\MusicPlaylistUnmuffle\Win\Win\Win		203188
-	989487855	Music3	.cache\00\{00161964-ABB0-6D7B-5CB4-C2AA03314C53}.wem		\Containers\Default Work Unit\MusicPlaylist\MusicPlaylistUnmuffle\Battle3\Battle3\Music3		5830972
-	1005246337	Music1	.cache\74\{741D1A0E-F747-0F1D-207A-7AB33E10CDE4}.wem		\Containers\Default Work Unit\MusicPlaylist\MusicPlaylistUnmuffle\Battle1\Battle1\Music1		5556304
 	1017932379	Lose	.cache\F8\{F878E9BC-ACFD-D347-2758-E47EC74C548C}.wem		\Containers\Default Work Unit\MusicPlaylist\MusicPlaylistUnmuffle\Lose\Lose\Lose		285940
 
