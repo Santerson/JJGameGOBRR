@@ -335,4 +335,14 @@ public class AudioManager : MonoBehaviour
         }
 
     }
+    
+    public float GetTier2BattleMusicFloat()
+    {
+        return MusicIntensity1;
+    }
+
+    public float GetTier3BattleMusicFloat()
+    {
+        return MusicIntensity2;
+    }
 }

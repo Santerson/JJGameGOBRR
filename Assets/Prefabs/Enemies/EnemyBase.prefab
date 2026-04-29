@@ -57,7 +57,7 @@ MonoBehaviour:
   AttackHitBoxY: 0
   LengthOfAnimaton: 0
   EnemyID: 0
-  RandomVoiceChance: 500
+  RandomVoiceChance: 0.2
   TimeInbetweenWalkSounds: 1
   DeathAnimationtime: 0
   DeathAnimation: 0

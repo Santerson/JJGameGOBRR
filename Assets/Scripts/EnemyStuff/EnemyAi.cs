@@ -25,8 +25,8 @@ public class EnemyAi : MonoBehaviour
     [SerializeField] float LengthOfAnimaton = 0;
     [SerializeField] AudioManager.Enemies EnemyID;
     [Header("SFX")]
-    [Tooltip("1 in this chance to play the sound each fixed update (50 times per second)")]
-    [SerializeField] float RandomVoiceChance = 500f;
+    [Tooltip("out of 100, chance to play each footstep")]
+    [SerializeField] float RandomVoiceChance = 10f;
     [Tooltip("The amount of time in seconds inbetween each walk sound")]
     [SerializeField] float TimeInbetweenWalkSounds = 1f;
     [SerializeField] float DeathAnimationtime;
@@ -93,7 +93,12 @@ public class EnemyAi : MonoBehaviour
             if (timeToNextEnemyWalkSound <= 0)
             {
                 if (refAudioManager != null)
+                {
                     refAudioManager.PlayEnemyWalkSFX(gameObject, EnemyID);
+                    float chance = Random.Range(0, 100);
+                    if (chance <= RandomVoiceChance)
+                        refAudioManager.PlayEnemyVoiceSFX(gameObject, EnemyID);
+                }
                 timeToNextEnemyWalkSound = TimeInbetweenWalkSounds;
             }
         }
@@ -109,7 +114,6 @@ public class EnemyAi : MonoBehaviour
             // moves enemy
             RB.linearVelocityX = MaxSpeed;
             MaxSpeed = Speed;
-
         }
         animator.SetInteger("State", (int)animations.walk);
     }

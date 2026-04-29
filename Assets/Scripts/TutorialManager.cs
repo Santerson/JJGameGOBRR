@@ -1,6 +1,7 @@
 /************************************
  * Filename: TutorialManager.cs
  * Author: Santiago Caprarulo
+ * Email: santiago.caprarulo
  * Description: Performs a tutorial at the start
  * of the game
  * 
@@ -52,6 +53,7 @@ public class TutorialManager : MonoBehaviour
 
     SpawnerEnemy refEnemySpawner;
     public static bool tutorialOccured = false;
+    AudioManager refAudioManager;
 
     public bool IsTutorialing { get; private set; } = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -62,6 +64,7 @@ public class TutorialManager : MonoBehaviour
         {
             Debug.LogError("NO enemy spawner found!");
         }
+        refAudioManager = FindFirstObjectByType<AudioManager>();
         if (DoTutorial && !tutorialOccured) StartCoroutine(PlayTutorial());
     }
 
@@ -122,6 +125,8 @@ public class TutorialManager : MonoBehaviour
 
         // Spawn an enemy and enable second text
         GameObject refenemy = refEnemySpawner.SpawnEnemy(tutorialEnemy, 1);
+        // Escalate Music
+        refAudioManager?.UpdateEnemiesPerSecondRTPC(refAudioManager.GetTier2BattleMusicFloat() + 0.1f);
         tutorial2.SetActive(true);
         yield return new WaitForSeconds(waitTime2);
 
@@ -269,6 +274,8 @@ public class TutorialManager : MonoBehaviour
         manaBar.ManaDraining = false;
         tutorial10.SetActive(false);
         tutorial11.SetActive(true);
+        // Return the music
+        refAudioManager?.UpdateEnemiesPerSecondRTPC(refAudioManager.GetTier2BattleMusicFloat() - 0.1f);
         // Make the player read through the next batches of text
         while (!Input.GetKey(ContinueButton))
             yield return new WaitForEndOfFrame();
