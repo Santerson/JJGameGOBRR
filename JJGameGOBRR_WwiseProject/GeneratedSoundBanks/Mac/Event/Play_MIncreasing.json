@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "353692838",
+    "Type": "Event",
+    "GUID": "{C929B1E9-DC16-4373-91E6-3D84251BF915}",
+    "Language": "SFX",
+    "Hash": "{D29299F4-3258-4E72-8C2A-05E7079E0723}",
+    "ObjectPath": "Play_MIncreasing",
+    "ShortName": "Play_MIncreasing",
+    "Path": "Event/Play_MIncreasing.bnk",
+    "Media": [
+     {
+      "Id": "914461470",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Mana_Increasing.wav",
+      "Path": "Media/914461470.wem",
+      "CachePath": "01/{0152261B-71BB-C676-B333-8DCEEE18D99A}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "353692838",
+      "Name": "Play_MIncreasing",
+      "ObjectPath": "\\Events\\Default Work Unit\\SoundEffects\\Play_MIncreasing",
+      "GUID": "{C929B1E9-DC16-4373-91E6-3D84251BF915}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.7251701",
+      "DurationMax": "0.7251701",
+      "MediaRefs": [
+       {
+        "Id": "914461470"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{966F8552-F9CD-AD92-29BB-DCF493964769}"
+ }
+}

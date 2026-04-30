@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3957186333",
+    "Type": "Event",
+    "GUID": "{58D66B10-76D8-4F4B-95E6-35D170AE66F8}",
+    "Language": "SFX",
+    "Hash": "{4F80F6F9-CD1E-18CD-1C22-6336841110F0}",
+    "ObjectPath": "Play_TBPlace",
+    "ShortName": "Play_TBPlace",
+    "Path": "Event/Play_TBPlace.bnk",
+    "Media": [
+     {
+      "Id": "1020242796",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BunnySpawn2.wav",
+      "Path": "Media/1020242796.wem",
+      "CachePath": "F3/{F353E0B7-C26C-C48B-87D0-73ACCC9037BB}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3957186333",
+      "Name": "Play_TBPlace",
+      "ObjectPath": "\\Events\\Default Work Unit\\SoundEffects\\Play_TBPlace",
+      "GUID": "{58D66B10-76D8-4F4B-95E6-35D170AE66F8}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.8280272",
+      "DurationMax": "0.8280272",
+      "MediaRefs": [
+       {
+        "Id": "1020242796"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{1E3FD91E-6558-8EA1-A9E8-7F8E14A0FB44}"
+ }
+}

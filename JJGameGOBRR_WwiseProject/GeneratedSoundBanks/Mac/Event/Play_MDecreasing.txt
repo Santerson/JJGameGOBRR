@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2591182578	Play_MDecreasing			\Default Work Unit\SoundEffects\Play_MDecreasing	
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	3505915932	curMana			\Default Work Unit\curMana	
+

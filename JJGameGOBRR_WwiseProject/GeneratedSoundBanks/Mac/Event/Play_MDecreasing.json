@@ -1,0 +1,56 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2591182578",
+    "Type": "Event",
+    "GUID": "{822FDE62-0D80-458A-92E5-C3B4EC6E7FFA}",
+    "Language": "SFX",
+    "Hash": "{70749B7D-EE54-AF95-B70E-BE48CEB3F64D}",
+    "ObjectPath": "Play_MDecreasing",
+    "ShortName": "Play_MDecreasing",
+    "Path": "Event/Play_MDecreasing.bnk",
+    "Media": [
+     {
+      "Id": "152500346",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Mana_Decreasing.wav",
+      "Path": "Media/152500346.wem",
+      "CachePath": "79/{7936D13D-0614-9436-ED20-54D6E81CB127}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2591182578",
+      "Name": "Play_MDecreasing",
+      "ObjectPath": "\\Events\\Default Work Unit\\SoundEffects\\Play_MDecreasing",
+      "GUID": "{822FDE62-0D80-458A-92E5-C3B4EC6E7FFA}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.79086167",
+      "DurationMax": "0.79086167",
+      "MediaRefs": [
+       {
+        "Id": "152500346"
+       }
+      ]
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "3505915932",
+      "Name": "curMana",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\curMana",
+      "GUID": "{D3891064-1AFB-4042-A0CC-97B00B1F828E}"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{5CE2B469-87CE-FDD1-3AB8-4967DD6553E2}"
+ }
+}

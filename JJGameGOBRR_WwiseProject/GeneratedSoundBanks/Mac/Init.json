@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{62B08D95-EAF7-BA18-C695-2863BC791232}",
+    "Hash": "{F8CC6849-C22B-7F13-2500-B151DD8FB58B}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -40,26 +40,108 @@
       "Name": "Main Audio Bus",
       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus",
       "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"
+     },
+     {
+      "Id": "4084199202",
+      "Name": "SFX Audio Bus",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\SFX Audio Bus",
+      "GUID": "{30F7FAA6-CB0C-40EA-84A5-3CF437AA2FB5}"
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "65081432",
+      "Name": "enemiesPerMinute",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\enemiesPerMinute",
+      "GUID": "{4ACF671F-F40E-49C0-A2E1-F01A531B6129}"
+     },
+     {
+      "Id": "3505915932",
+      "Name": "curMana",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\curMana",
+      "GUID": "{D3891064-1AFB-4042-A0CC-97B00B1F828E}"
      }
     ],
     "StateGroups": [
      {
-      "Id": "491548818",
-      "Name": "CurrentLevel",
-      "ObjectPath": "\\States\\Default Work Unit\\CurrentLevel",
-      "GUID": "{5A19B937-16A9-41F6-B756-DB671270D2A2}",
+      "Id": "2163007642",
+      "Name": "MusicStateGroup",
+      "ObjectPath": "\\States\\Default Work Unit\\MusicStateGroup",
+      "GUID": "{1712CBF6-D8AA-4000-B3B6-D6EBD3FD80C6}",
+      "States": [
+       {
+        "Id": "221232726",
+        "Name": "Lose",
+        "ObjectPath": "\\States\\Default Work Unit\\MusicStateGroup\\Lose",
+        "GUID": "{66C18FB2-CB72-4FDF-83A1-36B1B92886D5}"
+       },
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\MusicStateGroup\\None",
+        "GUID": "{708CF3F4-2C9C-4AE1-8981-F5EAC4196E46}"
+       },
+       {
+        "Id": "979765101",
+        "Name": "Win",
+        "ObjectPath": "\\States\\Default Work Unit\\MusicStateGroup\\Win",
+        "GUID": "{0A3782FD-23B7-4190-9FC6-6AF7EB5B0A83}"
+       },
+       {
+        "Id": "2813898844",
+        "Name": "Battle1",
+        "ObjectPath": "\\States\\Default Work Unit\\MusicStateGroup\\Battle1",
+        "GUID": "{944C87C5-AF4D-4D36-A14F-93AF72CA2B14}"
+       },
+       {
+        "Id": "2813898846",
+        "Name": "Battle3",
+        "ObjectPath": "\\States\\Default Work Unit\\MusicStateGroup\\Battle3",
+        "GUID": "{C03F85D9-E4DA-4B7F-8938-2663CD0884AE}"
+       },
+       {
+        "Id": "2813898847",
+        "Name": "Battle2",
+        "ObjectPath": "\\States\\Default Work Unit\\MusicStateGroup\\Battle2",
+        "GUID": "{173F842F-E5E1-43CC-9D55-0AE8431AD003}"
+       },
+       {
+        "Id": "3705726509",
+        "Name": "Title",
+        "ObjectPath": "\\States\\Default Work Unit\\MusicStateGroup\\Title",
+        "GUID": "{84A5005D-D1C6-47D6-BD76-0249C93F6A61}"
+       }
+      ]
+     },
+     {
+      "Id": "2466022301",
+      "Name": "MuffledOrUnmuffled",
+      "ObjectPath": "\\States\\Default Work Unit\\MuffledOrUnmuffled",
+      "GUID": "{6115CEEA-C646-4B6F-BD26-DC6ECA50C04C}",
       "States": [
        {
         "Id": "748895195",
         "Name": "None",
-        "ObjectPath": "\\States\\Default Work Unit\\CurrentLevel\\None",
-        "GUID": "{214D4B71-40F1-4155-8CDB-397949C0AD01}"
+        "ObjectPath": "\\States\\Default Work Unit\\MuffledOrUnmuffled\\None",
+        "GUID": "{8BCE3D90-012F-42FC-A104-3B1637A1606F}"
+       },
+       {
+        "Id": "3603405849",
+        "Name": "Unmuffled",
+        "ObjectPath": "\\States\\Default Work Unit\\MuffledOrUnmuffled\\Unmuffled",
+        "GUID": "{F49FEC07-288F-4309-994A-61A27994A5C4}"
+       },
+       {
+        "Id": "4200322818",
+        "Name": "Muffled",
+        "ObjectPath": "\\States\\Default Work Unit\\MuffledOrUnmuffled\\Muffled",
+        "GUID": "{AD194A52-56D2-4996-9171-287E0BF1528B}"
        }
       ]
      }
     ]
    }
   ],
-  "FileHash": "{23F3F0B4-06C2-764C-2F3D-F5AA066DDFD5}"
+  "FileHash": "{7992A97E-B408-8FA7-014A-F7B3C30E0835}"
  }
 }

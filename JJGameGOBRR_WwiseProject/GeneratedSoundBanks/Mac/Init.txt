@@ -1,11 +1,22 @@
 State Group	ID	Name			Wwise Object Path	Notes
-	491548818	CurrentLevel			\Default Work Unit\CurrentLevel	
+	2163007642	MusicStateGroup			\Default Work Unit\MusicStateGroup	
+	2466022301	MuffledOrUnmuffled			\Default Work Unit\MuffledOrUnmuffled	
 
 State	ID	Name	State Group			Notes
-	748895195	None	CurrentLevel			
+	221232726	Lose	MusicStateGroup			
+	748895195	None	MusicStateGroup			
+	979765101	Win	MusicStateGroup			
+	2813898844	Battle1	MusicStateGroup			
+	2813898846	Battle3	MusicStateGroup			
+	2813898847	Battle2	MusicStateGroup			
+	3705726509	Title	MusicStateGroup			
+	748895195	None	MuffledOrUnmuffled			
+	3603405849	Unmuffled	MuffledOrUnmuffled			
+	4200322818	Muffled	MuffledOrUnmuffled			
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	2246998526	Main Audio Bus			\Default Work Unit\Main Audio Bus	
+	4084199202	SFX Audio Bus			\Default Work Unit\Main Audio Bus\SFX Audio Bus	
 
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			
