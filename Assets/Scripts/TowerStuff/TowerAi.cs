@@ -34,6 +34,7 @@ public class TowerAi : MonoBehaviour
     TowerGrid refGrid;
     LaneCheck refLaneCheck;
     AudioManager refAudioManager; 
+    [SerializeField] private GameObject particls_bunny;
     [SerializeField] private GameObject particls;
     [SerializeField] private GameObject particlsRemove;
     [SerializeField] Vector2 PickupOffset = new Vector2(0, 0.8f);
@@ -105,8 +106,13 @@ public class TowerAi : MonoBehaviour
                 int ramdombunnyanimation = Random.Range(0,11);
                 Debug.Log(ramdombunnyanimation);
                 Animator.SetInteger("State", ramdombunnyanimation);
+                if (ramdombunnyanimation >= 8)
+                {
+                    Instantiate(particls_bunny, gameObject.transform.position, Quaternion.identity);
+                }
                 bunnyAnimationPlaying = true;
                 StartCoroutine(DelayBunnyAnim());
+                
 
             }
            
