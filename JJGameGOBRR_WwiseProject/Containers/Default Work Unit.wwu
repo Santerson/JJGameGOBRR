@@ -348,7 +348,7 @@
 									<ChildrenList>
 										<MusicSegment Name="Lose" ID="{082ACE70-3244-42CE-84C4-A2B24DAF7C9C}" ShortID="150461923">
 											<PropertyList>
-												<Property Name="EndPosition" Type="Real64" Value="32493.514739229"/>
+												<Property Name="EndPosition" Type="Real64" Value="31377.029478458"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -410,7 +410,7 @@
 													<MusicCue Name="Exit Cue" ID="{0BBC70A8-EF77-4C78-A52E-72646CFBAC43}">
 														<PropertyList>
 															<Property Name="CueType" Type="int16" Value="1"/>
-															<Property Name="TimeMs" Type="Real64" Value="31259.7562743232"/>
+															<Property Name="TimeMs" Type="Real64" Value="31377.029478458"/>
 														</PropertyList>
 													</MusicCue>
 												</ObjectList>
@@ -464,7 +464,7 @@
 									<ChildrenList>
 										<MusicSegment Name="Title" ID="{96FB85EE-7474-4C99-95DB-4DC13B1D18E1}" ShortID="497764128">
 											<PropertyList>
-												<Property Name="EndPosition" Type="Real64" Value="97044.401108019"/>
+												<Property Name="EndPosition" Type="Real64" Value="96000"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -526,7 +526,7 @@
 													<MusicCue Name="Exit Cue" ID="{FCC005CA-C5FF-4BC4-81CE-EF433278E146}">
 														<PropertyList>
 															<Property Name="CueType" Type="int16" Value="1"/>
-															<Property Name="TimeMs" Type="Real64" Value="95810.2476441051"/>
+															<Property Name="TimeMs" Type="Real64" Value="96000"/>
 														</PropertyList>
 													</MusicCue>
 												</ObjectList>
@@ -578,6 +578,9 @@
 									</ReferenceList>
 									<ChildrenList>
 										<MusicSegment Name="Win" ID="{9C9E002C-1ED4-43AC-B6F6-E9E08C1738D3}" ShortID="205710949">
+											<PropertyList>
+												<Property Name="EndPosition" Type="Real64" Value="1151.31519274376"/>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9178FA55-D303-4149-A5D8-ACE42835274F}"/>
@@ -638,7 +641,7 @@
 													<MusicCue Name="Exit Cue" ID="{3FCA8280-5503-47B8-B8D4-B16700A8075F}">
 														<PropertyList>
 															<Property Name="CueType" Type="int16" Value="1"/>
-															<Property Name="TimeMs" Type="Real64" Value="1494.92385786802"/>
+															<Property Name="TimeMs" Type="Real64" Value="1151.31519274376"/>
 														</PropertyList>
 													</MusicCue>
 												</ObjectList>
@@ -692,7 +695,7 @@
 									<ChildrenList>
 										<MusicSegment Name="Battle1" ID="{10228F2F-D4C1-463B-A9BC-D9ED6438C29A}" ShortID="340162374">
 											<PropertyList>
-												<Property Name="EndPosition" Type="Real64" Value="150639.752748254"/>
+												<Property Name="EndPosition" Type="Real64" Value="118153.854875283"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -703,14 +706,14 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<MusicTrack Name="Music1" ID="{608AD08E-5912-49E6-932E-078D5F77B90D}" ShortID="468531483">
+												<MusicTrack Name="JBattleSong1" ID="{ECC4971C-7B96-4A94-8A0A-BD9875795693}" ShortID="386919816">
 													<ReferenceList>
 														<Reference Name="OutputBus">
 															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84580E68-76CE-4E53-85DC-C1911E9315F6}"/>
 														</Reference>
 														<Reference Name="TransitionRoot">
 															<Custom>
-																<MusicTransition Name="Root" ID="{F1E1D780-CEF3-4E61-ABF2-84E674ECD8A4}">
+																<MusicTransition Name="Root" ID="{309301F1-F36D-47A9-AE92-FF51EB62CA33}">
 																	<PropertyList>
 																		<Property Name="IsFolder" Type="bool" Value="True"/>
 																	</PropertyList>
@@ -720,7 +723,7 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="JBattleSong1" ID="{F41EA71E-FEB4-4F06-A03F-C914AFB07A31}">
+														<AudioFileSource Name="JBattleSong1" ID="{23729C2E-8E12-44CA-A887-52D4C8AD4647}">
 															<Language>SFX</Language>
 															<AudioFile>JBattleSong1.wav</AudioFile>
 															<MediaIDList>
@@ -730,16 +733,16 @@
 													</ChildrenList>
 													<ObjectLists>
 														<ObjectList Name="Sequences">
-															<MusicTrackSequence Name="" ID="{91DBD512-AED9-4A45-A528-E8679C098A68}">
+															<MusicTrackSequence Name="" ID="{3D7F63D5-F12D-4370-99E7-1C82299F474F}">
 																<ObjectLists>
 																	<ObjectList Name="Clips">
-																		<MusicClip Name="JBattleSong1" ID="{74A9F70D-9687-41FC-9882-455D1682A731}">
+																		<MusicClip Name="JBattleSong1" ID="{78620851-51B1-4CD9-97D4-F15C70A057CE}">
 																			<PropertyList>
-																				<Property Name="EndTrimOffset" Type="Real64" Value="147692.31292517"/>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="118153.854875283"/>
 																				<Property Name="FadeInMode" Type="int16" Value="0"/>
 																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																			</PropertyList>
-																			<AudioSourceRef Name="JBattleSong1" ID="{F41EA71E-FEB4-4F06-A03F-C914AFB07A31}"/>
+																			<AudioSourceRef Name="JBattleSong1" ID="{23729C2E-8E12-44CA-A887-52D4C8AD4647}"/>
 																		</MusicClip>
 																	</ObjectList>
 																</ObjectLists>
@@ -754,7 +757,7 @@
 													<MusicCue Name="Exit Cue" ID="{FF13B432-9611-4F23-ACDE-DDC20A3CB84F}">
 														<PropertyList>
 															<Property Name="CueType" Type="int16" Value="1"/>
-															<Property Name="TimeMs" Type="Real64" Value="147589.298166223"/>
+															<Property Name="TimeMs" Type="Real64" Value="118153.854875283"/>
 														</PropertyList>
 													</MusicCue>
 												</ObjectList>
@@ -808,7 +811,7 @@
 									<ChildrenList>
 										<MusicSegment Name="Battle2" ID="{C412D6F6-E796-4375-B533-DC0585B3E339}" ShortID="208595233">
 											<PropertyList>
-												<Property Name="EndPosition" Type="Real64" Value="152000"/>
+												<Property Name="EndPosition" Type="Real64" Value="118153.854875283"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -819,14 +822,14 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<MusicTrack Name="Music2" ID="{35B42D45-EEFA-447D-AADB-5B644A77169A}" ShortID="985325604">
+												<MusicTrack Name="JBattleSong2" ID="{D6F38213-F5CD-41C7-9134-38B58F60EB6D}" ShortID="721932243">
 													<ReferenceList>
 														<Reference Name="OutputBus">
 															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84580E68-76CE-4E53-85DC-C1911E9315F6}"/>
 														</Reference>
 														<Reference Name="TransitionRoot">
 															<Custom>
-																<MusicTransition Name="Root" ID="{47485941-34FE-4D12-9432-60124348D8C7}">
+																<MusicTransition Name="Root" ID="{A106BAAF-BCA0-4011-B399-F8E6460D87CD}">
 																	<PropertyList>
 																		<Property Name="IsFolder" Type="bool" Value="True"/>
 																	</PropertyList>
@@ -836,7 +839,7 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="JBattleSong2" ID="{0810CAF6-F0C0-4BA9-8E17-8C820B6481FF}">
+														<AudioFileSource Name="JBattleSong2" ID="{FA1F2D36-9472-4A1E-BBE4-9BDAD3684C38}">
 															<Language>SFX</Language>
 															<AudioFile>JBattleSong2.wav</AudioFile>
 															<MediaIDList>
@@ -846,16 +849,16 @@
 													</ChildrenList>
 													<ObjectLists>
 														<ObjectList Name="Sequences">
-															<MusicTrackSequence Name="" ID="{D6DF3B1E-0C1B-45C7-B123-F9FD2A0A5799}">
+															<MusicTrackSequence Name="" ID="{49C59714-3488-481D-B59E-DB957BD4E270}">
 																<ObjectLists>
 																	<ObjectList Name="Clips">
-																		<MusicClip Name="JBattleSong2" ID="{0EC4FB51-615A-4D17-8621-5279F2DBED38}">
+																		<MusicClip Name="JBattleSong2" ID="{511C62D8-4013-4BE4-957A-EE9E59DD4047}">
 																			<PropertyList>
-																				<Property Name="EndTrimOffset" Type="Real64" Value="147692.31292517"/>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="118153.854875283"/>
 																				<Property Name="FadeInMode" Type="int16" Value="0"/>
 																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																			</PropertyList>
-																			<AudioSourceRef Name="JBattleSong2" ID="{0810CAF6-F0C0-4BA9-8E17-8C820B6481FF}"/>
+																			<AudioSourceRef Name="JBattleSong2" ID="{FA1F2D36-9472-4A1E-BBE4-9BDAD3684C38}"/>
 																		</MusicClip>
 																	</ObjectList>
 																</ObjectLists>
@@ -870,7 +873,7 @@
 													<MusicCue Name="Exit Cue" ID="{415F3245-670E-4579-9727-08D82D9D1B71}">
 														<PropertyList>
 															<Property Name="CueType" Type="int16" Value="1"/>
-															<Property Name="TimeMs" Type="Real64" Value="147414.046375806"/>
+															<Property Name="TimeMs" Type="Real64" Value="118153.854875283"/>
 														</PropertyList>
 													</MusicCue>
 												</ObjectList>
@@ -924,7 +927,7 @@
 									<ChildrenList>
 										<MusicSegment Name="Battle3" ID="{82ADECAF-D908-4E45-8D3D-1A5190E823EF}" ShortID="360930544">
 											<PropertyList>
-												<Property Name="EndPosition" Type="Real64" Value="180747.16553288"/>
+												<Property Name="EndPosition" Type="Real64" Value="118153.854875283"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -935,14 +938,14 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<MusicTrack Name="Music3" ID="{8DEFD8CD-7572-41A3-947B-215222ED964A}" ShortID="887173798">
+												<MusicTrack Name="JBattleSong3" ID="{815E3848-E7EC-461B-AE07-A113EF30747E}" ShortID="1028709563">
 													<ReferenceList>
 														<Reference Name="OutputBus">
 															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84580E68-76CE-4E53-85DC-C1911E9315F6}"/>
 														</Reference>
 														<Reference Name="TransitionRoot">
 															<Custom>
-																<MusicTransition Name="Root" ID="{5390DE55-88EE-4982-B943-9516D6B3AD26}">
+																<MusicTransition Name="Root" ID="{DF6D5282-2CF9-45E9-9FEE-A66AEDAA1F94}">
 																	<PropertyList>
 																		<Property Name="IsFolder" Type="bool" Value="True"/>
 																	</PropertyList>
@@ -952,7 +955,7 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="JBattleSong3" ID="{63DE21C3-FB89-42D6-8D14-DF51E96B5D0A}">
+														<AudioFileSource Name="JBattleSong3" ID="{16C5A92B-9645-45CC-B3B3-C161994BDD50}">
 															<Language>SFX</Language>
 															<AudioFile>JBattleSong3.wav</AudioFile>
 															<MediaIDList>
@@ -962,16 +965,16 @@
 													</ChildrenList>
 													<ObjectLists>
 														<ObjectList Name="Sequences">
-															<MusicTrackSequence Name="" ID="{61C582CB-38F9-40DE-BA65-D7144AA89C0C}">
+															<MusicTrackSequence Name="" ID="{FC4C705F-F6BB-4E9B-B5DB-FD0EA993A6C0}">
 																<ObjectLists>
 																	<ObjectList Name="Clips">
-																		<MusicClip Name="JBattleSong3" ID="{8796E07C-0E17-4E7A-BAA0-A70E4DA8DDFC}">
+																		<MusicClip Name="JBattleSong3" ID="{0F02474A-4B89-4598-8C0A-FF5DA31760DC}">
 																			<PropertyList>
-																				<Property Name="EndTrimOffset" Type="Real64" Value="147692.31292517"/>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="118153.854875283"/>
 																				<Property Name="FadeInMode" Type="int16" Value="0"/>
 																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																			</PropertyList>
-																			<AudioSourceRef Name="JBattleSong3" ID="{63DE21C3-FB89-42D6-8D14-DF51E96B5D0A}"/>
+																			<AudioSourceRef Name="JBattleSong3" ID="{16C5A92B-9645-45CC-B3B3-C161994BDD50}"/>
 																		</MusicClip>
 																	</ObjectList>
 																</ObjectLists>
@@ -986,7 +989,7 @@
 													<MusicCue Name="Exit Cue" ID="{65809893-D0ED-4E78-9B98-A8CA88D8CC56}">
 														<PropertyList>
 															<Property Name="CueType" Type="int16" Value="1"/>
-															<Property Name="TimeMs" Type="Real64" Value="147759.071334984"/>
+															<Property Name="TimeMs" Type="Real64" Value="118153.854875283"/>
 														</PropertyList>
 													</MusicCue>
 												</ObjectList>
@@ -1440,7 +1443,7 @@
 									<ChildrenList>
 										<MusicSegment Name="Battle1" ID="{CC13AE16-5BDB-4924-A291-AC2C3370522C}" ShortID="415034947">
 											<PropertyList>
-												<Property Name="EndPosition" Type="Real64" Value="147692.31292517"/>
+												<Property Name="EndPosition" Type="Real64" Value="118153.854875283"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -1451,14 +1454,14 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<MusicTrack Name="Music1" ID="{F4F0D6B4-79AE-4D88-9D93-906C981C2DDF}" ShortID="1054432855">
+												<MusicTrack Name="JBattleSong1" ID="{B2F6890A-BE41-42A2-9730-8090A132E711}" ShortID="299875705">
 													<ReferenceList>
 														<Reference Name="OutputBus">
 															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84580E68-76CE-4E53-85DC-C1911E9315F6}"/>
 														</Reference>
 														<Reference Name="TransitionRoot">
 															<Custom>
-																<MusicTransition Name="Root" ID="{B5C6BDC1-B5D1-487E-9C9D-AFF022CF7889}">
+																<MusicTransition Name="Root" ID="{9958B44F-5F13-4D1F-AB23-C7458E40CE57}">
 																	<PropertyList>
 																		<Property Name="IsFolder" Type="bool" Value="True"/>
 																	</PropertyList>
@@ -1468,7 +1471,7 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="JBattleSong1" ID="{5014A014-34A1-4208-9C3E-F46562689E4F}">
+														<AudioFileSource Name="JBattleSong1" ID="{2B73A1DF-8CEE-4F34-9435-8FAA1D5F0019}">
 															<Language>SFX</Language>
 															<AudioFile>JBattleSong1.wav</AudioFile>
 															<MediaIDList>
@@ -1478,16 +1481,16 @@
 													</ChildrenList>
 													<ObjectLists>
 														<ObjectList Name="Sequences">
-															<MusicTrackSequence Name="" ID="{975B4307-8B00-4C89-897F-349FC0E79AC3}">
+															<MusicTrackSequence Name="" ID="{4B763E7C-F9E6-444E-BA68-563E3DD00B48}">
 																<ObjectLists>
 																	<ObjectList Name="Clips">
-																		<MusicClip Name="JBattleSong1" ID="{BCAC65D3-BD1A-4BE9-B41C-F13E737CE088}">
+																		<MusicClip Name="JBattleSong1" ID="{F8D2C0CD-A4D4-4312-9A1F-1AB608CB69BE}">
 																			<PropertyList>
-																				<Property Name="EndTrimOffset" Type="Real64" Value="147692.31292517"/>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="118153.854875283"/>
 																				<Property Name="FadeInMode" Type="int16" Value="0"/>
 																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																			</PropertyList>
-																			<AudioSourceRef Name="JBattleSong1" ID="{5014A014-34A1-4208-9C3E-F46562689E4F}"/>
+																			<AudioSourceRef Name="JBattleSong1" ID="{2B73A1DF-8CEE-4F34-9435-8FAA1D5F0019}"/>
 																		</MusicClip>
 																	</ObjectList>
 																</ObjectLists>
@@ -1502,7 +1505,7 @@
 													<MusicCue Name="Exit Cue" ID="{6D906021-553D-45B7-AC90-A74F32C6D1F5}">
 														<PropertyList>
 															<Property Name="CueType" Type="int16" Value="1"/>
-															<Property Name="TimeMs" Type="Real64" Value="31508.5493217323"/>
+															<Property Name="TimeMs" Type="Real64" Value="118153.854875283"/>
 														</PropertyList>
 													</MusicCue>
 												</ObjectList>
@@ -1556,7 +1559,7 @@
 									<ChildrenList>
 										<MusicSegment Name="Battle2" ID="{97E89A74-F872-4BDE-9069-1AD08F5549F3}" ShortID="469993886">
 											<PropertyList>
-												<Property Name="EndPosition" Type="Real64" Value="31497.7777777778"/>
+												<Property Name="EndPosition" Type="Real64" Value="118153.854875283"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -1567,14 +1570,14 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<MusicTrack Name="Music2" ID="{E25A0FFE-2762-46B6-81EB-5AF3FB6A5D95}" ShortID="353433079">
+												<MusicTrack Name="JBattleSong2" ID="{7F4BB3E0-5F2E-488E-89F4-D3D4E66CC673}" ShortID="898527464">
 													<ReferenceList>
 														<Reference Name="OutputBus">
 															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84580E68-76CE-4E53-85DC-C1911E9315F6}"/>
 														</Reference>
 														<Reference Name="TransitionRoot">
 															<Custom>
-																<MusicTransition Name="Root" ID="{484EC21C-2B44-4375-8C66-D176F5A4E822}">
+																<MusicTransition Name="Root" ID="{257FA89A-5B68-4BE8-946E-9CE5E9025079}">
 																	<PropertyList>
 																		<Property Name="IsFolder" Type="bool" Value="True"/>
 																	</PropertyList>
@@ -1584,7 +1587,7 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="JBattleSong2" ID="{7C3823BB-F602-4E09-9162-8675EC9B6096}">
+														<AudioFileSource Name="JBattleSong2" ID="{011E133B-E043-407D-BF8A-F150BC2550AB}">
 															<Language>SFX</Language>
 															<AudioFile>JBattleSong2.wav</AudioFile>
 															<MediaIDList>
@@ -1594,16 +1597,16 @@
 													</ChildrenList>
 													<ObjectLists>
 														<ObjectList Name="Sequences">
-															<MusicTrackSequence Name="" ID="{6120B07B-CD01-4B9D-A10C-521A5CDE6E33}">
+															<MusicTrackSequence Name="" ID="{C0ABF75C-A038-4F3F-9CEB-FEF44A29696A}">
 																<ObjectLists>
 																	<ObjectList Name="Clips">
-																		<MusicClip Name="JBattleSong2" ID="{6DDC4D8A-1642-4E05-B95E-9C83D247B674}">
+																		<MusicClip Name="JBattleSong2" ID="{3D16C5B1-42E3-4BCF-B86B-E5B6A94A459E}">
 																			<PropertyList>
-																				<Property Name="EndTrimOffset" Type="Real64" Value="147692.31292517"/>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="118153.854875283"/>
 																				<Property Name="FadeInMode" Type="int16" Value="0"/>
 																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																			</PropertyList>
-																			<AudioSourceRef Name="JBattleSong2" ID="{7C3823BB-F602-4E09-9162-8675EC9B6096}"/>
+																			<AudioSourceRef Name="JBattleSong2" ID="{011E133B-E043-407D-BF8A-F150BC2550AB}"/>
 																		</MusicClip>
 																	</ObjectList>
 																</ObjectLists>
@@ -1618,7 +1621,7 @@
 													<MusicCue Name="Exit Cue" ID="{C957EBC1-34CB-4EFC-832B-6FCE31702E0A}">
 														<PropertyList>
 															<Property Name="CueType" Type="int16" Value="1"/>
-															<Property Name="TimeMs" Type="Real64" Value="31459.3421040474"/>
+															<Property Name="TimeMs" Type="Real64" Value="118153.854875283"/>
 														</PropertyList>
 													</MusicCue>
 												</ObjectList>
@@ -1672,7 +1675,7 @@
 									<ChildrenList>
 										<MusicSegment Name="Battle3" ID="{7C8DAE6C-BE2F-4B3B-B6BE-EC5A3F12771D}" ShortID="664026246">
 											<PropertyList>
-												<Property Name="EndPosition" Type="Real64" Value="180747.16553288"/>
+												<Property Name="EndPosition" Type="Real64" Value="118153.854875283"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -1683,14 +1686,14 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<MusicTrack Name="Music3" ID="{F37932D6-01C8-4C23-9F09-DEC0D8A60E02}" ShortID="539481545">
+												<MusicTrack Name="JBattleSong3" ID="{B2AB3BFB-35F3-4A25-B002-A3705660621A}" ShortID="732081499">
 													<ReferenceList>
 														<Reference Name="OutputBus">
 															<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84580E68-76CE-4E53-85DC-C1911E9315F6}"/>
 														</Reference>
 														<Reference Name="TransitionRoot">
 															<Custom>
-																<MusicTransition Name="Root" ID="{FDA42E39-C37D-4B31-9E04-EA2A873A2044}">
+																<MusicTransition Name="Root" ID="{00D2E19A-2255-4E64-9923-E96239CD9467}">
 																	<PropertyList>
 																		<Property Name="IsFolder" Type="bool" Value="True"/>
 																	</PropertyList>
@@ -1700,7 +1703,7 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="JBattleSong3" ID="{07EC5965-E1D8-4793-8651-F75E36A21511}">
+														<AudioFileSource Name="JBattleSong3" ID="{FD3AE3C1-C077-4C7A-9BE4-039AAF3D8CF0}">
 															<Language>SFX</Language>
 															<AudioFile>JBattleSong3.wav</AudioFile>
 															<MediaIDList>
@@ -1710,16 +1713,16 @@
 													</ChildrenList>
 													<ObjectLists>
 														<ObjectList Name="Sequences">
-															<MusicTrackSequence Name="" ID="{20A24EFD-54E9-42EE-9A17-7AA02034EB34}">
+															<MusicTrackSequence Name="" ID="{956A7EF7-3989-4206-8174-EEC75D90D62A}">
 																<ObjectLists>
 																	<ObjectList Name="Clips">
-																		<MusicClip Name="JBattleSong3" ID="{A9B71461-79C9-4621-AFF9-AA095BE30415}">
+																		<MusicClip Name="JBattleSong3" ID="{1F237B8E-82DD-49CF-9B0C-D1F360D84ABB}">
 																			<PropertyList>
-																				<Property Name="EndTrimOffset" Type="Real64" Value="147692.31292517"/>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="118153.854875283"/>
 																				<Property Name="FadeInMode" Type="int16" Value="0"/>
 																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																			</PropertyList>
-																			<AudioSourceRef Name="JBattleSong3" ID="{07EC5965-E1D8-4793-8651-F75E36A21511}"/>
+																			<AudioSourceRef Name="JBattleSong3" ID="{FD3AE3C1-C077-4C7A-9BE4-039AAF3D8CF0}"/>
 																		</MusicClip>
 																	</ObjectList>
 																</ObjectLists>
@@ -1734,7 +1737,7 @@
 													<MusicCue Name="Exit Cue" ID="{B3810D71-16DB-4CB6-A6C8-962F0E150ED3}">
 														<PropertyList>
 															<Property Name="CueType" Type="int16" Value="1"/>
-															<Property Name="TimeMs" Type="Real64" Value="32765.953126307"/>
+															<Property Name="TimeMs" Type="Real64" Value="118153.854875283"/>
 														</PropertyList>
 													</MusicCue>
 												</ObjectList>
@@ -1788,7 +1791,7 @@
 									<ChildrenList>
 										<MusicSegment Name="Lose" ID="{E74E07DC-C6E2-4B1F-A716-13A97FA7AEAE}" ShortID="193640536">
 											<PropertyList>
-												<Property Name="EndPosition" Type="Real64" Value="33811.3060722467"/>
+												<Property Name="EndPosition" Type="Real64" Value="31377.029478458"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -1850,7 +1853,7 @@
 													<MusicCue Name="Exit Cue" ID="{BA41EC9D-E66B-4C9A-A2C7-A02C481449F2}">
 														<PropertyList>
 															<Property Name="CueType" Type="int16" Value="1"/>
-															<Property Name="TimeMs" Type="Real64" Value="31197.21828908"/>
+															<Property Name="TimeMs" Type="Real64" Value="31377.029478458"/>
 														</PropertyList>
 													</MusicCue>
 												</ObjectList>
@@ -1904,7 +1907,7 @@
 									<ChildrenList>
 										<MusicSegment Name="Title" ID="{AF72C638-6249-47DD-9B42-724DF0F43AA0}" ShortID="123829233">
 											<PropertyList>
-												<Property Name="EndPosition" Type="Real64" Value="97044.401108019"/>
+												<Property Name="EndPosition" Type="Real64" Value="96000"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -1966,7 +1969,7 @@
 													<MusicCue Name="Exit Cue" ID="{223F1AF3-D764-4C45-BDDB-B845ACE92D22}">
 														<PropertyList>
 															<Property Name="CueType" Type="int16" Value="1"/>
-															<Property Name="TimeMs" Type="Real64" Value="95810.2476441051"/>
+															<Property Name="TimeMs" Type="Real64" Value="96000"/>
 														</PropertyList>
 													</MusicCue>
 												</ObjectList>
@@ -2018,6 +2021,9 @@
 									</ReferenceList>
 									<ChildrenList>
 										<MusicSegment Name="Win" ID="{D918B1BB-D3CB-4357-91DE-579C6D62C379}" ShortID="853779564">
+											<PropertyList>
+												<Property Name="EndPosition" Type="Real64" Value="1151.31519274376"/>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9178FA55-D303-4149-A5D8-ACE42835274F}"/>
@@ -2078,7 +2084,7 @@
 													<MusicCue Name="Exit Cue" ID="{C472561A-D542-44D7-A22C-0B48D8DC4B4D}">
 														<PropertyList>
 															<Property Name="CueType" Type="int16" Value="1"/>
-															<Property Name="TimeMs" Type="Real64" Value="1494.92385786802"/>
+															<Property Name="TimeMs" Type="Real64" Value="1151.31519274376"/>
 														</PropertyList>
 													</MusicCue>
 												</ObjectList>
