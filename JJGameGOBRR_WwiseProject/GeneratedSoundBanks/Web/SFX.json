@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{1B1FEBF3-0FD8-419E-9E0B-3423DC0D482B}",
     "Language": "SFX",
-    "Hash": "{69A3AEEB-A333-09B9-8BA7-BA454379C4A3}",
+    "Hash": "{718C6ED0-5A8F-467E-506F-8BEC5062443A}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\SFX",
     "ShortName": "SFX",
     "Path": "SFX.bnk",
@@ -291,8 +291,8 @@
       "ObjectPath": "\\Events\\Default Work Unit\\SoundEffects\\Play_EGHurt",
       "GUID": "{00619A6E-27F5-4244-8F7B-8A5CBDDFFC5F}",
       "DurationType": "OneShot",
-      "DurationMin": "0.19643457",
-      "DurationMax": "0.3708191",
+      "DurationMin": "0.23699921",
+      "DurationMax": "0.34004262",
       "MediaRefs": [
        {
         "Id": "738599819"
@@ -333,8 +333,8 @@
       "ObjectPath": "\\Events\\Default Work Unit\\SoundEffects\\Play_EGWalk",
       "GUID": "{20E31CEF-2FF1-4054-BE91-3B323787DE7D}",
       "DurationType": "OneShot",
-      "DurationMin": "0.22614512",
-      "DurationMax": "0.5879592",
+      "DurationMin": "0.13760969",
+      "DurationMax": "0.35777417",
       "MediaRefs": [
        {
         "Id": "132091408"
@@ -570,6 +570,6 @@
     ]
    }
   ],
-  "FileHash": "{13404C0E-D1AA-5490-8C65-AE4A3BCFAE58}"
+  "FileHash": "{9B038C75-886A-5984-6A37-DCC201DAC702}"
  }
 }
