@@ -2614,7 +2614,7 @@ PrefabInstance:
     - target: {fileID: 5812513164392073569, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
       propertyPath: FairyWindupSFX.WwiseObjectReference
       value: 
-      objectReference: {fileID: 11400000, guid: 00c8f009b4819f9499f39ee12dc5dbaf, type: 2}
+      objectReference: {fileID: 11400000, guid: b81d1aef8c2cb734facc687b0de71ec5, type: 2}
     - target: {fileID: 5812513164392073569, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
       propertyPath: TowerFailPlace.WwiseObjectReference
       value: 
@@ -2659,6 +2659,10 @@ PrefabInstance:
       propertyPath: EnemyWalkSFXs.Array.data[1].WwiseObjectReference
       value: 
       objectReference: {fileID: 11400000, guid: 7503bc721bea5a74f8226658e944347c, type: 2}
+    - target: {fileID: 5812513164392073569, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
+      propertyPath: TowerDropSFXs.Array.data[2].WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 00c8f009b4819f9499f39ee12dc5dbaf, type: 2}
     - target: {fileID: 5812513164392073569, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
       propertyPath: TowerDropSFXs.Array.data[3].WwiseObjectReference
       value: 
