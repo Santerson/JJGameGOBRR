@@ -21,6 +21,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] List<AK.Wwise.Event> TowerShootSFXs;
     [SerializeField] List<AK.Wwise.Event> TowerDieSFXs;
     [SerializeField] List<AK.Wwise.Event> TowerRemoveSFXs;
+    [SerializeField] AK.Wwise.Event FairyWindupSFX;
     [SerializeField] AK.Wwise.Event TowerGenericDrop;
     [SerializeField] AK.Wwise.Event TowerGenericDeath;
     [SerializeField] AK.Wwise.Event TowerGenericClick;
@@ -281,6 +282,15 @@ public class AudioManager : MonoBehaviour
     {
         AkUnitySoundEngine.SetState("MusicStateGroup", $"Battle{waveIntensity}");
         MuffleorUnmuffleMusic(false);
+    }
+
+    /// <summary>
+    /// Plays the windup sfx for the fairy
+    /// </summary>
+    /// <param name="spawnLocation">The gameobj to spawn the sfx from</param>
+    public void PlayFairyWindupSFX(GameObject spawnLocation)
+    {
+        AkUnitySoundEngine.PostEvent(FairyWindupSFX.Id, spawnLocation);
     }
 
     /// <summary>

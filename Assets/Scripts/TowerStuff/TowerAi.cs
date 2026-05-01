@@ -40,6 +40,7 @@ public class TowerAi : MonoBehaviour
     [SerializeField] Vector2 PickupOffset = new Vector2(0, 0.8f);
     [SerializeField] float MaxDistToPickupTower = 0.5f;
     [SerializeField] Color MouseOverHighlight = Color.red;
+    [SerializeField] float FairyWindupSFXTimeAfterAnimStart = 0.6f;
     /// <summary>
     /// The position of this tower in the grid (index based, where 0,0 is the bottom left)
     /// </summary>
@@ -128,6 +129,10 @@ public class TowerAi : MonoBehaviour
             if (CoolDown <= LengthOfAnimaton)
             {
                 Animator.SetInteger("State", (int)Animatons.attack);
+                if (TowerID == AudioManager.Towers.fairy)
+                {
+                    StartCoroutine(DelayFairyWindupSFX());
+                }
             }
             else
             {
@@ -240,9 +245,20 @@ public class TowerAi : MonoBehaviour
         }
     }
 
+    private void OnDestroy()
+    {
+        StopAllCoroutines();
+    }
+
     IEnumerator DelayBunnyAnim()
     {
         yield return new WaitForSeconds(1.5f);
         bunnyAnimationPlaying = false;
+    }
+
+    IEnumerator DelayFairyWindupSFX()
+    {
+        yield return new WaitForSeconds(FairyWindupSFXTimeAfterAnimStart);
+        refAudioManager?.PlayFairyWindupSFX(gameObject);
     }
 }
