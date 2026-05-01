@@ -15,6 +15,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2567734897	Play_EGWalk			\Default Work Unit\SoundEffects\Play_EGWalk	
 	2689049308	Play_TDeath			\Default Work Unit\SoundEffects\Play_TDeath	
 	3350535243	Play_EGSpawn			\Default Work Unit\SoundEffects\Play_EGSpawn	
+	3716631181	Play_TFReady			\Default Work Unit\SoundEffects\Play_TFReady	
 	3949267617	Play_TFPlace			\Default Work Unit\SoundEffects\Play_TFPlace	
 	4094970478	Play_TGPlace			\Default Work Unit\SoundEffects\Play_TGPlace	
 	4112018788	Play_TMShoot			\Default Work Unit\SoundEffects\Play_TMShoot	
@@ -35,6 +36,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	347852687	Voice	.cache\A0\{A07D45CB-6159-190D-E846-C3EC20833FEE}.wem		\Containers\Default Work Unit\RouteToSFXBus\EnemyMixer\GuyMixer\Voice		289796
 	362161334	Walk_05	.cache\C2\{C2D3F6AC-C53B-53B6-DD42-C0489F3FCC6C}.wem		\Containers\Default Work Unit\RouteToSFXBus\EnemyMixer\GuyMixer\WalkRandom\Walk_05		91200
 	383884461	Walk_03	.cache\D1\{D1A58E5D-C712-E20A-3A0A-275E8E39417B}.wem		\Containers\Default Work Unit\RouteToSFXBus\EnemyMixer\GuyMixer\WalkRandom\Walk_03		39988
+	473478384	Ready	.cache\A3\{A3616D74-EC78-E102-195A-F74746D2B7BB}.wem		\Containers\Default Work Unit\RouteToSFXBus\TowerMixer\FairyMixer\Ready		317644
 	483462771	Walk_08	.cache\0E\{0EE89B24-709A-C7EB-847D-37A7F92E4098}.wem		\Containers\Default Work Unit\RouteToSFXBus\EnemyMixer\GuyMixer\WalkRandom\Walk_08		103812
 	503869253	Shoot	.cache\3A\{3A34253B-6903-2C4B-2766-37FB6AC6B82A}.wem		\Containers\Default Work Unit\RouteToSFXBus\TowerMixer\MushMixer\Shoot		107712
 	547085646	Attack	.cache\D9\{D9A54542-ED4F-61A7-CF0D-CC8396AA611D}.wem		\Containers\Default Work Unit\RouteToSFXBus\EnemyMixer\GuyMixer\Attack		88976

@@ -3257,7 +3257,7 @@
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>5</Value>
+														<Value>2</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -3318,6 +3318,13 @@
 														<MediaID ID="93329577"/>
 													</MediaIDList>
 												</AudioFileSource>
+												<AudioFileSource Name="FiaryShootBells" ID="{287E428E-22BE-4E5D-A079-0B8CA16C4EAC}">
+													<Language>SFX</Language>
+													<AudioFile>FiaryShootBells.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="473478384"/>
+													</MediaIDList>
+												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
 												<ActiveSource Name="FairyShooty" ID="{6390C629-ECFF-4867-844D-8B7981CB255A}" Platform="Linked"/>
@@ -3350,6 +3357,28 @@
 											</ChildrenList>
 											<ActiveSourceList>
 												<ActiveSource Name="fairyPlace" ID="{9D27839F-3555-45B1-84D8-CCA328882D58}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Ready" ID="{1BC9FF8E-2100-466E-93C1-65E906CC828B}" ShortID="151905814">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9178FA55-D303-4149-A5D8-ACE42835274F}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{84580E68-76CE-4E53-85DC-C1911E9315F6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="FiaryShootBells" ID="{ACA989F4-A176-453D-9537-A3FA8DD07198}">
+													<Language>SFX</Language>
+													<AudioFile>FiaryShootBells.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="473478384"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="FiaryShootBells" ID="{ACA989F4-A176-453D-9537-A3FA8DD07198}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>

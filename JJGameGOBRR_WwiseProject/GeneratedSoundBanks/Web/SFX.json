@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{1B1FEBF3-0FD8-419E-9E0B-3423DC0D482B}",
     "Language": "SFX",
-    "Hash": "{DA915F3F-BB72-AF19-3006-1843E92AD96A}",
+    "Hash": "{C180C0CF-46A1-6297-7FAC-A0A671A00358}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\SFX",
     "ShortName": "SFX",
     "Path": "SFX.bnk",
@@ -126,6 +126,14 @@
       "Location": "Memory",
       "ShortName": "Step-004.wav",
       "CachePath": "D1/{D1A58E5D-C712-E20A-3A0A-275E8E39417B}.wem"
+     },
+     {
+      "Id": "473478384",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "FiaryShootBells.wav",
+      "CachePath": "A3/{A3616D74-EC78-E102-195A-F74746D2B7BB}.wem"
      },
      {
       "Id": "483462771",
@@ -442,6 +450,20 @@
       ]
      },
      {
+      "Id": "3716631181",
+      "Name": "Play_TFReady",
+      "ObjectPath": "\\Events\\Default Work Unit\\SoundEffects\\Play_TFReady",
+      "GUID": "{58846ED1-BCC1-413C-A943-FFA351B931E5}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.8001587",
+      "DurationMax": "1.8001587",
+      "MediaRefs": [
+       {
+        "Id": "473478384"
+       }
+      ]
+     },
+     {
       "Id": "929142997",
       "Name": "Play_TFShoot",
       "ObjectPath": "\\Events\\Default Work Unit\\SoundEffects\\Play_TFShoot",
@@ -570,6 +592,6 @@
     ]
    }
   ],
-  "FileHash": "{9EA5CD63-CCA8-7DB4-27DE-02B10E5F9BC3}"
+  "FileHash": "{3EEF7270-0463-8207-83BC-AB0DCF4D3F28}"
  }
 }
