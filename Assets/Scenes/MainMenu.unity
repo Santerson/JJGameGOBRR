@@ -2652,6 +2652,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: c18b9a992aa87ac4a9688ce58494aaf3, type: 2}
     - target: {fileID: 5812513164392073569, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
+      propertyPath: EnemyWalkSFXs.Array.data[1].WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 7503bc721bea5a74f8226658e944347c, type: 2}
+    - target: {fileID: 5812513164392073569, guid: ee7408d355352e845af85a32cf605d6e, type: 3}
       propertyPath: TowerDropSFXs.Array.data[3].WwiseObjectReference
       value: 
       objectReference: {fileID: 11400000, guid: aac9fb0b9630c0c42ac4f1ad220229be, type: 2}
