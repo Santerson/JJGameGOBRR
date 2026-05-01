@@ -49,6 +49,7 @@ public class TowerAi : MonoBehaviour
     public bool canBeSold = true;
     public bool canBeQuickMoved = true;
     private bool bunnyAnimationPlaying = false;
+    private bool fairySFXPlayed;
 
     Color SpriteBaseColor;
     SpriteRenderer ChildSprite;
@@ -129,9 +130,10 @@ public class TowerAi : MonoBehaviour
             if (CoolDown <= LengthOfAnimaton)
             {
                 Animator.SetInteger("State", (int)Animatons.attack);
-                if (TowerID == AudioManager.Towers.fairy)
+                if (TowerID == AudioManager.Towers.fairy && !fairySFXPlayed)
                 {
                     StartCoroutine(DelayFairyWindupSFX());
+                    fairySFXPlayed = true;
                 }
             }
             else
@@ -149,6 +151,8 @@ public class TowerAi : MonoBehaviour
                 refAudioManager?.PlayTowerShootSFX(gameObject, TowerID);
                 // Reset cooldown
                 CoolDown = RateOfFire;
+                // Rest fairysfx
+                fairySFXPlayed = false;
             }
         }
         // Make sure attack cooldown cant hit zero tell animaton plays first
