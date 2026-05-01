@@ -14,6 +14,7 @@
 					<ObjectInclusionList>
 						<ObjectRef Name="Play_EGWalk" ID="{20E31CEF-2FF1-4054-BE91-3B323787DE7D}" WorkUnitID="{387072C7-A7CF-4480-B8F0-2D62B0219160}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_EGAttack" ID="{874FBE2A-FE91-412C-BECF-29F88569953E}" WorkUnitID="{387072C7-A7CF-4480-B8F0-2D62B0219160}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_TFReady" ID="{58846ED1-BCC1-413C-A943-FFA351B931E5}" WorkUnitID="{387072C7-A7CF-4480-B8F0-2D62B0219160}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_EGHurt" ID="{00619A6E-27F5-4244-8F7B-8A5CBDDFFC5F}" WorkUnitID="{387072C7-A7CF-4480-B8F0-2D62B0219160}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_TMShoot" ID="{B6D1461F-E233-432D-AF0B-E39D3F9D7FD9}" WorkUnitID="{387072C7-A7CF-4480-B8F0-2D62B0219160}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_TClick" ID="{33A62A1B-52EE-440C-8692-B8E22C9461E4}" WorkUnitID="{387072C7-A7CF-4480-B8F0-2D62B0219160}" Origin="Manual" Filter="7"/>

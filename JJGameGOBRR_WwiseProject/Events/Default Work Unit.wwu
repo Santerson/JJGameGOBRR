@@ -254,6 +254,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_TFReady" ID="{58846ED1-BCC1-413C-A943-FFA351B931E5}">
+							<ChildrenList>
+								<Action Name="" ID="{EE582E16-2D5E-423E-85D1-D172099367D5}" ShortID="988475221">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Ready" ID="{1BC9FF8E-2100-466E-93C1-65E906CC828B}" WorkUnitID="{C9DDC0B8-4122-402E-850F-253503C47F0F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="MusicThings" ID="{09F339EE-521F-45D9-BA4D-86CA6D483AA9}" ShortID="825185757">
@@ -277,17 +288,6 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Nothing" ID="{0142E37B-DFA4-4B38-8F64-01A662D43EA2}" WorkUnitID="{C9DDC0B8-4122-402E-850F-253503C47F0F}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_TFReady" ID="{58846ED1-BCC1-413C-A943-FFA351B931E5}">
-					<ChildrenList>
-						<Action Name="" ID="{EE582E16-2D5E-423E-85D1-D172099367D5}" ShortID="988475221">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Ready" ID="{1BC9FF8E-2100-466E-93C1-65E906CC828B}" WorkUnitID="{C9DDC0B8-4122-402E-850F-253503C47F0F}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
